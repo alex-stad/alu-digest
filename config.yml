@@ -1,0 +1,56 @@
+digest:
+  name: "Alex's Daily Alu Digest"
+  max_articles: 8
+  min_articles: 3
+
+email:
+  recipients:
+    - "stadelmann.alexander@gmail.com"
+    - "alexander.stadelmann@novelis.com"
+  subject_prefix: "Alu Digest"
+
+github:
+  username: "alex-stad"
+  repo: "alu-digest"
+  pages_url: "https://alex-stad.github.io/alu-digest"
+
+search_queries:
+  # Tier 1 — Novelis direct & competitors (highest priority)
+  - query: "Novelis OR Hindalco aluminium news"
+    priority: 1
+  - query: "Arconic OR Constellium OR Hydro OR Speira OR AMAG aluminium news"
+    priority: 1
+  # Tier 2 — Product segments
+  - query: "aluminium flat rolled can sheet automotive sheet aerospace news"
+    priority: 2
+  - query: "aluminium recycling closed loop sustainability ESG"
+    priority: 2
+  # Tier 3 — Market & trade
+  - query: "EU CBAM aluminium tariff anti-dumping trade policy 2025"
+    priority: 3
+  - query: "LME aluminium price premium today"
+    priority: 3
+  - query: "AlCircle aluminium news"
+    priority: 3
+  - query: "Aluminium International Today news"
+    priority: 3
+  - query: "Fastmarkets aluminium industry news"
+    priority: 3
+  # Tier 4 — European coverage
+  - query: "aluminium Industrie Deutschland Europa Nachrichten"
+    priority: 4
+  - query: "aluminium industrie Europe recyclage actualités"
+    priority: 4
+
+relevance_criteria:
+  novelis_direct: 10       # Novelis, Hindalco, Aditya Birla
+  competitors: 9           # Arconic, Constellium, Hydro, Speira, AMAG, Aleris
+  flat_rolled_products: 8  # Can sheet, automotive, aerospace, construction, defence
+  recycling_esg: 7         # Closed-loop, carbon, sustainability, circular economy
+  trade_policy: 7          # CBAM, tariffs, anti-dumping, import/export regulations
+  lme_market: 5            # LME prices, premiums, inventory
+
+resend:
+  api_url: "https://api.resend.com/emails"
+  from_name: "Alex's Daily Alu Digest"
+  from_email: "onboarding@resend.dev"
