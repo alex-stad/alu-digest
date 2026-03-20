@@ -30,6 +30,7 @@ CATEGORY_TAG_CLASS = {
     "Competitor": "tag-competitor",
     "Flat Rolled Products": "tag-flat",
     "Recycling & ESG": "tag-esg",
+    "Energy & Upstream": "tag-energy",
     "Trade Policy": "tag-trade",
     "Market Data": "tag-market",
 }
