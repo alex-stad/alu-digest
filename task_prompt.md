@@ -226,7 +226,7 @@ Score each article 1–10 using this framework tailored to what a Novelis employ
 
 | Score | Category | What qualifies |
 |-------|----------|---------------|
-| **10** | **Novelis / Hindalco Direct** | Novelis, Hindalco, Aditya Birla Group mentioned in context of aluminium. Includes: earnings, plant news, product launches, executive changes, customer agreements, Novelis 3x30, Bay Minette, Oswego, Greensboro, IPO news. |
+| **10** | **Novelis / Hindalco Direct** | Novelis mentioned directly, or Hindalco/Aditya Birla Group news that has a direct impact on Novelis (e.g. Hindalco earnings affecting Novelis, group-level M&A, Hindalco primary aluminium supply to Novelis). Do NOT include Hindalco news that only affects Hindalco's India-domestic operations (extrusions, copper, wire) with no connection to Novelis. Includes: Novelis earnings, plant news, product launches, executive changes, customer agreements, Novelis 3x30, Bay Minette, Oswego, Greensboro, IPO news. |
 | **9** | **Tier 1 Competitor** | Constellium, Hydro (rolling), Speira, AMAG, Arconic, UACJ, ElvalHalcor, Tri-Arrows — earnings, plant investments, new products, capacity changes, M&A. |
 | **8** | **Flat Rolled Products & End Markets** | Beverage can sheet demand/supply, automotive body sheet & EV lightweighting, aerospace plate orders, OEM material decisions (JLR, BMW, Audi, Ford), can maker news (Ball, Crown, Ardagh, Can-Pack). |
 | **7** | **Recycling, Circular Economy & ESG** | Closed-loop recycling milestones, recycled content regulation, aluminium scrap supply/pricing, end-of-life vehicle recycling, Aluminium Stewardship Initiative (ASI) certifications, sustainability reporting. |
