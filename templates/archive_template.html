@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex's Daily Alu Digest</title>
+<title>{% block title %}Alex's Daily Alu Digest{% endblock %}</title>
 <style>
   :root {
     --bg: #0f1620;
@@ -110,7 +110,7 @@
   </div>
 </header>
 
-
+{% block content %}{% endblock %}
 
 <div class="site-footer">
   Curated by Claude · Sources: AlCircle, Fastmarkets, Reuters, Aluminium International Today &amp; more ·
