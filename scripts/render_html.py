@@ -66,6 +66,9 @@ def render_email(digest_data: dict) -> str:
         lme_price=digest_data.get("lme_price"),
         lme_change=digest_data.get("lme_change"),
         lme_change_positive=digest_data.get("lme_change_positive", True),
+        ecdp_price=digest_data.get("ecdp_price"),
+        ecdp_change=digest_data.get("ecdp_change"),
+        ecdp_change_positive=digest_data.get("ecdp_change_positive", True),
         articles=digest_data.get("articles", []),
         article_count=len(digest_data.get("articles", [])),
         archive_url=digest_data.get("archive_url", "https://alex-stad.github.io/alu-digest/"),
@@ -104,6 +107,16 @@ def render_archive_page(digest_data: dict, date_slug: str) -> str:
           <span class="price">{digest_data['lme_price']}</span>
           {change_html}
           <span class="unit">Cash settlement · USD/t</span>
+        </div>"""
+        if digest_data.get("ecdp_price"):
+            ecdp_change_color = "#4caf7d" if digest_data.get("ecdp_change_positive", True) else "#e05c5c"
+            ecdp_change_html = f'<span style="color:{ecdp_change_color};font-size:13px;">{digest_data["ecdp_change"]}</span>' if digest_data.get("ecdp_change") else ""
+            lme_bar += f"""
+        <div class="lme-bar" style="margin-top:6px;border-left-color:#3a6a8a;">
+          <span class="label">EU Duty-Paid Premium</span>
+          <span class="price" style="font-size:18px;color:#6ab0d4;">{digest_data['ecdp_price']}</span>
+          {ecdp_change_html}
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
         </div>"""
 
     template = env.get_template("archive_template.html")

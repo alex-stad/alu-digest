@@ -51,6 +51,28 @@
         </tr>
         {% endif %}
 
+        <!-- ECDP PRICE BAR -->
+        {% if ecdp_price %}
+        <tr>
+          <td style="background:#152535;padding:10px 32px;border-left:4px solid #3a6a8a;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                  <span style="font-size:11px;font-weight:600;letter-spacing:2px;color:#4a8aaa;text-transform:uppercase;">EU Duty-Paid Premium</span>
+                  <span style="font-size:16px;font-weight:700;color:#6ab0d4;margin-left:12px;">{{ ecdp_price }}</span>
+                  {% if ecdp_change %}
+                  <span style="font-size:12px;color:{% if ecdp_change_positive %}#4caf7d{% else %}#e05c5c{% endif %};margin-left:8px;">{{ ecdp_change }}</span>
+                  {% endif %}
+                </td>
+                <td align="right">
+                  <span style="font-size:11px;color:#3a6a7b;">P1020A in-whs dp Rotterdam · USD/t</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {% endif %}
+
         <!-- DIVIDER -->
         <tr><td style="background:#0f1a28;height:2px;"></td></tr>
 

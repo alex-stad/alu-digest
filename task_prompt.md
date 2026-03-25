@@ -249,8 +249,19 @@ From your scored and verified articles, select the top 5–8. Enforce these rule
 4. **Category diversity**: the final selection must span at least 3 different categories
 5. **No padding**: if you only found 3 quality articles, send 3. Do not pad with low-relevance filler.
 6. **LME price**: always include as a separate data point (not counted as one of the 5–8 articles)
+7. **ECDP price**: always include the European Duty-Paid Premium alongside LME (see Step 5)
+8. **No repeat news**: Before finalising, check the output/ directory for the previous day's digest file. Read it and ensure no story is repeated from yesterday. If a story was covered yesterday, drop it and select the next-best article. Within the same day, never include the same event twice from different sources.
+9. **Energy & Upstream: apply sparingly**: Only include smelter/upstream news if it has a clear, direct impact on Novelis (e.g. major supply disruption affecting European P1020 availability or premiums). General smelter curtailments, production updates, or financial results of upstream producers should NOT be included unless they materially affect flat-rolled supply chains. When in doubt, drop it.
 
-Order articles by score descending (highest relevance first).
+**Category ordering (MANDATORY):** Articles in the final digest MUST be ordered by category in this exact sequence — within each category, order by score descending:
+1. Novelis / Hindalco
+2. Competitor
+3. Flat Rolled Products
+4. Recycling & ESG
+5. Trade Policy
+6. Market Data
+7. Energy & Upstream
+8. General Industry
 
 ---
 
@@ -268,15 +279,22 @@ Rules:
 
 ---
 
-## STEP 5: LME price data
+## STEP 5: LME price and ECDP premium data
 
+**LME Aluminium Cash Settlement:**
 From your search results, extract:
 - LME aluminium cash settlement price in USD/t
 - Change vs previous session (absolute + percentage)
+- Format: `$X,XXX/t` and `+$XX (+X.X%)` or `-$XX (-X.X%)`
 
-Format: `$X,XXX/t` and `+$XX (+X.X%)` or `-$XX (-X.X%)`
+**European Duty-Paid Premium (ECDP):**
+Also search for: `aluminium European duty paid premium P1020 Rotterdam USD per tonne`
+- Extract the latest Fastmarkets or LME assessment of the P1020A premium, in-whs dp Rotterdam
+- This is typically reported as a range (e.g. "$360–390/t") or a midpoint
+- Format: `$XXX–XXX/t` (range) or `$XXX/t` (midpoint)
+- Include change vs previous assessment if available
 
-If unavailable, set lme_price to None and omit the LME bar. Do not guess.
+If either price is unavailable, set the corresponding field to None. Do not guess.
 
 ---
 
@@ -290,6 +308,9 @@ digest_data = {
     "lme_price": "$2,485/t",            # or None
     "lme_change": "+$12 (+0.5%)",       # or None
     "lme_change_positive": True,         # True if up, False if down
+    "ecdp_price": "$360–390/t",         # or None — EU duty-paid premium range
+    "ecdp_change": "+$15",              # or None
+    "ecdp_change_positive": True,        # True if up, False if down
     "articles": [
         {
             "title": "Exact headline from the source",
@@ -299,7 +320,7 @@ digest_data = {
             "category": "Novelis / Hindalco",
             "summary": "Two sentence summary. Second sentence connecting to Novelis relevance."
         },
-        # ... 3–8 articles, ordered by relevance score descending
+        # ... 3–8 articles, ordered by CATEGORY (see Step 3 ordering rules)
     ],
     "archive_url": "https://alex-stad.github.io/alu-digest/"
 }
@@ -323,7 +344,8 @@ Run the following Python script using the Bash tool. Replace the `digest_data` d
 
 ```bash
 cd "/Users/Haseena/Alex's Daily Alu Digest"
-python3 - <<'PYEOF'
+export PATH="/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:$HOME/.local/bin:$PATH"
+/usr/local/bin/python3 - <<'PYEOF'
 import sys, os
 from datetime import datetime
 from pathlib import Path
@@ -352,7 +374,7 @@ out_path.write_text(html, encoding="utf-8")
 print(f"Digest saved to {out_path}")
 
 os.environ["RESEND_API_KEY"] = "re_GT6nCqyw_JpvDedPpuN5PmDwdzXLUfnYH"
-recipients = ["stadelmann.alexander@gmail.com"]
+recipients = ["stadelmann.alexander@gmail.com", "alexander.stadelmann@novelis.com"]
 subject = f"Alex's Daily Alu Digest — {digest_data['date']}"
 send_digest(html, subject, recipients)
 
@@ -369,21 +391,27 @@ PYEOF
 
 ```bash
 cd "/Users/Haseena/Alex's Daily Alu Digest"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:$HOME/.local/bin:$PATH"
 DATE_SLUG=$(date +%Y-%m-%d)
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
 DAY=$(date +%d)
 
+# Stash any uncommitted changes on main before switching branches
+git stash --include-untracked 2>/dev/null || true
+
 git fetch origin gh-pages 2>/dev/null || true
 git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
 mkdir -p "${YEAR}/${MONTH}"
 cp "output/archive_${DATE_SLUG}.html" "${YEAR}/${MONTH}/${DAY}.html"
-python3 scripts/update_archive_index.py --date-slug "${DATE_SLUG}"
+/usr/local/bin/python3 scripts/update_archive_index.py --date-slug "${DATE_SLUG}"
 git add -A
 git commit -m "Digest ${DATE_SLUG}" || echo "Nothing to commit"
 git push origin gh-pages
+
+# Return to main and restore stashed changes
 git checkout main
+git stash pop 2>/dev/null || true
 ```
 
 ---
