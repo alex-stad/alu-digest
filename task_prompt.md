@@ -150,55 +150,28 @@ Novelis Inc. is the world's largest flat-rolled aluminium producer and recycler,
 
 ## STEP 1: Search for today's news
 
-Run ALL of the following web searches. Do not skip any. These are designed to cover every angle relevant to a Novelis employee.
+Run these 10 searches in order. Do not skip any.
 
-**Company-specific (5 searches):**
-1. `Novelis news today`
-2. `Hindalco aluminium news`
-3. `Constellium aluminium news`
-4. `Speira OR "Norsk Hydro" aluminium rolling news`
-5. `AMAG OR Arconic OR UACJ aluminium news`
+1. `Novelis aluminium news`
+2. `Constellium OR Speira OR Hydro aluminium rolling news`
+3. `AMAG OR Arconic OR ElvalHalcor aluminium news`
+4. `aluminium flat rolled can sheet automotive recycling news today`
+5. `aluminium recycling sustainability ESG circular economy news`
+6. `EU CBAM aluminium tariff trade policy news`
+7. `LME aluminium price today European duty paid premium`
+8. `AlCircle aluminium news today`
+9. `Aluminium International Today news`
+10. `Novelis OR Hindalco site:prnewswire.com OR site:businesswire.com`
 
-**Industry publications (4 searches):**
-6. `site:alcircle.com aluminium news` (limit to last 24h if possible)
-7. `site:aluminiumtoday.com news`
-8. `site:agmetalminer.com aluminium`
-9. `Fastmarkets OR Reuters aluminium industry news today`
-
-**End markets & products (3 searches):**
-10. `aluminium beverage can sheet packaging news`
-11. `aluminium automotive sheet lightweighting EV battery enclosure news`
-12. `aluminium aerospace plate defence news`
-
-**Sustainability & recycling (2 searches):**
-13. `aluminium recycling closed loop circular economy sustainability news`
-14. `green aluminium low carbon decarbonisation inert anode news`
-
-**Trade, regulation & policy (2 searches):**
-15. `EU CBAM aluminium carbon border adjustment news`
-16. `aluminium tariff anti-dumping trade policy US Europe news`
-
-**Market data (2 searches):**
-17. `LME aluminium price today`
-18. `aluminium premium Europe Midwest Japan scrap price news`
-
-**European / regional (2 searches):**
-19. `aluminium Industrie Deutschland Europa Nachrichten`
-20. `aluminium Europe smelter energy costs capacity news`
-
-**Upstream supply chain (1 search):**
-21. `Alcoa OR "Rio Tinto" OR Rusal OR EGA aluminium smelter news`
-
-For each search, extract from the top 3-5 results:
-- Exact headline/title as it appears
-- The direct article URL (NOT the homepage — the full URL to the specific article)
-- Source name
-- Publication date
+For each search, extract from the top 3-4 results:
+- Exact headline/title as it appears on the source
+- The **direct article URL** — the full path to the specific article, never the homepage
+- Source name and publication date
 - Key facts in 1-2 sentences
 
-**CRITICAL: URL quality rule.** Every article URL must be a direct link to the specific article page. Never use a homepage URL (e.g. `alcircle.com` or `reuters.com`). If you only have a homepage URL, do a follow-up search with the headline to find the direct link. If you still cannot find a direct link, include the article but set the URL to the best available and note it.
+**URL rule (critical):** Every article URL must point directly to the article. Never use a homepage URL. If you only have a homepage, do one follow-up search with the exact headline to find the direct link.
 
-Collect all results. Aim for 25-50 raw articles before filtering.
+Collect all results. Aim for 20-35 raw articles before filtering.
 
 ---
 
@@ -338,93 +311,39 @@ Valid category values (use exactly one per article):
 
 ---
 
-## STEP 7: Render and send the digest
+## STEP 7: Write digest data to a JSON file
 
-Run the following Python script using the Bash tool. Replace the `digest_data` dict with your actual data from Step 6:
+Write the `digest_data` dict to a file using the Write tool:
+- File path: `/Users/Haseena/Alex's Daily Alu Digest/output/digest_YYYY-MM-DD.json`
+  (use today's actual date in the filename, e.g. `digest_2026-03-27.json`)
 
-```bash
-cd "/Users/Haseena/Alex's Daily Alu Digest"
-export PATH="/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:$HOME/.local/bin:$PATH"
-/usr/local/bin/python3 - <<'PYEOF'
-import sys, os
-from datetime import datetime
-from pathlib import Path
-sys.path.insert(0, str(Path.cwd()))
-from scripts.render_html import render_email, render_archive_page
-from scripts.send_email import send_digest
-
-# === REPLACE WITH YOUR ACTUAL digest_data ===
-digest_data = {
-    "date": "...",
-    "lme_price": None,
-    "lme_change": None,
-    "lme_change_positive": True,
-    "articles": [],
-    "archive_url": "https://alex-stad.github.io/alu-digest/"
-}
-# === END ===
-
-date_slug = datetime.now().strftime("%Y-%m-%d")
-out_dir = Path("output")
-out_dir.mkdir(exist_ok=True)
-
-html = render_email(digest_data)
-out_path = out_dir / f"{date_slug}.html"
-out_path.write_text(html, encoding="utf-8")
-print(f"Digest saved to {out_path}")
-
-os.environ["RESEND_API_KEY"] = "re_GT6nCqyw_JpvDedPpuN5PmDwdzXLUfnYH"
-recipients = ["stadelmann.alexander@gmail.com", "alexander.stadelmann@novelis.com"]
-subject = f"Alex's Daily Alu Digest — {digest_data['date']}"
-send_digest(html, subject, recipients)
-
-archive_html = render_archive_page(digest_data, date_slug)
-archive_path = out_dir / f"archive_{date_slug}.html"
-archive_path.write_text(archive_html, encoding="utf-8")
-print(f"Archive page saved to {archive_path}")
-PYEOF
-```
+The JSON must be valid. Double-check that all URLs are real article URLs, not homepages.
 
 ---
 
-## STEP 8: Update GitHub Pages archive
+## STEP 8: Run the pipeline
+
+Run this single command using the Bash tool:
 
 ```bash
 cd "/Users/Haseena/Alex's Daily Alu Digest"
 export PATH="/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:$HOME/.local/bin:$PATH"
 DATE_SLUG=$(date +%Y-%m-%d)
-YEAR=$(date +%Y)
-MONTH=$(date +%m)
-DAY=$(date +%d)
-
-# Stash any uncommitted changes on main before switching branches
-git stash --include-untracked 2>/dev/null || true
-
-git fetch origin gh-pages 2>/dev/null || true
-git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
-mkdir -p "${YEAR}/${MONTH}"
-cp "output/archive_${DATE_SLUG}.html" "${YEAR}/${MONTH}/${DAY}.html"
-/usr/local/bin/python3 scripts/update_archive_index.py --date-slug "${DATE_SLUG}"
-git add -A
-git commit -m "Digest ${DATE_SLUG}" || echo "Nothing to commit"
-git push origin gh-pages
-
-# Return to main and restore stashed changes
-git checkout main
-git stash pop 2>/dev/null || true
+mkdir -p output
+/usr/local/bin/python3 scripts/generate_digest.py --json-file "output/digest_${DATE_SLUG}.json"
 ```
+
+This single script handles everything: rendering the HTML, sending the email, saving locally, updating the GitHub Pages archive. Watch the output for any `[ERROR]` lines. If the script exits with an error, report it exactly.
 
 ---
 
-## STEP 9: Log completion
+## STEP 9: Confirm
 
+Print:
 ```
 ✓ Alex's Daily Alu Digest — [DATE]
-  Articles: [N] stories ([list categories covered])
-  LME: [price] [change]
-  Sources: [list source names used]
-  Email: sent to [N] recipients
+  Articles: [N] ([categories])
+  LME: [price]  ECDP: [price]
+  Email: sent to stadelmann.alexander@gmail.com + alexander.stadelmann@novelis.com
   Archive: https://alex-stad.github.io/alu-digest/
 ```
-
-If any step fails, log the error and continue. The digest must always be saved locally even if email or archive update fails.
