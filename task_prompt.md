@@ -150,18 +150,27 @@ Novelis Inc. is the world's largest flat-rolled aluminium producer and recycler,
 
 ## STEP 1: Search for today's news
 
-Run these 10 searches in order. Do not skip any.
+Run these 12 searches in order. Do not skip any.
 
-1. `Novelis aluminium news`
-2. `Constellium OR Speira OR Hydro aluminium rolling news`
-3. `AMAG OR Arconic OR ElvalHalcor aluminium news`
-4. `aluminium flat rolled can sheet automotive recycling news today`
-5. `aluminium recycling sustainability ESG circular economy news`
-6. `EU CBAM aluminium tariff trade policy news`
-7. `LME aluminium price today European duty paid premium`
-8. `AlCircle aluminium news today`
-9. `Aluminium International Today news`
-10. `Novelis OR Hindalco site:prnewswire.com OR site:businesswire.com`
+**Company-specific (4 searches):**
+1. `Novelis aluminium news today`
+2. `Hindalco site:prnewswire.com OR site:businesswire.com OR site:hindalco.com`
+3. `Constellium OR Speira aluminium rolling news`
+4. `AMAG OR Arconic OR "Norsk Hydro" OR ElvalHalcor aluminium news`
+
+**Industry publications (2 searches):**
+5. `AlCircle aluminium news today`
+6. `"Aluminium International Today" OR aluminium-journal.com news`
+
+**Products, end markets & sustainability (3 searches):**
+7. `aluminium beverage can sheet automotive aerospace news`
+8. `aluminium recycling closed loop low carbon ESG sustainability news`
+9. `EU CBAM OR aluminium tariff OR anti-dumping trade policy news`
+
+**Market data & wire services (3 searches):**
+10. `LME aluminium price today European duty paid premium P1020`
+11. `Fastmarkets OR Reuters OR Bloomberg aluminium industry news`
+12. `aluminium Industrie Deutschland OR aluminium industrie Europe actualités`
 
 For each search, extract from the top 3-4 results:
 - Exact headline/title as it appears on the source
@@ -171,7 +180,7 @@ For each search, extract from the top 3-4 results:
 
 **URL rule (critical):** Every article URL must point directly to the article. Never use a homepage URL. If you only have a homepage, do one follow-up search with the exact headline to find the direct link.
 
-Collect all results. Aim for 20-35 raw articles before filtering.
+Collect all results. Aim for 25-45 raw articles before filtering.
 
 ---
 
