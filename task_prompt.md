@@ -322,9 +322,12 @@ Valid category values (use exactly one per article):
 
 ## STEP 7: Write digest data to a JSON file
 
-Write the `digest_data` dict to a file using the Write tool:
-- File path: `/Users/Haseena/Alex's Daily Alu Digest/output/digest_YYYY-MM-DD.json`
-  (use today's actual date in the filename, e.g. `digest_2026-03-27.json`)
+Write the `digest_data` dict to a file using the Write tool.
+
+**Determining the file path:** You know the absolute path to this task_prompt.md file
+(the scheduled task told you to read it). The project root is the directory containing
+this file. Write the JSON to: `{project_root}/output/digest_YYYY-MM-DD.json`
+(use today's actual date, e.g. `digest_2026-03-27.json`).
 
 The JSON must be valid. Double-check that all URLs are real article URLs, not homepages.
 
@@ -332,14 +335,15 @@ The JSON must be valid. Double-check that all URLs are real article URLs, not ho
 
 ## STEP 8: Run the pipeline
 
-Run this single command using the Bash tool:
+Run this single command using the Bash tool. Replace `PROJECT_ROOT` with the actual
+absolute path to the project directory (the directory containing this task_prompt.md file):
 
 ```bash
-cd "/Users/Haseena/Alex's Daily Alu Digest"
-export PATH="/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:$HOME/.local/bin:$PATH"
+cd "PROJECT_ROOT"
+export PATH="/usr/local/bin:/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 DATE_SLUG=$(date +%Y-%m-%d)
 mkdir -p output
-/usr/local/bin/python3 scripts/generate_digest.py --json-file "output/digest_${DATE_SLUG}.json"
+python3 scripts/generate_digest.py --json-file "output/digest_${DATE_SLUG}.json"
 ```
 
 This single script handles everything: rendering the HTML, sending the email, saving locally, updating the GitHub Pages archive. Watch the output for any `[ERROR]` lines. If the script exits with an error, report it exactly.

@@ -24,12 +24,40 @@ sys.path.insert(0, str(REPO_ROOT))
 from scripts.render_html import render_email, render_archive_page
 from scripts.send_email import send_digest
 
-RESEND_API_KEY = "re_GT6nCqyw_JpvDedPpuN5PmDwdzXLUfnYH"
-# NOTE: Resend free tier only allows sending to the verified account email until a
-# custom domain is verified at resend.com/domains. Add "alexander.stadelmann@novelis.com"
-# here once domain verification is complete.
+
+def _load_env() -> None:
+    """Load .env file from project root into os.environ (no external deps)."""
+    env_file = REPO_ROOT / ".env"
+    if not env_file.exists():
+        return
+    for line in env_file.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip())
+
+
+_load_env()
+
+RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
+if not RESEND_API_KEY:
+    print("[ERROR] RESEND_API_KEY not set. Add it to .env in the project root.")
+    sys.exit(1)
+
+# NOTE: Resend free tier only allows sending to the account's verified email.
+# Add "alexander.stadelmann@novelis.com" once domain is verified at resend.com/domains.
 RECIPIENTS = ["stadelmann.alexander@gmail.com"]
-GH_PATH = str(Path.home() / ".local/bin/gh")
+
+# Auto-detect gh CLI: Homebrew (/usr/local/bin or /opt/homebrew/bin) or manual install
+def _find_gh() -> str:
+    for candidate in ["/usr/local/bin/gh", "/opt/homebrew/bin/gh",
+                      str(Path.home() / ".local/bin/gh")]:
+        if Path(candidate).exists():
+            return candidate
+    return "gh"  # fall back to PATH
+
+GH_PATH = _find_gh()
 
 
 def run(digest_data: dict) -> bool:
@@ -51,7 +79,7 @@ def run(digest_data: dict) -> bool:
 
     # ── 2. Send email ──────────────────────────────────────────────────────
     try:
-        os.environ["RESEND_API_KEY"] = RESEND_API_KEY
+        os.environ["RESEND_API_KEY"] = RESEND_API_KEY  # already loaded from .env
         subject = f"Alex's Daily Alu Digest — {digest_data['date']}"
         ok = send_digest(html, subject, RECIPIENTS)
         if not ok:
@@ -105,7 +133,14 @@ def _push_to_gh_pages(date_slug: str, digest_data: dict):
         raise FileNotFoundError(f"Archive source not found: {archive_src}")
 
     env = os.environ.copy()
-    env["PATH"] = f"/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:{Path.home()}/.local/bin:{env.get('PATH', '')}"
+    # Include common install paths for git and gh on both Intel and Apple Silicon Macs
+    env["PATH"] = (
+        f"/usr/local/bin:/opt/homebrew/bin:"
+        f"/Library/Frameworks/Python.framework/Versions/3.14/bin:"
+        f"/Library/Frameworks/Python.framework/Versions/3.13/bin:"
+        f"/Library/Frameworks/Python.framework/Versions/3.12/bin:"
+        f"{Path.home()}/.local/bin:{env.get('PATH', '')}"
+    )
 
     def git(*args, cwd=repo):
         result = subprocess.run(["git"] + list(args), cwd=cwd, env=env,

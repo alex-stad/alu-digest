@@ -15,6 +15,15 @@ from datetime import datetime
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+# Load .env file so RESEND_API_KEY is available without manually exporting it
+_env_file = REPO_ROOT / ".env"
+if _env_file.exists():
+    for _line in _env_file.read_text().splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _, _v = _line.partition("=")
+            os.environ.setdefault(_k.strip(), _v.strip())
+
 from scripts.render_html import render_email
 from scripts.send_email import send_digest
 
