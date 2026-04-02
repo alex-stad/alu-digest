@@ -45,9 +45,7 @@ jobs:
           # Write .env so generate_digest.py can load it
           echo "BUTTONDOWN_API_KEY=${BUTTONDOWN_API_KEY}" > .env
 
-          # Run Claude with the full task prompt — it executes Steps 1–9 autonomously
-          claude -p "The project is located at: ${PROJECT_ROOT}
-
-$(cat task_prompt.md)" \
+          # Run Claude: tell it the project root and to read + execute task_prompt.md
+          claude -p "The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
             --allowedTools "Bash,Read,Write,WebSearch,WebFetch,Glob,Grep" \
             --dangerously-skip-permissions
