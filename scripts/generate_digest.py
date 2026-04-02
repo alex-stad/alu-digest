@@ -129,9 +129,9 @@ def _push_to_gh_pages(date_slug: str, digest_data: dict):
         raise FileNotFoundError(f"Archive source not found: {archive_src}")
 
     env = os.environ.copy()
-    # Include common install paths for git and gh on both Intel and Apple Silicon Macs
+    # Include common install paths for git: Mac (Homebrew) + Linux (GitHub Actions)
     env["PATH"] = (
-        f"/usr/local/bin:/opt/homebrew/bin:"
+        f"/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:"
         f"/Library/Frameworks/Python.framework/Versions/3.14/bin:"
         f"/Library/Frameworks/Python.framework/Versions/3.13/bin:"
         f"/Library/Frameworks/Python.framework/Versions/3.12/bin:"

@@ -1,0 +1,53 @@
+name: Daily Alu Digest
+
+on:
+  schedule:
+    # 07:00 UTC = 08:00 CET (UTC+1) / 09:00 CEST (UTC+2 in summer)
+    - cron: '0 7 * * 1-5'
+  workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
+
+permissions:
+  contents: write  # Required to push to gh-pages branch
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history needed for git worktree (gh-pages)
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install jinja2 httpx
+
+      - name: Configure git identity
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run Daily Alu Digest (AI pipeline)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          PROJECT_ROOT=$(pwd)
+
+          # Write .env so generate_digest.py can load it
+          echo "BUTTONDOWN_API_KEY=${BUTTONDOWN_API_KEY}" > .env
+
+          # Run Claude with the full task prompt — it executes Steps 1–9 autonomously
+          claude -p "The project is located at: ${PROJECT_ROOT}
+
+$(cat task_prompt.md)" \
+            --allowedTools "Bash,Read,Write,WebSearch,WebFetch,Glob,Grep" \
+            --dangerously-skip-permissions
