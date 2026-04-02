@@ -34,7 +34,7 @@ Two files were AirDropped and are sitting in ~/Downloads. Find and move them aut
   find ~/Downloads -maxdepth 2 -name "digest_*.json" | head -1 | xargs -I{} cp {} "/Users/alexanderstadelmann/Claude Projects/daily-alu-digest/output/"
 
 Verify both files landed correctly:
-  cat "/Users/alexanderstadelmann/Claude Projects/daily-alu-digest/.env" | grep -c "RESEND_API_KEY" && echo ".env OK"
+  cat "/Users/alexanderstadelmann/Claude Projects/daily-alu-digest/.env" | grep -c "BUTTONDOWN_API_KEY" && echo ".env OK"
   ls "/Users/alexanderstadelmann/Claude Projects/daily-alu-digest/output/"digest_*.json && echo "digest JSON OK"
 
 If either file is missing, search more broadly: find ~ -maxdepth 4 -name ".env" -o -name "digest_*.json" 2>/dev/null
@@ -65,10 +65,10 @@ STEP 8 — Print a final confirmation summary
 Print:
   ✓ Setup complete
   - Python deps: jinja2, httpx installed
-  - .env: present at project root (RESEND_API_KEY loaded)
+  - .env: present at project root (BUTTONDOWN_API_KEY loaded)
   - output/ digest JSON: present
   - git configured: Alex Stadelmann
-  - pipeline test: email sent to stadelmann.alexander@gmail.com
+  - pipeline test: draft created in Buttondown
   - scheduled task: alex-daily-alu-digest, runs Mon-Fri at 13:30 local (= 07:30 CET)
   - next run: [show next scheduled time]
 ```

@@ -40,14 +40,10 @@ def _load_env() -> None:
 
 _load_env()
 
-RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
-if not RESEND_API_KEY:
-    print("[ERROR] RESEND_API_KEY not set. Add it to .env in the project root.")
+BUTTONDOWN_API_KEY = os.environ.get("BUTTONDOWN_API_KEY", "")
+if not BUTTONDOWN_API_KEY:
+    print("[ERROR] BUTTONDOWN_API_KEY not set. Add it to .env in the project root.")
     sys.exit(1)
-
-# NOTE: Resend free tier only allows sending to the account's verified email.
-# Add "alexander.stadelmann@novelis.com" once domain is verified at resend.com/domains.
-RECIPIENTS = ["stadelmann.alexander@gmail.com"]
 
 # Auto-detect gh CLI: Homebrew (/usr/local/bin or /opt/homebrew/bin) or manual install
 def _find_gh() -> str:
@@ -79,9 +75,9 @@ def run(digest_data: dict) -> bool:
 
     # ── 2. Send email ──────────────────────────────────────────────────────
     try:
-        os.environ["RESEND_API_KEY"] = RESEND_API_KEY  # already loaded from .env
+        os.environ["BUTTONDOWN_API_KEY"] = BUTTONDOWN_API_KEY  # already loaded from .env
         subject = f"Alex's Daily Alu Digest — {digest_data['date']}"
-        ok = send_digest(html, subject, RECIPIENTS)
+        ok = send_digest(html, subject)
         if not ok:
             errors.append("Email send returned False")
     except Exception as e:
@@ -110,7 +106,7 @@ def run(digest_data: dict) -> bool:
     print(f"\n{'✓' if not errors else '⚠'} Alex's Daily Alu Digest — {digest_data['date']}")
     print(f"  Articles : {n} ({cats})")
     print(f"  LME      : {lme}   ECDP: {ecdp}")
-    print(f"  Email    : {'sent' if not errors else 'see errors'} → {', '.join(RECIPIENTS)}")
+    print(f"  Email    : {'sent to subscribers' if not errors else 'see errors'} via Buttondown")
     print(f"  Archive  : https://alex-stad.github.io/alu-digest/")
     if errors:
         print(f"  ERRORS   : {'; '.join(errors)}")

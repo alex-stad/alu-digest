@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-End-to-end test: renders a sample digest and sends it via Resend.
-Verifies the full email pipeline before the scheduled task goes live.
+End-to-end test: renders a sample digest and creates a Buttondown draft.
+Verifies the full rendering + API pipeline before the scheduled task goes live.
 
 Usage:
-    RESEND_API_KEY=re_... python3 scripts/test_send.py
+    python3 scripts/test_send.py          # creates a draft (default, safe)
+    python3 scripts/test_send.py --send   # sends to all subscribers (use with care)
 """
 
 import os
@@ -15,7 +16,7 @@ from datetime import datetime
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-# Load .env file so RESEND_API_KEY is available without manually exporting it
+# Load .env file so BUTTONDOWN_API_KEY is available without manually exporting it
 _env_file = REPO_ROOT / ".env"
 if _env_file.exists():
     for _line in _env_file.read_text().splitlines():
@@ -25,29 +26,32 @@ if _env_file.exists():
             os.environ.setdefault(_k.strip(), _v.strip())
 
 from scripts.render_html import render_email
-from scripts.send_email import send_digest
+from scripts.send_email import send_digest, send_draft
 
 SAMPLE_DIGEST = {
     "date": datetime.now().strftime("%A, %d %B %Y"),
     "lme_price": "$2,485/t",
     "lme_change": "+$12 (+0.5%)",
     "lme_change_positive": True,
+    "ecdp_price": "$360\u2013390/t",
+    "ecdp_change": "+$15",
+    "ecdp_change_positive": True,
     "articles": [
         {
-            "title": "Novelis Announces €300M Investment in Göttingen Recycling Facility",
-            "url": "https://alcircle.com",
+            "title": "Novelis Announces \u20ac300M Investment in G\u00f6ttingen Recycling Facility",
+            "url": "https://www.alcircle.com/news/novelis-announces-300m-investment-gottingen-recycling-102345",
             "source": "AlCircle",
             "date": datetime.now().strftime("%d %b"),
             "category": "Novelis / Hindalco",
             "summary": (
-                "Novelis has announced a €300 million expansion of its Göttingen plant to double "
+                "Novelis has announced a \u20ac300 million expansion of its G\u00f6ttingen plant to double "
                 "closed-loop aluminium recycling capacity by 2027. The investment supports the "
                 "company's target of achieving 80% recycled content across its European operations."
             ),
         },
         {
             "title": "Constellium Reports Record Q4 Automotive Sheet Demand",
-            "url": "https://fastmarkets.com",
+            "url": "https://www.fastmarkets.com/insights/constellium-q4-automotive-sheet-demand-2024",
             "source": "Fastmarkets",
             "date": datetime.now().strftime("%d %b"),
             "category": "Competitor",
@@ -58,33 +62,8 @@ SAMPLE_DIGEST = {
             ),
         },
         {
-            "title": "EU CBAM Aluminium Compliance: First Declarant Fines Issued",
-            "url": "https://reuters.com",
-            "source": "Reuters",
-            "date": datetime.now().strftime("%d %b"),
-            "category": "Trade Policy",
-            "summary": (
-                "The European Commission issued its first CBAM non-compliance fines totalling "
-                "€4.2 million to aluminium importers who failed to submit 2024 transition period "
-                "reports. Industry bodies warn the full mechanism in 2026 will add €180–220/t to "
-                "primary aluminium import costs."
-            ),
-        },
-        {
-            "title": "LME Aluminium Climbs on Tight Scrap Supply and Dollar Weakness",
-            "url": "https://alcircle.com",
-            "source": "Metal Bulletin",
-            "date": datetime.now().strftime("%d %b"),
-            "category": "Market Data",
-            "summary": (
-                "LME three-month aluminium rose $18 to $2,497/t as scrap availability tightened "
-                "ahead of summer construction season in Europe. Analysts note that European P1020 "
-                "premiums have widened to $175/t over LME, the highest since Q3 2023."
-            ),
-        },
-        {
             "title": "Aluminium Recycling Rates Hit Record 76% in EU, Report Finds",
-            "url": "https://aluminiumtoday.com",
+            "url": "https://www.aluminiumtoday.com/news/eu-recycling-rates-record-76-percent-2024",
             "source": "Aluminium International Today",
             "date": datetime.now().strftime("%d %b"),
             "category": "Recycling & ESG",
@@ -95,17 +74,44 @@ SAMPLE_DIGEST = {
                 "to Novelis's sustainability strategy."
             ),
         },
+        {
+            "title": "EU CBAM Aluminium Compliance: First Declarant Fines Issued",
+            "url": "https://www.reuters.com/business/eu-cbam-aluminium-compliance-first-fines-2024-03",
+            "source": "Reuters",
+            "date": datetime.now().strftime("%d %b"),
+            "category": "Trade Policy",
+            "summary": (
+                "The European Commission issued its first CBAM non-compliance fines totalling "
+                "\u20ac4.2 million to aluminium importers who failed to submit 2024 transition period "
+                "reports. Industry bodies warn the full mechanism in 2026 will add \u20ac180\u2013220/t to "
+                "primary aluminium import costs."
+            ),
+        },
+        {
+            "title": "LME Aluminium Climbs on Tight Scrap Supply and Dollar Weakness",
+            "url": "https://www.metalbulletin.com/article/lme-aluminium-scrap-supply-dollar-weakness-2024",
+            "source": "Metal Bulletin",
+            "date": datetime.now().strftime("%d %b"),
+            "category": "Market Data",
+            "summary": (
+                "LME three-month aluminium rose $18 to $2,497/t as scrap availability tightened "
+                "ahead of summer construction season in Europe. Analysts note that European P1020 "
+                "premiums have widened to $175/t over LME, the highest since Q3 2023."
+            ),
+        },
     ],
     "archive_url": "https://alex-stad.github.io/alu-digest/",
 }
 
 
 def main():
-    api_key = os.environ.get("RESEND_API_KEY", "").strip()
+    api_key = os.environ.get("BUTTONDOWN_API_KEY", "").strip()
     if not api_key:
-        print("ERROR: Set RESEND_API_KEY environment variable first.")
-        print("Usage: RESEND_API_KEY=re_... python3 scripts/test_send.py")
+        print("ERROR: Set BUTTONDOWN_API_KEY environment variable first.")
+        print("       Or add it to .env in the project root.")
         sys.exit(1)
+
+    send_live = "--send" in sys.argv
 
     print("Rendering HTML digest...")
     html = render_email(SAMPLE_DIGEST)
@@ -117,14 +123,20 @@ def main():
     print(f"Preview saved to: {preview_path}")
 
     subject = f"[TEST] Alex's Daily Alu Digest — {SAMPLE_DIGEST['date']}"
-    recipients = ["stadelmann.alexander@gmail.com"]
 
-    print(f"Sending test email to: {', '.join(recipients)}")
-    success = send_digest(html, subject, recipients)
+    if send_live:
+        print("Sending test newsletter to ALL subscribers...")
+        success = send_digest(html, subject)
+    else:
+        print("Creating draft in Buttondown (not sending to subscribers)...")
+        success = send_draft(html, subject)
 
     if success:
-        print("\nTest passed. Check your inbox — the digest should arrive within 30 seconds.")
-        print("Review the email and confirm it looks correct before the scheduled task goes live.")
+        if send_live:
+            print("\nTest passed. Check subscriber inboxes — the digest should arrive shortly.")
+        else:
+            print("\nDraft created. Check Buttondown dashboard to preview and optionally send.")
+            print("To send to subscribers, re-run with: python3 scripts/test_send.py --send")
     else:
         print("\nTest FAILED. Check the error above.")
         sys.exit(1)

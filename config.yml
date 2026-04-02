@@ -4,10 +4,10 @@ digest:
   min_articles: 3
 
 email:
-  recipients:
-    - "stadelmann.alexander@gmail.com"
-    - "alexander.stadelmann@novelis.com"
+  platform: "buttondown"
+  sending_domain: "alu-digest.com"
   subject_prefix: "Alu Digest"
+  subscribe_url: "https://buttondown.com/alu-digest"
 
 github:
   username: "alex-stad"
@@ -50,7 +50,7 @@ relevance_criteria:
   trade_policy: 7          # CBAM, tariffs, anti-dumping, import/export regulations
   lme_market: 5            # LME prices, premiums, inventory
 
-resend:
-  api_url: "https://api.resend.com/emails"
-  from_name: "Alex's Daily Alu Digest"
-  from_email: "onboarding@resend.dev"
+buttondown:
+  api_url: "https://api.buttondown.com/v1/emails"
+  from_domain: "alu-digest.com"
+  dashboard: "https://buttondown.com/settings"

@@ -61,7 +61,7 @@ You should see: `generate_digest.py  render_html.py  send_email.py  test_send.py
 
 ## STEP 4 — Add the .env file (AirDrop)
 
-The `.env` file contains the Resend API key. It is **not** on GitHub for security reasons.
+The `.env` file contains the Buttondown API key. It is **not** on GitHub for security reasons.
 You should have received it via AirDrop. Place it here:
 
 ```
@@ -74,7 +74,7 @@ Verify its contents:
 cat "/Users/alexanderstadelmann/Claude Projects/daily-alu-digest/.env"
 ```
 
-You should see: `RESEND_API_KEY=re_...`
+You should see: `BUTTONDOWN_API_KEY=...`
 
 ---
 
@@ -116,12 +116,12 @@ Expected output:
 ```
 Rendering HTML digest...
 Preview saved to: .../output/preview_email.html
-Sending test email to: stadelmann.alexander@gmail.com
-Email sent successfully. ID: ...
-Test passed. Check your inbox...
+Creating draft in Buttondown (not sending to subscribers)...
+Draft created successfully. ID: ...
+Draft created. Check Buttondown dashboard to preview and optionally send.
 ```
 
-**Do not continue to Step 8 until you see a test email arrive in your Gmail.**
+**Do not continue to Step 8 until you see the draft appear in the Buttondown dashboard.**
 
 ---
 
@@ -154,7 +154,7 @@ Run the daily alu digest task now by reading and executing task_prompt.md at
 ```
 
 Verify:
-- Email arrives at `stadelmann.alexander@gmail.com`
+- Newsletter is sent to all Buttondown subscribers
 - Archive updates at https://alex-stad.github.io/alu-digest/
 - Output file saved at `output/digest_YYYY-MM-DD.json`
 
@@ -177,9 +177,9 @@ Check the schedule is correct:
 | Problem | Fix |
 |---------|-----|
 | `ModuleNotFoundError: jinja2` | `pip3 install jinja2 httpx` |
-| `RESEND_API_KEY not set` | Check `.env` file exists in project root |
+| `BUTTONDOWN_API_KEY not set` | Check `.env` file exists in project root |
 | `gh auth` fails | Run `gh auth login` and authenticate in browser |
-| Email not arriving | Check spam; verify Resend key in `.env` is correct |
+| Email not arriving | Check spam; verify Buttondown key in `.env` is correct |
 | GitHub Pages not updating | Run `gh auth status` — may need `gh auth login` again |
 | Scheduled task not running | Mac must be awake; check Claude Code sidebar for errors |
 
@@ -193,7 +193,7 @@ Check the schedule is correct:
 | `config.yml` | Recipients, settings reference |
 | `scripts/generate_digest.py` | Master pipeline: render → email → archive |
 | `scripts/render_html.py` | Jinja2 HTML renderer |
-| `scripts/send_email.py` | Resend API email sender |
+| `scripts/send_email.py` | Buttondown API newsletter sender |
 | `scripts/test_send.py` | Send a test digest email |
 | `templates/email_template.html` | Email HTML design |
 | `templates/archive_template.html` | GitHub Pages archive design |
@@ -206,4 +206,5 @@ Check the schedule is correct:
 
 - Archive: https://alex-stad.github.io/alu-digest/
 - GitHub repo: https://github.com/alex-stad/alu-digest
-- Resend dashboard: https://resend.com/emails
+- Buttondown dashboard: https://buttondown.com/emails
+- Subscribe page: https://buttondown.com/alu-digest

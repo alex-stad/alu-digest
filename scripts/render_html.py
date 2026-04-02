@@ -113,7 +113,7 @@ def render_archive_page(digest_data: dict, date_slug: str) -> str:
             ecdp_change_html = f'<span style="color:{ecdp_change_color};font-size:13px;">{digest_data["ecdp_change"]}</span>' if digest_data.get("ecdp_change") else ""
             lme_bar += f"""
         <div class="lme-bar" style="margin-top:6px;border-left-color:#3a6a8a;">
-          <span class="label">EU Duty-Paid Premium</span>
+          <span class="label">ECDP</span>
           <span class="price" style="font-size:18px;color:#6ab0d4;">{digest_data['ecdp_price']}</span>
           {ecdp_change_html}
           <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
@@ -136,8 +136,8 @@ def render_archive_page(digest_data: dict, date_slug: str) -> str:
 
     # Simple injection since Jinja2 blocks don't work well for standalone rendering
     base_html = template.render()
-    return base_html.replace("{% block content %}{% endblock %}", content).replace(
-        "{% block title %}Alex's Daily Alu Digest{% endblock %}",
+    return base_html.replace("<!-- CONTENT_PLACEHOLDER -->", content).replace(
+        "<!-- TITLE_PLACEHOLDER -->",
         f"Alu Digest — {digest_data.get('date', date_slug)}"
     )
 
@@ -175,7 +175,9 @@ def render_archive_index(entries: list) -> str:
     </div>"""
 
     base_html = template.render()
-    return base_html.replace("{% block content %}{% endblock %}", content)
+    return base_html.replace("<!-- CONTENT_PLACEHOLDER -->", content).replace(
+        "<!-- TITLE_PLACEHOLDER -->", "Alex's Daily Alu Digest — Archive"
+    )
 
 
 # ── Quick self-test ──────────────────────────────────────────────────────────
