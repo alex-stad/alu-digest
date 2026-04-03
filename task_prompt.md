@@ -19,8 +19,6 @@ Novelis is the world's largest flat-rolled aluminium (FRP) producer and recycler
 
 **End markets:** Beverage packaging (~60%, can body/end sheet), Automotive (~20%, BIW sheet, EV battery enclosures), Aerospace plate (Koblenz, ex-Aleris), Specialties.
 
-**Key customers:** Ball Corporation, Crown Holdings, Ardagh Metal Packaging, Can-Pack; JLR (sole supplier), BMW, Audi, Ford.
-
 **Recycling:** World's largest aluminium recycler. ~63% recycled content. 3x30 targets: 75% recycled content, <3 tCO₂e/t by 2030. Closed-loop pioneer (REALCAR/JLR).
 
 **European plants (10):** Nachterstedt (400 kt recycling + cold rolling), Göttingen, Koblenz (aerospace), Sierre (automotive R&D), Pieve Emanuele, Bresso, Latchford UK (beverage recycling, £90M expansion), Alunorf JV (50/50 with Speira).
@@ -29,20 +27,28 @@ Novelis is the world's largest flat-rolled aluminium (FRP) producer and recycler
 
 ---
 
-## NOVELIS COMPETITORS
+## COMPETITORS — flat-rolled producers only
 
-### Tier 1 — Direct flat-rolled (always monitor)
+These are Novelis's direct competitors. They manufacture aluminium flat-rolled products. **Primary smelters (EGA, Alcoa, Rusal) are NOT competitors — do not assign them to this category.**
+
 | Company | HQ | Relevance |
 |---------|-----|-----------|
 | **Constellium SE** | Paris | Packaging & automotive FRP. 1M+ t/yr. Neuf-Brisach, Muscle Shoals. |
 | **Norsk Hydro** | Oslo | Hydro Rolling (DE/NO). 50% Alunorf. CIRCAL/REDUXA brands. |
 | **Speira GmbH** | Grevenbroich | 7 plants DE/NO. 50% Alunorf. 650 kt recycling. KPS Capital. |
 | **AMAG Austria Metall** | Ranshofen | Aerospace, auto, packaging. ~226 kt. High recycled content. |
-| **Arconic** | Pittsburgh | Rolled + extrusions, N. American auto sheet. |
-| **UACJ** | Tokyo | 1.5M+ t. Japan/USA/Thailand. Co-owner Logan Aluminum JV with Novelis. |
-| **ElvalHalcor (Elval)** | Athens | Major European roller. Packaging, auto, HVAC. EAPG member. |
+| **Arconic** | Pittsburgh | Rolled products, N. American auto sheet. |
+| **UACJ** | Tokyo | Monitor European footprint only: European import volumes, Logan Aluminum JV with Novelis. Non-European UACJ news excluded unless direct Novelis impact. |
+| **ElvalHalcor (Elval)** | Athens | Major European roller. Packaging, auto, HVAC. |
+| **Gränges AB** | Stockholm | Heat exchanger strip, automotive HVAC, specialty rolled products. |
+| **Aludium** | Madrid | European roller (ex-Novelis Spanish plants). Packaging and industrial sheet. |
 
-### Tier 2 — Primary producers (monitor for supply/cost impact)
+---
+
+## PRIMARY PRODUCERS — for Industry News only
+
+Primary smelters appear in **Industry News** ONLY when their news materially affects P1020 supply or pricing to European flat-rolled producers. General earnings, output updates, or non-European news → do not include.
+
 | Company | Relevance |
 |---------|-----------|
 | Alcoa | 2.7M t/yr. ELYSIS JV. Smelter curtailments. |
@@ -50,9 +56,23 @@ Novelis is the world's largest flat-rolled aluminium (FRP) producer and recycler
 | EGA | 2.6M t/yr. CelestiAL solar brand. |
 | Rusal | 3.7M t/yr. Sanctions risk. ALLOW+ brand. |
 | Chalco / Hongqiao | Chinese overcapacity risk. |
+| Trimet / Aluminium Dunkerque | European smelters, curtailment risk. |
 
-### Tier 3 — Downstream & other
-Ball, Crown, Ardagh (can makers/Novelis customers). Granges (heat exchangers). Kaiser Aluminum (US aerospace). Trimet / Aluminium Dunkerque (European smelters, curtailment risk).
+---
+
+## END MARKETS — demand-side only
+
+End market news covers demand signals, material selection decisions, orders, or market trends from Novelis's customers. **This is demand-side news only — news about a manufacturer's own capacity, earnings, or production belongs in Competitors, not End Markets.**
+
+**Beverage Packaging:** Ball Corporation, Crown Holdings, Ardagh Metal Packaging, Can-Pack — can demand, lightweighting, recycled content targets, packaging format shifts.
+
+**Automotive:** Jaguar Land Rover, BMW, Audi, Volkswagen Group, Stellantis, Ford, Tesla, Rivian — lightweighting decisions, BIW aluminium adoption, EV battery enclosures, OEM material specification changes.
+
+**Aerospace & Defense:** Boeing, Airbus, defence contractors — aerospace plate orders, aluminium demand in aircraft programmes, defence spending.
+
+**Building & Construction:** Construction sector aluminium demand, curtain wall, façade systems, Hydro Building Systems customers.
+
+**Specialty / Industry:** Consumer electronics, commercial transportation, industrial applications.
 
 ---
 
@@ -71,7 +91,7 @@ Reuters, Bloomberg, S&P Global/Platts, Fastmarkets
 European Aluminium (european-aluminium.eu), IAI (international-aluminium.org), The Aluminum Association (aluminum.org)
 
 **Tier D — Company newsrooms:**
-investors.novelis.com/press-releases · hindalco.com/media · constellium.com/news · hydro.com/en/media/news · speira.com/newsroom · amag.at/en/press
+investors.novelis.com/press-releases · hindalco.com/media · constellium.com/news · hydro.com/en/media/news · speira.com/newsroom · amag.at/en/press · granges.com/en/media · aludium.com/news
 
 **Tier E — Market data:**
 Westmetall (westmetall.com) · LME (lme.com) · Kitco (kitco.com/price/base-metals/aluminum)
@@ -88,7 +108,7 @@ Run these 12 searches. Do not skip any.
 1. `Novelis aluminium news today`
 2. `Hindalco site:prnewswire.com OR site:businesswire.com OR site:hindalco.com`
 3. `Constellium OR Speira aluminium rolling news`
-4. `AMAG OR Arconic OR "Norsk Hydro" OR ElvalHalcor aluminium news`
+4. `AMAG OR Arconic OR "Norsk Hydro" OR ElvalHalcor OR Gränges OR Aludium aluminium news`
 5. `AlCircle aluminium news today`
 6. `"Aluminium International Today" OR aluminium-journal.com news`
 7. `aluminium beverage can sheet automotive aerospace news`
@@ -123,16 +143,15 @@ Same event from multiple sources → keep the most authoritative: company press 
 ### 2c. Relevance scoring
 
 | Score | Category | What qualifies |
-|-------|----------|---------------|
+|-------|----------|----------------|
 | **10** | **Novelis / Hindalco** | Novelis directly, or Hindalco news with direct Novelis impact (earnings, M&A, supply). NOT Hindalco India-domestic ops (copper, wire, extrusions) with no Novelis link. |
-| **9** | **Tier 1 Competitor** | Constellium, Hydro, Speira, AMAG, Arconic, UACJ, ElvalHalcor — earnings, investment, capacity, M&A. |
-| **8** | **Flat Rolled / End Markets** | Can sheet, auto BIW/EV, aerospace plate, OEM material decisions, can maker news. |
-| **7** | **Recycling & ESG** | Closed-loop milestones, recycled content regulation, scrap supply/pricing, ASI certifications. |
-| **7** | **Trade Policy** | EU CBAM, US 25% tariffs, anti-dumping investigations, scrap export restrictions. |
-| **6** | **Energy & Upstream** | European smelter curtailments/restarts, electricity prices, green aluminium supply. |
-| **5** | **Market Data** | LME price, regional premiums, inventory, demand/supply forecasts. |
-| **3–4** | **General Industry** | Extrusions, castings, broad reports with indirect relevance. |
-| **1–2** | **Low relevance** | Household foil, art, bauxite/mining with no downstream impact. |
+| **9** | **Competitors** | Constellium, Hydro, Speira, AMAG, Arconic, UACJ (EU only), ElvalHalcor, Gränges, Aludium — earnings, investment, capacity, M&A, new products. FLAT-ROLLED PRODUCERS ONLY. |
+| **8** | **End Markets** | Demand-side news from Novelis customers: can makers (Ball, Crown, Ardagh, Can-Pack), auto OEMs (JLR, BMW, Audi, VW, Ford, Tesla), aerospace (Boeing, Airbus), B&C, specialty. DEMAND-SIDE ONLY — not manufacturer earnings. |
+| **7** | **Sustainability & Recycling** | Closed-loop milestones, scrap supply/pricing, recycled content regulation, ASI certifications, carbon footprint reporting. |
+| **7** | **Trade & Regulation** | EU CBAM, US 25% tariffs, anti-dumping investigations, scrap export restrictions, Critical Raw Materials Act. |
+| **5** | **Industry News** | LME price, ECDP premium, regional premiums, supply/demand forecasts. Primary producer news (EGA, Alcoa, Rusal, Trimet) ONLY if it materially affects P1020 supply or pricing for European FRP producers. |
+
+**Minimum score to include: 5. Drop anything below.**
 
 ---
 
@@ -145,17 +164,15 @@ Rules:
 4. **Category diversity**: span at least 3 categories
 5. **No padding**: 3 quality articles beats 8 filler articles
 6. **No repeat news**: read the previous day's JSON in `output/` — drop any story covered yesterday
-7. **Energy & Upstream: apply sparingly** — only if it has clear direct impact on Novelis (major supply disruption affecting European P1020 availability or premiums). General smelter updates → drop.
+7. **Industry News: apply sparingly** — only if primary producer news has clear, direct supply-chain impact on European P1020 availability or premiums for Novelis. General smelter updates, earnings, output figures → drop.
 
 **Category ordering (MANDATORY):** Order articles by category in this exact sequence; within category, order by score descending:
 1. Novelis / Hindalco
-2. Competitor
-3. Flat Rolled Products
-4. Recycling & ESG
-5. Trade Policy
-6. Market Data
-7. Energy & Upstream
-8. General Industry
+2. Competitors
+3. End Markets
+4. Sustainability & Recycling
+5. Trade & Regulation
+6. Industry News
 
 ---
 
@@ -211,6 +228,14 @@ digest_data = {
 }
 ```
 
+Valid category values (use exactly):
+- `"Novelis / Hindalco"`
+- `"Competitors"`
+- `"End Markets"`
+- `"Sustainability & Recycling"`
+- `"Trade & Regulation"`
+- `"Industry News"`
+
 ---
 
 ## STEP 7: Write digest data to JSON
@@ -242,6 +267,6 @@ Print:
 ✓ Alex's Daily Alu Digest — [DATE]
   Articles: [N] ([categories])
   LME: [price]  ECDP: [price]
-  Email: sent to stadelmann.alexander@gmail.com + alexander.stadelmann@novelis.com
+  Email: sent to subscribers via Buttondown
   Archive: https://alex-stad.github.io/alu-digest/
 ```
