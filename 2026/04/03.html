@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Friday, 3 April 2026</title>
+<style>
+  :root {
+    --bg: #0f1620;
+    --surface: #162030;
+    --surface2: #1a2840;
+    --border: #1e3550;
+    --accent: #2d6aab;
+    --accent-light: #4a90d0;
+    --text: #c8dff0;
+    --text-muted: #6a8fa8;
+    --text-dim: #3a5870;
+    --green: #4caf7d;
+    --purple: #9b72cf;
+    --gold: #c4a43a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent-light); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5986 50%, #1a4a7a 100%);
+    padding: 32px 0;
+    border-bottom: 2px solid var(--border);
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header .label { font-size: 11px; font-weight: 600; letter-spacing: 3px; color: #7ab3d4; text-transform: uppercase; margin-bottom: 6px; }
+  .site-header h1 { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+  .site-header p { font-size: 13px; color: #a8c8e8; margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent-light); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: #fff; }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .lme-bar {
+    background: #162a3e;
+    border-left: 4px solid var(--accent);
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .lme-bar .label { font-size: 11px; font-weight: 600; letter-spacing: 2px; color: #5a9abf; text-transform: uppercase; }
+  .lme-bar .price { font-size: 20px; font-weight: 700; color: #7cc4f0; }
+  .lme-bar .unit { font-size: 11px; color: var(--text-dim); margin-left: auto; }
+
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tag {
+    display: inline-block; padding: 3px 10px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .tag-novelis   { background: #1a3a5c; color: #5ba3d4; border: 1px solid #2d5f8a; }
+  .tag-competitor{ background: #2a1f3d; color: var(--purple); border: 1px solid #4a3a6d; }
+  .tag-flat      { background: #1a2e1a; color: var(--green); border: 1px solid #2d5c35; }
+  .tag-esg       { background: #1a2e20; color: #4fba7a; border: 1px solid #2a5c3a; }
+  .tag-trade     { background: #2e2a12; color: var(--gold); border: 1px solid #5c4e1a; }
+  .tag-market    { background: #1e2228; color: #7a95b0; border: 1px solid #3a4d5c; }
+  .tag-energy    { background: #2e1e1e; color: #c47a3a; border: 1px solid #5c3a1a; }
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 13px; font-weight: 700; color: #2d6a9f; font-family: monospace; margin-left: auto; }
+  .article h3 { font-size: 17px; font-weight: 700; color: #d0e8f8; margin-bottom: 8px; line-height: 1.35; }
+  .article h3 a { color: #d0e8f8; }
+  .article h3 a:hover { color: var(--accent-light); text-decoration: none; }
+  .article p { font-size: 14px; color: #8aacbe; line-height: 1.65; }
+  .article .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: #3a7ab0; }
+
+  .site-footer {
+    margin-top: 40px; padding: 20px 24px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <p class="label">Daily Intelligence Briefing</p>
+    <h1>&#9654; Alex's Daily Alu Digest</h1>
+    <p>Global aluminium industry news · European focus · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="../../../index.html" class="back">← Back to archive</a>
+        <h2>Friday, 3 April 2026</h2>
+        <p class="meta">6 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="lme-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,505/t</span>
+          <span style="color:#e05c5c;font-size:14px;">-$79 (-2.2%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="lme-bar" style="margin-top:6px;border-left-color:#3a6a8a;">
+          <span class="label">ECDP</span>
+          <span class="price" style="font-size:18px;color:#6ab0d4;">$594/t</span>
+          <span style="color:#4caf7d;font-size:13px;">+$82 (+16.0%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-novelis">Novelis / Hindalco</span>
+            <span class="article-source">Fairmont Today</span>
+            <span class="article-source">· 1 Apr</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3><a href="https://nationaltoday.com/us/wv/fairmont/news/2026/04/01/european-aluminum-foil-maker-buys-shuttered-novelis-plant/" target="_blank" rel="noopener">European Aluminum Foil Maker Buys Shuttered Novelis Plant</a></h3>
+          <p>Assan Alüminyum acquired the former Novelis plant in Fairmont, West Virginia through U.S. subsidiary Kibar Americas on 1 April 2026; the facility was shuttered in March 2025 with ~200 job losses and will be evaluated for aluminium foil production. The sale closes out Novelis's Fairmont footprint and signals a new European-owned foil entrant in North America, where Novelis is simultaneously ramping its 600 kt Bay Minette greenfield targeting beverage can and automotive sheet.</p>
+          <a href="https://nationaltoday.com/us/wv/fairmont/news/2026/04/01/european-aluminum-foil-maker-buys-shuttered-novelis-plant/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-competitor">Competitor</span>
+            <span class="article-source">AlCircle</span>
+            <span class="article-source">· 2 Apr</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3><a href="https://www.alcircle.com/news/gfv-117889" target="_blank" rel="noopener">Aluminum crunch sparks 11% rally in Constellium</a></h3>
+          <p>Constellium SE climbed 11.15% to close at USD 27.32 on 2 April 2026, driven by investor expectations of a prolonged supply squeeze following Iran's strikes on Middle Eastern smelters and the resulting P1020 tightening. The sharp re-rating of Novelis's closest flat-rolled competitor in European automotive and packaging sheet reflects market confidence that tight supply conditions will improve realised FRP margins across the sector, reinforcing pricing power for Novelis's beverage and automotive sheet segments as well.</p>
+          <a href="https://www.alcircle.com/news/gfv-117889" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-flat">Flat Rolled Products</span>
+            <span class="article-source">AlCircle</span>
+            <span class="article-source">· 1 Apr</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3><a href="https://www.alcircle.com/news/strait-of-hormuz-disruption-halts-aluminium-supply-for-ev-production-117854" target="_blank" rel="noopener">Strait of Hormuz disruption halts aluminium supply for EV production</a></h3>
+          <p>Iran's attacks on Gulf smelters cut Aluminium Bahrain's output by 19% and halted Qatalum, removing roughly 9% of global aluminium supply and extending Middle East delivery times to ~49 days; Toyota cut ~40,000 vehicle units over two months as OEMs scrambled to replace low-carbon Gulf aluminium needed to satisfy Scope 3 emission targets. Automotive manufacturers seeking alternative low-carbon BIW and EV battery enclosure sheet could accelerate sourcing from Novelis, whose ~63% recycled content and REALCAR closed-loop programme provide comparable carbon credentials to Gulf solar-powered primary metal.</p>
+          <a href="https://www.alcircle.com/news/strait-of-hormuz-disruption-halts-aluminium-supply-for-ev-production-117854" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-trade">Trade Policy</span>
+            <span class="article-source">S&P Global Platts</span>
+            <span class="article-source">· 1 Apr</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3><a href="https://www.spglobal.com/energy/en/pricing-benchmarks/our-methodology/subscriber-notes/040126-platts-starts-to-include-cbam-costs-in-european-duty-paid-aluminum-assessments" target="_blank" rel="noopener">Platts starts to include CBAM costs in European duty-paid aluminum assessments</a></h3>
+          <p>S&P Global Platts began embedding EU Carbon Border Adjustment Mechanism costs into its European duty-paid P1020 and DDP billet aluminium premium assessments effective 1 April 2026, marking the first time CBAM charges are reflected in benchmark pricing used across European aluminium trade. This structural change raises the effective landed cost of high-carbon imported aluminium in Europe, improving the competitive economics of Novelis's recycled-content FRP sheet relative to primary-smelted imports from India, China, and the Middle East.</p>
+          <a href="https://www.spglobal.com/energy/en/pricing-benchmarks/our-methodology/subscriber-notes/040126-platts-starts-to-include-cbam-costs-in-european-duty-paid-aluminum-assessments" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-market">Market Data</span>
+            <span class="article-source">AlCircle</span>
+            <span class="article-source">· 1 Apr</span>
+            <span class="article-num">#5</span>
+          </div>
+          <h3><a href="https://www.alcircle.com/news/april-aluminium-premiums-on-the-rise-market-reacts-to-gulf-smelter-hits-117868" target="_blank" rel="noopener">April aluminium premiums on the rise: Market reacts to Gulf smelter hits</a></h3>
+          <p>Europe's duty-paid P1020 premium for April delivery surged 16% week-on-week to USD 594/t—a four-year high since June 2022—following Iran's drone and missile strikes on EGA and Aluminium Bahrain; Japan's Q2 premium jumped 20% to USD 300/t and the US Midwest premium matched record highs at USD 1.12/lb, while Goldman Sachs raised its LME Q2 2026 forecast to USD 3,450/t. Rising regional premiums increase Novelis's realised metal spreads across all three geographies and strengthen the economics of its high-recycled-content sheet, which is insulated from primary-metal supply shocks through closed-loop scrap sourcing.</p>
+          <a href="https://www.alcircle.com/news/april-aluminium-premiums-on-the-rise-market-reacts-to-gulf-smelter-hits-117868" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-energy">Energy & Upstream</span>
+            <span class="article-source">Bloomberg</span>
+            <span class="article-source">· 1 Apr</span>
+            <span class="article-num">#6</span>
+          </div>
+          <h3><a href="https://www.bloomberg.com/news/articles/2026-04-01/uae-aluminum-smelter-seeks-to-sell-feedstock-after-plant-hit" target="_blank" rel="noopener">UAE's EGA Moves to Sell Alumina as Al Taweelah Smelter Faces Damage</a></h3>
+          <p>Emirates Global Aluminium moved to sell multiple alumina cargoes shipping April–June 2026 after attacks caused significant damage to its Al Taweelah smelter near Abu Dhabi, signalling near-term output reduction from one of the world's largest primary aluminium producers at 2.6 Mt/yr. The sidelining of EGA—a key supplier of CelestiAL low-carbon solar aluminium to European markets—tightens P1020 availability for European downstream buyers and reduces the pool of low-carbon primary metal that Novelis's FRP competitors could use to offset their recycled-content disadvantages.</p>
+          <a href="https://www.bloomberg.com/news/articles/2026-04-01/uae-aluminum-smelter-seeks-to-sell-feedstock-after-plant-hit" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  A daily selection of aluminium industry news, compiled for flat-rolled professionals. ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
