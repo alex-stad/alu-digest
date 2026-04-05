@@ -118,6 +118,8 @@ Run these 12 searches. Do not skip any.
 11. `Fastmarkets OR Reuters OR Bloomberg aluminium industry news`
 12. `aluminium Industrie Deutschland OR aluminium industrie Europe actualités`
 
+**Use search snippets only — do not fetch full article pages.** Snippets provide headline, source, date, and excerpt — everything needed for scoring and summaries.
+
 For each search, extract from the top 3–4 results:
 - Exact headline as it appears on the source
 - **Direct article URL** (never a homepage — do a follow-up search if needed)
