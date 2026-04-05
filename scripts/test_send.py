@@ -54,7 +54,7 @@ SAMPLE_DIGEST = {
             "url": "https://www.fastmarkets.com/insights/constellium-q4-automotive-sheet-demand-2024",
             "source": "Fastmarkets",
             "date": datetime.now().strftime("%d %b"),
-            "category": "Competitor",
+            "category": "Competitors",
             "summary": (
                 "Constellium posted a 12% year-on-year increase in automotive sheet shipments "
                 "in Q4 2024, driven by EV lightweighting demand across German OEMs. "
@@ -66,7 +66,7 @@ SAMPLE_DIGEST = {
             "url": "https://www.aluminiumtoday.com/news/eu-recycling-rates-record-76-percent-2024",
             "source": "Aluminium International Today",
             "date": datetime.now().strftime("%d %b"),
-            "category": "Recycling & ESG",
+            "category": "Sustainability & Recycling",
             "summary": (
                 "A new report from European Aluminium shows recycling rates for flat-rolled "
                 "products reached 76% in 2024, up from 71% in 2022. The beverage can segment "
@@ -79,7 +79,7 @@ SAMPLE_DIGEST = {
             "url": "https://www.reuters.com/business/eu-cbam-aluminium-compliance-first-fines-2024-03",
             "source": "Reuters",
             "date": datetime.now().strftime("%d %b"),
-            "category": "Trade Policy",
+            "category": "Trade & Regulation",
             "summary": (
                 "The European Commission issued its first CBAM non-compliance fines totalling "
                 "\u20ac4.2 million to aluminium importers who failed to submit 2024 transition period "
@@ -92,7 +92,7 @@ SAMPLE_DIGEST = {
             "url": "https://www.metalbulletin.com/article/lme-aluminium-scrap-supply-dollar-weakness-2024",
             "source": "Metal Bulletin",
             "date": datetime.now().strftime("%d %b"),
-            "category": "Market Data",
+            "category": "Industry News",
             "summary": (
                 "LME three-month aluminium rose $18 to $2,497/t as scrap availability tightened "
                 "ahead of summer construction season in Europe. Analysts note that European P1020 "

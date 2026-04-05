@@ -5,24 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ digest_date }} — Alex's Daily Alu Digest</title>
 </head>
-<body style="margin:0;padding:0;background-color:#1a1f2e;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#1a1f2e;">
+<body style="margin:0;padding:0;background-color:#F5F6F8;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F5F6F8;">
   <tr>
     <td align="center" style="padding:24px 16px;">
-      <table role="presentation" width="700" cellpadding="0" cellspacing="0" style="max-width:700px;width:100%;">
+      <table role="presentation" width="700" cellpadding="0" cellspacing="0" style="max-width:700px;width:100%;border:1px solid #E0E4E8;border-radius:10px;background:#FFFFFF;">
 
         <!-- HEADER -->
         <tr>
-          <td style="background:linear-gradient(135deg,#1e3a5f 0%,#2d5986 50%,#1a4a7a 100%);border-radius:10px 10px 0 0;padding:28px 32px 24px;">
+          <td style="background:#FFFFFF;border-radius:10px 10px 0 0;padding:28px 32px 24px;border-bottom:2px solid #C0A060;">
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td>
-                  <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:3px;color:#7ab3d4;text-transform:uppercase;">Daily Intelligence Briefing</p>
-                  <h1 style="margin:6px 0 0;font-size:24px;font-weight:700;color:#ffffff;letter-spacing:-0.5px;">&#9654; Alex's Daily Alu Digest</h1>
+                  <h1 style="margin:0;font-size:22px;font-weight:700;color:#1A2028;letter-spacing:-0.5px;">Alex's Daily Alu Digest</h1>
+                  <p style="margin:4px 0 0;font-size:12px;color:#8A96A0;">{{ digest_date }}</p>
                 </td>
-                <td align="right" valign="top">
-                  <p style="margin:0;font-size:13px;color:#a8c8e8;line-height:1.4;">{{ digest_date }}</p>
-                  <p style="margin:2px 0 0;font-size:11px;color:#6a99b8;">{{ article_count }} stories selected</p>
+                <td align="right" valign="middle">
+                  <p style="margin:0;font-size:11px;color:#8A96A0;">{{ article_count }} stories</p>
                 </td>
               </tr>
             </table>
@@ -32,18 +31,18 @@
         <!-- LME PRICE BAR -->
         {% if lme_price %}
         <tr>
-          <td style="background:#162a3e;padding:12px 32px;border-left:4px solid #4a90c4;">
+          <td style="background:#FAFBFC;padding:14px 32px;border-bottom:1px solid #E8EAED;">
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td>
-                  <span style="font-size:11px;font-weight:600;letter-spacing:2px;color:#5a9abf;text-transform:uppercase;">LME Aluminium</span>
-                  <span style="font-size:18px;font-weight:700;color:#7cc4f0;margin-left:12px;">{{ lme_price }}</span>
+                  <span style="font-size:10px;font-weight:600;letter-spacing:0.5px;color:#8A96A0;text-transform:uppercase;">LME Aluminium</span>
+                  <span style="font-size:20px;font-weight:700;color:#1A2028;margin-left:12px;letter-spacing:-0.5px;">{{ lme_price }}</span>
                   {% if lme_change %}
-                  <span style="font-size:13px;color:{% if lme_change_positive %}#4caf7d{% else %}#e05c5c{% endif %};margin-left:8px;">{{ lme_change }}</span>
+                  <span style="font-size:12px;color:{% if lme_change_positive %}#1A8A4A{% else %}#C0392B{% endif %};margin-left:8px;">{{ lme_change }}</span>
                   {% endif %}
                 </td>
                 <td align="right">
-                  <span style="font-size:11px;color:#4a7a9b;">Cash settlement · USD/t</span>
+                  <span style="font-size:10px;color:#B0BAC4;">Cash settlement · USD/t</span>
                 </td>
               </tr>
             </table>
@@ -54,18 +53,18 @@
         <!-- ECDP PRICE BAR -->
         {% if ecdp_price %}
         <tr>
-          <td style="background:#152535;padding:10px 32px;border-left:4px solid #3a6a8a;">
+          <td style="background:#FAFBFC;padding:14px 32px;border-bottom:1px solid #E8EAED;">
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td>
-                  <span style="font-size:11px;font-weight:600;letter-spacing:2px;color:#4a8aaa;text-transform:uppercase;">ECDP</span>
-                  <span style="font-size:16px;font-weight:700;color:#6ab0d4;margin-left:12px;">{{ ecdp_price }}</span>
+                  <span style="font-size:10px;font-weight:600;letter-spacing:0.5px;color:#8A96A0;text-transform:uppercase;">ECDP</span>
+                  <span style="font-size:20px;font-weight:700;color:#1A2028;margin-left:12px;letter-spacing:-0.5px;">{{ ecdp_price }}</span>
                   {% if ecdp_change %}
-                  <span style="font-size:12px;color:{% if ecdp_change_positive %}#4caf7d{% else %}#e05c5c{% endif %};margin-left:8px;">{{ ecdp_change }}</span>
+                  <span style="font-size:12px;color:{% if ecdp_change_positive %}#1A8A4A{% else %}#C0392B{% endif %};margin-left:8px;">{{ ecdp_change }}</span>
                   {% endif %}
                 </td>
                 <td align="right">
-                  <span style="font-size:11px;color:#3a6a7b;">P1020A in-whs dp Rotterdam · USD/t</span>
+                  <span style="font-size:10px;color:#B0BAC4;">P1020A in-whs dp Rotterdam · USD/t</span>
                 </td>
               </tr>
             </table>
@@ -73,58 +72,54 @@
         </tr>
         {% endif %}
 
-        <!-- DIVIDER -->
-        <tr><td style="background:#0f1a28;height:2px;"></td></tr>
-
         <!-- ARTICLES -->
         <tr>
-          <td style="background:#0f1a28;padding:8px 0;">
+          <td style="background:#FFFFFF;padding:4px 0;">
 
             {% for article in articles %}
-            <!-- Article {{ loop.index }} -->
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
               <tr>
-                <td style="padding:20px 32px 20px;">
+                <td style="padding:22px 32px;">
 
                   <!-- Category tag + source -->
-                  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:8px;">
+                  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;">
                     <tr>
                       <td>
-                        <span style="display:inline-block;padding:3px 10px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-                          {% if article.category == 'Novelis / Hindalco' %}background:#1a3a5c;color:#5ba3d4;border:1px solid #2d5f8a;
-                          {% elif article.category == 'Competitors' %}background:#2a1f3d;color:#9b72cf;border:1px solid #4a3a6d;
-                          {% elif article.category == 'End Markets' %}background:#1a2e1a;color:#5aad6e;border:1px solid #2d5c35;
-                          {% elif article.category == 'Sustainability & Recycling' %}background:#1a2e20;color:#4fba7a;border:1px solid #2a5c3a;
-                          {% elif article.category == 'Trade & Regulation' %}background:#2e2a12;color:#c4a43a;border:1px solid #5c4e1a;
-                          {% elif article.category == 'Industry News' %}background:#2e1e1e;color:#c47a3a;border:1px solid #5c3a1a;
-                          {% else %}background:#1e2228;color:#7a95b0;border:1px solid #3a4d5c;{% endif %}
+                        <span style="display:inline-block;padding:3px 9px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:0;text-transform:uppercase;
+                          {% if article.category == 'Novelis / Hindalco' %}background:#EAF2FB;color:#1A5FA0;border:1px solid #BAD4F0;
+                          {% elif article.category == 'Competitors' %}background:#F2EAFA;color:#6B3FA0;border:1px solid #D4BCF0;
+                          {% elif article.category == 'End Markets' %}background:#EAF7EE;color:#1A7A3C;border:1px solid #B8E0C4;
+                          {% elif article.category == 'Sustainability & Recycling' %}background:#E6F8ED;color:#0F7A46;border:1px solid #A8E0C0;
+                          {% elif article.category == 'Trade & Regulation' %}background:#FBF6E2;color:#8A6A0A;border:1px solid #E8D898;
+                          {% elif article.category == 'Industry News' %}background:#FBF0E8;color:#8A4A10;border:1px solid #E8C8A0;
+                          {% else %}background:#F0F2F5;color:#4A5662;border:1px solid #C8D0D8;{% endif %}
                         ">{{ article.category }}</span>
-                        <span style="font-size:11px;color:#4a6a82;margin-left:10px;">{{ article.source }}</span>
-                        {% if article.date %}<span style="font-size:11px;color:#3a5060;margin-left:8px;">· {{ article.date }}</span>{% endif %}
+                        <span style="font-size:11px;color:#8A96A0;margin-left:10px;">{{ article.source }}</span>
+                        {% if article.date %}<span style="font-size:11px;color:#B0BAC4;margin-left:6px;">· {{ article.date }}</span>{% endif %}
                       </td>
                       <td align="right">
-                        <span style="font-size:13px;font-weight:700;color:#2d6a9f;font-family:monospace;">#{{ loop.index }}</span>
+                        <span style="font-size:12px;font-weight:600;color:#C8D0D8;">#{{ loop.index }}</span>
                       </td>
                     </tr>
                   </table>
 
                   <!-- Headline -->
-                  <h2 style="margin:0 0 8px;font-size:16px;font-weight:700;line-height:1.35;color:#f0f4f8;">
-                    <a href="{{ article.url }}" style="color:#f0f4f8!important;text-decoration:none;" target="_blank">{{ article.title }}</a>
+                  <h2 style="margin:0 0 8px;font-size:16px;font-weight:700;line-height:1.35;color:#1A2028;">
+                    <a href="{{ article.url }}" style="color:#1A2028!important;text-decoration:none;" target="_blank">{{ article.title }}</a>
                   </h2>
 
                   <!-- Summary -->
-                  <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8aacbe;">{{ article.summary }}</p>
+                  <p style="margin:0;font-size:13px;line-height:1.65;color:#4A5662;">{{ article.summary }}</p>
 
                   <!-- Read more -->
                   <p style="margin:10px 0 0;">
-                    <a href="{{ article.url }}" style="font-size:11px;color:#f0f4f8!important;text-decoration:none;font-weight:600;letter-spacing:0.5px;" target="_blank">READ FULL STORY &#8599;</a>
+                    <a href="{{ article.url }}" style="font-size:11px;color:#2D6A9F!important;text-decoration:none;font-weight:600;letter-spacing:0.5px;" target="_blank">READ FULL STORY &#8599;</a>
                   </p>
 
                 </td>
               </tr>
               {% if not loop.last %}
-              <tr><td style="padding:0 32px;"><div style="border-top:1px solid #1e2e3e;"></div></td></tr>
+              <tr><td style="padding:0 32px;"><div style="border-top:1px solid #EEF0F3;"></div></td></tr>
               {% endif %}
             </table>
             {% endfor %}
@@ -134,17 +129,17 @@
 
         <!-- FOOTER -->
         <tr>
-          <td style="background:#0d151f;border-radius:0 0 10px 10px;padding:20px 32px;border-top:2px solid #1e3a5f;">
+          <td style="background:#FAFBFC;border-radius:0 0 10px 10px;padding:18px 32px;border-top:1px solid #E8EAED;">
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td>
-                  <p style="margin:0;font-size:11px;color:#3a5060;line-height:1.5;">
-                    A daily selection of aluminium industry news, compiled for flat-rolled professionals.<br>
-                    {% if archive_url %}<a href="{{ archive_url }}" style="color:#6ab8e0;text-decoration:none;">View archive &amp; share with colleagues</a>{% endif %}
+                  <p style="margin:0;font-size:11px;color:#8A96A0;line-height:1.5;">
+                    Daily aluminium industry digest · Curated for flat-rolled professionals.<br>
+                    {% if archive_url %}<a href="{{ archive_url }}" style="color:#2D6A9F;text-decoration:none;">View archive &amp; share with colleagues</a>{% endif %}
                   </p>
                 </td>
                 <td align="right">
-                  <p style="margin:0;font-size:10px;color:#2a3a48;letter-spacing:1px;text-transform:uppercase;">Alex's Daily Alu Digest</p>
+                  <p style="margin:0;font-size:10px;color:#B0BAC4;">Alex's Daily Alu Digest</p>
                 </td>
               </tr>
             </table>
