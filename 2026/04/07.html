@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Tuesday, 7 April 2026</title>
+<style>
+  :root {
+    --bg: #0C0F14;
+    --surface: #111318;
+    --surface2: #161A21;
+    --border: #1C2430;
+    --accent: #A8B8C8;
+    --accent-light: #A8B8C8;
+    --text: #E8ECF0;
+    --text-muted: #8C9BAA;
+    --text-dim: #4A5662;
+    --text-dimmer: #374350;
+    --green: #2ECC7A;
+    --purple: #9b72cf;
+    --gold: #c4a43a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent-light); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--bg);
+    padding: 32px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent-light); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .price-bar {
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: #5A6B78; text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: #D4DDE6; letter-spacing: -0.5px; }
+  .price-bar .change-pos { font-size: 12px; color: #2ECC7A; }
+  .price-bar .change-neg { font-size: 12px; color: #E04C4C; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tag {
+    display: inline-block; padding: 3px 10px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #1a3a5c; color: #5ba3d4; border: 1px solid #2d5f8a; }
+  .tag-competitors    { background: #2a1f3d; color: var(--purple); border: 1px solid #4a3a6d; }
+  .tag-end-markets    { background: #1a2e1a; color: #5aad6e; border: 1px solid #2d5c35; }
+  .tag-sustainability { background: #1a2e20; color: #4fba7a; border: 1px solid #2a5c3a; }
+  .tag-trade          { background: #2e2a12; color: var(--gold); border: 1px solid #5c4e1a; }
+  .tag-industry       { background: #2e1e1e; color: #c47a3a; border: 1px solid #5c3a1a; }
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 13px; font-weight: 700; color: var(--text-dim); margin-left: auto; }
+  .article h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article h3 a { color: var(--text); }
+  .article h3 a:hover { color: var(--accent-light); text-decoration: none; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+  .article .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for flat-rolled professionals</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="../../../index.html" class="back">← Back to archive</a>
+        <h2>Tuesday, 7 April 2026</h2>
+        <p class="meta">4 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="lme-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,465/t</span>
+          <span style="color:#e05c5c;font-size:14px;">-$62 (-1.76%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-novelis">Novelis / Hindalco</span>
+            <span class="article-source">AlCircle</span>
+            <span class="article-source">· 6 Apr</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3><a href="https://www.alcircle.com/news/kibar-americas-acquires-100-year-old-former-novelis-facility-117874" target="_blank" rel="noopener">Kibar Americas acquires 100-year-old former Novelis facility</a></h3>
+          <p>Kibar Americas, the US subsidiary of Assan Alüminyum — one of Europe's largest aluminium foil manufacturers — has acquired Novelis's dormant flat-rolled facility in Fairmont, West Virginia, closed in March 2025 with the loss of approximately 200 jobs, with plans to produce automotive and HVAC fin stock and food-grade foil. The acquisition repurposes a former Novelis asset for a new North American FRP entrant, adding competitive pressure in specialty rolled products at a time when Novelis's own Bay Minette greenfield (600 kt, $4.1B) continues its ramp-up.</p>
+          <a href="https://www.alcircle.com/news/kibar-americas-acquires-100-year-old-former-novelis-facility-117874" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-market">Competitors</span>
+            <span class="article-source">AlCircle</span>
+            <span class="article-source">· 6 Apr</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3><a href="https://www.alcircle.com/news/gfv-117889" target="_blank" rel="noopener">Aluminium crunch sparks 11% rally in Constellium</a></h3>
+          <p>Constellium SE shares surged 11% in early April 2026 as the global aluminium supply crunch — driven by the EGA Al Taweelah smelter shutdown and Strait of Hormuz closure — pushed LME prices above $3,500/t, raising market expectations for wider scrap spreads and improved FRP producer margins. As Novelis's primary competitor in European automotive BIW sheet and North American packaging, Constellium's improved margin outlook aligns with its $780–820M Adjusted EBITDA guidance for 2026 and a newly authorised $300M share buyback programme.</p>
+          <a href="https://www.alcircle.com/news/gfv-117889" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-market">Trade & Regulation</span>
+            <span class="article-source">AlCircle</span>
+            <span class="article-source">· 6 Apr</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3><a href="https://www.alcircle.com/news/guinea-bauxite-policy-uncertainty-and-hormuz-disruption-reshape-alumina-trade-flows-117901" target="_blank" rel="noopener">Guinea bauxite policy uncertainty and Hormuz disruption reshape alumina trade flows</a></h3>
+          <p>Guinea has cut its 2026 bauxite export volumes to support prices for smaller domestic producers, while simultaneous Strait of Hormuz closure has blocked alumina supply routes from Middle East refineries, forcing European smelters to source alumina from more expensive Australian and South American alternatives. Tightening alumina availability risks constraining P1020 supply from European primary producers and placing further upward pressure on the duty-paid Rotterdam premium that underpins Novelis's feedstock costs across its ten European plants.</p>
+          <a href="https://www.alcircle.com/news/guinea-bauxite-policy-uncertainty-and-hormuz-disruption-reshape-alumina-trade-flows-117901" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-market">Industry News</span>
+            <span class="article-source">MarketMinute / FinancialContent</span>
+            <span class="article-source">· 6 Apr</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3><a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-4-6-global-aluminum-industry-gripped-by-dual-crisis-as-hormuz-closure-and-guinea-export-curbs-send-shocks-through-supply-chain" target="_blank" rel="noopener">Global Aluminum Industry Gripped by Dual Crisis as Hormuz Closure and Guinea Export Curbs Send Shocks Through Supply Chain</a></h3>
+          <p>EGA's 1.6 Mt/yr Al Taweelah smelter remains shut following precision strikes on 28 March 2026, with full recovery expected to take up to 12 months; the concurrent Strait of Hormuz closure has effectively stranded approximately 9% of global primary aluminium supply, sending LME prices above $3,500/t and European P1020 duty-paid Rotterdam premiums to record highs. The widening scrap spread enhances Novelis's structural recycling advantage as the world's largest aluminium recycler (~63% recycled content), though sustained P1020 supply disruption also elevates risk for primary metal top-ups at European rolling plants and complicates pricing on long-term can sheet and automotive contracts.</p>
+          <a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-4-6-global-aluminum-industry-gripped-by-dual-crisis-as-hormuz-closure-and-guinea-export-curbs-send-shocks-through-supply-chain" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for flat-rolled professionals ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
