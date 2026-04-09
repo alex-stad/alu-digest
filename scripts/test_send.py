@@ -38,19 +38,22 @@ SAMPLE_DIGEST = {
     "ecdp_change_positive": True,
     "articles": [
         {
-            "title": "Novelis Announces \u20ac300M Investment in G\u00f6ttingen Recycling Facility",
+            "title": "Novelis announces \u20ac300M investment in G\u00f6ttingen recycling facility",
             "url": "https://www.alcircle.com/news/novelis-announces-300m-investment-gottingen-recycling-102345",
             "source": "AlCircle",
             "date": datetime.now().strftime("%d %b"),
             "category": "Novelis / Hindalco",
             "summary": (
                 "Novelis has announced a \u20ac300 million expansion of its G\u00f6ttingen plant to double "
-                "closed-loop aluminium recycling capacity by 2027. The investment supports the "
-                "company's target of achieving 80% recycled content across its European operations."
+                "closed-loop aluminium recycling capacity by 2027."
+            ),
+            "novelis_angle": (
+                "This signals Novelis is doubling down on European recycled content ahead of the "
+                "2030 target, reducing dependence on primary metal and strengthening its CBAM position."
             ),
         },
         {
-            "title": "Constellium Reports Record Q4 Automotive Sheet Demand",
+            "title": "Constellium reports record Q4 automotive sheet demand",
             "url": "https://www.fastmarkets.com/insights/constellium-q4-automotive-sheet-demand-2024",
             "source": "Fastmarkets",
             "date": datetime.now().strftime("%d %b"),
@@ -60,6 +63,7 @@ SAMPLE_DIGEST = {
                 "in Q4 2024, driven by EV lightweighting demand across German OEMs. "
                 "The company is expanding its Neuf-Brisach facility to meet growing demand."
             ),
+            "novelis_angle": None,
         },
         {
             "title": "Aluminium Recycling Rates Hit Record 76% in EU, Report Finds",

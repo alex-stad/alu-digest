@@ -27,12 +27,11 @@ env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=True)
 
 CATEGORY_TAG_CLASS = {
     "Novelis / Hindalco": "tag-novelis",
-    "Competitor": "tag-competitor",
-    "Flat Rolled Products": "tag-flat",
-    "Recycling & ESG": "tag-esg",
-    "Energy & Upstream": "tag-energy",
-    "Trade Policy": "tag-trade",
-    "Market Data": "tag-market",
+    "Competitors": "tag-competitors",
+    "End Markets": "tag-end-markets",
+    "Sustainability & Recycling": "tag-sustainability",
+    "Trade & Regulation": "tag-trade",
+    "Industry News": "tag-industry",
 }
 
 
@@ -83,17 +82,23 @@ def render_archive_page(digest_data: dict, date_slug: str) -> str:
     # Build inline archive page (extends archive_template logic)
     articles_html = ""
     for i, art in enumerate(digest_data.get("articles", []), 1):
-        tag_class = CATEGORY_TAG_CLASS.get(art.get("category", ""), "tag-market")
+        tag_class = CATEGORY_TAG_CLASS.get(art.get("category", ""), "tag-industry")
+        novelis_angle_html = ""
+        if art.get("novelis_angle"):
+            novelis_angle_html = f"""
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>{art['novelis_angle']}</p>
+          </div>"""
         articles_html += f"""
         <article class="article">
           <div class="article-meta">
             <span class="tag {tag_class}">{art.get('category', 'General')}</span>
-            <span class="article-source">{art.get('source', '')}</span>
             {'<span class="article-source">· ' + art['date'] + '</span>' if art.get('date') else ''}
             <span class="article-num">#{i}</span>
           </div>
           <h3><a href="{art.get('url', '#')}" target="_blank" rel="noopener">{art.get('title', '')}</a></h3>
-          <p>{art.get('summary', '')}</p>
+          <p>{art.get('summary', '')}</p>{novelis_angle_html}
           <a href="{art.get('url', '#')}" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
         </article>"""
 

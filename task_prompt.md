@@ -144,16 +144,18 @@ Same event from multiple sources → keep the most authoritative: company press 
 
 ### 2c. Relevance scoring
 
-| Score | Category | What qualifies |
-|-------|----------|----------------|
-| **10** | **Novelis / Hindalco** | Novelis directly, or Hindalco news with direct Novelis impact (earnings, M&A, supply). NOT Hindalco India-domestic ops (copper, wire, extrusions) with no Novelis link. |
-| **9** | **Competitors** | Constellium, Hydro, Speira, AMAG, Arconic, UACJ (EU only), ElvalHalcor, Gränges, Aludium — earnings, investment, capacity, M&A, new products. FLAT-ROLLED PRODUCERS ONLY. |
-| **8** | **End Markets** | Demand-side news from Novelis customers: can makers (Ball, Crown, Ardagh, Can-Pack), auto OEMs (JLR, BMW, Audi, VW, Ford, Tesla), aerospace (Boeing, Airbus), B&C, specialty. DEMAND-SIDE ONLY — not manufacturer earnings. |
-| **7** | **Sustainability & Recycling** | Closed-loop milestones, scrap supply/pricing, recycled content regulation, ASI certifications, carbon footprint reporting. |
-| **7** | **Trade & Regulation** | EU CBAM, US 25% tariffs, anti-dumping investigations, scrap export restrictions, Critical Raw Materials Act. |
-| **5** | **Industry News** | LME price, ECDP premium, regional premiums, supply/demand forecasts. Primary producer news (EGA, Alcoa, Rusal, Trimet) ONLY if it materially affects P1020 supply or pricing for European FRP producers. |
+| Score | Category | What qualifies | Does NOT include |
+|-------|----------|----------------|-----------------|
+| **10** | **Novelis / Hindalco** | Novelis directly, or Hindalco news with direct Novelis impact (earnings, M&A, supply). | Hindalco India copper/wire/extrusions with no Novelis link. |
+| **9** | **Competitors** | Constellium, Hydro, Speira, AMAG, Arconic, UACJ (EU only), ElvalHalcor, Gränges, Aludium — earnings, investment, capacity, M&A, new products. FLAT-ROLLED PRODUCERS ONLY. | Primary smelters (EGA, Alcoa, Rusal); OEMs (they are customers, not competitors). |
+| **8** | **End Markets** | Any news from Novelis customers (can makers, auto OEMs, aerospace, B&C) that carries an indirect demand signal — even if aluminium is not mentioned. Strong earnings, capacity expansion, new model launches, market share gains all indicate a healthier buyer. Ask: *does this story say something meaningful about how much that customer will buy in the next 12–24 months?* If yes → include. | Stories with zero demand signal: OEM product safety recall unrelated to volumes, can maker internal HR news. |
+| **7** | **Sustainability & Recycling** | Closed-loop milestones, scrap supply/pricing, recycled content regulation, ASI certifications, carbon footprint reporting. | Carbon pricing/CBAM mechanisms — those are Trade & Regulation. |
+| **7** | **Trade & Regulation** | EU CBAM, US 25% tariffs, anti-dumping investigations, scrap export restrictions, Critical Raw Materials Act. | Sustainability milestones, recycling rate achievements, ESG reports — those are Sustainability & Recycling. |
+| **5** | **Industry News** | LME price, ECDP premium, regional premiums, supply/demand forecasts. Primary producer news (EGA, Alcoa, Rusal, Trimet) ONLY if it materially affects P1020 supply or pricing for European FRP producers. | FRP competitor stories (those go in Competitors); company-specific news with its own higher-scoring category. |
 
 **Minimum score to include: 5. Drop anything below.**
+
+**Tiebreaker:** If an article fits two categories, assign the higher-scoring one. If genuinely ambiguous after applying exclusions, use Industry News rather than guessing.
 
 ---
 
@@ -165,7 +167,7 @@ Rules:
 3. **Novelis priority**: if a Novelis/Hindalco story exists, it MUST be included
 4. **Category diversity**: span at least 3 categories
 5. **No padding**: 3 quality articles beats 8 filler articles
-6. **No repeat news**: read the previous day's JSON in `output/` — drop any story covered yesterday
+6. **No repeat news**: read the last 5 digest JSON files in `output/` — drop any story whose core topic (same company + same event) was already covered, even if the headline or source differs. A story is NOT a duplicate if there is a concrete new development (new milestone, new number, new incident). Example: if Friday covered "Novelis Bay Minette construction update", drop any article still about Bay Minette construction on Monday unless something materially new happened.
 7. **Industry News: apply sparingly** — only if primary producer news has clear, direct supply-chain impact on European P1020 availability or premiums for Novelis. General smelter updates, earnings, output figures → drop.
 
 **Category ordering (MANDATORY):** Order articles by category in this exact sequence; within category, order by score descending:
@@ -178,12 +180,27 @@ Rules:
 
 ---
 
-## STEP 4: Write 2-sentence summaries
+## STEP 3b: Quality checklist (run for each selected article before writing)
 
-- **Sentence 1**: What happened — specific facts (company, numbers, location, date).
-- **Sentence 2**: Why it matters — connect explicitly to Novelis (competitive positioning, supply chain, regulation, demand).
+- [ ] **Title**: normalised to sentence case? (Capitalise only first word and proper nouns — company names, place names, acronyms. Convert any Title Case or ALL CAPS headline from the source.)
+- [ ] **Category**: matches definition AND passes the "does NOT include" exclusions? If End Markets, is there a genuine demand signal (direct or indirect)?
+- [ ] **Dedup**: is the core topic (same company + same event) already in the last 5 digests?
+- [ ] **Date**: within 48 hours and specific (not "March 2026")?
 
-Be factual. No hedging. Use industry terms (FRP, P1020, BIW, closed-loop, DRS). Only include facts from the search result.
+If any check fails → fix or drop before proceeding.
+
+---
+
+## STEP 4: Write summaries
+
+For each article, produce:
+
+- **`summary`** (1–2 sentences): Verifiable facts from the article only — what happened, who, numbers, location. Do NOT include interpretation or "why it matters" here.
+- **`novelis_angle`** (1 sentence, optional): Your own editorial interpretation of why this matters specifically for Novelis — competitive positioning, supply chain impact, demand signal. Only populate when the insight is non-obvious. Set to `null` for stories where the relevance is self-evident.
+
+**Title normalisation:** Convert any Title Case or ALL CAPS headline to sentence case. Example: `"Novelis Announces New Recycling Facility In Germany"` → `"Novelis announces new recycling facility in Germany"`. Preserve proper nouns and acronyms (LME, CBAM, BIW, EGA, EU, FRP).
+
+Be factual. No hedging. Use industry terms (FRP, P1020, BIW, closed-loop, DRS). Only include facts from the search result in `summary`.
 
 ---
 
@@ -217,12 +234,13 @@ digest_data = {
     "ecdp_change_positive": True,
     "articles": [
         {
-            "title": "Exact headline from the source",
+            "title": "Exact headline from the source, normalised to sentence case",
             "url": "https://full-direct-article-url.com/specific-article-path",
             "source": "Source Name",
             "date": "21 Mar",
             "category": "Novelis / Hindalco",
-            "summary": "Two sentence summary. Second sentence connecting to Novelis."
+            "summary": "One to two sentences of verifiable facts from the article only.",
+            "novelis_angle": "One sentence of editorial interpretation — why this matters for Novelis. Set to null if self-evident."
         },
         # 3–8 articles, ordered by CATEGORY (Step 3 sequence)
     ],

@@ -94,8 +94,7 @@
                           {% elif article.category == 'Industry News' %}background:#FBF0E8;color:#8A4A10;border:1px solid #E8C8A0;
                           {% else %}background:#F0F2F5;color:#4A5662;border:1px solid #C8D0D8;{% endif %}
                         ">{{ article.category }}</span>
-                        <span style="font-size:11px;color:#8A96A0;margin-left:10px;">{{ article.source }}</span>
-                        {% if article.date %}<span style="font-size:11px;color:#B0BAC4;margin-left:6px;">· {{ article.date }}</span>{% endif %}
+                        {% if article.date %}<span style="font-size:11px;color:#B0BAC4;margin-left:8px;">{{ article.date }}</span>{% endif %}
                       </td>
                       <td align="right">
                         <span style="font-size:12px;font-weight:600;color:#C8D0D8;">#{{ loop.index }}</span>
@@ -110,6 +109,18 @@
 
                   <!-- Summary -->
                   <p style="margin:0;font-size:13px;line-height:1.65;color:#4A5662;">{{ article.summary }}</p>
+
+                  <!-- Novelis angle -->
+                  {% if article.novelis_angle %}
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+                    <tr>
+                      <td style="border-left:2px solid #C0A060;background:#FDFBF8;padding:8px 12px;">
+                        <span style="display:block;font-size:10px;font-weight:700;letter-spacing:0.5px;color:#C0A060;text-transform:uppercase;margin-bottom:3px;">Novelis angle</span>
+                        <span style="font-size:12px;font-style:italic;color:#5A6B78;line-height:1.6;">{{ article.novelis_angle }}</span>
+                      </td>
+                    </tr>
+                  </table>
+                  {% endif %}
 
                   <!-- Read more -->
                   <p style="margin:10px 0 0;">
