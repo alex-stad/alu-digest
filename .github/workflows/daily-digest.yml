@@ -15,12 +15,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0  # Full history needed for git worktree (gh-pages)
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -45,8 +45,13 @@ jobs:
           # Write .env so generate_digest.py can load it
           echo "BUTTONDOWN_API_KEY=${BUTTONDOWN_API_KEY}" > .env
 
-          # Run Claude: tell it the project root and to read + execute task_prompt.md
-          claude -p "The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
-            --allowedTools "Bash,Read,Write,WebSearch,Glob,Grep" \
-            --max-turns 60 \
-            --dangerously-skip-permissions
+          # Run Claude with up to 3 attempts to handle transient API overload (529 errors)
+          for attempt in 1 2 3; do
+            claude -p "The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
+              --allowedTools "Bash,Read,Write,WebSearch,Glob,Grep" \
+              --max-turns 60 \
+              --dangerously-skip-permissions && break
+            [ $attempt -eq 3 ] && { echo "All 3 attempts failed. Exiting."; exit 1; }
+            echo "Attempt ${attempt} failed — retrying in 3 minutes..."
+            sleep 180
+          done
