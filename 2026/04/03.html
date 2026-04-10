@@ -6,33 +6,30 @@
 <title>Alu Digest — Friday, 3 April 2026</title>
 <style>
   :root {
-    --bg: #0f1620;
-    --surface: #162030;
-    --surface2: #1a2840;
-    --border: #1e3550;
-    --accent: #2d6aab;
-    --accent-light: #4a90d0;
-    --text: #c8dff0;
-    --text-muted: #6a8fa8;
-    --text-dim: #3a5870;
-    --green: #4caf7d;
-    --purple: #9b72cf;
-    --gold: #c4a43a;
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
-  a { color: var(--accent-light); text-decoration: none; }
+  a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
   .site-header {
-    background: linear-gradient(135deg, #1e3a5f 0%, #2d5986 50%, #1a4a7a 100%);
-    padding: 32px 0;
-    border-bottom: 2px solid var(--border);
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
   }
   .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  .site-header .label { font-size: 11px; font-weight: 600; letter-spacing: 3px; color: #7ab3d4; text-transform: uppercase; margin-bottom: 6px; }
-  .site-header h1 { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
-  .site-header p { font-size: 13px; color: #a8c8e8; margin-top: 4px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
 
   .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
 
@@ -43,7 +40,7 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 16px 0; color: var(--text); transition: color 0.15s;
   }
-  .digest-list a:hover { color: var(--accent-light); text-decoration: none; }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
   .digest-list .date { font-size: 14px; font-weight: 600; }
   .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
   .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
@@ -51,49 +48,57 @@
   /* DIGEST PAGE */
   .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
   .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
-  .digest-header h2 { font-size: 22px; font-weight: 700; color: #fff; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
   .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
 
-  .lme-bar {
-    background: #162a3e;
-    border-left: 4px solid var(--accent);
-    padding: 12px 20px;
-    border-radius: 4px;
-    margin-bottom: 28px;
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
     display: flex; align-items: center; gap: 16px;
   }
-  .lme-bar .label { font-size: 11px; font-weight: 600; letter-spacing: 2px; color: #5a9abf; text-transform: uppercase; }
-  .lme-bar .price { font-size: 20px; font-weight: 700; color: #7cc4f0; }
-  .lme-bar .unit { font-size: 11px; color: var(--text-dim); margin-left: auto; }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
 
+  /* ARTICLES */
   .articles { display: flex; flex-direction: column; gap: 0; }
-  .article {
-    padding: 24px 0;
-    border-bottom: 1px solid var(--border);
-  }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
   .article:last-child { border-bottom: none; }
   .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
   .tag {
-    display: inline-block; padding: 3px 10px; border-radius: 3px;
-    font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
   }
-  .tag-novelis   { background: #1a3a5c; color: #5ba3d4; border: 1px solid #2d5f8a; }
-  .tag-competitor{ background: #2a1f3d; color: var(--purple); border: 1px solid #4a3a6d; }
-  .tag-flat      { background: #1a2e1a; color: var(--green); border: 1px solid #2d5c35; }
-  .tag-esg       { background: #1a2e20; color: #4fba7a; border: 1px solid #2a5c3a; }
-  .tag-trade     { background: #2e2a12; color: var(--gold); border: 1px solid #5c4e1a; }
-  .tag-market    { background: #1e2228; color: #7a95b0; border: 1px solid #3a4d5c; }
-  .tag-energy    { background: #2e1e1e; color: #c47a3a; border: 1px solid #5c3a1a; }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
   .article-source { font-size: 11px; color: var(--text-dim); }
-  .article-num { font-size: 13px; font-weight: 700; color: #2d6a9f; font-family: monospace; margin-left: auto; }
-  .article h3 { font-size: 17px; font-weight: 700; color: #d0e8f8; margin-bottom: 8px; line-height: 1.35; }
-  .article h3 a { color: #d0e8f8; }
-  .article h3 a:hover { color: var(--accent-light); text-decoration: none; }
-  .article p { font-size: 14px; color: #8aacbe; line-height: 1.65; }
-  .article .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: #3a7ab0; }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article h3 a { color: var(--text); }
+  .article h3 a:hover { color: var(--accent); }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; margin: 0; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
 
   .site-footer {
-    margin-top: 40px; padding: 20px 24px;
+    padding: 20px 24px; margin-top: 40px;
     border-top: 1px solid var(--border);
     font-size: 11px; color: var(--text-dim);
     max-width: 760px; margin: 40px auto 0;
@@ -113,7 +118,7 @@
 
     <div class="container">
       <div class="digest-header">
-        <a href="../../../index.html" class="back">← Back to archive</a>
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
         <h2>Friday, 3 April 2026</h2>
         <p class="meta">6 stories · Alex's Daily Alu Digest</p>
       </div>
