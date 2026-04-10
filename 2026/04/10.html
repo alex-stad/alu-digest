@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Friday, 10 April 2026</title>
+<style>
+  :root {
+    --bg: #0C0F14;
+    --surface: #111318;
+    --surface2: #161A21;
+    --border: #1C2430;
+    --accent: #A8B8C8;
+    --accent-light: #A8B8C8;
+    --text: #E8ECF0;
+    --text-muted: #8C9BAA;
+    --text-dim: #4A5662;
+    --text-dimmer: #374350;
+    --green: #2ECC7A;
+    --purple: #9b72cf;
+    --gold: #c4a43a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent-light); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--bg);
+    padding: 32px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent-light); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .price-bar {
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: #5A6B78; text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: #D4DDE6; letter-spacing: -0.5px; }
+  .price-bar .change-pos { font-size: 12px; color: #2ECC7A; }
+  .price-bar .change-neg { font-size: 12px; color: #E04C4C; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tag {
+    display: inline-block; padding: 3px 10px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #1a3a5c; color: #5ba3d4; border: 1px solid #2d5f8a; }
+  .tag-competitors    { background: #2a1f3d; color: var(--purple); border: 1px solid #4a3a6d; }
+  .tag-end-markets    { background: #1a2e1a; color: #5aad6e; border: 1px solid #2d5c35; }
+  .tag-sustainability { background: #1a2e20; color: #4fba7a; border: 1px solid #2a5c3a; }
+  .tag-trade          { background: #2e2a12; color: var(--gold); border: 1px solid #5c4e1a; }
+  .tag-industry       { background: #2e1e1e; color: #c47a3a; border: 1px solid #5c3a1a; }
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; margin: 0; }
+  .article-num { font-size: 13px; font-weight: 700; color: var(--text-dim); margin-left: auto; }
+  .article h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article h3 a { color: var(--text); }
+  .article h3 a:hover { color: var(--accent-light); text-decoration: none; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+  .article .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="../../../index.html" class="back">← Back to archive</a>
+        <h2>Friday, 10 April 2026</h2>
+        <p class="meta">5 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-novelis">Novelis / Hindalco</span>
+            <span class="article-source">· 9 Apr</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3><a href="https://www.prnewswire.com/news-releases/ten-novelis-plants-achieve-new-level-of-manufacturing-maturity-302738332.html" target="_blank" rel="noopener">Ten Novelis plants achieve new level of manufacturing maturity</a></h3>
+          <p>Ten of Novelis's 29 manufacturing plants achieved Level 1 certification in the Novelis Operating System (NOS) by the end of fiscal year 2026. Novelis plans to advance all 29 facilities through four progressive NOS certification levels to strengthen operational reliability and service consistency globally.</p>
+          <a href="https://www.prnewswire.com/news-releases/ten-novelis-plants-achieve-new-level-of-manufacturing-maturity-302738332.html" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-novelis">Novelis / Hindalco</span>
+            <span class="article-source">· 8 Apr</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3><a href="https://www.alcircle.com/news/aluminium-stock-surge-prompts-jpmorgans-bullish-call-on-vedanta-hindalco-117943" target="_blank" rel="noopener">Aluminium stock surge prompts JPMorgan's bullish call on Vedanta, Hindalco</a></h3>
+          <p>JPMorgan upgraded Hindalco Industries to 'overweight' on 7 April, raising its price target from INR 875 to INR 1,125, citing improving Novelis prospects as the Oswego plant restarts and scrap spreads improve, with LME aluminium trading around $3,500/t well above the ~$2,900/t implied by current share valuations.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>The Oswego restart and improving scrap spreads confirm Novelis margin recovery is underway, reinforcing Hindalco's appetite for continued capital support of Novelis's North American capacity rebuild after the September 2025 fire.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/aluminium-stock-surge-prompts-jpmorgans-bullish-call-on-vedanta-hindalco-117943" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">· 7 Apr</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3><a href="https://www.alcircle.com/news/aluminium-beverage-can-sector-to-receive-a-boost-with-amps-bonn-laboratory-117989" target="_blank" rel="noopener">Aluminium beverage can sector to receive a boost with AMP's Bonn laboratory</a></h3>
+          <p>Ardagh Metal Packaging Europe has opened a technical laboratory in Bonn, Germany, providing testing and analytical services including material compatibility, coating performance, and food safety compliance for its European beverage can production network and customers.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Ardagh's investment in premium can-sheet testing infrastructure signals continued commitment to high-specification aluminium body stock, a positive demand indicator for Novelis's beverage packaging segment which accounts for approximately 60% of its shipment volume.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/aluminium-beverage-can-sector-to-receive-a-boost-with-amps-bonn-laboratory-117989" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-trade">Trade & Regulation</span>
+            <span class="article-source">· 6 Apr</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3><a href="https://www.whitecase.com/insight-alert/united-states-modifies-steel-aluminum-and-copper-section-232-tariffs" target="_blank" rel="noopener">United States modifies steel, aluminum, and copper Section 232 tariffs</a></h3>
+          <p>A US presidential proclamation effective 6 April 2026 restructured Section 232 tariffs on aluminium, applying the duty to the full customs value of imports rather than metal content alone; aluminium articles including sheet face a 50% rate (Annex I-A) or 25% (Annex I-B), with a 90-day Commerce and USTR review due by 1 July 2026.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Applying the 50% rate to full customs value sharply raises the effective duty burden on imported aluminium sheet, strengthening the competitive moat around Novelis's US domestic plants while adding cross-border cost complexity for products moving within its North American network.</p>
+          </div>
+          <a href="https://www.whitecase.com/insight-alert/united-states-modifies-steel-aluminum-and-copper-section-232-tariffs" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">· 3 Apr</span>
+            <span class="article-num">#5</span>
+          </div>
+          <h3><a href="https://www.bloomberg.com/news/articles/2026-04-03/ega-says-may-take-a-year-to-restore-abu-dhabi-aluminum-output" target="_blank" rel="noopener">EGA says full production recovery from Al Taweelah attack could take 12 months</a></h3>
+          <p>Emirates Global Aluminium (EGA) confirmed that restoring primary aluminium production at its Al Taweelah smelter — which produced 1.6 million tonnes in 2025 — could take up to 12 months following Iranian missile and drone strikes on 28 March. The alumina refinery and recycling plant may restart earlier, and EGA has existing metal stocks to partially mitigate near-term supply disruption.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Removing 1.6 Mt/yr of primary aluminium from global supply for up to a year tightens P1020 availability and is already pushing European duty-paid premiums higher, increasing the raw material cost base for all European flat-rolled producers including Novelis.</p>
+          </div>
+          <a href="https://www.bloomberg.com/news/articles/2026-04-03/ega-says-may-take-a-year-to-restore-abu-dhabi-aluminum-output" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
