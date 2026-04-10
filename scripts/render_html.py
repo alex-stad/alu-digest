@@ -173,7 +173,7 @@ def render_archive_index(entries: list) -> str:
     template = env.get_template("archive_template.html")
     content = f"""
     <div class="container">
-      <h2 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">
+      <h2 style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">
         Archive
       </h2>
       <ul class="digest-list" style="list-style:none;">
