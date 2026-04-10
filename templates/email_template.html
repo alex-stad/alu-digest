@@ -94,7 +94,8 @@
                           {% elif article.category == 'Industry News' %}background:#FBF0E8;color:#8A4A10;border:1px solid #E8C8A0;
                           {% else %}background:#F0F2F5;color:#4A5662;border:1px solid #C8D0D8;{% endif %}
                         ">{{ article.category }}</span>
-                        {% if article.date %}<span style="font-size:11px;color:#B0BAC4;margin-left:8px;">{{ article.date }}</span>{% endif %}
+                        {% if article.source %}<span style="font-size:11px;color:#8A96A0;margin-left:10px;">{{ article.source }}</span>{% endif %}
+                        {% if article.date %}<span style="font-size:11px;color:#B0BAC4;margin-left:6px;">· {{ article.date }}</span>{% endif %}
                       </td>
                       <td align="right">
                         <span style="font-size:12px;font-weight:600;color:#C8D0D8;">#{{ loop.index }}</span>
@@ -103,15 +104,13 @@
                   </table>
 
                   <!-- Headline -->
-                  <h2 style="margin:0 0 8px;font-size:16px;font-weight:700;line-height:1.35;color:#1A2028;">
-                    <a href="{{ article.url }}" style="color:#1A2028!important;text-decoration:none;" target="_blank">{{ article.title }}</a>
-                  </h2>
+                  <h2 style="margin:0 0 8px;font-size:16px;font-weight:700;line-height:1.35;color:#1A2028;">{{ article.title }}</h2>
 
                   <!-- Summary -->
                   <p style="margin:0;font-size:13px;line-height:1.65;color:#4A5662;">{{ article.summary }}</p>
 
                   <!-- Novelis angle -->
-                  {% if article.novelis_angle %}
+                  {% if article.novelis_angle and article.category != 'Novelis / Hindalco' %}
                   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px;">
                     <tr>
                       <td style="border-left:2px solid #C0A060;background:#FDFBF8;padding:8px 12px;">

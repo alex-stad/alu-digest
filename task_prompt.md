@@ -196,7 +196,7 @@ If any check fails → fix or drop before proceeding.
 For each article, produce:
 
 - **`summary`** (1–2 sentences): Verifiable facts from the article only — what happened, who, numbers, location. Do NOT include interpretation or "why it matters" here.
-- **`novelis_angle`** (1 sentence, optional): Your own editorial interpretation of why this matters specifically for Novelis — competitive positioning, supply chain impact, demand signal. Only populate when the insight is non-obvious. Set to `null` for stories where the relevance is self-evident.
+- **`novelis_angle`** (1 sentence, optional): Your own editorial interpretation of why this matters specifically for Novelis — competitive positioning, supply chain impact, demand signal. Only populate when the insight is non-obvious. Set to `null` for stories where the relevance is self-evident. **Always `null` for `"Novelis / Hindalco"` category.**
 
 **Title normalisation:** Convert any Title Case or ALL CAPS headline to sentence case. Example: `"Novelis Announces New Recycling Facility In Germany"` → `"Novelis announces new recycling facility in Germany"`. Preserve proper nouns and acronyms (LME, CBAM, BIW, EGA, EU, FRP).
 

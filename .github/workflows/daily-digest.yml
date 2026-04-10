@@ -49,7 +49,7 @@ jobs:
           for attempt in 1 2 3; do
             claude -p "The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
               --allowedTools "Bash,Read,Write,WebSearch,Glob,Grep" \
-              --max-turns 60 \
+              --max-turns 90 \
               --dangerously-skip-permissions && break
             [ $attempt -eq 3 ] && { echo "All 3 attempts failed. Exiting."; exit 1; }
             echo "Attempt ${attempt} failed — retrying in 3 minutes..."
