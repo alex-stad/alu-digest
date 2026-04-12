@@ -34,14 +34,19 @@ These are Novelis's direct competitors. They manufacture aluminium flat-rolled p
 | Company | HQ | Relevance |
 |---------|-----|-----------|
 | **Constellium SE** | Paris | Packaging & automotive FRP. 1M+ t/yr. Neuf-Brisach, Muscle Shoals. |
-| **Norsk Hydro** | Oslo | Hydro Rolling (DE/NO). 50% Alunorf. CIRCAL/REDUXA brands. |
-| **Speira GmbH** | Grevenbroich | 7 plants DE/NO. 50% Alunorf. 650 kt recycling. KPS Capital. |
+| **Speira GmbH** | Grevenbroich | 7 plants DE/NO. 50% Alunorf. 650 kt recycling. KPS Capital. (Acquired Hydro Rolling from Norsk Hydro in 2021.) |
 | **AMAG Austria Metall** | Ranshofen | Aerospace, auto, packaging. ~226 kt. High recycled content. |
-| **Arconic** | Pittsburgh | Rolled products, N. American auto sheet. |
 | **UACJ** | Tokyo | Monitor European footprint only: European import volumes, Logan Aluminum JV with Novelis. Non-European UACJ news excluded unless direct Novelis impact. |
-| **ElvalHalcor (Elval)** | Athens | Major European roller. Packaging, auto, HVAC. |
+| **Elval** | Athens | Flat-rolled aluminium subsidiary of ElvalHalcor. Major European roller. Packaging, auto, HVAC. Search "Elval" not "ElvalHalcor" to capture rolling-specific news. |
 | **Gränges AB** | Stockholm | Heat exchanger strip, automotive HVAC, specialty rolled products. |
 | **Aludium** | Madrid | European roller (ex-Novelis Spanish plants). Packaging and industrial sheet. |
+| **Ma'aden** | Riyadh | Saudi Arabian mining & aluminium group. Rolling mill via Ma'aden Aluminium JV. Monitor capacity expansions and export volumes. |
+| **Hulamin** | Pietermaritzburg | South Africa's primary flat-roller. Packaging, auto, industrial. Monitor export strategy and capacity changes. |
+| **Aluminium Duffel** | Duffel, Belgium | European packaging and automotive FRP roller. |
+| **Impol** | Slovenska Bistrica | Slovenian roller. Packaging, industrial and automotive sheet, foil. |
+| **Carcano** | Locate di Triulzi, Italy | Italian specialty flat-roller. Industrial and technical sheet. |
+| **Laminazione Sottile** | Maddaloni, Italy | Italian packaging and industrial flat-roller. |
+| **Plus Pack** | Kolding, Denmark | Nordic flexible packaging converter and aluminium foil producer. |
 
 ---
 
@@ -103,20 +108,19 @@ Packaging Dive, Automotive Manufacturing Solutions, Recycling International
 
 ## STEP 1: Search for today's news
 
-Run these 12 searches. Do not skip any.
+Run these 11 searches. Do not skip any.
 
 1. `Novelis aluminium news today`
 2. `Hindalco site:prnewswire.com OR site:businesswire.com OR site:hindalco.com`
-3. `Constellium OR Speira aluminium rolling news`
-4. `AMAG OR Arconic OR "Norsk Hydro" OR ElvalHalcor OR Gränges OR Aludium aluminium news`
-5. `AlCircle aluminium news today`
-6. `"Aluminium International Today" OR aluminium-journal.com news`
-7. `aluminium beverage can sheet automotive aerospace news`
-8. `aluminium recycling closed loop low carbon ESG sustainability news`
-9. `EU CBAM OR aluminium tariff OR anti-dumping trade policy news`
-10. `LME aluminium price today European duty paid premium P1020`
-11. `Fastmarkets OR Reuters OR Bloomberg aluminium industry news`
-12. `aluminium Industrie Deutschland OR aluminium industrie Europe actualités`
+3. `Constellium OR Speira OR AMAG OR UACJ OR Elval OR Gränges OR Aludium OR "Ma'aden" OR Hulamin OR "Aluminium Duffel" OR Impol OR Carcano OR "Laminazione Sottile" OR "Plus Pack" aluminium rolling news`
+4. `AlCircle aluminium news today`
+5. `"Aluminium International Today" OR aluminium-journal.com news`
+6. `aluminium beverage can sheet automotive aerospace news`
+7. `aluminium recycling closed loop low carbon ESG sustainability news`
+8. `EU CBAM OR aluminium tariff OR anti-dumping trade policy news`
+9. `LME aluminium price today European duty paid premium P1020`
+10. `Fastmarkets OR Reuters OR Bloomberg aluminium industry news`
+11. `aluminium Industrie Deutschland OR aluminium industrie Europe actualités`
 
 **Use search snippets only — do not fetch full article pages.** Snippets provide headline, source, date, and excerpt — everything needed for scoring and summaries.
 
@@ -147,7 +151,7 @@ Same event from multiple sources → keep the most authoritative: company press 
 | Score | Category | What qualifies | Does NOT include |
 |-------|----------|----------------|-----------------|
 | **10** | **Novelis / Hindalco** | Novelis directly, or Hindalco news with direct Novelis impact (earnings, M&A, supply). | Hindalco India copper/wire/extrusions with no Novelis link. |
-| **9** | **Competitors** | Constellium, Hydro, Speira, AMAG, Arconic, UACJ (EU only), ElvalHalcor, Gränges, Aludium — earnings, investment, capacity, M&A, new products. FLAT-ROLLED PRODUCERS ONLY. | Primary smelters (EGA, Alcoa, Rusal); OEMs (they are customers, not competitors). |
+| **9** | **Competitors** | Constellium, Speira, AMAG, UACJ (EU only), Elval, Gränges, Aludium, Ma'aden, Hulamin, Aluminium Duffel, Impol, Carcano, Laminazione Sottile, Plus Pack — earnings, investment, capacity, M&A, new products. FLAT-ROLLED PRODUCERS ONLY. | Primary smelters (EGA, Alcoa, Rusal); OEMs (they are customers, not competitors); Norsk Hydro (sold rolling to Speira 2021); Arconic (US-only focus, no material overlap). |
 | **8** | **End Markets** | Any news from Novelis customers (can makers, auto OEMs, aerospace, B&C) that carries an indirect demand signal — even if aluminium is not mentioned. Strong earnings, capacity expansion, new model launches, market share gains all indicate a healthier buyer. Ask: *does this story say something meaningful about how much that customer will buy in the next 12–24 months?* If yes → include. | Stories with zero demand signal: OEM product safety recall unrelated to volumes, can maker internal HR news. |
 | **7** | **Sustainability & Recycling** | Closed-loop milestones, scrap supply/pricing, recycled content regulation, ASI certifications, carbon footprint reporting. | Carbon pricing/CBAM mechanisms — those are Trade & Regulation. |
 | **7** | **Trade & Regulation** | EU CBAM, US 25% tariffs, anti-dumping investigations, scrap export restrictions, Critical Raw Materials Act. | Sustainability milestones, recycling rate achievements, ESG reports — those are Sustainability & Recycling. |
