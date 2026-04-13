@@ -45,9 +45,13 @@ jobs:
           # Write .env so generate_digest.py can load it
           echo "BUTTONDOWN_API_KEY=${BUTTONDOWN_API_KEY}" > .env
 
+          # Pre-compute today's date — shell date is always correct, Claude's
+          # day-of-week arithmetic is not reliable
+          TODAY=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%A, %d %B %Y'))")
+
           # Run Claude with up to 3 attempts to handle transient API overload (529 errors)
           for attempt in 1 2 3; do
-            claude -p "The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
+            claude -p "Today's date is: ${TODAY}. The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
               --allowedTools "Bash,Read,Write,WebSearch,Glob,Grep" \
               --max-turns 90 \
               --dangerously-skip-permissions && break
