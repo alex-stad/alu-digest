@@ -108,7 +108,7 @@ Packaging Dive, Automotive Manufacturing Solutions, Recycling International
 
 ## STEP 1: Search for today's news
 
-Run these 11 searches. Do not skip any.
+Run these 10 searches. Do not skip any.
 
 1. `Novelis aluminium news today`
 2. `Hindalco site:prnewswire.com OR site:businesswire.com OR site:hindalco.com`
@@ -118,9 +118,8 @@ Run these 11 searches. Do not skip any.
 6. `aluminium beverage can sheet automotive aerospace news`
 7. `aluminium recycling closed loop low carbon ESG sustainability news`
 8. `EU CBAM OR aluminium tariff OR anti-dumping trade policy news`
-9. `LME aluminium price today European duty paid premium P1020`
-10. `Fastmarkets OR Reuters OR Bloomberg aluminium industry news`
-11. `aluminium Industrie Deutschland OR aluminium industrie Europe actualités`
+9. `Fastmarkets OR Reuters OR Bloomberg aluminium industry news`
+10. `aluminium Industrie Deutschland OR aluminium industrie Europe actualités`
 
 **Use search snippets only — do not fetch full article pages.** Snippets provide headline, source, date, and excerpt — everything needed for scoring and summaries.
 
@@ -210,18 +209,25 @@ Be factual. No hedging. Use industry terms (FRP, P1020, BIW, closed-loop, DRS). 
 
 ## STEP 5: LME price and ECDP premium data
 
-**LME Aluminium Cash Settlement:**
-- Price in USD/t + change vs previous session (absolute + %)
-- Format: `$X,XXX/t` and `+$XX (+X.X%)` or `-$XX (-X.X%)`
+Do NOT use web search for prices. Use direct page fetches only.
 
-**ECDP (European Commodity Duty-Paid Premium):**
-Search: `aluminium European duty paid premium P1020 Rotterdam USD per tonne`
-- Fastmarkets assessment of P1020A, in-whs dp Rotterdam
-- Report as a SINGLE price (use midpoint if only range available)
-- Include change vs previous assessment (absolute + %)
-- Format: `$XXX/t` and `+$XX (+X.X%)` or `-$XX (-X.X%)`
+**LME Aluminium Cash Settlement — fetch Westmetall:**
 
-If either price is unavailable, set to None. Do not guess.
+Fetch: `https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_cash`
+
+- Extract the two most recent rows from the table
+- Record the latest cash settlement value (USD/t) and compute the change vs the previous row (absolute $ and %)
+- Format value as `$X,XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
+- If the fetch fails or no value is parseable, set `lme_price` and all lme_change fields to `null`. Do not carry forward a stale LME value — a day-old LME price is misleading.
+
+**ECDP (European Duty-Paid Premium) — fetch TradingView:**
+
+Fetch: `https://www.tradingview.com/symbols/LME-ED1!/`
+
+- Extract the price and 24h change shown for `LME:ED1!` (LME Aluminium Premium Duty Paid European, Fastmarkets MB)
+- This is an LME futures contract that settles against the Fastmarkets P1020A in-whs dp Rotterdam assessment. Report it as-is — do NOT attribute it to "Fastmarkets" or describe it as a "Fastmarkets assessment".
+- Format value as `$XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
+- **Carryforward rule:** If the fetch fails or returns no parseable price, read the most recent digest JSON in `output/` and carry the last known `ecdp_price` forward. Append `*` to the value (e.g. `$583/t*`) and set `ecdp_change` to `null`. The carryforward is correct behaviour — ECDP is assessed twice weekly and does not change every day.
 
 ---
 
