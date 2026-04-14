@@ -1,0 +1,52 @@
+{
+  "date": "Thursday, 26 March 2026",
+  "lme_price": "$3,241/t",
+  "lme_change": "+$15 (+0.5%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$375\u2013395/t",
+  "ecdp_change": "+$10",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Novelis Greensboro Recycling Facility Resumes Casting After March Explosion",
+      "url": "https://www.novelis.com/about-us/news-releases/novelis-greensboro-update",
+      "source": "Novelis",
+      "date": "25 Mar",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis confirmed its Greensboro, Georgia recycling facility has resumed casting operations following the March 2026 explosion, with full production expected within weeks. The restart removes a near-term supply constraint on North American flat-rolled output."
+    },
+    {
+      "title": "Constellium Expands Neuf-Brisach Automotive Sheet Capacity by 15%",
+      "url": "https://www.constellium.com/news/constellium-expands-neuf-brisach",
+      "source": "Constellium",
+      "date": "25 Mar",
+      "category": "Competitor",
+      "summary": "Constellium announced a EUR 120M investment to expand automotive body sheet capacity at Neuf-Brisach by 15%, targeting German OEM demand for EV body-in-white applications from 2027. The expansion directly competes with Novelis Sierre and Nachterstedt in the European automotive sheet segment."
+    },
+    {
+      "title": "European Aluminium Beverage Can Recycling Reaches Record 76.3%",
+      "url": "https://www.alcircle.com/news/europe-secures-76-3-in-aluminium-can-recycling-led-by-germany-with-99-117361",
+      "source": "AlCircle",
+      "date": "24 Mar",
+      "category": "Recycling & ESG",
+      "summary": "European aluminium beverage can recycling hit a record 76.3% in 2023, with Germany at 99% driven by its deposit return scheme. The sustained high recycling rates underpin feedstock supply for closed-loop can sheet production, directly supporting Novelis's 3x30 recycled content targets."
+    },
+    {
+      "title": "Euranimi Petitions for CBAM Declaration Deadline Extension to December 2027",
+      "url": "https://euranimi.eu/euranimi-calls-for-extension-of-cbam-declaration-deadline/",
+      "source": "Euranimi",
+      "date": "Mar 2026",
+      "category": "Trade Policy",
+      "summary": "Euranimi petitioned the European Commission to extend the CBAM emissions declaration deadline for 2026 imports from September to December 2027, citing that verification of non-EU installations cannot begin until January 2027. Without the extension, default emission values could inflate aluminium import costs to EUR 600-800/t versus EUR 0-100/t with verified data."
+    },
+    {
+      "title": "LME Aluminium Rises as Gulf Supply Disruptions Persist",
+      "url": "https://www.alcircle.com/news/lme-aluminium-rises-gulf-supply-117800",
+      "source": "AlCircle",
+      "date": "26 Mar",
+      "category": "Market Data",
+      "summary": "LME three-month aluminium rose to $3,241/t as Strait of Hormuz disruptions continue to constrain Gulf smelter output. The European duty-paid premium widened to $375-395/t as buyers compete for non-Middle Eastern origin metal."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}

@@ -1,0 +1,56 @@
+{
+  "date": "Thursday, 9 April 2026",
+  "lme_price": "$3,600/t",
+  "lme_change": "+$110 (+3.1%)",
+  "lme_change_positive": true,
+  "ecdp_price": null,
+  "ecdp_change": null,
+  "ecdp_change_positive": null,
+  "articles": [
+    {
+      "title": "Aluminium stock surge prompts JPMorgan's bullish call on Vedanta, Hindalco",
+      "url": "https://www.alcircle.com/news/aluminium-stock-surge-prompts-jpmorgans-bullish-call-on-vedanta-hindalco-117943",
+      "source": "AlCircle",
+      "date": "7 Apr",
+      "category": "Novelis / Hindalco",
+      "summary": "JPMorgan on 7 April 2026 upgraded Hindalco Industries to \"overweight\" with a revised target price of Rs 1,125 (~20% upside), citing a $600/t gap between current LME aluminium prices (~$3,500/t) and the ~$2,900/t implied in Hindalco's valuation. The upgrade reflects analyst recognition that the Iran-war-driven Middle East supply shock materially benefits Novelis's parent, with elevated LME levels expected to lift consolidated earnings well above current consensus.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Transparent, accountable and comprehensive",
+      "url": "https://www.alcircle.com/press-release/transparent-accountable-and-comprehensive-117959",
+      "source": "AlCircle / Speira",
+      "date": "8 Apr",
+      "category": "Competitors",
+      "summary": "Speira GmbH launched Environmental Product Declarations (EPDs) for all major product categories in its Specialities business unit on 8 April 2026, with Life Cycle Assessments carried out by Alea Design, a University of Modena spin-off. The move strengthens Speira's sustainability credentials in FRP specialities — a segment Novelis also competes in — raising the bar for third-party-verified lifecycle transparency that downstream customers increasingly require.",
+      "novelis_angle": null
+    },
+    {
+      "title": "EU sets initial CBAM certificate price at €75.36/t for Q1 2026",
+      "url": "https://www.alcircle.com/news/eu-sets-initial-cbam-certificate-price-at-75-36-t-for-q1-2026-117974",
+      "source": "AlCircle",
+      "date": "7 Apr",
+      "category": "Trade & Regulation",
+      "summary": "The European Commission published the first official CBAM certificate price at €75.36/t for Q1 2026 on 7 April 2026, establishing the definitive carbon cost benchmark for imports of aluminium, steel, and other covered goods entering the EU. For Novelis, whose European plants produce with ~63% recycled content and low embedded carbon, this CBAM cost on competing primary aluminium imports reinforces the competitive advantage of closed-loop FRP production and supports elevated ECDP premium levels.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Top Aluminum Makers Hike US Surcharge as War Disrupts Supply",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-08/top-aluminum-makers-hike-us-surcharge-as-war-disrupts-supply",
+      "source": "Bloomberg",
+      "date": "8 Apr",
+      "category": "Industry News",
+      "summary": "Rio Tinto and Century Aluminum raised US aluminium billet premiums by approximately 12% (~$110/t) on 8 April 2026, with the US Midwest premium hitting a record $1.1325/lb as Iran-war supply disruptions eliminate roughly one-fifth of US aluminium imports from the Gulf region. The premium surge directly reflects EGA-driven P1020 supply tightening that also lifts European ECDP levels, widening scrap spreads and favouring Novelis's recycling-intensive business model across all regions.",
+      "novelis_angle": null
+    },
+    {
+      "title": "EGA Says May Take a Year to Restore Abu Dhabi Aluminum Output",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-03/ega-says-may-take-a-year-to-restore-abu-dhabi-aluminum-output",
+      "source": "Bloomberg",
+      "date": "3 Apr",
+      "category": "Industry News",
+      "summary": "Emirates Global Aluminium confirmed on 3 April 2026 that its Al Taweelah smelter in Abu Dhabi — which produced 1.6 million tonnes of cast metal in 2025 — sustained significant damage from Iranian missile and drone strikes and could take up to 12 months to restore full primary production. The potential year-long removal of 1.6 Mt/yr of P1020 capacity is the most significant primary aluminium supply disruption in years, tightening European duty-paid premiums and structurally reinforcing Novelis's advantage as the world's largest aluminium recycler.",
+      "novelis_angle": null
+    }
+  ]
+}

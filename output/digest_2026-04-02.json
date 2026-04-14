@@ -1,0 +1,56 @@
+{
+  "date": "Thursday, 2 April 2026",
+  "lme_price": "$3,527.5/t",
+  "lme_change": "+$3.7 (+0.1%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$594/t",
+  "ecdp_change": "+$82 (+16.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "China's aluminium exports now poised to grow as Iran war hits global supply",
+      "url": "https://www.engineeringnews.co.za/article/chinas-aluminium-exports-now-poised-to-grow-as-iran-war-hits-global-supply-2026-04-02",
+      "source": "Engineering News",
+      "date": "2 Apr",
+      "category": "Trade Policy",
+      "summary": "Fastmarkets now projects 2026 Chinese aluminium export volume growth at 12–18%, reversing a prior flat-to-negative outlook, as Iranian strikes on Gulf producers EGA and Alba open significant supply gaps in global markets. Redirected Chinese exports may temper near-term P1020 price spikes for Novelis’s European plants, but a wave of carbon-intensive primary metal from China would pressure the premium that Novelis’s low-carbon recycled FRP commands with automotive and packaging customers.",
+      "novelis_angle": null
+    },
+    {
+      "title": "April aluminium premiums on the rise: Market reacts to Gulf smelter hits",
+      "url": "https://www.alcircle.com/news/april-aluminium-premiums-on-the-rise-market-reacts-to-gulf-smelter-hits-117868",
+      "source": "AlCircle",
+      "date": "1 Apr",
+      "category": "Market Data",
+      "summary": "The European duty-paid P1020A premium (ECDP) for April delivery settled at $594/t — a four-year high — up 16% in one week following Iranian strikes on EGA and Alba, while Japan’s April premium jumped 20% to $300/t. As a major FRP producer blending P1020 primary metal with end-of-life scrap across its 10 European plants, Novelis faces direct input cost pressure from the ECDP surge and will need to manage the impact on conversion margins and customer contracts.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Iranian strikes hit EGA and Alba’s aluminium smelters; workers injured, facilities damaged",
+      "url": "https://www.alcircle.com/news/iranian-strikes-hit-ega-and-alba-s-aluminium-smelters-workers-injured-facilities-damaged-117823",
+      "source": "AlCircle",
+      "date": "30 Mar",
+      "category": "Energy & Upstream",
+      "summary": "Iranian drone and missile strikes on March 28 damaged EGA’s Al Taweelah smelter (1.6 Mt/yr, UAE) and Alba’s facility (1.6 Mt/yr, Bahrain), injuring workers, with Wood Mackenzie estimating a potential 3–3.5 Mt global supply disruption in 2026. Europe imports heavily from Gulf producers to supplement scrap-based rolling feedstock, so sustained curtailments at these two plants will tighten P1020 availability and elevate the All-In Metal Price for Novelis’s European operations.",
+      "novelis_angle": null
+    },
+    {
+      "title": "UAE’s EGA Moves to Sell Alumina as Al Taweelah Smelter Faces Damage",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-01/uae-aluminum-smelter-seeks-to-sell-feedstock-after-plant-hit",
+      "source": "Bloomberg",
+      "date": "1 Apr",
+      "category": "Energy & Upstream",
+      "summary": "EGA is offering multiple alumina cargoes for April–June shipment after the Iranian strike on Al Taweelah, confirming the smelter cannot consume its normal feedstock and that production curtailment is material and sustained, not temporary. The displacement of 1.6 Mt/yr Gulf smelting capacity onto the spot alumina market signals a prolonged absence of Gulf primary supply, reinforcing the tightening P1020 environment for European flat-rolled producers including Novelis.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Persian Gulf’s Aluminum Prospects Clouded by War, Says Goldman",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-02/arabian-gulf-s-aluminum-prospects-clouded-by-war-says-goldman",
+      "source": "Bloomberg",
+      "date": "2 Apr",
+      "category": "Energy & Upstream",
+      "summary": "Goldman Sachs warned on April 2 that the Gulf conflict has structurally clouded the region’s role as a future source of incremental aluminium supply, with ongoing war complicating planned expansions and the EGA/Alba damage making near-term recovery uncertain. The long-run structural supply risk identified by Goldman reinforces the strategic value of Novelis’s closed-loop scrap recycling model and its $4.1B Bay Minette greenfield, which insulate the company from primary metal market volatility.",
+      "novelis_angle": null
+    }
+  ]
+}

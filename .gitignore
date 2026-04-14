@@ -1,4 +1,5 @@
-output/
+output/*
+!output/digest_*.json
 __pycache__/
 *.pyc
 .env

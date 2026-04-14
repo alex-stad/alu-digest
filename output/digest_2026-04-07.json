@@ -1,0 +1,47 @@
+{
+  "date": "Tuesday, 7 April 2026",
+  "lme_price": "$3,465/t",
+  "lme_change": "-$62 (-1.76%)",
+  "lme_change_positive": false,
+  "ecdp_price": null,
+  "ecdp_change": null,
+  "ecdp_change_positive": null,
+  "articles": [
+    {
+      "title": "Kibar Americas acquires 100-year-old former Novelis facility",
+      "url": "https://www.alcircle.com/news/kibar-americas-acquires-100-year-old-former-novelis-facility-117874",
+      "source": "AlCircle",
+      "date": "6 Apr",
+      "category": "Novelis / Hindalco",
+      "summary": "Kibar Americas, the US subsidiary of Assan Alüminyum — one of Europe's largest aluminium foil manufacturers — has acquired Novelis's dormant flat-rolled facility in Fairmont, West Virginia, closed in March 2025 with the loss of approximately 200 jobs, with plans to produce automotive and HVAC fin stock and food-grade foil. The acquisition repurposes a former Novelis asset for a new North American FRP entrant, adding competitive pressure in specialty rolled products at a time when Novelis's own Bay Minette greenfield (600 kt, $4.1B) continues its ramp-up.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Aluminium crunch sparks 11% rally in Constellium",
+      "url": "https://www.alcircle.com/news/gfv-117889",
+      "source": "AlCircle",
+      "date": "6 Apr",
+      "category": "Competitors",
+      "summary": "Constellium SE shares surged 11% in early April 2026 as the global aluminium supply crunch — driven by the EGA Al Taweelah smelter shutdown and Strait of Hormuz closure — pushed LME prices above $3,500/t, raising market expectations for wider scrap spreads and improved FRP producer margins. As Novelis's primary competitor in European automotive BIW sheet and North American packaging, Constellium's improved margin outlook aligns with its $780–820M Adjusted EBITDA guidance for 2026 and a newly authorised $300M share buyback programme.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Guinea bauxite policy uncertainty and Hormuz disruption reshape alumina trade flows",
+      "url": "https://www.alcircle.com/news/guinea-bauxite-policy-uncertainty-and-hormuz-disruption-reshape-alumina-trade-flows-117901",
+      "source": "AlCircle",
+      "date": "6 Apr",
+      "category": "Trade & Regulation",
+      "summary": "Guinea has cut its 2026 bauxite export volumes to support prices for smaller domestic producers, while simultaneous Strait of Hormuz closure has blocked alumina supply routes from Middle East refineries, forcing European smelters to source alumina from more expensive Australian and South American alternatives. Tightening alumina availability risks constraining P1020 supply from European primary producers and placing further upward pressure on the duty-paid Rotterdam premium that underpins Novelis's feedstock costs across its ten European plants.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Global Aluminum Industry Gripped by Dual Crisis as Hormuz Closure and Guinea Export Curbs Send Shocks Through Supply Chain",
+      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-4-6-global-aluminum-industry-gripped-by-dual-crisis-as-hormuz-closure-and-guinea-export-curbs-send-shocks-through-supply-chain",
+      "source": "MarketMinute / FinancialContent",
+      "date": "6 Apr",
+      "category": "Industry News",
+      "summary": "EGA's 1.6 Mt/yr Al Taweelah smelter remains shut following precision strikes on 28 March 2026, with full recovery expected to take up to 12 months; the concurrent Strait of Hormuz closure has effectively stranded approximately 9% of global primary aluminium supply, sending LME prices above $3,500/t and European P1020 duty-paid Rotterdam premiums to record highs. The widening scrap spread enhances Novelis's structural recycling advantage as the world's largest aluminium recycler (~63% recycled content), though sustained P1020 supply disruption also elevates risk for primary metal top-ups at European rolling plants and complicates pricing on long-term can sheet and automotive contracts.",
+      "novelis_angle": null
+    }
+  ]
+}

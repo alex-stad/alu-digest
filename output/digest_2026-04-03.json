@@ -1,0 +1,65 @@
+{
+  "date": "Friday, 3 April 2026",
+  "lme_price": "$3,505/t",
+  "lme_change": "-$79 (-2.2%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$594/t",
+  "ecdp_change": "+$82 (+16.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "European Aluminum Foil Maker Buys Shuttered Novelis Plant",
+      "url": "https://nationaltoday.com/us/wv/fairmont/news/2026/04/01/european-aluminum-foil-maker-buys-shuttered-novelis-plant/",
+      "source": "Fairmont Today",
+      "date": "1 Apr",
+      "category": "Novelis / Hindalco",
+      "summary": "Assan Alüminyum acquired the former Novelis plant in Fairmont, West Virginia through U.S. subsidiary Kibar Americas on 1 April 2026; the facility was shuttered in March 2025 with ~200 job losses and will be evaluated for aluminium foil production. The sale closes out Novelis's Fairmont footprint and signals a new European-owned foil entrant in North America, where Novelis is simultaneously ramping its 600 kt Bay Minette greenfield targeting beverage can and automotive sheet.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Aluminum crunch sparks 11% rally in Constellium",
+      "url": "https://www.alcircle.com/news/gfv-117889",
+      "source": "AlCircle",
+      "date": "2 Apr",
+      "category": "Competitor",
+      "summary": "Constellium SE climbed 11.15% to close at USD 27.32 on 2 April 2026, driven by investor expectations of a prolonged supply squeeze following Iran's strikes on Middle Eastern smelters and the resulting P1020 tightening. The sharp re-rating of Novelis's closest flat-rolled competitor in European automotive and packaging sheet reflects market confidence that tight supply conditions will improve realised FRP margins across the sector, reinforcing pricing power for Novelis's beverage and automotive sheet segments as well.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Strait of Hormuz disruption halts aluminium supply for EV production",
+      "url": "https://www.alcircle.com/news/strait-of-hormuz-disruption-halts-aluminium-supply-for-ev-production-117854",
+      "source": "AlCircle",
+      "date": "1 Apr",
+      "category": "Flat Rolled Products",
+      "summary": "Iran's attacks on Gulf smelters cut Aluminium Bahrain's output by 19% and halted Qatalum, removing roughly 9% of global aluminium supply and extending Middle East delivery times to ~49 days; Toyota cut ~40,000 vehicle units over two months as OEMs scrambled to replace low-carbon Gulf aluminium needed to satisfy Scope 3 emission targets. Automotive manufacturers seeking alternative low-carbon BIW and EV battery enclosure sheet could accelerate sourcing from Novelis, whose ~63% recycled content and REALCAR closed-loop programme provide comparable carbon credentials to Gulf solar-powered primary metal.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Platts starts to include CBAM costs in European duty-paid aluminum assessments",
+      "url": "https://www.spglobal.com/energy/en/pricing-benchmarks/our-methodology/subscriber-notes/040126-platts-starts-to-include-cbam-costs-in-european-duty-paid-aluminum-assessments",
+      "source": "S&P Global Platts",
+      "date": "1 Apr",
+      "category": "Trade Policy",
+      "summary": "S&P Global Platts began embedding EU Carbon Border Adjustment Mechanism costs into its European duty-paid P1020 and DDP billet aluminium premium assessments effective 1 April 2026, marking the first time CBAM charges are reflected in benchmark pricing used across European aluminium trade. This structural change raises the effective landed cost of high-carbon imported aluminium in Europe, improving the competitive economics of Novelis's recycled-content FRP sheet relative to primary-smelted imports from India, China, and the Middle East.",
+      "novelis_angle": null
+    },
+    {
+      "title": "April aluminium premiums on the rise: Market reacts to Gulf smelter hits",
+      "url": "https://www.alcircle.com/news/april-aluminium-premiums-on-the-rise-market-reacts-to-gulf-smelter-hits-117868",
+      "source": "AlCircle",
+      "date": "1 Apr",
+      "category": "Market Data",
+      "summary": "Europe's duty-paid P1020 premium for April delivery surged 16% week-on-week to USD 594/t—a four-year high since June 2022—following Iran's drone and missile strikes on EGA and Aluminium Bahrain; Japan's Q2 premium jumped 20% to USD 300/t and the US Midwest premium matched record highs at USD 1.12/lb, while Goldman Sachs raised its LME Q2 2026 forecast to USD 3,450/t. Rising regional premiums increase Novelis's realised metal spreads across all three geographies and strengthen the economics of its high-recycled-content sheet, which is insulated from primary-metal supply shocks through closed-loop scrap sourcing.",
+      "novelis_angle": null
+    },
+    {
+      "title": "UAE's EGA Moves to Sell Alumina as Al Taweelah Smelter Faces Damage",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-01/uae-aluminum-smelter-seeks-to-sell-feedstock-after-plant-hit",
+      "source": "Bloomberg",
+      "date": "1 Apr",
+      "category": "Energy & Upstream",
+      "summary": "Emirates Global Aluminium moved to sell multiple alumina cargoes shipping April–June 2026 after attacks caused significant damage to its Al Taweelah smelter near Abu Dhabi, signalling near-term output reduction from one of the world's largest primary aluminium producers at 2.6 Mt/yr. The sidelining of EGA—a key supplier of CelestiAL low-carbon solar aluminium to European markets—tightens P1020 availability for European downstream buyers and reduces the pool of low-carbon primary metal that Novelis's FRP competitors could use to offset their recycled-content disadvantages.",
+      "novelis_angle": null
+    }
+  ]
+}

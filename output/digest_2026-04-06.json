@@ -1,0 +1,47 @@
+{
+  "date": "Monday, 6 April 2026",
+  "lme_price": "$3,505/t",
+  "lme_change": "+$40 (+1.1%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$594/t",
+  "ecdp_change": "+$82 (+16.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Kibar Americas acquires 100-year-old former Novelis facility",
+      "url": "https://www.alcircle.com/news/kibar-americas-acquires-100-year-old-former-novelis-facility-117874",
+      "source": "AlCircle",
+      "date": "2 Apr",
+      "category": "Novelis / Hindalco",
+      "summary": "Kibar Americas, a Turkish-owned European aluminium foil manufacturer, completed acquisition of Novelis's former flat-rolled aluminium plant in Fairmont, West Virginia — closed in March 2025 with ~200 job losses — with plans to produce automotive fin stock, HVAC fin stock, and food-grade foil. The sale marks the end of Novelis's century-long Fairmont presence and provides context for Novelis's strategic footprint rationalisation as it concentrates capital on the $4.1B Bay Minette greenfield.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Strikes on Gulf aluminium facilities disrupt supply chains, lowering Airbus' price target",
+      "url": "https://www.alcircle.com/news/strikes-on-gulf-aluminium-facilities-disrupt-supply-chains-lowering-airbus-price-target-117869",
+      "source": "AlCircle",
+      "date": "4 Apr",
+      "category": "End Markets",
+      "summary": "Iranian missile and drone strikes on EGA's Al Taweelah (UAE) and Alba (Bahrain) smelters — combined ~3.2Mt/yr capacity — forced force majeure declarations and led Bank of America to cut its Airbus price target from €259 to €255, estimating €100M in extra aluminium costs for Airbus in 2026. As a supplier of aerospace plate from its Koblenz plant, Novelis is positioned to benefit from increased OEM urgency to secure long-term, geopolitically insulated supply contracts.",
+      "novelis_angle": null
+    },
+    {
+      "title": "April aluminium premiums on the rise: Market reacts to Gulf smelter hits",
+      "url": "https://www.alcircle.com/news/april-aluminium-premiums-on-the-rise-market-reacts-to-gulf-smelter-hits-117868",
+      "source": "AlCircle",
+      "date": "4 Apr",
+      "category": "Trade & Regulation",
+      "summary": "European duty-paid P1020A premium settled at USD 594/t for April delivery — a four-year high last seen in June 2022 — surging 16% week-on-week following Iranian strikes on EGA and Alba and reflecting the tightest European primary aluminium supply outlook since the 2022 energy crisis. The elevated ECDP raises all-in metal costs for European FRP producers, underscoring the strategic advantage of Novelis's ~63% recycled content model, which reduces exposure to primary P1020 price spikes relative to competitors with lower scrap utilisation.",
+      "novelis_angle": null
+    },
+    {
+      "title": "EGA Says May Take a Year to Restore Abu Dhabi Aluminum Output",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-03/ega-says-may-take-a-year-to-restore-abu-dhabi-aluminum-output",
+      "source": "Bloomberg",
+      "date": "3 Apr",
+      "category": "Industry News",
+      "summary": "Emirates Global Aluminium said its Al Taweelah smelter — 1.6Mt/yr, one of the world's largest — may take up to a year to restore full production after suffering significant damage from Iranian missiles, with EGA simultaneously offering alumina cargoes for sale as it manages the supply shock. Combined with reduced output at Alba and Qatalum, up to ~3Mt/yr of Middle Eastern P1020 capacity is at risk, supporting elevated European duty-paid premiums and incentivising Novelis and other FRP producers to accelerate closed-loop scrap procurement.",
+      "novelis_angle": null
+    }
+  ]
+}
