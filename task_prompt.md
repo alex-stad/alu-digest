@@ -170,7 +170,7 @@ Rules:
 3. **Novelis priority**: if a Novelis/Hindalco story exists, it MUST be included
 4. **Category diversity**: span at least 3 categories
 5. **No padding**: 3 quality articles beats 8 filler articles
-6. **No repeat news**: read the last 5 digest JSON files in `output/` — drop any story whose core topic (same company + same event) was already covered, even if the headline or source differs. A story is NOT a duplicate if there is a concrete new development (new milestone, new number, new incident). Example: if Friday covered "Novelis Bay Minette construction update", drop any article still about Bay Minette construction on Monday unless something materially new happened.
+6. **No repeat news**: read the last 5 digest JSON files in `output/` — drop any story whose **specific, named event** (same incident, announcement, or development — not just the same theme or topic area) was already covered, even if the headline or source differs, unless there is a concrete new development: a new number, new milestone, new incident, or material update to a previously reported figure. Example: if Friday covered "Novelis Bay Minette construction update", drop any article still about Bay Minette construction on Monday unless something materially new happened.
 7. **Industry News: apply sparingly** — only if primary producer news has clear, direct supply-chain impact on European P1020 availability or premiums for Novelis. General smelter updates, earnings, output figures → drop.
 
 **Category ordering (MANDATORY):** Order articles by category in this exact sequence; within category, order by score descending:
@@ -187,7 +187,7 @@ Rules:
 
 - [ ] **Title**: normalised to sentence case? (Capitalise only first word and proper nouns — company names, place names, acronyms. Convert any Title Case or ALL CAPS headline from the source.)
 - [ ] **Category**: matches definition AND passes the "does NOT include" exclusions? If End Markets, is there a genuine demand signal (direct or indirect)?
-- [ ] **Dedup**: is the core topic (same company + same event) already in the last 5 digests?
+- [ ] **Dedup**: has this specific, named event already been covered in the last 5 digests with no concrete new development (new number, milestone, incident, or material update) since?
 - [ ] **Date**: within 48 hours and specific (not "March 2026")?
 
 If any check fails → fix or drop before proceeding.

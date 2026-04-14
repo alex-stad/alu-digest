@@ -59,3 +59,16 @@ jobs:
             echo "Attempt ${attempt} failed — retrying in 3 minutes..."
             sleep 180
           done
+
+          # Commit today's digest JSON back to main so future runs can use it for dedup.
+          # Without this, the output/ folder on main stays stale and the dedup check
+          # never sees recent digests.
+          DATE_SLUG=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%Y-%m-%d'))")
+          JSON_FILE="output/digest_${DATE_SLUG}.json"
+          if [ -f "${JSON_FILE}" ]; then
+            git add "${JSON_FILE}"
+            git diff --cached --quiet || git commit -m "Add digest JSON ${DATE_SLUG} for dedup history"
+            git push origin main
+          else
+            echo "Warning: ${JSON_FILE} not found — skipping JSON commit"
+          fi
