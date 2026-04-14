@@ -2,16 +2,17 @@ name: Daily Alu Digest
 
 on:
   schedule:
-    # 06:00 UTC = 07:00 CET (UTC+1) / 08:00 CEST (UTC+2 in summer)
+    # 05:00 UTC = 07:00 CEST (UTC+2 in summer) / 06:00 CET (UTC+1 in winter)
     - cron: '0 5 * * 1-5'
   workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
 
 permissions:
-  contents: write  # Required to push to gh-pages branch
+  contents: write  # Required to push to gh-pages branch and main (JSON dedup)
 
 jobs:
   send-digest:
     runs-on: ubuntu-latest
+    timeout-minutes: 25  # Fix 10: cap runaway jobs; 3×retry×3min + pipeline ≈ 20min max
 
     steps:
       - name: Checkout repository
@@ -25,7 +26,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install Python dependencies
-        run: pip install jinja2 httpx
+        run: pip install "jinja2==3.1.6" "httpx==0.28.1"  # Fix 5: pinned versions
 
       - name: Configure git identity
         run: |
@@ -33,26 +34,40 @@ jobs:
           git config user.name "github-actions[bot]"
 
       - name: Install Claude Code CLI
-        run: npm install -g @anthropic-ai/claude-code
+        run: npm install -g @anthropic-ai/claude-code@2.1.101  # Fix 4: pinned version
 
       - name: Run Daily Alu Digest (AI pipeline)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
         run: |
+          # Fix 2: pre-flight checks — fail fast before wasting API credits
+          if [ -z "${ANTHROPIC_API_KEY}" ]; then
+            echo "ERROR: ANTHROPIC_API_KEY secret is not set. Aborting."
+            exit 1
+          fi
+          if [ -z "${BUTTONDOWN_API_KEY}" ]; then
+            echo "ERROR: BUTTONDOWN_API_KEY secret is not set. Aborting."
+            exit 1
+          fi
+
           PROJECT_ROOT=$(pwd)
 
           # Write .env so generate_digest.py can load it
           echo "BUTTONDOWN_API_KEY=${BUTTONDOWN_API_KEY}" > .env
 
-          # Pre-compute today's date — shell date is always correct, Claude's
-          # day-of-week arithmetic is not reliable
+          # Fix 6: pre-compute both date strings before Claude runs so they are
+          # consistent across the entire job (guards against midnight crossing).
+          # Shell date is always correct; Claude's day-of-week arithmetic is not.
           TODAY=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%A, %d %B %Y'))")
+          DATE_SLUG=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%Y-%m-%d'))")
 
           # Run Claude with up to 3 attempts to handle transient API overload (529 errors)
           for attempt in 1 2 3; do
-            claude -p "Today's date is: ${TODAY}. The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
-              --allowedTools "Bash,Read,Write,WebSearch,Glob,Grep" \
+            # Fix 1: WebFetch added to allowedTools (needed for Westmetall + TradingView price fetches in Step 5)
+            # Fix 6: DATE_SLUG passed so generate_digest.py uses the same date as this job
+            claude -p "Today's date is: ${TODAY}. Date slug: ${DATE_SLUG}. The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
+              --allowedTools "Bash,Read,Write,WebSearch,WebFetch,Glob,Grep" \
               --max-turns 90 \
               --dangerously-skip-permissions && break
             [ $attempt -eq 3 ] && { echo "All 3 attempts failed. Exiting."; exit 1; }
@@ -61,11 +76,10 @@ jobs:
           done
 
           # Commit today's digest JSON back to main so future runs can use it for dedup.
-          # Without this, the output/ folder on main stays stale and the dedup check
-          # never sees recent digests.
-          DATE_SLUG=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%Y-%m-%d'))")
+          # Fix 8: pull --rebase before push to handle any concurrent push to main.
           JSON_FILE="output/digest_${DATE_SLUG}.json"
           if [ -f "${JSON_FILE}" ]; then
+            git pull --rebase origin main
             git add "${JSON_FILE}"
             git diff --cached --quiet || git commit -m "Add digest JSON ${DATE_SLUG} for dedup history"
             git push origin main

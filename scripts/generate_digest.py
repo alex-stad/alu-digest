@@ -56,8 +56,11 @@ def _find_gh() -> str:
 GH_PATH = _find_gh()
 
 
-def run(digest_data: dict) -> bool:
-    date_slug = datetime.now().strftime("%Y-%m-%d")
+def run(digest_data: dict, date_slug: str = None) -> bool:
+    # Fix 6: accept an externally-provided date_slug so the job's date and the
+    # script's date are always consistent (guards against midnight crossing).
+    if date_slug is None:
+        date_slug = datetime.now().strftime("%Y-%m-%d")
     out_dir = REPO_ROOT / "output"
     out_dir.mkdir(exist_ok=True)
 
@@ -73,15 +76,25 @@ def run(digest_data: dict) -> bool:
         print(f"[ERROR] Render failed: {e}")
         return False  # fatal — can't send without HTML
 
-    # ── 2. Send email ──────────────────────────────────────────────────────
-    try:
-        os.environ["BUTTONDOWN_API_KEY"] = BUTTONDOWN_API_KEY  # already loaded from .env
-        subject = f"Alex's Daily Alu Digest — {digest_data['date']}"
-        ok = send_digest(html, subject)
-        if not ok:
-            errors.append("Email send returned False")
-    except Exception as e:
-        errors.append(f"Email exception: {e}")
+    # ── 2. Send email (Fix 3: retry up to 3 times on transient failures) ──────
+    import time as _time
+    os.environ["BUTTONDOWN_API_KEY"] = BUTTONDOWN_API_KEY
+    subject = f"Alex's Daily Alu Digest — {digest_data['date']}"
+    email_sent = False
+    for attempt in range(1, 4):
+        try:
+            if send_digest(html, subject):
+                email_sent = True
+                break
+            print(f"[WARN] Email attempt {attempt}/3 returned False"
+                  f"{' — retrying in 10s' if attempt < 3 else ' — giving up'}")
+        except Exception as e:
+            print(f"[WARN] Email attempt {attempt}/3 exception: {e}"
+                  f"{' — retrying in 10s' if attempt < 3 else ' — giving up'}")
+        if attempt < 3:
+            _time.sleep(10)
+    if not email_sent:
+        errors.append("Email failed after 3 attempts")
 
     # ── 3. Save archive page ───────────────────────────────────────────────
     try:
@@ -166,7 +179,14 @@ def _push_to_gh_pages(date_slug: str, digest_data: dict):
         except RuntimeError:
             print("[OK] Nothing new to commit to gh-pages")
             return
-        git("push", "origin", "HEAD:gh-pages", cwd=worktree)
+        # Fix 9: retry push once after rebasing in case of concurrent push
+        try:
+            git("push", "origin", "HEAD:gh-pages", cwd=worktree)
+        except RuntimeError:
+            print("[WARN] gh-pages push failed — fetching latest and retrying once")
+            git("fetch", "origin", "gh-pages")
+            git("rebase", "origin/gh-pages", cwd=worktree)
+            git("push", "origin", "HEAD:gh-pages", cwd=worktree)
         print("[OK] GitHub Pages updated")
 
     finally:
@@ -210,6 +230,8 @@ def main():
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--json-file", help="Path to JSON file with digest data")
     group.add_argument("--json", help="JSON string with digest data")
+    # Fix 6: accept date slug from caller so script and workflow stay in sync
+    parser.add_argument("--date-slug", help="Date slug YYYY-MM-DD (defaults to today)")
     args = parser.parse_args()
 
     if args.json_file:
@@ -217,7 +239,7 @@ def main():
     else:
         data = json.loads(args.json)
 
-    ok = run(data)
+    ok = run(data, date_slug=args.date_slug)
     sys.exit(0 if ok else 1)
 
 

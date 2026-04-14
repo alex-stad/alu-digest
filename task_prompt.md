@@ -281,12 +281,13 @@ The project root is the directory containing this file. JSON must be valid. All 
 ```bash
 cd "PROJECT_ROOT"
 export PATH="/usr/local/bin:/opt/homebrew/bin:$HOME/.local/bin:$PATH"
-DATE_SLUG=$(date +%Y-%m-%d)
 mkdir -p output
-python3 scripts/generate_digest.py --json-file "output/digest_${DATE_SLUG}.json"
+python3 scripts/generate_digest.py --json-file "output/digest_DATE_SLUG.json" --date-slug DATE_SLUG
 ```
 
-Replace `PROJECT_ROOT` with the actual absolute path. This handles rendering, email sending, local save, and GitHub Pages update. Watch for `[ERROR]` lines and report exactly if any appear.
+Replace `PROJECT_ROOT` with the actual absolute path. Replace `DATE_SLUG` with the date slug provided in the run command (format: YYYY-MM-DD, e.g. 2026-04-15).
+
+**If the script exits with a non-zero code, stop immediately and report the full error output. Do not proceed to Step 9.** Watch for `[ERROR]` lines and report exactly if any appear.
 
 ---
 
