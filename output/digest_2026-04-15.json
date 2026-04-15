@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 15 April 2026",
+  "lme_price": "$3,625/t",
+  "lme_change": "-$41 (-1.1%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$583/t",
+  "ecdp_change": null,
+  "ecdp_change_positive": null,
+  "articles": [
+    {
+      "title": "Novelis extends partnership with Infinitum to advance aluminium can recycling in Norway",
+      "url": "https://www.prnewswire.com/news-releases/novelis-extends-partnership-with-infinitum-to-advance-aluminium-can-recycling-in-norway-302741300.html",
+      "source": "PR Newswire",
+      "date": "14 Apr",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis renewed its long-term partnership with Infinitum, Norway's deposit return system operator, on 14 April 2026, securing continued annual shipments of Norwegian post-consumer aluminium UBCs to Novelis's Latchford, UK recycling plant for processing into new beverage cans. The agreement provides long-term supply stability and directly supports Novelis's 3x30 targets of 75% recycled content and below 3 tCO\u2082e/t by 2030.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Boeing beats Airbus in deliveries to further comeback story",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-14/boeing-beats-airbus-in-deliveries-to-further-comeback-story",
+      "source": "Bloomberg",
+      "date": "14 Apr",
+      "category": "End Markets",
+      "summary": "Boeing delivered 143 commercial aircraft in Q1 2026 — 114 737s, 15 787 Dreamliners, eight 777s, and six 767s — outpacing Airbus's 114 Q1 deliveries and marking a significant milestone in its production recovery. Bank of America forecasts approximately 860 Airbus deliveries in 2026, signalling strong full-year demand for aerospace-grade aluminium plate.",
+      "novelis_angle": "Boeing and Airbus's combined 2026 delivery ramp signals rising demand for aerospace aluminium plate, directly benefiting Novelis's Koblenz facility as OEMs seek geopolitically-stable European suppliers to meet accelerating build rates."
+    },
+    {
+      "title": "LME aluminium hits 4-year high with cash offer price up 4% amid Hormuz blockade fears",
+      "url": "https://www.alcircle.com/news/lme-aluminium-hits-4-year-high-as-cash-offer-jump-4-to-3-665-5-t-amid-hormuz-blockade-fears-118037",
+      "source": "AlCircle",
+      "date": "13 Apr",
+      "category": "Industry News",
+      "summary": "LME aluminium cash settled at $3,665.5/t on 13 April 2026 — its highest level in four years — after surging $139.5/t (4%) in a single session following news of a US military Strait of Hormuz blockade; SHFE aluminium closed at RMB\u202025,020/t, up 1.36% in the same session. Prices eased back to $3,625/t on 14 April as initial market sentiment stabilised.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
