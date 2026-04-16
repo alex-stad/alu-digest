@@ -1,0 +1,48 @@
+{
+  "date": "Thursday, 16 April 2026",
+  "lme_price": "$3,581/t",
+  "lme_change": "-$44 (-1.2%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$583/t",
+  "ecdp_change": null,
+  "ecdp_change_positive": null,
+  "articles": [
+    {
+      "title": "Strong momentum meets stretched valuations as Hindalco Industries Ltd reaches all-time high",
+      "url": "https://www.marketsmojo.com/news/stocks-in-action/hindalco-industries-ltd-hits-all-time-high-at-rs104555-on-15-apr-2026-3946940",
+      "source": "MarketsMojo",
+      "date": "15 Apr",
+      "category": "Novelis / Hindalco",
+      "summary": "Hindalco Industries Ltd hit a fresh all-time high of Rs 1,045.55 on 15 April 2026, opening with a 5.63% gap-up and closing up 3.59%; the stock has gained 12% year-to-date against a NIFTY50 decline of 8%, with Indian aluminium majors broadly outperforming as sustained LME strength above $3,500/t — driven by Gulf supply disruptions — boosts earnings expectations for Hindalco's integrated aluminium business, which includes Novelis.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Britons push for government action as UK aluminium recycling loses ground",
+      "url": "https://www.alcircle.com/news/britons-push-for-government-action-as-uk-aluminium-recycling-loses-ground-118032",
+      "source": "AlCircle",
+      "date": "14 Apr",
+      "category": "Trade & Regulation",
+      "summary": "A Yonder Consulting survey of 2,000 UK adults commissioned by Alupro found 58% are concerned about too much aluminium scrap leaving the country; the UK aluminium sector supports 108,000 jobs and contributes £9.4 billion to the economy, yet unlike the EU — which has moved to restrict secondary aluminium exports — the UK has not introduced equivalent measures, prompting industry calls for government action to curb scrap outflows.",
+      "novelis_angle": "UK scrap export restrictions, if introduced, would benefit Novelis's Latchford recycling plant by securing more of the domestic post-consumer aluminium stream it depends on to meet its 75% recycled content target, reducing competition from overseas buyers for UK UBC scrap."
+    },
+    {
+      "title": "China's aluminum exports to surge as Mideast disruptions continue",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-15/china-s-aluminum-exports-to-surge-as-mideast-disruptions-persist",
+      "source": "Bloomberg",
+      "date": "15 Apr",
+      "category": "Industry News",
+      "summary": "Chinese aluminium exports are forecast to surge in the coming months as buyers seek alternatives to Gulf supply disruptions now in their seventh week; Chinese local aluminium inventories stand at a six-year high, export profits for semi-finished products rose 43% month-on-month, and overseas orders for automotive and packaging products are expected to increase noticeably in April, with annual export volumes potentially matching or exceeding the 2024 record of 6.7 million tonnes.",
+      "novelis_angle": "A surge in Chinese semi-finished aluminium exports — particularly automotive sheet and packaging coil — into European and global markets creates direct competitive pressure on Novelis's core product mix, while cheaper Chinese P1020 could gradually erode the elevated European duty-paid premium that currently amplifies Novelis's recycling cost advantage."
+    },
+    {
+      "title": "LME aluminium prices drop after record surge but still hover above $3,600/t",
+      "url": "https://www.alcircle.com/news/lme-aluminium-prices-drop-after-record-surge-but-still-hover-above-3600-t-118057",
+      "source": "AlCircle",
+      "date": "15 Apr",
+      "category": "Industry News",
+      "summary": "LME aluminium cash offer settled at $3,625/t on 14 April 2026, down $40.5/t from the previous session's 4-year peak of $3,665.5/t, as LME-registered warehouse stocks fell below 400,000 tonnes for the first time since the Gulf supply shock began — settling at 397,100 tonnes; the 3-month reference price declined $44.54 (-1.23%) to $3,563/t, while December 2027 futures closed up 1% at $3,022/t, indicating the market is pricing sustained supply tightness through at least end-2027.",
+      "novelis_angle": "LME inventory falling below 400,000 tonnes signals that physical P1020 availability is structurally tightening beyond the initial price spike, confirming durable support for scrap spreads — the primary driver of Novelis's recycling margin advantage over primary-aluminium-dependent competitors."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
