@@ -1,0 +1,48 @@
+{
+  "date": "Friday, 17 April 2026",
+  "lme_price": "$3,679/t",
+  "lme_change": "+$98 (+2.7%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$583/t",
+  "ecdp_change": null,
+  "ecdp_change_positive": null,
+  "articles": [
+    {
+      "title": "Constellium to report first quarter 2026 results on April 29, 2026",
+      "url": "https://www.globenewswire.com/news-release/2026/04/15/3274226/0/en/Constellium-to-Report-First-Quarter-2026-Results-on-April-29-2026.html",
+      "source": "GlobeNewswire / Constellium",
+      "date": "15 Apr",
+      "category": "Competitors",
+      "summary": "Constellium SE will release first-quarter 2026 financial results before market open on 29 April 2026, with CEO Ingrid Joerg and CFO Jack Guo hosting a conference call at 10:00 AM ET; the company generated $8.4 billion in revenue in fiscal year 2025.",
+      "novelis_angle": "Q1 2026 will be the first full-quarter earnings readout from Novelis's largest European flat-rolled competitor under the elevated scrap spreads and Middle East supply tightening that define early 2026, providing a sector benchmark for how FRP margins are translating into earnings across the industry."
+    },
+    {
+      "title": "Stellantis Poissy plant in France will stop making cars, shift to parts and recycling",
+      "url": "https://www.autonews.com/stellantis/ane-stellantis-production-end-poissy-france-0416/",
+      "source": "Automotive News",
+      "date": "16 Apr",
+      "category": "End Markets",
+      "summary": "Stellantis confirmed on 16 April 2026 that its Poissy plant near Paris will cease production of the DS3 and Opel Mokka by end of 2028, with €100 million invested to convert the facility to parts manufacturing and vehicle recycling; the plant currently employs approximately 1,600 workers.",
+      "novelis_angle": "The conversion of Poissy to end-of-life vehicle processing is part of a broader Stellantis ICE portfolio restructuring in Europe that reduces BIW aluminium sheet demand at affected plants, though the recycling operations could over time channel more post-consumer aluminium body scrap back into the European secondary metal supply chain."
+    },
+    {
+      "title": "Aluminum market enters a prolonged supply 'black hole'",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-04-16/aluminum-market-enters-a-prolonged-supply-black-hole",
+      "source": "Bloomberg",
+      "date": "16 Apr",
+      "category": "Industry News",
+      "summary": "Bloomberg reported on 16 April 2026 that even an immediate end to the Iran war would come too late to prevent a major aluminium supply shock, characterising the Gulf production disruption as structural damage to supply chains that near-term diplomatic resolution cannot reverse.",
+      "novelis_angle": "A supply deficit that persists regardless of peace-deal timing keeps European duty-paid premiums structurally elevated through at least 2026, sustaining the cost advantage of Novelis's recycling-intensive model over primary-metal-dependent flat-rolled competitors."
+    },
+    {
+      "title": "Deutsche Bank trims Norsk Hydro to 'hold' as aluminium rally stretches valuations",
+      "url": "https://www.alcircle.com/news/deutsche-bank-trims-norsk-hydro-to-hold-as-aluminium-rally-stretches-valuations-118087",
+      "source": "AlCircle",
+      "date": "17 Apr",
+      "category": "Industry News",
+      "summary": "Deutsche Bank downgraded Norsk Hydro from 'buy' to 'hold' on 17 April 2026, raising its price target to NOK 100 from NOK 88 after shares gained nearly 40% year-to-date to a record NOK 107.60; Deutsche Bank's current Norsk Hydro valuation implies LME aluminium at USD 3,200–3,400/t and the bank forecasts partial supply recovery by end 2026 with broader normalisation in H2 2027.",
+      "novelis_angle": "Deutsche Bank's H2 2027 normalisation outlook is the first credible bank timeline for when primary aluminium supply — and thus P1020 premiums — will structurally ease, providing a planning horizon for Novelis's multi-year raw material procurement and hedging strategy."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
