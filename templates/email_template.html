@@ -94,8 +94,7 @@
                           {% elif article.category == 'Industry News' %}background:#FBF0E8;color:#8A4A10;border:1px solid #E8C8A0;
                           {% else %}background:#F0F2F5;color:#4A5662;border:1px solid #C8D0D8;{% endif %}
                         ">{{ article.category }}</span>
-                        {% if article.source %}<span style="font-size:11px;color:#8A96A0;margin-left:10px;">{{ article.source }}</span>{% endif %}
-                        {% if article.date %}<span style="font-size:11px;color:#B0BAC4;margin-left:6px;">· {{ article.date }}</span>{% endif %}
+                        {% if article.date %}<span style="font-size:11px;color:#B0BAC4;margin-left:10px;">{{ article.date }}</span>{% endif %}
                       </td>
                       <td align="right">
                         <span style="font-size:12px;font-weight:600;color:#C8D0D8;">#{{ loop.index }}</span>

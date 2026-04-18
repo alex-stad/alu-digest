@@ -90,13 +90,12 @@ def render_archive_page(digest_data: dict, date_slug: str) -> str:
             <span class="label">Novelis angle</span>
             <p>{art['novelis_angle']}</p>
           </div>"""
-        source_html = f'<span class="article-source">{art["source"]}</span>' if art.get("source") else ""
-        date_html = f'<span class="article-source">· {art["date"]}</span>' if art.get("date") else ""
+        date_html = f'<span class="article-source">{art["date"]}</span>' if art.get("date") else ""
         articles_html += f"""
         <article class="article">
           <div class="article-meta">
             <span class="tag {tag_class}">{art.get('category', 'General')}</span>
-            {source_html}{date_html}
+            {date_html}
             <span class="article-num">#{i}</span>
           </div>
           <h3>{art.get('title', '')}</h3>
