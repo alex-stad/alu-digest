@@ -29,24 +29,24 @@ Novelis is the world's largest flat-rolled aluminium (FRP) producer and recycler
 
 ## COMPETITORS — flat-rolled producers only
 
-These are Novelis's direct competitors. They manufacture aluminium flat-rolled products. **Primary smelters (EGA, Alcoa, Rusal) are NOT competitors — do not assign them to this category.**
+These are Novelis's direct competitors (FRP manufacturers). **Primary smelters (EGA, Alcoa, Rusal) are NOT competitors.**
 
-| Company | HQ | Relevance |
-|---------|-----|-----------|
-| **Constellium SE** | Paris | Packaging & automotive FRP. 1M+ t/yr. Neuf-Brisach, Muscle Shoals. |
-| **Speira GmbH** | Grevenbroich | 7 plants DE/NO. 50% Alunorf. 650 kt recycling. KPS Capital. (Acquired Hydro Rolling from Norsk Hydro in 2021.) |
-| **AMAG Austria Metall** | Ranshofen | Aerospace, auto, packaging. ~226 kt. High recycled content. |
-| **UACJ** | Tokyo | Monitor European footprint only: European import volumes, Logan Aluminum JV with Novelis. Non-European UACJ news excluded unless direct Novelis impact. |
-| **Elval** | Athens | Flat-rolled aluminium subsidiary of ElvalHalcor. Major European roller. Packaging, auto, HVAC. Search "Elval" not "ElvalHalcor" to capture rolling-specific news. |
-| **Gränges AB** | Stockholm | Heat exchanger strip, automotive HVAC, specialty rolled products. |
-| **Aludium** | Madrid | European roller (ex-Novelis Spanish plants). Packaging and industrial sheet. |
-| **Ma'aden** | Riyadh | Saudi Arabian mining & aluminium group. Rolling mill via Ma'aden Aluminium JV. Monitor capacity expansions and export volumes. |
-| **Hulamin** | Pietermaritzburg | South Africa's primary flat-roller. Packaging, auto, industrial. Monitor export strategy and capacity changes. |
-| **Aluminium Duffel** | Duffel, Belgium | European packaging and automotive FRP roller. |
-| **Impol** | Slovenska Bistrica | Slovenian roller. Packaging, industrial and automotive sheet, foil. |
-| **Carcano** | Locate di Triulzi, Italy | Italian specialty flat-roller. Industrial and technical sheet. |
-| **Laminazione Sottile** | Maddaloni, Italy | Italian packaging and industrial flat-roller. |
-| **Plus Pack** | Kolding, Denmark | Nordic flexible packaging converter and aluminium foil producer. |
+| Company | HQ | Notes |
+|---------|-----|-------|
+| **Constellium SE** | Paris | Packaging & auto FRP, 1M+ t/yr |
+| **Speira GmbH** | Grevenbroich | 7 DE/NO plants, 50% Alunorf, ex-Hydro Rolling |
+| **AMAG Austria Metall** | Ranshofen | Aerospace, auto, packaging |
+| **UACJ** | Tokyo | EU footprint + Logan JV only; non-EU news excluded |
+| **Elval** | Athens | FRP subsidiary of ElvalHalcor; search "Elval" |
+| **Gränges AB** | Stockholm | Heat exchanger strip, automotive HVAC |
+| **Aludium** | Madrid | European roller, ex-Novelis Spanish plants |
+| **Ma'aden** | Riyadh | Rolling via Ma'aden Aluminium JV |
+| **Hulamin** | Pietermaritzburg | South Africa FRP, packaging/auto |
+| **Aluminium Duffel** | Belgium | European packaging & automotive FRP |
+| **Impol** | Slovenia | Packaging, industrial, automotive sheet |
+| **Carcano** | Italy | Specialty industrial sheet |
+| **Laminazione Sottile** | Italy | Packaging and industrial FRP |
+| **Plus Pack** | Denmark | Flexible packaging & aluminium foil |
 
 ---
 
@@ -96,7 +96,7 @@ Reuters, Bloomberg, S&P Global/Platts, Fastmarkets
 European Aluminium (european-aluminium.eu), IAI (international-aluminium.org), The Aluminum Association (aluminum.org)
 
 **Tier D — Company newsrooms:**
-investors.novelis.com/press-releases · hindalco.com/media · constellium.com/news · hydro.com/en/media/news · speira.com/newsroom · amag.at/en/press · granges.com/en/media · aludium.com/news
+Novelis IR, Hindalco media, Constellium news, Speira newsroom, AMAG press, Gränges media, Aludium news
 
 **Tier E — Market data:**
 Westmetall (westmetall.com) · LME (lme.com) · Kitco (kitco.com/price/base-metals/aluminum)
@@ -170,7 +170,7 @@ Rules:
 3. **Novelis priority**: if a Novelis/Hindalco story exists, it MUST be included
 4. **Category diversity**: span at least 3 categories
 5. **No padding**: 3 quality articles beats 8 filler articles
-6. **No repeat news**: read the last 5 digest JSON files in `output/` — drop any story whose **specific, named event** (same incident, announcement, or development — not just the same theme or topic area) was already covered, even if the headline or source differs, unless there is a concrete new development: a new number, new milestone, new incident, or material update to a previously reported figure. Example: if Friday covered "Novelis Bay Minette construction update", drop any article still about Bay Minette construction on Monday unless something materially new happened.
+6. **No repeat news**: read `output/dedup_history.json` (a slim list of `{date, title}` for the last 14 days) — drop any story whose **specific, named event** (same incident, announcement, or development — not just the same theme or topic area) was already covered, even if the headline or source differs, unless there is a concrete new development: a new number, new milestone, new incident, or material update to a previously reported figure. Example: if Friday covered "Novelis Bay Minette construction update", drop any article still about Bay Minette construction on Monday unless something materially new happened.
 7. **Industry News: apply sparingly** — only if primary producer news has clear, direct supply-chain impact on European P1020 availability or premiums for Novelis. General smelter updates, earnings, output figures → drop.
 
 **Category ordering (MANDATORY):** Order articles by category in this exact sequence; within category, order by score descending:
@@ -209,25 +209,40 @@ Be factual. No hedging. Use industry terms (FRP, P1020, BIW, closed-loop, DRS). 
 
 ## STEP 5: LME price and ECDP premium data
 
-Do NOT use web search for prices. Use direct page fetches only.
+Do NOT use web search for prices. Use the Bash commands below — they return only the data lines needed, keeping context minimal.
 
-**LME Aluminium Cash Settlement — fetch Westmetall:**
+**LME Aluminium Cash Settlement — Westmetall via Bash:**
 
-Fetch: `https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_cash`
+```bash
+curl -s "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_cash" | \
+  python3 -c "
+import sys, re
+html = sys.stdin.read()
+dates  = re.findall(r'\d{2}/\d{2}/\d{4}', html)
+prices = re.findall(r'\d{1,2},\d{3}\.\d{2}', html)
+for d, p in zip(dates[:2], prices[:2]):
+    print(d, p)
+"
+```
 
-- Extract the two most recent rows from the table
-- Record the latest cash settlement value (USD/t) and compute the change vs the previous row (absolute $ and %)
+- The command prints two lines: today's and yesterday's `date price` (e.g. `04/17/2026 3,679.00`)
+- Compute the change (absolute $ and %) between the two rows
 - Format value as `$X,XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
-- If the fetch fails or no value is parseable, set `lme_price` and all lme_change fields to `null`. Do not carry forward a stale LME value — a day-old LME price is misleading.
+- If the command returns empty output, set `lme_price` and all lme_change fields to `null`. Do not carry forward a stale LME value.
 
-**ECDP (European Duty-Paid Premium) — fetch TradingView:**
+**ECDP (European Duty-Paid Premium) — TradingView via Bash:**
 
-Fetch: `https://www.tradingview.com/symbols/LME-ED1!/`
+```bash
+curl -s -X POST \
+  "https://scanner.tradingview.com/symbol?symbol=LME%3AED1%21&fields=close%2Cchange_abs%2Cchange&no_404=1" \
+  -H "Content-Type: application/json" 2>/dev/null
+```
 
-- Extract the price and 24h change shown for `LME:ED1!` (LME Aluminium Premium Duty Paid European, Fastmarkets MB)
-- This is an LME futures contract that settles against the Fastmarkets P1020A in-whs dp Rotterdam assessment. Report it as-is — do NOT attribute it to "Fastmarkets" or describe it as a "Fastmarkets assessment".
+- If the command returns a JSON object containing `close`, extract `close` (the ECDP price in USD/t), `change_abs` (absolute change), and `change` (% change)
 - Format value as `$XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
-- **Carryforward rule:** If the fetch fails or returns no parseable price, read the most recent digest JSON in `output/` and carry the last known `ecdp_price` forward. Append `*` to the value (e.g. `$583/t*`) and set `ecdp_change` to `null`. The carryforward is correct behaviour — ECDP is assessed twice weekly and does not change every day.
+- If the Bash command returns no parseable JSON, fall back to: `WebFetch https://www.tradingview.com/symbols/LME-ED1!/` and extract the displayed price and 24h change
+- This contract settles against the Fastmarkets P1020A in-whs dp Rotterdam assessment. Report it as-is — do NOT label it as a "Fastmarkets assessment".
+- **Carryforward rule:** If both Bash and WebFetch fail or return no parseable price, read `output/dedup_history.json` to find the most recent digest JSON filename, then read that file and carry the last known `ecdp_price` forward. Append `*` to the value (e.g. `$583/t*`) and set `ecdp_change` to `null`. The carryforward is correct — ECDP is assessed twice weekly.
 
 ---
 
@@ -244,15 +259,15 @@ digest_data = {
     "ecdp_change_positive": True,
     "articles": [
         {
-            "title": "Exact headline from the source, normalised to sentence case",
-            "url": "https://full-direct-article-url.com/specific-article-path",
+            "title": "sentence case headline",
+            "url": "https://direct-article-url.com/path",
             "source": "Source Name",
             "date": "21 Mar",
             "category": "Novelis / Hindalco",
-            "summary": "One to two sentences of verifiable facts from the article only.",
-            "novelis_angle": "One sentence of editorial interpretation — why this matters for Novelis. Set to null if self-evident."
+            "summary": "1–2 sentences of verifiable facts only.",
+            "novelis_angle": "1 sentence interpretation or null"
         },
-        # 3–8 articles, ordered by CATEGORY (Step 3 sequence)
+        // 3–8 articles, ordered by CATEGORY (Step 3 sequence)
     ],
     "archive_url": "https://alex-stad.github.io/alu-digest/"
 }

@@ -12,7 +12,7 @@ permissions:
 jobs:
   send-digest:
     runs-on: ubuntu-latest
-    timeout-minutes: 25  # Fix 10: cap runaway jobs; 3×retry×3min + pipeline ≈ 20min max
+    timeout-minutes: 25  # smart retry only fires on 529; 70-turn run ≈ 12min + pipeline
 
     steps:
       - name: Checkout repository
@@ -62,27 +62,40 @@ jobs:
           TODAY=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%A, %d %B %Y'))")
           DATE_SLUG=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%Y-%m-%d'))")
 
-          # Run Claude with up to 3 attempts to handle transient API overload (529 errors)
+          # Run Claude — retry ONLY on 529/overloaded errors, not on turn-limit or task failures.
+          # Retrying a turn-limit failure wastes a full run's worth of API credits for no benefit.
+          CLAUDE_LOG=$(mktemp)
           for attempt in 1 2 3; do
-            # Fix 1: WebFetch added to allowedTools (needed for Westmetall + TradingView price fetches in Step 5)
-            # Fix 6: DATE_SLUG passed so generate_digest.py uses the same date as this job
             claude -p "Today's date is: ${TODAY}. Date slug: ${DATE_SLUG}. The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
               --allowedTools "Bash,Read,Write,WebSearch,WebFetch,Glob,Grep" \
-              --max-turns 90 \
-              --dangerously-skip-permissions && break
-            [ $attempt -eq 3 ] && { echo "All 3 attempts failed. Exiting."; exit 1; }
-            echo "Attempt ${attempt} failed — retrying in 3 minutes..."
-            sleep 180
-          done
+              --max-turns 70 \
+              --dangerously-skip-permissions 2>&1 | tee "${CLAUDE_LOG}"
+            CLAUDE_EXIT=${PIPESTATUS[0]}
 
-          # Commit today's digest JSON back to main so future runs can use it for dedup.
+            [ ${CLAUDE_EXIT} -eq 0 ] && break
+
+            if grep -qiE "529|overloaded_error|overloaded|rate.?limit|too.?many.?request" "${CLAUDE_LOG}"; then
+              [ ${attempt} -eq 3 ] && { echo "All 3 attempts failed (API overloaded). Exiting."; rm -f "${CLAUDE_LOG}"; exit 1; }
+              echo "Attempt ${attempt}: API overloaded — retrying in 3 minutes..."
+              sleep 180
+            else
+              echo "Attempt ${attempt} failed (not an overload error — not retrying)."
+              rm -f "${CLAUDE_LOG}"
+              exit 1
+            fi
+          done
+          rm -f "${CLAUDE_LOG}"
+
+          # Commit today's digest JSON and updated dedup_history.json back to main.
           # Fix 8: pull --rebase before push to handle any concurrent push to main.
           JSON_FILE="output/digest_${DATE_SLUG}.json"
+          DEDUP_FILE="output/dedup_history.json"
           if [ -f "${JSON_FILE}" ]; then
             git pull --rebase origin main
             git add "${JSON_FILE}"
-            git diff --cached --quiet || git commit -m "Add digest JSON ${DATE_SLUG} for dedup history"
+            [ -f "${DEDUP_FILE}" ] && git add "${DEDUP_FILE}"
+            git diff --cached --quiet || git commit -m "Add digest ${DATE_SLUG}: JSON + dedup history"
             git push origin main
           else
-            echo "Warning: ${JSON_FILE} not found — skipping JSON commit"
+            echo "Warning: ${JSON_FILE} not found — skipping commit"
           fi

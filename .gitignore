@@ -1,5 +1,6 @@
 output/*
 !output/digest_*.json
+!output/dedup_history.json
 __pycache__/
 *.pyc
 .env

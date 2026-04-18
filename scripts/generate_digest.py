@@ -15,7 +15,7 @@ import json
 import os
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
@@ -54,6 +54,38 @@ def _find_gh() -> str:
     return "gh"  # fall back to PATH
 
 GH_PATH = _find_gh()
+
+
+def _update_dedup_history(out_dir: Path, date_slug: str, digest_data: dict) -> None:
+    """
+    Maintain output/dedup_history.json — a slim list of {date, title} entries
+    for the last 14 days. Used by Claude for dedup checks instead of reading
+    full digest JSON files (~5,600 tokens → ~1,400 tokens).
+    """
+    history_file = out_dir / "dedup_history.json"
+    entries = []
+    if history_file.exists():
+        try:
+            entries = json.loads(history_file.read_text(encoding="utf-8"))
+        except Exception:
+            entries = []
+
+    # Remove today's entries (in case of re-run) and entries older than 14 days
+    cutoff = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
+    entries = [e for e in entries
+               if e.get("date") != date_slug and e.get("date", "") >= cutoff]
+
+    # Prepend today's articles (newest first)
+    new_entries = [
+        {"date": date_slug, "title": art.get("title", "")}
+        for art in digest_data.get("articles", [])
+    ]
+    entries = new_entries + entries
+
+    history_file.write_text(
+        json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    print(f"[OK] dedup_history.json updated ({len(entries)} entries)")
 
 
 def run(digest_data: dict, date_slug: str = None) -> bool:
@@ -110,6 +142,12 @@ def run(digest_data: dict, date_slug: str = None) -> bool:
         _push_to_gh_pages(date_slug, digest_data)
     except Exception as e:
         errors.append(f"GitHub Pages push: {e}")
+
+    # ── 4b. Update slim dedup history ─────────────────────────────────────
+    try:
+        _update_dedup_history(out_dir, date_slug, digest_data)
+    except Exception as e:
+        errors.append(f"Dedup history update: {e}")
 
     # ── 5. Summary ─────────────────────────────────────────────────────────
     n = len(digest_data.get("articles", []))
