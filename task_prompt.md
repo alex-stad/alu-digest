@@ -187,7 +187,7 @@ Rules:
 
 - [ ] **Title**: normalised to sentence case? (Capitalise only first word and proper nouns — company names, place names, acronyms. Convert any Title Case or ALL CAPS headline from the source.)
 - [ ] **Category**: matches definition AND passes the "does NOT include" exclusions? If End Markets, is there a genuine demand signal (direct or indirect)?
-- [ ] **Dedup**: has this specific, named event already been covered in the last 5 digests with no concrete new development (new number, milestone, incident, or material update) since?
+- [ ] **Dedup**: has this specific, named event already been covered in the last 14 days (per `output/dedup_history.json`) with no concrete new development (new number, milestone, incident, or material update) since?
 - [ ] **Date**: within 48 hours and specific (not "March 2026")?
 
 If any check fails → fix or drop before proceeding.
@@ -218,31 +218,32 @@ curl -s "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_c
   python3 -c "
 import sys, re
 html = sys.stdin.read()
-dates  = re.findall(r'\d{2}/\d{2}/\d{4}', html)
-prices = re.findall(r'\d{1,2},\d{3}\.\d{2}', html)
-for d, p in zip(dates[:2], prices[:2]):
-    print(d, p)
+# Each row: <td>date</td><td>cash</td><td>3-month</td><td>stock</td>
+# Take first two cells (date + cash) for the two most recent rows.
+rows = re.findall(r'<tr>\s*<td[^>]*>([^<]+)</td>\s*<td[^>]*>([^<]+)</td>', html)
+for date, cash in rows[:2]:
+    print(date.strip(), '|', cash.strip())
 "
 ```
 
-- The command prints two lines: today's and yesterday's `date price` (e.g. `04/17/2026 3,679.00`)
-- Compute the change (absolute $ and %) between the two rows
+- The command prints two lines in the form `DD. Month YYYY | X,XXX.XX` — today's cash settlement and the previous trading day's
+- Parse both values (strip commas, convert to float) and compute the change between row[0] and row[1] (absolute $ and %)
 - Format value as `$X,XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
 - If the command returns empty output, set `lme_price` and all lme_change fields to `null`. Do not carry forward a stale LME value.
 
 **ECDP (European Duty-Paid Premium) — TradingView via Bash:**
 
 ```bash
-curl -s -X POST \
-  "https://scanner.tradingview.com/symbol?symbol=LME%3AED1%21&fields=close%2Cchange_abs%2Cchange&no_404=1" \
-  -H "Content-Type: application/json" 2>/dev/null
+curl -s "https://scanner.tradingview.com/symbol?symbol=LME%3AED1%21&fields=close%2Cchange_abs%2Cchange&no_404=1"
 ```
 
-- If the command returns a JSON object containing `close`, extract `close` (the ECDP price in USD/t), `change_abs` (absolute change), and `change` (% change)
+- Note: this is a **GET** request — do not add `-X POST` (the endpoint returns HTTP 405 for POST)
+- Returns a JSON object like `{"change":0.245,"change_abs":1.43,"close":584.64}`
+- Extract `close` (the ECDP price in USD/t), `change_abs` (absolute change), and `change` (% change)
 - Format value as `$XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
-- If the Bash command returns no parseable JSON, fall back to: `WebFetch https://www.tradingview.com/symbols/LME-ED1!/` and extract the displayed price and 24h change
+- If the JSON is empty or missing fields, fall back to: `WebFetch https://www.tradingview.com/symbols/LME-ED1!/` and extract the displayed price and 24h change
 - This contract settles against the Fastmarkets P1020A in-whs dp Rotterdam assessment. Report it as-is — do NOT label it as a "Fastmarkets assessment".
-- **Carryforward rule:** If both Bash and WebFetch fail or return no parseable price, read `output/dedup_history.json` to find the most recent digest JSON filename, then read that file and carry the last known `ecdp_price` forward. Append `*` to the value (e.g. `$583/t*`) and set `ecdp_change` to `null`. The carryforward is correct — ECDP is assessed twice weekly.
+- **Carryforward rule:** If both Bash and WebFetch fail, glob `output/digest_*.json`, take the most recent file, read its `ecdp_price`, append `*` (e.g. `$583/t*`), and set `ecdp_change` to `null`. The carryforward is correct — ECDP is assessed twice weekly.
 
 ---
 

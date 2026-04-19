@@ -98,7 +98,12 @@ def run(digest_data: dict, date_slug: str = None) -> bool:
 
     errors = []
 
-    # ── 1. Render ──────────────────────────────────────────────────────────
+    # Order: render → archive → gh-pages push → dedup update → SEND EMAIL (last).
+    # Email is the only irreversible step. Everything else must succeed or be logged
+    # BEFORE we notify subscribers — otherwise a broken archive link goes out, or
+    # tomorrow's dedup misses today's stories.
+
+    # ── 1. Render email HTML ───────────────────────────────────────────────
     try:
         html = render_email(digest_data)
         email_path = out_dir / f"{date_slug}.html"
@@ -108,7 +113,29 @@ def run(digest_data: dict, date_slug: str = None) -> bool:
         print(f"[ERROR] Render failed: {e}")
         return False  # fatal — can't send without HTML
 
-    # ── 2. Send email (Fix 3: retry up to 3 times on transient failures) ──────
+    # ── 2. Render + save archive page ──────────────────────────────────────
+    try:
+        archive_html = render_archive_page(digest_data, date_slug)
+        archive_path = out_dir / f"archive_{date_slug}.html"
+        archive_path.write_text(archive_html, encoding="utf-8")
+        print(f"[OK] Archive page saved → {archive_path}")
+    except Exception as e:
+        errors.append(f"Archive render: {e}")
+
+    # ── 3. Push to GitHub Pages ────────────────────────────────────────────
+    try:
+        _push_to_gh_pages(date_slug, digest_data)
+    except Exception as e:
+        errors.append(f"GitHub Pages push: {e}")
+
+    # ── 4. Update slim dedup history (before email send, so a post-email
+    #       failure can't cause duplicate coverage tomorrow) ────────────────
+    try:
+        _update_dedup_history(out_dir, date_slug, digest_data)
+    except Exception as e:
+        errors.append(f"Dedup history update: {e}")
+
+    # ── 5. Send email — LAST irreversible step ─────────────────────────────
     import time as _time
     os.environ["BUTTONDOWN_API_KEY"] = BUTTONDOWN_API_KEY
     subject = f"Alex's Daily Alu Digest — {digest_data['date']}"
@@ -128,28 +155,7 @@ def run(digest_data: dict, date_slug: str = None) -> bool:
     if not email_sent:
         errors.append("Email failed after 3 attempts")
 
-    # ── 3. Save archive page ───────────────────────────────────────────────
-    try:
-        archive_html = render_archive_page(digest_data, date_slug)
-        archive_path = out_dir / f"archive_{date_slug}.html"
-        archive_path.write_text(archive_html, encoding="utf-8")
-        print(f"[OK] Archive page saved → {archive_path}")
-    except Exception as e:
-        errors.append(f"Archive render: {e}")
-
-    # ── 4. Push to GitHub Pages ────────────────────────────────────────────
-    try:
-        _push_to_gh_pages(date_slug, digest_data)
-    except Exception as e:
-        errors.append(f"GitHub Pages push: {e}")
-
-    # ── 4b. Update slim dedup history ─────────────────────────────────────
-    try:
-        _update_dedup_history(out_dir, date_slug, digest_data)
-    except Exception as e:
-        errors.append(f"Dedup history update: {e}")
-
-    # ── 5. Summary ─────────────────────────────────────────────────────────
+    # ── 6. Summary ─────────────────────────────────────────────────────────
     n = len(digest_data.get("articles", []))
     lme = digest_data.get("lme_price", "N/A")
     ecdp = digest_data.get("ecdp_price", "N/A")
