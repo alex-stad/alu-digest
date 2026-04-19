@@ -1,9 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><!-- TITLE_PLACEHOLDER --></title>
+#!/usr/bin/env python3
+"""
+Patches existing gh-pages HTML files to use the new light theme.
+- Replaces the <style>...</style> block with the new light CSS
+- Fixes the "Back to archive" link (../../../index.html → absolute URL)
+- Updates h3 link colour so article title links look right on light bg
+
+Run from repo root:
+    python3 scripts/patch_ghpages.py /path/to/gh-pages-worktree
+"""
+
+import sys
+import re
+from pathlib import Path
+
+NEW_STYLE = """\
 <style>
   :root {
     --bg: #F5F6F8;
@@ -87,11 +97,13 @@
   .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
 
   .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article h3 a { color: var(--text); }
+  .article h3 a:hover { color: var(--accent); }
   .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
 
   .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
   .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
-  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; margin: 0; }
 
   .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
 
@@ -101,23 +113,59 @@
     font-size: 11px; color: var(--text-dim);
     max-width: 760px; margin: 40px auto 0;
   }
-</style>
-</head>
-<body>
+</style>"""
 
-<header class="site-header">
-  <div class="inner">
-    <h1>Alex's Daily Alu Digest</h1>
-    <p>Daily aluminium industry digest · Curated for Novelis</p>
-  </div>
-</header>
+ARCHIVE_INDEX_URL = "https://alex-stad.github.io/alu-digest/"
 
-<!-- CONTENT_PLACEHOLDER -->
 
-<div class="site-footer">
-  Daily aluminium industry digest · Curated for Novelis ·
-  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
-</div>
+def patch_file(path: Path) -> bool:
+    """Patch a single HTML file. Returns True if changed."""
+    original = path.read_text(encoding="utf-8")
+    html = original
 
-</body>
-</html>
+    # 1. Replace <style>...</style> block
+    html = re.sub(r"<style>.*?</style>", NEW_STYLE, html, flags=re.DOTALL)
+
+    # 2. Fix "Back to archive" relative links → absolute URL
+    html = html.replace('href="../../../index.html"', f'href="{ARCHIVE_INDEX_URL}"')
+    html = html.replace("href='../../../index.html'", f"href='{ARCHIVE_INDEX_URL}'")
+
+    if html == original:
+        return False
+
+    path.write_text(html, encoding="utf-8")
+    return True
+
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python3 scripts/patch_ghpages.py <gh-pages-worktree-path>")
+        sys.exit(1)
+
+    root = Path(sys.argv[1])
+    if not root.is_dir():
+        print(f"Error: {root} is not a directory")
+        sys.exit(1)
+
+    targets = list(root.glob("**/*.html"))
+    patched = []
+    skipped = []
+
+    for f in sorted(targets):
+        changed = patch_file(f)
+        if changed:
+            patched.append(f.relative_to(root))
+        else:
+            skipped.append(f.relative_to(root))
+
+    print(f"Patched {len(patched)} files:")
+    for p in patched:
+        print(f"  ✓ {p}")
+    if skipped:
+        print(f"\nUnchanged ({len(skipped)} files — already up to date or no style block found):")
+        for p in skipped:
+            print(f"  – {p}")
+
+
+if __name__ == "__main__":
+    main()
