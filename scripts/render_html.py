@@ -9,6 +9,8 @@ Usage:
 
 import sys
 import os
+import re
+import html as _html
 from pathlib import Path
 from datetime import datetime
 
@@ -35,6 +37,32 @@ CATEGORY_TAG_CLASS = {
 }
 
 
+def _safe_url(url: str) -> str:
+    """
+    Defence against URL-scheme injection from Claude-generated content.
+    Jinja2 autoescape blocks HTML injection but does NOT block javascript: or
+    data: URLs used as href targets. Return only http(s) URLs; anything else
+    is replaced with '#' and logged.
+    """
+    if not url or not isinstance(url, str):
+        return "#"
+    stripped = url.strip().lower()
+    if stripped.startswith(("http://", "https://")):
+        return url.strip()
+    print(f"[WARN] Rejected non-http(s) URL: {url!r} — replaced with '#'")
+    return "#"
+
+
+def _sanitize_articles(articles: list) -> list:
+    """Return a copy of articles with URL fields safety-checked."""
+    safe = []
+    for art in articles:
+        a = dict(art)
+        a["url"] = _safe_url(a.get("url", ""))
+        safe.append(a)
+    return safe
+
+
 def render_email(digest_data: dict) -> str:
     """
     Render the HTML email from digest data.
@@ -59,6 +87,7 @@ def render_email(digest_data: dict) -> str:
         "archive_url": "https://alex-stad.github.io/alu-digest/"  # optional
     }
     """
+    articles = _sanitize_articles(digest_data.get("articles", []))
     template = env.get_template("email_template.html")
     return template.render(
         digest_date=digest_data.get("date", datetime.now().strftime("%A, %d %B %Y")),
@@ -68,9 +97,9 @@ def render_email(digest_data: dict) -> str:
         ecdp_price=digest_data.get("ecdp_price"),
         ecdp_change=digest_data.get("ecdp_change"),
         ecdp_change_positive=digest_data.get("ecdp_change_positive", True),
-        articles=digest_data.get("articles", []),
-        article_count=len(digest_data.get("articles", [])),
-        archive_url=digest_data.get("archive_url", "https://alex-stad.github.io/alu-digest/"),
+        articles=articles,
+        article_count=len(articles),
+        archive_url=_safe_url(digest_data.get("archive_url") or "https://alex-stad.github.io/alu-digest/"),
     )
 
 
@@ -79,7 +108,11 @@ def render_archive_page(digest_data: dict, date_slug: str) -> str:
     Render a standalone archive HTML page for GitHub Pages.
     date_slug: "2025-03-20"
     """
-    # Build inline archive page (extends archive_template logic)
+    # Build inline archive page. All Claude-generated fields are HTML-escaped
+    # (f-strings don't autoescape like Jinja2 does) and URLs are scheme-checked.
+    def esc(s):
+        return _html.escape(str(s or ""), quote=True)
+
     articles_html = ""
     for i, art in enumerate(digest_data.get("articles", []), 1):
         tag_class = CATEGORY_TAG_CLASS.get(art.get("category", ""), "tag-industry")
@@ -88,50 +121,52 @@ def render_archive_page(digest_data: dict, date_slug: str) -> str:
             novelis_angle_html = f"""
           <div class="novelis-angle">
             <span class="label">Novelis angle</span>
-            <p>{art['novelis_angle']}</p>
+            <p>{esc(art['novelis_angle'])}</p>
           </div>"""
-        date_html = f'<span class="article-source">{art["date"]}</span>' if art.get("date") else ""
+        date_html = f'<span class="article-source">{esc(art["date"])}</span>' if art.get("date") else ""
+        safe_url = _safe_url(art.get("url", ""))
         articles_html += f"""
         <article class="article">
           <div class="article-meta">
-            <span class="tag {tag_class}">{art.get('category', 'General')}</span>
+            <span class="tag {tag_class}">{esc(art.get('category', 'General'))}</span>
             {date_html}
             <span class="article-num">#{i}</span>
           </div>
-          <h3>{art.get('title', '')}</h3>
-          <p>{art.get('summary', '')}</p>{novelis_angle_html}
-          <a href="{art.get('url', '#')}" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+          <h3>{esc(art.get('title', ''))}</h3>
+          <p>{esc(art.get('summary', ''))}</p>{novelis_angle_html}
+          <a href="{esc(safe_url)}" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
         </article>"""
 
     lme_bar = ""
     if digest_data.get("lme_price"):
         change_class = "change-pos" if digest_data.get("lme_change_positive", True) else "change-neg"
-        change_html = f'<span class="{change_class}">{digest_data["lme_change"]}</span>' if digest_data.get("lme_change") else ""
+        change_html = f'<span class="{change_class}">{esc(digest_data["lme_change"])}</span>' if digest_data.get("lme_change") else ""
         lme_bar = f"""
         <div class="price-bar">
           <span class="label">LME Aluminium</span>
-          <span class="price">{digest_data['lme_price']}</span>
+          <span class="price">{esc(digest_data['lme_price'])}</span>
           {change_html}
           <span class="unit">Cash settlement · USD/t</span>
         </div>"""
         if digest_data.get("ecdp_price"):
             ecdp_change_class = "change-pos" if digest_data.get("ecdp_change_positive", True) else "change-neg"
-            ecdp_change_html = f'<span class="{ecdp_change_class}">{digest_data["ecdp_change"]}</span>' if digest_data.get("ecdp_change") else ""
+            ecdp_change_html = f'<span class="{ecdp_change_class}">{esc(digest_data["ecdp_change"])}</span>' if digest_data.get("ecdp_change") else ""
             lme_bar += f"""
         <div class="price-bar">
           <span class="label">ECDP</span>
-          <span class="price">{digest_data['ecdp_price']}</span>
+          <span class="price">{esc(digest_data['ecdp_price'])}</span>
           {ecdp_change_html}
           <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
         </div>"""
 
     template = env.get_template("archive_template.html")
     # Render with injected content block
+    date_display = esc(digest_data.get('date', date_slug))
     content = f"""
     <div class="container">
       <div class="digest-header">
         <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
-        <h2>{digest_data.get('date', date_slug)}</h2>
+        <h2>{date_display}</h2>
         <p class="meta">{len(digest_data.get('articles', []))} stories · Alex's Daily Alu Digest</p>
       </div>
       {lme_bar}
@@ -144,7 +179,7 @@ def render_archive_page(digest_data: dict, date_slug: str) -> str:
     base_html = template.render()
     return base_html.replace("<!-- CONTENT_PLACEHOLDER -->", content).replace(
         "<!-- TITLE_PLACEHOLDER -->",
-        f"Alu Digest — {digest_data.get('date', date_slug)}"
+        f"Alu Digest — {date_display}"
     )
 
 
@@ -155,15 +190,24 @@ def render_archive_index(entries: list) -> str:
     entries: list of dicts, newest first:
     [{"date_slug": "2025-03-20", "date_display": "Thursday, 20 March 2025", "lead_headline": "..."}, ...]
     """
+    def esc(s):
+        return _html.escape(str(s or ""), quote=True)
+
     items_html = ""
     for entry in entries:
-        path = f"{entry['date_slug'].replace('-', '/')}.html"
+        # date_slug is YYYY-MM-DD — validate strictly before building the path,
+        # so a malformed slug can't inject into the href attribute.
+        slug = str(entry.get("date_slug", ""))
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", slug):
+            print(f"[WARN] Skipping archive index entry with invalid date_slug: {slug!r}")
+            continue
+        path = f"{slug.replace('-', '/')}.html"
         items_html += f"""
         <li class="digest-list">
-          <a href="{path}">
+          <a href="{esc(path)}">
             <div>
-              <div class="date">{entry['date_display']}</div>
-              <div class="headline">{entry.get('lead_headline', '')}</div>
+              <div class="date">{esc(entry.get('date_display', ''))}</div>
+              <div class="headline">{esc(entry.get('lead_headline', ''))}</div>
             </div>
             <span class="arrow">›</span>
           </a>

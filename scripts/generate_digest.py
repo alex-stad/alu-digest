@@ -56,6 +56,39 @@ def _find_gh() -> str:
 GH_PATH = _find_gh()
 
 
+def _atomic_write_text(path: Path, content: str) -> None:
+    """
+    Write content to `path` atomically by writing to a sibling .tmp file and then
+    os.replace()-ing it into place. Prevents half-written JSON on crash/power-loss.
+    """
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(content, encoding="utf-8")
+    os.replace(tmp, path)
+
+
+def _validate_digest_data(data) -> None:
+    """
+    Validate the top-level shape of digest_data before we render or send.
+    Fails fast with a clear message instead of producing a half-broken email.
+    Raises ValueError on invalid input.
+    """
+    if not isinstance(data, dict):
+        raise ValueError(f"digest_data must be a dict, got {type(data).__name__}")
+    if not isinstance(data.get("date"), str) or not data["date"].strip():
+        raise ValueError("digest_data['date'] must be a non-empty string")
+    articles = data.get("articles")
+    if not isinstance(articles, list) or not articles:
+        raise ValueError("digest_data['articles'] must be a non-empty list")
+    required_fields = ("title", "url", "category", "summary")
+    for i, art in enumerate(articles):
+        if not isinstance(art, dict):
+            raise ValueError(f"articles[{i}] must be a dict, got {type(art).__name__}")
+        for f in required_fields:
+            v = art.get(f)
+            if not isinstance(v, str) or not v.strip():
+                raise ValueError(f"articles[{i}]['{f}'] must be a non-empty string")
+
+
 def _update_dedup_history(out_dir: Path, date_slug: str, digest_data: dict) -> None:
     """
     Maintain output/dedup_history.json — a slim list of {date, title} entries
@@ -70,8 +103,14 @@ def _update_dedup_history(out_dir: Path, date_slug: str, digest_data: dict) -> N
         except Exception:
             entries = []
 
-    # Remove today's entries (in case of re-run) and entries older than 14 days
-    cutoff = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
+    # Derive cutoff from date_slug (not datetime.now()) so the 14-day window is
+    # stable even if the job crosses midnight or runs in a different timezone
+    # than the one that produced date_slug.
+    try:
+        base_date = datetime.strptime(date_slug, "%Y-%m-%d")
+    except ValueError:
+        base_date = datetime.now()
+    cutoff = (base_date - timedelta(days=14)).strftime("%Y-%m-%d")
     entries = [e for e in entries
                if e.get("date") != date_slug and e.get("date", "") >= cutoff]
 
@@ -82,8 +121,8 @@ def _update_dedup_history(out_dir: Path, date_slug: str, digest_data: dict) -> N
     ]
     entries = new_entries + entries
 
-    history_file.write_text(
-        json.dumps(entries, indent=2, ensure_ascii=False), encoding="utf-8"
+    _atomic_write_text(
+        history_file, json.dumps(entries, indent=2, ensure_ascii=False)
     )
     print(f"[OK] dedup_history.json updated ({len(entries)} entries)")
 
@@ -93,6 +132,14 @@ def run(digest_data: dict, date_slug: str = None) -> bool:
     # script's date are always consistent (guards against midnight crossing).
     if date_slug is None:
         date_slug = datetime.now().strftime("%Y-%m-%d")
+
+    # Validate structure BEFORE any filesystem/network side effects.
+    try:
+        _validate_digest_data(digest_data)
+    except ValueError as e:
+        print(f"[ERROR] Invalid digest_data: {e}")
+        return False
+
     out_dir = REPO_ROOT / "output"
     out_dir.mkdir(exist_ok=True)
 
@@ -263,10 +310,10 @@ def _update_entries(base: Path, date_slug: str, digest_data: dict):
         "lead_headline": lead,
     })
     entries = entries[:90]
-    entries_file.write_text(json.dumps(entries, indent=2, ensure_ascii=False))
+    _atomic_write_text(entries_file, json.dumps(entries, indent=2, ensure_ascii=False))
 
     index_html = render_archive_index(entries)
-    (base / "index.html").write_text(index_html, encoding="utf-8")
+    _atomic_write_text(base / "index.html", index_html)
 
 
 def main():
