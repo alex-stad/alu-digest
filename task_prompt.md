@@ -241,9 +241,8 @@ curl -s "https://scanner.tradingview.com/symbol?symbol=LME%3AED1%21&fields=close
 - Returns a JSON object like `{"change":0.245,"change_abs":1.43,"close":584.64}`
 - Extract `close` (the ECDP price in USD/t), `change_abs` (absolute change), and `change` (% change)
 - Format value as `$XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
-- If the JSON is empty or missing fields, fall back to: `WebFetch https://www.tradingview.com/symbols/LME-ED1!/` and extract the displayed price and 24h change
 - This contract settles against the Fastmarkets P1020A in-whs dp Rotterdam assessment. Report it as-is — do NOT label it as a "Fastmarkets assessment".
-- **Carryforward rule:** If both Bash and WebFetch fail, glob `output/digest_*.json`, take the most recent file, read its `ecdp_price`, append `*` (e.g. `$583/t*`), and set `ecdp_change` to `null`. The carryforward is correct — ECDP is assessed twice weekly.
+- **Carryforward rule:** If the JSON is empty or missing fields, glob `output/digest_*.json`, take the most recent file, read its `ecdp_price`, append `*` (e.g. `$583/t*`), and set `ecdp_change` to `null`. The carryforward is correct — ECDP is assessed twice weekly. Do NOT attempt WebFetch — it is not in the allowed tool set for this task.
 
 ---
 
