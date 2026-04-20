@@ -1,0 +1,160 @@
+name: Test Daily Alu Digest (draft only)
+
+# Manually-triggered test pipeline. Produces a Buttondown draft, does NOT send
+# to subscribers, does NOT push to gh-pages, does NOT commit to main.
+#
+# Use this before merging prompt or code changes to main. Click "Run workflow"
+# in the Actions tab, pick the branch you want to test, wait ~12 min, then
+# review the draft at https://buttondown.com/emails (Drafts tab).
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: 'Optional note shown in the run summary (e.g. "testing 6-search prompt")'
+        required: false
+        default: ''
+
+permissions:
+  contents: read  # Test mode reads but never writes back to the repo.
+
+jobs:
+  send-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          # We only READ from main's gh-pages history — and in test mode we
+          # skip the worktree push entirely — so shallow checkout is fine.
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install "jinja2==3.1.6" "httpx==0.28.1"
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code@2.1.101
+
+      - name: Run test pipeline (draft-only, no subscribers)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          TEST_MODE: 'true'  # Picked up by generate_digest.py — Claude's Bash
+                             # subshells inherit it, so task_prompt.md's Step 8
+                             # invocation runs in test mode automatically.
+        run: |
+          if [ -z "${ANTHROPIC_API_KEY}" ]; then
+            echo "ERROR: ANTHROPIC_API_KEY secret is not set. Aborting."
+            exit 1
+          fi
+          if [ -z "${BUTTONDOWN_API_KEY}" ]; then
+            echo "ERROR: BUTTONDOWN_API_KEY secret is not set. Aborting."
+            exit 1
+          fi
+
+          PROJECT_ROOT=$(pwd)
+
+          echo "BUTTONDOWN_API_KEY=${BUTTONDOWN_API_KEY}" > .env
+
+          TODAY=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%A, %d %B %Y'))")
+          DATE_SLUG=$(python3 -c "from datetime import datetime; print(datetime.now().strftime('%Y-%m-%d'))")
+
+          echo "── TEST RUN ───────────────────────────────────"
+          echo "  Branch:    ${GITHUB_REF_NAME}"
+          echo "  Date:      ${TODAY}"
+          echo "  Date slug: ${DATE_SLUG}"
+          echo "  Note:      ${{ github.event.inputs.note }}"
+          echo "  TEST_MODE: ${TEST_MODE} — draft only, no subscribers"
+          echo "───────────────────────────────────────────────"
+
+          # Same stream-json summariser as prod, so test runs produce the same
+          # turn/token/cost telemetry as a real run.
+          _summarise_claude_log() {
+            local log="$1"
+            [ -s "${log}" ] || { echo "(log empty — no summary)"; return 0; }
+            python3 - "${log}" <<'PYEOF'
+          import json, sys
+          log = sys.argv[1]
+          turns = 0
+          input_tok = cache_write = cache_read = output_tok = 0
+          final_text = ""
+          final_result = None
+          for line in open(log, encoding="utf-8", errors="replace"):
+              line = line.strip()
+              if not line or not line.startswith("{"):
+                  continue
+              try:
+                  e = json.loads(line)
+              except Exception:
+                  continue
+              if e.get("type") == "assistant":
+                  turns += 1
+                  msg = e.get("message", {}) or {}
+                  u = msg.get("usage", {}) or {}
+                  input_tok += u.get("input_tokens", 0) or 0
+                  cache_write += u.get("cache_creation_input_tokens", 0) or 0
+                  cache_read += u.get("cache_read_input_tokens", 0) or 0
+                  output_tok += u.get("output_tokens", 0) or 0
+                  for blk in msg.get("content", []) or []:
+                      if blk.get("type") == "text":
+                          final_text = blk.get("text", "") or final_text
+              elif e.get("type") == "result":
+                  final_result = e
+          cost = (input_tok*3 + cache_write*3.75 + cache_read*0.30 + output_tok*15) / 1_000_000
+          print("─" * 60)
+          print(f"Test run summary")
+          print(f"  Turns         : {turns}")
+          print(f"  Input (fresh) : {input_tok:>9,}")
+          print(f"  Cache write   : {cache_write:>9,}")
+          print(f"  Cache read    : {cache_read:>9,}")
+          print(f"  Output        : {output_tok:>9,}")
+          print(f"  Est. cost     : ${cost:,.2f}")
+          if final_result:
+              print(f"  Result        : {final_result.get('subtype', '?')}")
+          print("─" * 60)
+          if final_text:
+              print("Final assistant text:")
+              print(final_text[-1500:])
+          PYEOF
+          }
+
+          CLAUDE_LOG=$(mktemp)
+          for attempt in 1 2 3; do
+            claude -p "Today's date is: ${TODAY}. Date slug: ${DATE_SLUG}. The project root is: ${PROJECT_ROOT}. Read the file ${PROJECT_ROOT}/task_prompt.md and execute every step in it (Steps 1 through 9) exactly as described. Replace PROJECT_ROOT with ${PROJECT_ROOT} wherever the instructions mention it." \
+              --allowedTools "Bash,Read,Write,WebSearch,Glob,Grep" \
+              --max-turns 70 \
+              --output-format stream-json \
+              --verbose \
+              --dangerously-skip-permissions 2>&1 | tee "${CLAUDE_LOG}"
+            CLAUDE_EXIT=${PIPESTATUS[0]}
+
+            [ ${CLAUDE_EXIT} -eq 0 ] && break
+
+            if grep -qiE "529|overloaded_error|overloaded|rate.?limit|too.?many.?request" "${CLAUDE_LOG}"; then
+              [ ${attempt} -eq 3 ] && { echo "All 3 attempts failed (API overloaded). Exiting."; _summarise_claude_log "${CLAUDE_LOG}"; rm -f "${CLAUDE_LOG}"; exit 1; }
+              echo "Attempt ${attempt}: API overloaded — retrying in 3 minutes..."
+              sleep 180
+            else
+              echo "Attempt ${attempt} failed (not an overload error — not retrying)."
+              _summarise_claude_log "${CLAUDE_LOG}" || true
+              rm -f "${CLAUDE_LOG}"
+              exit 1
+            fi
+          done
+
+          _summarise_claude_log "${CLAUDE_LOG}" || true
+          rm -f "${CLAUDE_LOG}"
+
+          echo ""
+          echo "───────────────────────────────────────────────"
+          echo "✓ Test run complete."
+          echo "  Draft available at: https://buttondown.com/emails (Drafts tab)"
+          echo "  No commit, no push, no subscribers notified."
+          echo "───────────────────────────────────────────────"

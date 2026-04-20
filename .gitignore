@@ -1,6 +1,11 @@
 output/*
 !output/digest_*.json
 !output/dedup_history.json
+# Test-mode artifacts — ephemeral, should never be committed.
+# They live next to prod files so generate_digest.py can read prod dedup
+# while writing to a separate test file.
+output/dedup_history_test.json
+output/digest_test_*.json
 __pycache__/
 *.pyc
 .env
