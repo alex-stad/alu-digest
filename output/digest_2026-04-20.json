@@ -1,0 +1,39 @@
+{
+  "date": "Monday, 20 April 2026",
+  "lme_price": "$3,660/t",
+  "lme_change": "-$19 (-0.5%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "+$1 (+0.2%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Novelis Oswego mill restart delay tightens US flat-rolled aluminum supply",
+      "url": "https://www.metalnomist.com/2026/04/novelis-oswego-mill-restart-delay.html",
+      "source": "The Metalnomist",
+      "date": "Apr 2026",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis's Oswego, New York hot-rolling mill has missed its earlier restart target and is now expected to resume operations late in Q2 calendar 2026; the outage has removed an estimated 150,000–200,000 tonnes of flat-rolled product shipments, with Novelis purchasing hot band from domestic competitors to fulfil Ford and other automotive customer contracts while Bay Minette's cold mill begins commissioning.",
+      "novelis_angle": null
+    },
+    {
+      "title": "JPMorgan raises Constellium price target to $30 amid elevated aluminium premiums",
+      "url": "https://www.dailypolitical.com/2026/04/19/constellium-nysecstm-price-target-raised-to-30-00.html",
+      "source": "Daily Political",
+      "date": "19 Apr",
+      "category": "Competitors",
+      "summary": "JPMorgan Chase raised its price objective on Constellium SE from $29.00 to $30.00, maintaining an 'overweight' rating, on 19 April 2026, following a near-40% year-to-date rally in Constellium's stock driven by elevated aluminium premiums tied to the Gulf supply disruption.",
+      "novelis_angle": "Sustained analyst upgrades on Constellium reflect market consensus that the Gulf-driven P1020 supply squeeze will support European FRP producer margins through 2026, a dynamic that equally benefits Novelis's recycling-intensive cost structure relative to primary-metal-dependent rivals."
+    },
+    {
+      "title": "LME aluminium eases on April 17 as Strait of Hormuz opens for commercial vessels",
+      "url": "https://www.alcircle.com/news/lme-aluminium-eases-on-april-17-as-the-strait-of-hormuz-opens-for-commercial-vessels-118120",
+      "source": "AlCircle",
+      "date": "17 Apr",
+      "category": "Industry News",
+      "summary": "LME aluminium cash settlement eased to $3,660/t on 17 April 2026, down from $3,678.50/t the prior day, after Iran's Foreign Minister announced the Strait of Hormuz would reopen for commercial vessels during the ceasefire period, partially unwinding record-level price gains driven by Gulf smelter disruption fears since late February 2026.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}

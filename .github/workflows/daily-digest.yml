@@ -158,15 +158,27 @@ jobs:
           rm -f "${CLAUDE_LOG}"
 
           # Commit today's digest JSON and updated dedup_history.json back to main.
-          # Fix 8: pull --rebase before push to handle any concurrent push to main.
+          #
+          # Order matters: stage + commit FIRST, then pull --rebase. Reason:
+          # `generate_digest.py` rewrites the tracked file output/dedup_history.json,
+          # which leaves the working tree dirty. `git pull --rebase` refuses on a
+          # dirty tree with "cannot pull with rebase: You have unstaged changes"
+          # (exit 128), which is what killed run 24664454770 on 2026-04-20.
+          # Committing first moves those changes into HEAD so the rebase sees a
+          # clean worktree; any concurrent main-branch commits get replayed under
+          # our new commit.
           JSON_FILE="output/digest_${DATE_SLUG}.json"
           DEDUP_FILE="output/dedup_history.json"
           if [ -f "${JSON_FILE}" ]; then
-            git pull --rebase origin main
             git add "${JSON_FILE}"
             [ -f "${DEDUP_FILE}" ] && git add "${DEDUP_FILE}"
-            git diff --cached --quiet || git commit -m "Add digest ${DATE_SLUG}: JSON + dedup history"
-            git push origin main
+            if git diff --cached --quiet; then
+              echo "No changes staged — skipping commit/push."
+            else
+              git commit -m "Add digest ${DATE_SLUG}: JSON + dedup history"
+              git pull --rebase origin main
+              git push origin main
+            fi
           else
             echo "Warning: ${JSON_FILE} not found — skipping commit"
           fi
