@@ -1,0 +1,39 @@
+{
+  "date": "Tuesday, 21 April 2026",
+  "lme_price": "$3,590/t",
+  "lme_change": "-$70 (-1.9%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Double blow from the Middle East – aluminium supply disruptions and export challenges for the automobile industry",
+      "url": "https://www.alcircle.com/news/double-blow-from-the-middle-east-aluminium-supply-disruptions-and-export-challenges-for-the-automobile-industry-118107",
+      "source": "AlCircle",
+      "date": "18 Apr",
+      "category": "End Markets",
+      "summary": "Middle Eastern primary aluminium supply disruption from damage to EGA's Al Taweelah and Alba's Bahrain smelters has created a compounding challenge for the global automobile industry, with roughly 570,000 t/yr of Gulf capacity curtailed and the broader export environment for automotive products disrupted; automotive-grade aluminium specifications require up to 18 months to requalify with alternative suppliers, leaving OEMs exposed to a prolonged supply mismatch.",
+      "novelis_angle": "The 18-month requalification timeline for alternative automotive-spec FRP reinforces the competitive value of Novelis's established OEM supply agreements with JLR, BMW, and Ford; incumbents with certified automotive alloys stand to benefit from constrained spot availability."
+    },
+    {
+      "title": "'Resumption of hostilities': seized ship, vessel attacks push U.S.-Iran ceasefire toward brink",
+      "url": "https://www.cnbc.com/2026/04/20/us-iran-war-middle-east-conflict-peace-deal-strait-hormuz-shipping-ceasefire-tensions.html",
+      "source": "CNBC",
+      "date": "20 Apr",
+      "category": "Industry News",
+      "summary": "The US-Iran ceasefire announced 17 April 2026 has effectively collapsed: a US Navy vessel seizure and renewed attacks on commercial ships in the Strait of Hormuz on 20 April prompted Iran to threaten reimposing transit restrictions, leaving the strait still closed to Western-aligned commercial shipping and continuing to block primary aluminium flows from Gulf smelters.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Aluminium faces lasting supply squeeze on rising risks",
+      "url": "https://www.tradingpedia.com/2026/04/20/aluminum-faces-lasting-supply-squeeze-on-rising-risks/",
+      "source": "Tradingpedia",
+      "date": "20 Apr",
+      "category": "Industry News",
+      "summary": "Market analysts characterise the aluminium market as having entered a structural supply deficit, with capacity losses approaching 3 mtpa across Middle Eastern smelters widening the estimated global shortfall to 2 Mt; LME aluminium cash eased to $3,590/t on 20 April as signals of higher Chinese export readiness partially offset supply concerns, though tight underlying conditions are expected to maintain elevated prices.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
