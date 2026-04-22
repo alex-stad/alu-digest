@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 22 April 2026",
+  "lme_price": "$3,613/t",
+  "lme_change": "+$23 (+0.6%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Constellium secures multi-year Airbus contract for aluminium alloy extrusions",
+      "url": "https://www.alcircle.com/news/constellium-secures-multi-year-airbus-contract-for-aluminium-alloy-extrusions-supply-118156",
+      "source": "AlCircle",
+      "date": "21 Apr",
+      "category": "Competitors",
+      "summary": "Constellium SE signed a multi-year agreement with Airbus on 21 April 2026 to supply aluminium alloy extrusions — including bars and structural profiles made with Airware® aluminium-lithium alloy — from its Issoire and Montreuil-Juigné plants in France; Constellium shares rose 2.37% on the announcement.",
+      "novelis_angle": "The deal covers extrusions rather than rolled plate, leaving Novelis's Koblenz aerospace plate franchise with Airbus — focused on wing skin and fuselage sheet — unaffected by this award."
+    },
+    {
+      "title": "TOMRA introduces AI-based FINDER™ for advanced metal recycling operations",
+      "url": "https://www.alcircle.com/news/tomra-introduces-ai-based-finder-for-advanced-metal-recycling-operations-118153",
+      "source": "AlCircle",
+      "date": "21 Apr",
+      "category": "Sustainability & Recycling",
+      "summary": "TOMRA Recycling has launched FINDER™, an AI-powered multi-sensor sorting platform designed to recover aluminium, copper, brass, and stainless steel from shredded end-of-life vehicles and electronic scrap; the system combines electromagnetic, near-infrared, and optical sensors with real-time performance monitoring and will be showcased at IFAT 2026 in Munich in May.",
+      "novelis_angle": "Higher-purity ELV aluminium fractions recovered by advanced sorters like FINDER™ improve the quality and availability of wrought-alloy scrap that closed-loop recyclers such as Novelis depend on to meet its 3×30 recycled-content targets."
+    },
+    {
+      "title": "Geopolitical negotiations remain unresolved, aluminium prices continue, LME outperforms SHFE pattern",
+      "url": "https://www.alcircle.com/press-release/geopolitical-negotiations-remain-unresolved-aluminium-prices-continue-lme-outperforms-shfe-pattern-118135",
+      "source": "AlCircle",
+      "date": "22 Apr",
+      "category": "Industry News",
+      "summary": "As the US-Iran ceasefire expired on 22 April 2026 with negotiations unresolved, LME aluminium closed at $3,553/t (+0.16%), sustained by geopolitical risk premiums; widened SHFE import losses are expected to reduce China's net primary aluminium imports, providing additional support to ex-China supply.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
