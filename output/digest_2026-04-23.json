@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 23 April 2026",
+  "lme_price": "$3,652/t",
+  "lme_change": "+$39 (+1.1%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Constellium SE gains on strong aluminium automotive structures segment",
+      "url": "https://www.alcircle.com/news/constellium-se-gains-on-strong-aluminium-automotive-structures-segment-118138",
+      "source": "AlCircle",
+      "date": "21 Apr",
+      "category": "Competitors",
+      "summary": "Constellium's Automotive Structures & Industry (AS&I) segment generated revenues of approximately $1.6 billion, up 10% year-on-year, on shipments of 202,000 tonnes; the company's shares have gained 22.3% over three months as analyst consensus for 2026 earnings was revised upward 20.6%.",
+      "novelis_angle": "The same elevated aluminium prices and EV-driven BIW demand powering Constellium's AS&I revenue gains are key tailwinds for Novelis's automotive sheet business, confirming the pricing environment for FRP automotive producers remains constructive heading into H1 2026."
+    },
+    {
+      "title": "Why the price volatility in the global aluminium UBC scrap market: LME benchmarks and the underlying economic drivers",
+      "url": "https://www.alcircle.com/news/why-the-price-volatility-in-the-global-aluminium-ubc-scrap-market-lme-benchmarks-and-the-underlying-economic-drivers-118160",
+      "source": "AlCircle",
+      "date": "23 Apr",
+      "category": "Sustainability & Recycling",
+      "summary": "The global aluminium UBC scrap benchmark stood at approximately $2,519/t in April 2026 against LME above $3,500/t, leaving a primary-to-scrap spread of $1,000–$1,150/t; the analysis attributes the persistent gap to LME benchmark mechanisms, collection infrastructure constraints, and energy cost differentials in secondary smelting.",
+      "novelis_angle": "As the world's largest UBC recycler, Novelis benefits directly from the wide primary-to-scrap spread, which expands the cost advantage of recycled inputs versus primary metal and strengthens the business case for its 3×30 recycled-content targets."
+    },
+    {
+      "title": "US announced extension of ceasefire but maintained blockage, LME prices still had upward momentum",
+      "url": "https://www.alcircle.com/press-release/us-announced-extension-of-ceasefire-but-maintained-blockage-lme-prices-still-had-upward-momentum-118167",
+      "source": "AlCircle",
+      "date": "22 Apr",
+      "category": "Industry News",
+      "summary": "The US extended the ceasefire with Iran on 22 April while maintaining the shipping blockage in the Persian Gulf; LME aluminium prices sustained upward momentum as the continued supply disruption kept ex-China P1020 availability constrained.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
