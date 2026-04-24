@@ -1,0 +1,48 @@
+{
+  "date": "Friday, 24 April 2026",
+  "lme_price": "$3,642/t",
+  "lme_change": "-$10 (-0.3%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Novelis recognised for 100% scrap product",
+      "url": "https://aluminiumtoday.com/news/novelis-recognised-for-100-scrap-product",
+      "source": "Aluminium International Today",
+      "date": "24 Apr",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis received the MMK Award of Excellence 2026 for a fully circular aluminium sheet produced from 100% end-of-life vehicle scrap, qualified for exterior automotive body panel applications.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Aludium Eco expanding with 'Closed Loop' — a new low-emissions product range",
+      "url": "https://aludium.com/en/aludium-eco-will-be-expanding-this-year-with-closed-loop-a-new-low-emissions-product-range-thanks-to-its-high-percentage-of-recycled-aluminium/",
+      "source": "Aludium",
+      "date": "24 Apr",
+      "category": "Competitors",
+      "summary": "Aludium will expand its Aludium Eco product line in 2026 with a 'Closed Loop' sub-range using a high percentage of recycled aluminium to reduce carbon footprint and meet customer circular economy targets.",
+      "novelis_angle": "Aludium directly competing on recycled-content premium sheet mirrors Novelis's product positioning, raising competitive pressure in the European flat-rolled market for sustainability-driven customers."
+    },
+    {
+      "title": "Aluminum beverage can recycling rate hits 75% globally",
+      "url": "https://www.packagingdive.com/news/aluminum-beverage-can-glass-pet-recycling-rates-eunomia-cop30/805222/",
+      "source": "Packaging Dive",
+      "date": "24 Apr",
+      "category": "Sustainability & Recycling",
+      "summary": "An Eunomia report released ahead of COP30 found that global aluminium beverage can recycling rates have reached 75%, the highest of any packaging material and ahead of glass and PET.",
+      "novelis_angle": "A 75% global can recycling rate validates the closed-loop economics underlying Novelis's can body sheet business and its £90M Latchford recycling hub expansion, reinforcing the case for brand owners to sustain recycled-content commitments."
+    },
+    {
+      "title": "From policy to recycling loops: sustainability push and recycled aluminium reshape global value chains",
+      "url": "https://www.alcircle.com/news/from-policy-to-recycling-loops-sustainability-push-and-recycled-aluminium-reshape-global-value-chains-118018",
+      "source": "AlCircle",
+      "date": "23 Apr",
+      "category": "Trade & Regulation",
+      "summary": "EU PPWR, which becomes fully mandatory in August 2026, and the operational phase of CBAM are jointly accelerating closed-loop recycled aluminium investment while making high-carbon primary aluminium imports more expensive for European buyers.",
+      "novelis_angle": "The simultaneous activation of PPWR recycled-content mandates and CBAM carbon pricing creates a structural policy tailwind for Novelis's high-recycled-content FRP products and penalises primary-aluminium-dependent competitors."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
