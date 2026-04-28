@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Tuesday, 28 April 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Tuesday, 28 April 2026</h2>
+        <p class="meta">4 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,662/t</span>
+          <span class="change-neg">-$23 (-0.6%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$585/t</span>
+          <span class="change-pos">+$0 (0.0%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-competitors">Competitors</span>
+            <span class="article-source">25 Apr</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>Gränges posts record Q1 2026 results on European automotive surge</h3>
+          <p>Gränges AB reported its strongest-ever first quarter with total sales volume of 159,800 tonnes (+5.4% YoY), net sales of SEK 8,237 million (+13.9% YoY), and adjusted operating profit of SEK 459 million (+12.4% YoY); European automotive volumes rose 21%, driven by growth in EV-related business.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>The 21% surge in Gränges&#x27;s European automotive volumes, specifically tied to EV demand, signals strong near-term appetite for premium automotive FRP — the same segment where Novelis operates its Sierre and Koblenz facilities.</p>
+          </div>
+          <a href="https://www.granges.com/newsroom/press-releases/2026/granges-q1-interim-report-record-first-quarter-and-strong-momentum/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-competitors">Competitors</span>
+            <span class="article-source">27 Apr</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>Constellium gears up to report Q1 2026 earnings on April 29</h3>
+          <p>Analysts estimate Constellium&#x27;s Q1 2026 revenue at $2.45 billion (+23.8% YoY) and adjusted EPS at $0.62 (+138.5% YoY) ahead of results due April 29; the Zacks consensus estimate rose 8.8% in the past 30 days, with the company expecting recent demand trends to continue into at least early 2026.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>The sharp upward revision in Constellium earnings estimates — driven by elevated aluminium premiums and automotive demand recovery — mirrors the same macro tailwinds Novelis will report when Hindalco publishes Q4 FY2026 results on May 22.</p>
+          </div>
+          <a href="https://ca.finance.yahoo.com/news/constellium-gears-report-q1-earnings-155500671.html" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-sustainability">Sustainability &amp; Recycling</span>
+            <span class="article-source">27 Apr</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>ReMA tentatively approves new &#x27;ginger&#x27; aluminium scrap grade amid growing recycled demand</h3>
+          <p>The Recycled Materials Association board gave tentative approval to a new &#x27;ginger&#x27; scrap grade for wrought aluminium sheet, extrusion, and plate recovered from mixed shredded categories; the specification limits free magnesium to 1%, free zinc to 1%, and analytical iron to 0.5%; a 30-day public comment period opened April 13, with industry projections showing scrap demand could outpace supply by 1–3 million tonnes.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Standardising a high-quality shredded wrought aluminium grade would widen the verified feedstock base for FRP recycling, directly supporting Novelis&#x27;s 75% recycled content target under the 3x30 roadmap.</p>
+          </div>
+          <a href="https://www.scrapmonster.com/news/aluminum/rema-tentatively-approves-updated-aluminium-scrap-grade-amid-rising-recycled-metal-demand-2026-4-27/98986" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">28 Apr</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3>Global aluminium output falls 1.6% quarter-on-quarter in Q1 2026, GCC leads decline</h3>
+          <p>IAI data shows global primary aluminium production fell from 18.6 million tonnes in Q4 2025 to 18.3 million tonnes in Q1 2026 (-1.6% QoQ), led by declines in the GCC, Africa, South America, and Oceania; GCC output dropped approximately 6% in March as conflict-related disruptions at Gulf facilities took hold, while China edged down 0.9% to approximately 11.0 million tonnes.</p>
+          <a href="https://www.alcircle.com/news/global-aluminium-production-falls-1-6-in-q1-2026-led-by-declines-in-africa-gulf-south-america-and-oceania-118230" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
