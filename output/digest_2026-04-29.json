@@ -1,0 +1,57 @@
+{
+  "date": "Wednesday, 29 April 2026",
+  "lme_price": "$3,600/t",
+  "lme_change": "-$62 (-1.7%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "+$1 (+0.1%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Crown Holdings reports Q1 2026 results with global can shipments up 5%",
+      "url": "https://www.crowncork.com/news/crown-holdings-inc-reports-first-quarter-2026-results",
+      "source": "Crown Holdings",
+      "date": "27 Apr",
+      "category": "End Markets",
+      "summary": "Crown Holdings reported Q1 2026 net sales of $3,259 million (+12.9% YoY), with global beverage can shipments up 5% led by strong European and Asia-Pacific performance; North American shipments rose 1%. The company reaffirmed full-year adjusted diluted EPS guidance of $7.90–$8.30 and announced a new two-line greenfield beverage can plant in Northern India, targeted for H2 2027 start-up.",
+      "novelis_angle": "European-led can volume growth is a direct demand signal for Novelis's can body and end sheet business; the beverage packaging segment accounts for roughly 60% of Novelis's global shipments and European can makers are among its largest customers."
+    },
+    {
+      "title": "General Motors beats Q1 2026 estimates and raises full-year earnings guidance",
+      "url": "https://www.cnbc.com/2026/04/28/general-motors-gm-earnings-q1-2026.html",
+      "source": "CNBC",
+      "date": "28 Apr",
+      "category": "End Markets",
+      "summary": "General Motors reported Q1 2026 adjusted EPS of $3.70, beating the consensus of $2.62, with adjusted EBIT of $4.25 billion (+21.9% YoY). GM raised its 2026 adjusted earnings guidance by $500 million to $13.5–$15.5 billion, partly reflecting tariff relief. The company recorded $1.1 billion in EV-transition charges while maintaining robust ICE and hybrid vehicle production.",
+      "novelis_angle": "GM's sustained ICE/hybrid vehicle output supports near-term demand for BIW aluminium sheet; the automotive segment accounts for approximately 20% of Novelis's global shipments, making OEM earnings a key demand-side indicator."
+    },
+    {
+      "title": "Airbus reports Q1 2026 delivery decline but maintains guidance on record 9,037-aircraft backlog",
+      "url": "https://www.airbus.com/en/newsroom/press-releases/2026-04-airbus-reports-first-quarter-q1-2026-results",
+      "source": "Airbus",
+      "date": "28 Apr",
+      "category": "End Markets",
+      "summary": "Airbus delivered 114 commercial aircraft in Q1 2026 (-16% YoY) as Pratt & Whitney engine shortages constrained production ramp-up; consolidated revenues fell 7% to €12.7 billion. The commercial order backlog grew 4% YoY to 9,037 units, with net orders of 398 aircraft in the quarter. Airbus maintained its full-year 2026 delivery and financial guidance unchanged.",
+      "novelis_angle": "Airbus's unchanged 2026 guidance and a growing backlog underpin long-term aerospace plate demand; the near-term delivery shortfall is supply-chain driven, not demand-driven, keeping the long-term outlook for Novelis's Koblenz aerospace plate business intact."
+    },
+    {
+      "title": "EU parliament committee backs expanding CBAM to 180 downstream aluminium products from 2028",
+      "url": "https://www.alcircle.com/news/eu-considers-broader-cbam-scope-for-aluminium-products-industry-concern-intensifies-118102",
+      "source": "AlCircle",
+      "date": "17 Apr",
+      "category": "Trade & Regulation",
+      "summary": "The European Parliament Environment Committee recommended on 10 April that approximately 180 additional steel- and aluminium-intensive downstream products — including vehicle components, machinery and construction goods — be brought under CBAM from January 2028. The current Q1 2026 CBAM certificate price is €75.36 per tonne CO₂e, equivalent to approximately €144 per tonne for Chinese primary aluminium imports under default emission values.",
+      "novelis_angle": "Extending CBAM to downstream aluminium-intensive manufactured goods increases import costs for non-EU-produced parts, potentially benefiting European FRP-based supply chains and incentivising OEM customers to source aluminium sheet and coil from Novelis's EU plants."
+    },
+    {
+      "title": "LME aluminium cash offer dips to $3,662/t as inventories slide further",
+      "url": "https://www.alcircle.com/news/lme-aluminium-cash-offer-dips-to-usd-3-662-t-as-inventories-slide-further-118233",
+      "source": "AlCircle",
+      "date": "28 Apr",
+      "category": "Industry News",
+      "summary": "LME aluminium cash fell to $3,662/t on 27 April (-0.6% day-on-day) while warehouse stocks declined a further 2,550 tonnes to 376,275 tonnes total; cancelled warrants dropped 14% to 37,700 tonnes, signalling continued physical draw-down. Three-month contracts retreated to $3,588/t.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
