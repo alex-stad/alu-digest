@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Wednesday, 29 April 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Wednesday, 29 April 2026</h2>
+        <p class="meta">5 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,600/t</span>
+          <span class="change-neg">-$62 (-1.7%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$585/t</span>
+          <span class="change-pos">+$1 (+0.1%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">27 Apr</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>Crown Holdings reports Q1 2026 results with global can shipments up 5%</h3>
+          <p>Crown Holdings reported Q1 2026 net sales of $3,259 million (+12.9% YoY), with global beverage can shipments up 5% led by strong European and Asia-Pacific performance; North American shipments rose 1%. The company reaffirmed full-year adjusted diluted EPS guidance of $7.90–$8.30 and announced a new two-line greenfield beverage can plant in Northern India, targeted for H2 2027 start-up.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>European-led can volume growth is a direct demand signal for Novelis&#x27;s can body and end sheet business; the beverage packaging segment accounts for roughly 60% of Novelis&#x27;s global shipments and European can makers are among its largest customers.</p>
+          </div>
+          <a href="https://www.crowncork.com/news/crown-holdings-inc-reports-first-quarter-2026-results" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">28 Apr</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>General Motors beats Q1 2026 estimates and raises full-year earnings guidance</h3>
+          <p>General Motors reported Q1 2026 adjusted EPS of $3.70, beating the consensus of $2.62, with adjusted EBIT of $4.25 billion (+21.9% YoY). GM raised its 2026 adjusted earnings guidance by $500 million to $13.5–$15.5 billion, partly reflecting tariff relief. The company recorded $1.1 billion in EV-transition charges while maintaining robust ICE and hybrid vehicle production.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>GM&#x27;s sustained ICE/hybrid vehicle output supports near-term demand for BIW aluminium sheet; the automotive segment accounts for approximately 20% of Novelis&#x27;s global shipments, making OEM earnings a key demand-side indicator.</p>
+          </div>
+          <a href="https://www.cnbc.com/2026/04/28/general-motors-gm-earnings-q1-2026.html" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">28 Apr</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>Airbus reports Q1 2026 delivery decline but maintains guidance on record 9,037-aircraft backlog</h3>
+          <p>Airbus delivered 114 commercial aircraft in Q1 2026 (-16% YoY) as Pratt &amp; Whitney engine shortages constrained production ramp-up; consolidated revenues fell 7% to €12.7 billion. The commercial order backlog grew 4% YoY to 9,037 units, with net orders of 398 aircraft in the quarter. Airbus maintained its full-year 2026 delivery and financial guidance unchanged.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Airbus&#x27;s unchanged 2026 guidance and a growing backlog underpin long-term aerospace plate demand; the near-term delivery shortfall is supply-chain driven, not demand-driven, keeping the long-term outlook for Novelis&#x27;s Koblenz aerospace plate business intact.</p>
+          </div>
+          <a href="https://www.airbus.com/en/newsroom/press-releases/2026-04-airbus-reports-first-quarter-q1-2026-results" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-trade">Trade &amp; Regulation</span>
+            <span class="article-source">17 Apr</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3>EU parliament committee backs expanding CBAM to 180 downstream aluminium products from 2028</h3>
+          <p>The European Parliament Environment Committee recommended on 10 April that approximately 180 additional steel- and aluminium-intensive downstream products — including vehicle components, machinery and construction goods — be brought under CBAM from January 2028. The current Q1 2026 CBAM certificate price is €75.36 per tonne CO₂e, equivalent to approximately €144 per tonne for Chinese primary aluminium imports under default emission values.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Extending CBAM to downstream aluminium-intensive manufactured goods increases import costs for non-EU-produced parts, potentially benefiting European FRP-based supply chains and incentivising OEM customers to source aluminium sheet and coil from Novelis&#x27;s EU plants.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/eu-considers-broader-cbam-scope-for-aluminium-products-industry-concern-intensifies-118102" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">28 Apr</span>
+            <span class="article-num">#5</span>
+          </div>
+          <h3>LME aluminium cash offer dips to $3,662/t as inventories slide further</h3>
+          <p>LME aluminium cash fell to $3,662/t on 27 April (-0.6% day-on-day) while warehouse stocks declined a further 2,550 tonnes to 376,275 tonnes total; cancelled warrants dropped 14% to 37,700 tonnes, signalling continued physical draw-down. Three-month contracts retreated to $3,588/t.</p>
+          <a href="https://www.alcircle.com/news/lme-aluminium-cash-offer-dips-to-usd-3-662-t-as-inventories-slide-further-118233" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
