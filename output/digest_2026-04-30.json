@@ -1,0 +1,39 @@
+{
+    "date": "Thursday, 30 April 2026",
+    "lme_price": "$3,604/t",
+    "lme_change": "+$4 (+0.1%)",
+    "lme_change_positive": true,
+    "ecdp_price": "$585/t",
+    "ecdp_change": "$0 (0.0%)",
+    "ecdp_change_positive": false,
+    "articles": [
+        {
+            "title": "Constellium SE gains on strong aluminium automotive structures segment",
+            "url": "https://www.alcircle.com/news/constellium-se-gains-on-strong-aluminium-automotive-structures-segment-118138",
+            "source": "AlCircle",
+            "date": "29 Apr",
+            "category": "Competitors",
+            "summary": "Constellium reported Q1 2026 results on 29 April with its automotive structures segment delivering above-market performance, driving a 22.3% share price gain over the trailing three months. Management expects continued benefit from automotive FRP supply shortages and improved North American scrap spreads into at least early H2 2026.",
+            "novelis_angle": "Constellium's commentary on persistent automotive FRP supply shortages and improving North American scrap spreads signals competitive tightness in two segments — automotive sheet and secondary aluminium — where Novelis competes directly."
+        },
+        {
+            "title": "Aluminium's challenge now beyond moving the metal",
+            "url": "https://www.fastmarkets.com/insights/aluminiums-challenge-now-beyond-moving-the-metal-hotter-commodities/",
+            "source": "Fastmarkets",
+            "date": "29 Apr",
+            "category": "Trade & Regulation",
+            "summary": "Fastmarkets reports that CBAM costs are now fully embedded in its benchmark EU duty-paid P1020A, billet, and primary foundry alloy (PFA) premiums effective January 2026; EU aluminium traded at approximately $3,545/t as of 29 April, up ~48% year-on-year.",
+            "novelis_angle": "Embedding CBAM in Fastmarkets P1020A benchmarks creates a structural cost floor for EU duty-paid primary aluminium that raises input costs for Novelis's non-recycled metal mix while widening the cost advantage of its high recycled-content strategy over primary-intensive FRP rivals."
+        },
+        {
+            "title": "Rio Tinto reports steady aluminium output in Q1 2026 despite disruptions in bauxite",
+            "url": "https://www.alcircle.com/news/rio-tinto-reports-steady-aluminium-output-in-q1-2026-despite-disruptions-in-bauxite-118152",
+            "source": "AlCircle",
+            "date": "29 Apr",
+            "category": "Industry News",
+            "summary": "Rio Tinto maintained steady aluminium output in Q1 2026 despite bauxite supply disruptions, with production remaining close to its annual 3-million-tonne capacity during a period of curtailments at EGA and Alba.",
+            "novelis_angle": "Rio Tinto maintaining output partially offsets Middle East-driven curtailments from other primary producers, reducing upward pressure on European P1020 premiums relative to peak supply-shock scenarios."
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
