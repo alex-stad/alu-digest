@@ -1,0 +1,21 @@
+{
+    "date": "Friday, 01 May 2026",
+    "lme_price": "$3,526/t",
+    "lme_change": "-$79 (-2.2%)",
+    "lme_change_positive": false,
+    "ecdp_price": "$626/t",
+    "ecdp_change": "+$40 (+6.9%)",
+    "ecdp_change_positive": true,
+    "articles": [
+        {
+            "title": "Novelis extends partnership with Infinitum to advance aluminium can recycling in Norway",
+            "url": "https://www.prnewswire.com/news-releases/novelis-extends-partnership-with-infinitum-to-advance-aluminium-can-recycling-in-norway-302741300.html",
+            "source": "PR Newswire",
+            "date": "1 May",
+            "category": "Novelis / Hindalco",
+            "summary": "Novelis renewed its long-term agreement with Norwegian beverage can recycler Infinitum, reaffirming its commitment to recycle all aluminium beverage cans collected in Norway; collected cans are processed at Novelis's Latchford, UK recycling facility.",
+            "novelis_angle": null
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
