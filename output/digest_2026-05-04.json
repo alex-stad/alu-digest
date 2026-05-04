@@ -1,0 +1,48 @@
+{
+    "date": "Monday, 04 May 2026",
+    "lme_price": "$3,584/t",
+    "lme_change": "+$59 (+1.7%)",
+    "lme_change_positive": true,
+    "ecdp_price": "$593/t",
+    "ecdp_change": "-$33 (-5.3%)",
+    "ecdp_change_positive": false,
+    "articles": [
+        {
+            "title": "AMAG Austria Metall reports strong Q1 2026 results with significant earnings increase",
+            "url": "https://www.eqs-news.com/news/corporate-news/amag-austria-metall-ag-strong-first-quarter-of-2026-with-significant-increase-in-earnings/6df9d4b3-ed52-4297-b4b4-e0f395e25f68_en",
+            "source": "EQS News",
+            "date": "30 Apr",
+            "category": "Competitors",
+            "summary": "AMAG Austria Metall AG reported Q1 2026 EBITDA of \u20ac57.1 million, up 24% year-on-year, and net income of \u20ac26.5 million (+63.8%), with revenue growing 0.6% despite a slight decrease in total shipments. The Rolling Division saw increased demand in automotive and heat exchanger applications; the company reaffirmed its full-year 2026 EBITDA guidance of \u20ac150\u2013180 million.",
+            "novelis_angle": null
+        },
+        {
+            "title": "Gr\u00e4nges and NG Nordic extend long-term aluminium recycling partnership",
+            "url": "https://www.alcircle.com/news/granges-x-ng-nordic-aluminium-recycling-partnership-extended-to-cut-carbon-footprint-118237",
+            "source": "AlCircle",
+            "date": "29 Apr",
+            "category": "Competitors",
+            "summary": "Gr\u00e4nges has extended its long-term supply agreement with Norwegian recycler NG Nordic to secure high-quality, traceable recycled aluminium for its rolling facility in Finsp\u00e5ng, Sweden. The partnership supports Gr\u00e4nges\u2019s circular aluminium strategy and is expected to reduce the carbon footprint of its Swedish FRP production.",
+            "novelis_angle": null
+        },
+        {
+            "title": "Stellantis returns to profitability in Q1 2026 with revenues up 6%",
+            "url": "https://www.globenewswire.com/news-release/2026/04/30/3284476/0/en/Stellantis-Reports-Q1-2026-Financial-Results.html",
+            "source": "GlobeNewsWire",
+            "date": "30 Apr",
+            "category": "End Markets",
+            "summary": "Stellantis reported Q1 2026 net revenues of \u20ac38.1 billion (+6% year-on-year) and a return to net profit at \u20ac0.4 billion, with adjusted operating income of \u20ac1.0 billion (2.5% margin). North America shipments rose 17% to 379,000 units, driven by strong Ram pickup performance.",
+            "novelis_angle": "Stellantis\u2019s North America recovery \u2014 especially Ram light-truck volumes up 17% \u2014 is a direct volume signal for Novelis\u2019s BIW aluminium sheet business, which counts Stellantis among its key automotive customers."
+        },
+        {
+            "title": "LME aluminium cash reaches $3,584/t on May 1 as supply fear looms large",
+            "url": "https://www.alcircle.com/news/lme-aluminium-improves-on-may-1-cash-reaches-3-584-t-as-supply-fear-looms-large-118296",
+            "source": "AlCircle",
+            "date": "1 May",
+            "category": "Industry News",
+            "summary": "LME aluminium cash settled at $3,584/t on May 1, recovering from $3,525/t on April 30, as the blockage of the Strait of Hormuz and ongoing damage to Gulf smelting facilities continue to tighten primary supply. Emirates Global Aluminium, the region\u2019s largest producer and responsible for a significant portion of the 9% of global primary supply from the Persian Gulf, warned full capacity restoration may take up to one year.",
+            "novelis_angle": "Sustained high P1020 prices raise input costs for European FRP producers dependent on primary metal; Novelis\u2019s \u223c63% recycled content provides partial insulation, but elevated LME also lifts UBC scrap values, compressing the cost advantage."
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
