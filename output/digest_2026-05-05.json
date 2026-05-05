@@ -1,0 +1,39 @@
+{
+    "date": "Tuesday, 05 May 2026",
+    "lme_price": "$3,584/t",
+    "lme_change": "+$59 (+1.7%)",
+    "lme_change_positive": true,
+    "ecdp_price": "$593/t",
+    "ecdp_change": "-$33 (-5.3%)",
+    "ecdp_change_positive": false,
+    "articles": [
+        {
+            "title": "Ball Corporation stock: Q1 2026 earnings beat expectations with revenue up 2%",
+            "url": "https://investors.ball.com/news-presentations/news-presentations/detail/20260505-q1-2026-ball-corporation-earnings-conference-call",
+            "source": "Ball Corporation IR",
+            "date": "5 May",
+            "category": "End Markets",
+            "summary": "Ball Corporation reported Q1 2026 net revenue of $2.9 billion, up 2% year-on-year, driven by 3% higher global beverage can volumes that offset a 1% decline in average aluminium prices. Full-year 2026 adjusted EPS guidance was reaffirmed.",
+            "novelis_angle": null
+        },
+        {
+            "title": "Europe aluminium can recycling gains pace, targets 100% by 2030",
+            "url": "https://www.alcircle.com/interview/detail/118286/europe-aluminium-can-recycling-gains-pace-targets-100-by-2030",
+            "source": "AlCircle",
+            "date": "3 May",
+            "category": "Sustainability & Recycling",
+            "summary": "Metal Packaging Europe CEO Krassimira Kazashka told AL Circle that European aluminium beverage can recycling has reached 76%, with Deposit Return Schemes and the Packaging and Packaging Waste Regulation (PPWR) accelerating progress toward the industry\u2019s 100% recycling ambition by 2030.",
+            "novelis_angle": "Higher European can collection rates increase UBC scrap availability for Novelis\u2019s Latchford and Nachterstedt recycling operations, directly supporting the company\u2019s 75% recycled content target for 2030."
+        },
+        {
+            "title": "Aluminium price surge reignites Australian smelters as Rio Tinto and Alcoa step up",
+            "url": "https://www.alcircle.com/news/aluminium-price-surge-reignites-australian-smelters-as-rio-tinto-and-alcoa-step-up-118322",
+            "source": "AlCircle",
+            "date": "5 May",
+            "category": "Industry News",
+            "summary": "With the Middle East supply disruption having removed approximately 2.5 million tonnes from global production, Alcoa restarted potlines at its Portland smelter in Victoria and the Queensland and Federal governments committed A$2 billion to support Rio Tinto\u2019s Boyne smelter, moves intended to partially offset the Gulf supply gap at current elevated price levels.",
+            "novelis_angle": null
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
