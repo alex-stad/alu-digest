@@ -1,0 +1,57 @@
+{
+    "date": "Wednesday, 06 May 2026",
+    "lme_price": "$3,633/t",
+    "lme_change": "+$49 (+1.4%)",
+    "lme_change_positive": true,
+    "ecdp_price": "$593/t",
+    "ecdp_change": "+$0 (+0.0%)",
+    "ecdp_change_positive": true,
+    "articles": [
+        {
+            "title": "Novelis' Bay Minette cold mill set for commissioning next quarter",
+            "url": "https://aluminiumtoday.com/news/cold-mill-at-bay-minette-to-be-commissioned-next-quarter",
+            "source": "Aluminium International Today",
+            "date": "6 May",
+            "category": "Novelis / Hindalco",
+            "summary": "The cold-rolling mill at Novelis' $4.1B Bay Minette, Alabama, greenfield facility is on schedule for commissioning in Q3 2026, with the 600 kt plant targeting full start-up in the second half of 2026 and approximately 1,000 contractors currently on site.",
+            "novelis_angle": null
+        },
+        {
+            "title": "Hindalco board to meet 22 May to approve Q4 and full-year FY26 results and final dividend",
+            "url": "https://www.investywise.com/hindalco-board-meeting-for-q4-fy26-results-dividend-decision/",
+            "source": "InvestyWise",
+            "date": "5 May",
+            "category": "Novelis / Hindalco",
+            "summary": "Hindalco Industries' board of directors will convene on 22 May 2026 to consider audited standalone and consolidated financial results for Q4 FY26 and the full fiscal year ending 31 March 2026, and to recommend a final dividend.",
+            "novelis_angle": null
+        },
+        {
+            "title": "Crown Holdings to establish 2.2 billion-can per year beverage facility in northern India",
+            "url": "https://www.prnewswire.com/news-releases/crown-holdings-inc-to-establish-state-of-the-art-beverage-can-facility-in-northern-india-marking-strategic-expansion-into-high-growth-market-302750769.html",
+            "source": "PR Newswire",
+            "date": "23 Apr",
+            "category": "End Markets",
+            "summary": "Crown Holdings announced plans to build a two-line beverage can manufacturing facility in northern India targeting 2.2 billion cans annually at full capacity, with commissioning planned for H2 2027 and underpinned by long-term supply agreements with United Breweries (Heineken Group).",
+            "novelis_angle": "The continued capacity build-out by a top global can maker signals resilient long-term demand for aluminium beverage can sheet in Asia, a market where Novelis holds long-term can sheet supply contracts with major beverage customers."
+        },
+        {
+            "title": "Canada unveils C$1.5B aid package for steel and aluminium firms as US tariff scope widens",
+            "url": "https://www.bloomberg.com/news/articles/2026-05-04/canada-rolls-out-1-1b-for-firms-hit-by-us-steel-tariff-change",
+            "source": "Bloomberg",
+            "date": "4 May",
+            "category": "Trade & Regulation",
+            "summary": "Canada's federal government announced a C$1.5B package on 4 May 2026, comprising a C$1B BDC loan program and C$500M in regional support, for steel and aluminium firms hurt by the US extension of its 25% tariff to cover derivative products including aluminium sheet and steel coils.",
+            "novelis_angle": "The US tariff extension to aluminium sheet derivatives raises import costs for Canadian FRP producers selling into the US, reducing competitive pressure on Novelis's Bay Minette flat-rolled output as it ramps up in H2 2026."
+        },
+        {
+            "title": "Aluminium jumps most in three weeks as US-Iran truce holds",
+            "url": "https://www.bloomberg.com/news/articles/2026-05-05/copper-drops-as-iran-and-us-trade-fire-in-gulf-testing-truce",
+            "source": "Bloomberg",
+            "date": "5 May",
+            "category": "Industry News",
+            "summary": "LME aluminium rose 1.9% on 5 May, its largest single-day gain in three weeks, as the US-Iran ceasefire showed signs of holding and eased fears of renewed Gulf escalation; EGA's flagship UAE smelter remains offline and is not expected to return to full capacity for at least one year.",
+            "novelis_angle": "The extended EGA and ALBA outages are removing a significant share of Persian Gulf primary supply, keeping the European P1020 duty-paid premium elevated and widening the scrap-to-primary spread that underpins Novelis's recycling cost advantage."
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
