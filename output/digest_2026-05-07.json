@@ -1,0 +1,39 @@
+{
+    "date": "Thursday, 07 May 2026",
+    "lme_price": "$3,597/t",
+    "lme_change": "-$36 (-1.0%)",
+    "lme_change_positive": false,
+    "ecdp_price": "$593/t",
+    "ecdp_change": "+$0 (+0.0%)",
+    "ecdp_change_positive": true,
+    "articles": [
+        {
+            "title": "UBS initiates Constellium with buy rating on tariff and UBC spread outlook",
+            "url": "https://www.investing.com/news/analyst-ratings/ubs-initiates-constellium-stock-with-buy-rating-on-tariff-outlook-93CH-4657933",
+            "source": "Investing.com",
+            "date": "5 May",
+            "category": "Competitors",
+            "summary": "UBS initiated coverage of Constellium SE with a Buy rating and a $38 price target on 5 May 2026, projecting 2026 and 2027 EBITDA approximately 30% above consensus; the thesis centres on Section 232 tariffs sustaining elevated US used beverage can (UBC) sheet spreads, forecast at ~55% in 2027 versus consensus ~52%, with approximately 9% free cash flow yield in 2027\u201328.",
+            "novelis_angle": "The UBS UBC spread thesis highlights tariff-driven dynamics in US can sheet — the same market Novelis' 600 kt Bay Minette plant enters at H2 2026 ramp-up, validating how Section 232 tariffs are reshaping the competitive economics for both producers."
+        },
+        {
+            "title": "Aluminum prices are surging: how companies are handling the costs",
+            "url": "https://www.cnbc.com/2026/05/05/aluminum-prices-hormuz-ford-molson-coors.html",
+            "source": "CNBC",
+            "date": "5 May",
+            "category": "End Markets",
+            "summary": "LME aluminium has risen more than 13% since US-Israeli strikes on Iran on 28 February, driven by Strait of Hormuz disruptions affecting roughly 7% of global supply; Ford CFO Sherry House flagged aluminium as a key cost uncertainty for the F-150 programme, and Molson Coors CFO Tracey Joubert said elevated US Midwest Premium added approximately $30 million to Q1 2026 cost of goods sold, with further headwinds expected in Q2.",
+            "novelis_angle": "Ford and Molson Coors are two of Novelis' largest end customers for automotive sheet and beverage can sheet respectively; sustained aluminium cost pressure on both buyers risks inventory destocking or forward purchasing adjustments that affect Novelis' near-term order flow."
+        },
+        {
+            "title": "Europe aluminium billet premium surges amid Iran conflict, exposing supply fragility",
+            "url": "https://www.alcircle.com/news/europe-aluminium-billet-premium-surges-amid-iran-conflict-exposing-supply-fragility-118305",
+            "source": "AlCircle",
+            "date": "4 May",
+            "category": "Industry News",
+            "summary": "European physical aluminium premiums have risen 63% since the onset of the Iran conflict to USD 585/t currently, with May and June contract premiums reaching USD 625/t; EGA declared force majeure on certain European billet contracts following damage to its UAE smelter, and the extrusion billet premium in Rotterdam reached USD 1,100/t, up from USD 530 pre-war.",
+            "novelis_angle": "The 63% European premium rise widens input costs for Novelis' European operations, but simultaneously amplifies its scrap-based cost advantage — at $625/t duty-paid premium, Novelis' high recycled-content model captures greater spread versus producers reliant on primary P1020."
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
