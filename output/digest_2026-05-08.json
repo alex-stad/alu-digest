@@ -1,0 +1,30 @@
+{
+    "date": "Friday, 08 May 2026",
+    "lme_price": "$3,559/t",
+    "lme_change": "-$38 (-1.1%)",
+    "lme_change_positive": false,
+    "ecdp_price": "$593/t",
+    "ecdp_change": "+$0 (+0.0%)",
+    "ecdp_change_positive": true,
+    "articles": [
+        {
+            "title": "Solid start to the year: BMW Group achieves group EBT margin at previous full-year level",
+            "url": "https://www.press.bmwgroup.com/global/article/detail/T0457620EN/solid-start-to-the-year:-bmw-group-achieves-group-ebt-margin-at-previous-full-year-level",
+            "source": "BMW Group",
+            "date": "6 May",
+            "category": "End Markets",
+            "summary": "BMW Group delivered Q1 2026 EBT of \u20ac2,348 million at a 7.6% margin, shipping 566,000 retail units (-3.5% year-on-year); BEV sales fell 20.1% to 87,000 units while the company confirmed its full-year 2026 guidance of moderate EBT decline with an automotive EBIT margin target of 4%-6%.",
+            "novelis_angle": "BMW\u2019s confirmed 2026 production guidance maintains planned BIW aluminium sheet demand; the Neue Klasse iX3 launch (50,000+ European pre-orders since March) signals sustained high-content-aluminium platform activity for Novelis\u2019s European automotive segment."
+        },
+        {
+            "title": "G7 focuses on aluminium and other critical minerals as US-EU tariff tensions test unity",
+            "url": "https://www.alcircle.com/news/g7-focuses-on-aluminium-and-other-critical-minerals-as-us-eu-tariff-tensions-test-unity-118352",
+            "source": "AlCircle",
+            "date": "6 May",
+            "category": "Trade & Regulation",
+            "summary": "G7 trade ministers convened in Paris on 6 May to advance discussions on securing critical mineral supply chains including aluminium, targeting reduced Chinese dependency; France\u2019s lead minister cited China\u2019s mineral market concentration as a strategic risk, and ministers discussed establishing a permanent critical minerals secretariat potentially hosted at the IEA or OECD. US threats to raise EU car tariffs to 25% strained transatlantic unity during the session.",
+            "novelis_angle": "A G7 aluminium supply chain framework targeting non-Chinese sourcing could accelerate European regulatory and financial support for secondary/recycled aluminium capacity, directly benefiting Novelis as Europe\u2019s largest aluminium recycler with its 3\u00d730 targets."
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
