@@ -44,14 +44,19 @@ jobs:
 
       - name: Run test pipeline (draft-only, no subscribers)
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Auth via Claude Max subscription (OAuth token from `claude setup-token`)
+          # rather than ANTHROPIC_API_KEY. We deliberately do NOT also pass the API
+          # key — if both are set the CLI may prefer the API key, which would
+          # silently keep billing pay-as-you-go credits and defeat the test.
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           TEST_MODE: 'true'  # Picked up by generate_digest.py — Claude's Bash
                              # subshells inherit it, so task_prompt.md's Step 8
                              # invocation runs in test mode automatically.
         run: |
-          if [ -z "${ANTHROPIC_API_KEY}" ]; then
-            echo "ERROR: ANTHROPIC_API_KEY secret is not set. Aborting."
+          if [ -z "${CLAUDE_CODE_OAUTH_TOKEN}" ]; then
+            echo "ERROR: CLAUDE_CODE_OAUTH_TOKEN secret is not set. Aborting."
+            echo "Generate one locally with: claude setup-token"
             exit 1
           fi
           if [ -z "${BUTTONDOWN_API_KEY}" ]; then
@@ -115,7 +120,9 @@ jobs:
           print(f"  Cache write   : {cache_write:>9,}")
           print(f"  Cache read    : {cache_read:>9,}")
           print(f"  Output        : {output_tok:>9,}")
-          print(f"  Est. cost     : ${cost:,.2f}")
+          # Flat-rate Max subscription means no per-token charge. We still report
+          # the API-equivalent dollar figure so we can track usage trend over time.
+          print(f"  API-equiv cost: ${cost:,.2f}  (subscription run — not actually billed)")
           if final_result:
               print(f"  Result        : {final_result.get('subtype', '?')}")
           print("─" * 60)
