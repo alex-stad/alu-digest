@@ -1,9 +1,14 @@
 name: Daily Alu Digest
 
 on:
-  schedule:
-    # 05:00 UTC = 07:00 CEST (UTC+2 in summer) / 06:00 CET (UTC+1 in winter)
-    - cron: '0 5 * * 1-5'
+  # Cron disabled 2026-05-10 — daily run migrated to Claude Code Routine
+  # `alu-digest-PROD` (https://claude.ai/code/routines), which bills against
+  # the Max subscription instead of API credits. This workflow stays as a
+  # manual-trigger fallback: re-enable the schedule line below if Routines
+  # breaks for >1 day and it's blocking the digest.
+  # schedule:
+  #   # 05:00 UTC = 07:00 CEST (UTC+2 in summer) / 06:00 CET (UTC+1 in winter)
+  #   - cron: '0 5 * * 1-5'
   workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
 
 permissions:
