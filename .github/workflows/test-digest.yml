@@ -40,7 +40,9 @@ jobs:
         run: pip install "jinja2==3.1.6" "httpx==0.28.1"
 
       - name: Install Claude Code CLI
-        run: npm install -g @anthropic-ai/claude-code@2.1.101
+        # OAuth bumped to @latest while diagnosing the test-mode auth flow.
+        # Once we've confirmed the token path works, repin to a specific version.
+        run: npm install -g @anthropic-ai/claude-code@latest
 
       - name: Run test pipeline (draft-only, no subscribers)
         env:
