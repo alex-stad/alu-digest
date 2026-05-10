@@ -64,6 +64,23 @@ jobs:
             exit 1
           fi
 
+          # ── Token shape diagnostic ─────────────────────────────────────────
+          # Reports just numbers and yes/no booleans about the token, never the
+          # value itself, so it's safe even if GitHub's masking misses anything.
+          # Remove this block once auth is confirmed working.
+          echo "── Auth diagnostic ───────────────────────────────"
+          echo "  CLI version    : $(claude --version 2>&1 || echo '?')"
+          TOKEN_LEN_RAW=$(printf '%s' "${CLAUDE_CODE_OAUTH_TOKEN}" | wc -c | tr -d ' ')
+          TOKEN_TRIMMED_LEN=$(printf '%s' "${CLAUDE_CODE_OAUTH_TOKEN}" | sed -e 's/[[:space:]]*$//' | wc -c | tr -d ' ')
+          echo "  Token bytes    : ${TOKEN_LEN_RAW}"
+          echo "  Trimmed bytes  : ${TOKEN_TRIMMED_LEN}  (mismatch ⇒ trailing whitespace)"
+          if printf '%s' "${CLAUDE_CODE_OAUTH_TOKEN}" | grep -q '^sk-ant-oat01-'; then
+            echo "  Has oat01 prefix: yes"
+          else
+            echo "  Has oat01 prefix: NO  (expected sk-ant-oat01-…; got something else)"
+          fi
+          echo "──────────────────────────────────────────────────"
+
           PROJECT_ROOT=$(pwd)
 
           echo "BUTTONDOWN_API_KEY=${BUTTONDOWN_API_KEY}" > .env
