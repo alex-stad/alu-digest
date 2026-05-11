@@ -211,25 +211,18 @@ Be factual. No hedging. Use industry terms (FRP, P1020, BIW, closed-loop, DRS). 
 
 Do NOT use web search for prices. Use the Bash commands below — they return only the data lines needed, keeping context minimal.
 
-**LME Aluminium Cash Settlement — Westmetall via Bash:**
+**LME Aluminium 3-month — TradingView via Bash:**
 
 ```bash
-curl -s --retry 3 --retry-delay 2 --max-time 15 "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_cash" | \
-  python3 -c "
-import sys, re
-html = sys.stdin.read()
-# Each row: <td>date</td><td>cash</td><td>3-month</td><td>stock</td>
-# Take first two cells (date + cash) for the two most recent rows.
-rows = re.findall(r'<tr>\s*<td[^>]*>([^<]+)</td>\s*<td[^>]*>([^<]+)</td>', html)
-for date, cash in rows[:2]:
-    print(date.strip(), '|', cash.strip())
-"
+curl -s "https://scanner.tradingview.com/symbol?symbol=LME%3AAH1%21&fields=close%2Cchange_abs%2Cchange&no_404=1"
 ```
 
-- The command prints two lines in the form `DD. Month YYYY | X,XXX.XX` — today's cash settlement and the previous trading day's
-- Parse both values (strip commas, convert to float) and compute the change between row[0] and row[1] (absolute $ and %)
-- Format value as `$X,XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
-- **Carryforward rule:** If the command returns empty output or zero rows match, glob `output/digest_*.json`, take the most recent file, read its `lme_price`, append `*` (e.g. `$3,559/t*`), and set all lme_change fields to `null`. The carryforward signals the live fetch failed. Do NOT attempt WebFetch — it is not in the allowed tool set for this task.
+- Note: this is a **GET** request — do not add `-X POST` (the endpoint returns HTTP 405 for POST)
+- Returns a JSON object like `{"change":2.40,"change_abs":84.77,"close":3622.19}`
+- Extract `close` (LME aluminium 3-month, USD/t), `change_abs` (absolute change in $/t), and `change` (% change)
+- Format value as `$X,XXX/t` (round to nearest dollar), change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
+- This is the LME aluminium 3-month forward (`LME:AH1!`) — the most actively traded LME aluminium contract and the standard reference price quoted by trade press
+- **Carryforward rule:** If the JSON is empty or missing fields, glob `output/digest_*.json`, take the most recent file, read its `lme_price`, append `*` (e.g. `$3,622/t*`), and set all lme_change fields to `null`. The carryforward signals the live fetch failed. Do NOT attempt WebFetch — it is not in the allowed tool set for this task.
 
 **ECDP (European Duty-Paid Premium) — TradingView via Bash:**
 
