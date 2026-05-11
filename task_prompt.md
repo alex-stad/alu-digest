@@ -214,7 +214,7 @@ Do NOT use web search for prices. Use the Bash commands below — they return on
 **LME Aluminium Cash Settlement — Westmetall via Bash:**
 
 ```bash
-curl -s "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_cash" | \
+curl -s --retry 3 --retry-delay 2 --max-time 15 "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_cash" | \
   python3 -c "
 import sys, re
 html = sys.stdin.read()
@@ -229,7 +229,7 @@ for date, cash in rows[:2]:
 - The command prints two lines in the form `DD. Month YYYY | X,XXX.XX` — today's cash settlement and the previous trading day's
 - Parse both values (strip commas, convert to float) and compute the change between row[0] and row[1] (absolute $ and %)
 - Format value as `$X,XXX/t`, change as `+$XX (+X.X%)` or `-$XX (-X.X%)`
-- If the command returns empty output, set `lme_price` and all lme_change fields to `null`. Do not carry forward a stale LME value.
+- **Carryforward rule:** If the command returns empty output or zero rows match, glob `output/digest_*.json`, take the most recent file, read its `lme_price`, append `*` (e.g. `$3,559/t*`), and set all lme_change fields to `null`. The carryforward signals the live fetch failed. Do NOT attempt WebFetch — it is not in the allowed tool set for this task.
 
 **ECDP (European Duty-Paid Premium) — TradingView via Bash:**
 
