@@ -1,0 +1,39 @@
+{
+    "date": "Monday, 11 May 2026",
+    "lme_price": null,
+    "lme_change": null,
+    "lme_change_positive": null,
+    "ecdp_price": "$600/t",
+    "ecdp_change": "+$8 (+1.3%)",
+    "ecdp_change_positive": true,
+    "articles": [
+        {
+            "title": "Constellium enters multi-year agreement with Airbus for the supply of aluminium alloy extrusions",
+            "url": "https://www.globenewswire.com/news-release/2026/04/21/3277711/0/en/Constellium-Enters-Multi-Year-Agreement-with-Airbus-for-the-Supply-of-Aluminum-Alloy-Extrusions.html",
+            "source": "GlobeNewswire",
+            "date": "21 Apr",
+            "category": "Competitors",
+            "summary": "Constellium signed a multi-year supply agreement with Airbus for aluminium alloy bars and extrusions — including its proprietary Airware aluminium-lithium alloy — produced at its Montreuil-Juigné, France facility for demanding structural aircraft applications; Constellium shares rose 3.1% pre-market on the announcement.",
+            "novelis_angle": "The deal cements Constellium's long-term position in aerospace aluminium supply, in direct competition with Novelis's Koblenz aerospace segment; multi-year Airbus contracts signal elevated buyer confidence and reduce Constellium's exposure to aerospace demand cycles."
+        },
+        {
+            "title": "China aluminium flat-rolled products review tests EU trade defence balance",
+            "url": "https://www.metalnomist.com/2026/05/china-aluminium-flat-rolled-products.html",
+            "source": "The Metalnomist",
+            "date": "7 May",
+            "category": "Trade & Regulation",
+            "summary": "The European Commission launched a partial interim review of anti-dumping measures on Chinese aluminium flat-rolled products following a request from EU importer PalNet, which argues 7000-series aviation-grade aluminium sheets cannot be adequately sourced within the EU; existing AD duties expire 12 October 2026 and the review is expected to conclude within 12 months.",
+            "novelis_angle": "Removal of AD protection on 7000-series aviation sheet would expose European FRP suppliers to direct Chinese competition in aerospace — the same high-margin segment Novelis serves from its Koblenz plant, and could compress pricing across adjacent aerospace alloy grades."
+        },
+        {
+            "title": "Global alumina production drops 6.1% in Q1 2026 as major markets retreat quarter-on-quarter",
+            "url": "https://www.alcircle.com/news/global-alumina-production-drops-6-1-in-q1-2026-as-major-markets-retreat-q-o-q-while-north-america-moves-against-the-trend-118363",
+            "source": "AlCircle",
+            "date": "7 May",
+            "category": "Industry News",
+            "summary": "Global metallurgical-grade alumina output fell 6.1% quarter-on-quarter to 35.4 million tonnes in Q1 2026 from 37.7 Mt in Q4 2025, driven by Middle East conflict disruptions; North America was the only major region to increase output.",
+            "novelis_angle": "Sustained alumina supply tightness constrains primary aluminium production, supporting elevated LME and ECDP premiums — but making Novelis's scrap-intensive, low-P1020-exposure business model increasingly cost-competitive versus primary-dependent rivals."
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
