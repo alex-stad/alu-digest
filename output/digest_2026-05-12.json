@@ -1,0 +1,48 @@
+{
+  "date": "Tuesday, 12 May 2026",
+  "lme_price": "$3,593/t",
+  "lme_change": "-$29 (-0.8%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$600/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Novelis raises $750 million from AV Minerals to bolster post-Oswego liquidity",
+      "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN3ZK0DG:0-hindalco-says-novelis-enters-subscription-agreement-with-av-minerals/",
+      "source": "Reuters",
+      "date": "9 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis entered a subscription agreement with AV Minerals, a Hindalco group entity, issuing 50 million common shares at $150 per share to raise $750 million for future growth and to shore up liquidity after the Oswego plant fires.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Novelis Oswego cash impact revised to $1.3–1.6 billion as hot mill restart slips to late Q2",
+      "url": "https://www.whalesbook.com/news/English/industrial-goodsservices/Hindalcos-Novelis-Fire-Cash-Hit-Doubles-Recovery-Dragged/698cbb3cfa94ce7dec4e898d",
+      "source": "Whalesbook",
+      "date": "10 May",
+      "category": "Novelis / Hindalco",
+      "summary": "The total cash impact of the two Novelis Oswego fires has been revised to $1.3–$1.6 billion, more than double the initial $550–$650 million estimate; the hot mill restart is now expected in late Q2 calendar 2026, with Hindalco management flagging FY2026-27 as the recovery year once operations normalise.",
+      "novelis_angle": null
+    },
+    {
+      "title": "AMAG secures €75 million EIB loan to advance high-value aluminium R&D",
+      "url": "https://www.metalnomist.com/2026/04/amag-aluminium-loan-strengthens-europes.html",
+      "source": "Metalnomist",
+      "date": "30 Apr",
+      "category": "Competitors",
+      "summary": "AMAG Austria Metall secured a €75 million European Investment Bank loan for R&D into higher-value aluminium products, part of a €168 million investment programme running 2025–2028 targeting premium alloys for aerospace, automotive, and packaging markets.",
+      "novelis_angle": "AMAG's EIB-backed R&D push into premium alloys targets aerospace and automotive segments where Novelis holds strong European positions, intensifying competition for high-margin speciality FRP."
+    },
+    {
+      "title": "Ford raises 2026 profit guidance despite $1 billion net tariff burden from Novelis Oswego supply gap",
+      "url": "https://www.supplychaindive.com/news/ford-tarifs-novelis-aluminum-supplier-fire-impact/812123/",
+      "source": "Supply Chain Dive",
+      "date": "11 May",
+      "category": "End Markets",
+      "summary": "Ford raised its 2026 annual profit guidance by $500 million following a Supreme Court tariff-refund ruling, but still absorbs an estimated $1 billion in net tariff costs for the year; following the Novelis Oswego hot mill fire, F-150 aluminium is now sourced from Europe and South Korea — both subject to the 50% US Section 232 tariff — and the US government rejected Ford's tariff relief request.",
+      "novelis_angle": "Ford's $1 billion net tariff burden — driven partly by sourcing European and South Korean aluminium to replace lost Oswego capacity — underscores the commercial urgency for Novelis to restore domestic US hot mill supply."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
