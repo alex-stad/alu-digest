@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 13 May 2026",
+  "lme_price": "$3,603/t",
+  "lme_change": "-$20 (-0.5%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$600/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Novelis to host Q4 and full fiscal year 2026 earnings conference call on May 19",
+      "url": "https://www.streetinsider.com/PRNewswire/Novelis+to+Host+Fourth+Quarter+and+Full+Fiscal+Year+2026+Earnings+Conference+Call+on+May+19/26477276.html",
+      "source": "PR Newswire",
+      "date": "12 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis will report Q4 and full FY2026 financial results on 19 May 2026, with CEO Steve Fisher and CFO Dev Ahuja hosting a conference call for analysts and investors.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Canmakers say capacity is tight as they gear up for big summer",
+      "url": "https://www.packagingdive.com/news/beverage-food-cans-earnings-ball-ab-inbev-crown-ardagh-/819226/",
+      "source": "Packaging Dive",
+      "date": "12 May",
+      "category": "End Markets",
+      "summary": "Crown CEO Tim Donahue stated March 2026 was Crown's highest-ever monthly shipments month and warned of a very tight can supply situation this summer; Ball and Crown are managing elevated aluminium input costs ahead of World Cup and America250 demand spikes.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Aluminium recyclers warn of EU ETS hit",
+      "url": "https://invezz.com/news/2026/05/12/aluminium-recyclers-warn-of-eu-ets-hit-copper-nears-record-highs/",
+      "source": "Invezz",
+      "date": "12 May",
+      "category": "Trade & Regulation",
+      "summary": "European aluminium recyclers warned that the EU ETS benchmark update for 2026–2030 cuts free carbon allowances by ~34% vs. 2021–2025 levels, significantly raising production costs for recyclers who cannot pass prices through in internationally-set aluminium markets.",
+      "novelis_angle": "Novelis’s European recycling operations (Nachterstedt, Latchford) face the same ETS cost headwind, though its premium closed-loop and low-carbon product portfolio may command green premiums unavailable to commodity recyclers."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
