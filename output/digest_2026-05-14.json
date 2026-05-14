@@ -1,0 +1,48 @@
+{
+  "date": "Thursday, 14 May 2026",
+  "lme_price": "$3,690/t",
+  "lme_change": "-$5 (-0.1%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$600/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "JLR Q4 2026 sales bounce back from cyber attack as full-year volumes fall 23%",
+      "url": "https://www.wardsauto.com/news/jlr-q4-2026-sales-bounce-back-from-cyber-attack/816675/",
+      "source": "WardsAuto",
+      "date": "14 May",
+      "category": "End Markets",
+      "summary": "Jaguar Land Rover reported full-year FY2026 wholesale volumes of 307,900 units, down 23.2% year-on-year, and retail sales of 352,300 units, down 17.8%, as a cybersecurity incident, US tariff headwinds, China market weakness, and the wind-down of legacy Jaguar models suppressed annual output despite a Q4 delivery recovery.",
+      "novelis_angle": "JLR is Novelis's primary automotive closed-loop partner under the REALCAR programme; a 23% full-year volume decline signals reduced near-term demand for Novelis's automotive BIW sheet across its European plants."
+    },
+    {
+      "title": "ASI certifies four Nemak México facilities against performance standard V3.1 for automotive aluminium",
+      "url": "https://www.alcircle.com/press-release/asi-certifies-nemak-mexico-s-a-facilities-against-performance-standard-v3-1-118408",
+      "source": "AlCircle",
+      "date": "12 May",
+      "category": "Sustainability & Recycling",
+      "summary": "The Aluminium Stewardship Initiative certified four Nemak México S.A. facilities on 12 May 2026 against ASI Performance Standard V3.1; the plants produce automotive aluminium components including engine blocks, structural parts, and battery trays for e-mobility applications.",
+      "novelis_angle": "Expanding ASI adoption across the automotive supply chain increases OEM preference for certified-source material, reinforcing demand for Novelis's ASI-certified European FRP."
+    },
+    {
+      "title": "Middle East conflict may push global aluminium price above $4,000/t through 2027",
+      "url": "https://www.alcircle.com/news/the-middle-east-conflict-may-push-global-aluminium-price-above-4000-t-through-2027-118422",
+      "source": "AlCircle",
+      "date": "13 May",
+      "category": "Industry News",
+      "summary": "CRU forecasts global aluminium prices reaching approximately USD 4,020/t in Q3 2026 and USD 4,105/t in Q2 2027, driven by a growing supply deficit from the Middle East conflict; Gulf region aluminium production is estimated down around 25% year-on-year due to conflict-related export disruptions and raw material import constraints.",
+      "novelis_angle": "Sustained LME levels above $4,000/t would compress Novelis's conversion margin where downstream contract prices lag spot; Novelis's ~63% recycled content offers partial insulation versus primary-metal-dependent rivals."
+    },
+    {
+      "title": "Alba Q1 2026 sales fall 17% as Gulf conflict disrupts aluminium supply chains",
+      "url": "https://www.alcircle.com/news/alba-sales-decline-17-in-q1-2026-as-gulf-conflict-disrupts-aluminium-supply-chains-118429",
+      "source": "AlCircle",
+      "date": "13 May",
+      "category": "Industry News",
+      "summary": "Aluminium Bahrain (Alba), the world's largest single-site aluminium smelter, reported Q1 2026 sales volumes of 312,563 tonnes, down 17% year-on-year, as Gulf conflict logistics disruptions limited exports; net profit surged 316% to USD 200.3 million as elevated LME prices more than offset volume losses.",
+      "novelis_angle": "Alba's volume constraint tightens P1020 availability for European buyers, supporting the elevated ECDP premiums that feed directly into Novelis's metal purchasing costs across its ten European plants."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
