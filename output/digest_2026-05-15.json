@@ -1,0 +1,39 @@
+{
+  "date": "Friday, 15 May 2026",
+  "lme_price": "$3,650/t",
+  "lme_change": "-$53 (-1.4%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$600/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Gränges AB annual general meeting approves SEK 3.40 dividend and adopts LTI 2026 programme",
+      "url": "http://www.granges.com/newsroom/press-releases/2026/report-from-granges-abs-annual-general-meeting-on-may-12-2026/",
+      "source": "Gränges",
+      "date": "12 May",
+      "category": "Competitors",
+      "summary": "Gränges AB's annual general meeting on 12 May 2026 approved a dividend of SEK 3.40 per share and adopted the LTI 2026 long-term incentive programme comprising up to 1,000,000 warrants and 500,000 restricted share units for senior managers and key individuals, targeting financial value creation and sustainability over approximately three years.",
+      "novelis_angle": "The LTI programme signals Gränges's commitment to retaining management talent as it competes for automotive heat-exchanger strip demand—a segment where Novelis also supplies aluminium rolled products for EV thermal management applications."
+    },
+    {
+      "title": "RecAL targets smarter aluminium recycling across Europe",
+      "url": "https://recyclinginternational.com/commodities/non-ferrous-metals-recycling/recal-targets-smarter-aluminium-recycling-across-europe/64134/",
+      "source": "Recycling International",
+      "date": "13 May",
+      "category": "Sustainability & Recycling",
+      "summary": "The EU Horizon Europe-funded RecAL project, led by the Austrian Institute of Technology with 19 partners from 9 European countries, is developing 14 circular amplification technologies and a digital RecAL Hub cockpit for aluminium recyclate traceability and sorting, targeting annual cost savings of at least €170 million across the European aluminium recycling sector.",
+      "novelis_angle": "The RecAL Hub's recyclate-tracking infrastructure could complement Novelis's closed-loop programmes in Europe by improving sorting yields on post-consumer scrap, supporting progress toward the 3x30 recycled-content targets."
+    },
+    {
+      "title": "LME aluminium cash offer climbs to $3,729.5/t, near four-year high, on Middle East supply disruptions",
+      "url": "https://www.alcircle.com/news/lme-aluminium-price-surges-almost-past-its-four-year-high-after-cash-offer-climbed-to-3-729-5-t-on-may-13-118441",
+      "source": "AlCircle",
+      "date": "13 May",
+      "category": "Industry News",
+      "summary": "The LME aluminium cash offer climbed to $3,729.5/t on 13 May 2026—the highest level since March 2022—driven by Middle East supply disruptions affecting approximately 9% of global aluminium output and 25% of non-Chinese supply, with forward curve compression signalling strong physical demand from buyers seeking spot metal.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
