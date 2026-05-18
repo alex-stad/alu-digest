@@ -1,0 +1,39 @@
+{
+  "date": "Monday, 18 May 2026",
+  "lme_price": "$3,599/t",
+  "lme_change": "-$104 (-2.8%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$598/t",
+  "ecdp_change": "-$3 (-0.5%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Hindalco shares jump nearly 4% ahead of May 22 results",
+      "url": "https://www.newsbytesapp.com/news/business/hindalco-shares-jump-nearly-4-ahead-of-may-22-results/tldr",
+      "source": "NewsBytes",
+      "date": "18 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Hindalco Industries shares surged 3.43% to ₹1,077.90 on NSE ahead of the company's Q4 and full-year FY26 results, due for board approval on 22 May.",
+      "novelis_angle": null
+    },
+    {
+      "title": "From CBAM to recycling growth, here's how supply shocks and sustainability race redraw the global aluminium map",
+      "url": "https://www.alcircle.com/news/from-cbam-to-recycling-growth-heres-how-supply-shocks-and-sustainability-race-redraw-the-global-aluminium-map-118480",
+      "source": "AlCircle",
+      "date": "16 May",
+      "category": "Sustainability & Recycling",
+      "summary": "Supply chain tightening from Gulf conflict disruptions and CBAM implementation are accelerating recycling investments and shifting global scrap trade patterns toward increased secondary aluminium production.",
+      "novelis_angle": "CBAM charges on high-carbon primary imports strengthen the competitive position of Novelis's high-recycled-content FRP as the EU prepares to extend CBAM scope to downstream aluminium products from 2028."
+    },
+    {
+      "title": "Positive factors still provide support, but upside room for aluminium prices is limited",
+      "url": "https://www.alcircle.com/press-release/positive-factors-still-provide-support-but-upside-room-for-aluminium-prices-is-limited-118476",
+      "source": "AlCircle",
+      "date": "16 May",
+      "category": "Industry News",
+      "summary": "LME aluminium 3-month closed at $3,660/t on 16 May as LME inventory fell 11,700 tonnes week-on-week to 346,500 tonnes; volatile US–Iran negotiations and elevated US CPI data send conflicting signals on near-term price direction.",
+      "novelis_angle": "With LME inventory at multi-month lows and P1020 premiums elevated by Gulf disruptions, Novelis faces a tight input market as it simultaneously ramps Oswego recovery and advances Bay Minette commissioning."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
