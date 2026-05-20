@@ -1,0 +1,30 @@
+{
+  "date": "Wednesday, 20 May 2026",
+  "lme_price": "$3,618/t",
+  "lme_change": "-$4 (-0.1%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$598/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Hindalco shares rally 3.5% after Novelis Q4 earnings; Oswego hot mill restart ahead of schedule",
+      "url": "https://upstox.com/news/market-news/stocks/hindalco-shares-in-focus-after-novelis-q4-earnings-oswego-hot-mill-restart-ahead-of-schedule/article-193980/",
+      "source": "Upstox",
+      "date": "20 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Hindalco Industries rose 3.5% to ₹1,085 on 20 May as investors responded to Novelis's Q4 and full fiscal year 2026 earnings; CEO Steve Fisher stated the Oswego, New York hot mill will restart 'within the next few weeks, well ahead of our previous estimate of end of June', revising the prior late-Q2 timeline, with Q4 FY2026 adjusted EBITDA per tonne recovering to $544 (+10% year on year) despite full-year fire disruption impacts.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Constellium board authorizes new $300 million share repurchase programme effective after May 21 AGM",
+      "url": "https://www.constellium.com/news/constellium-board-authorizes-a-new-usd300-million-share-repurchase-program",
+      "source": "Constellium",
+      "date": "20 May",
+      "category": "Competitors",
+      "summary": "Constellium's board authorized a new $300 million share repurchase programme expiring 31 December 2028, effective after the company's 2026 annual general meeting in Paris on 21 May; the programme replaces the previous February 2024 authorization and covers board elections and executive remuneration among 16 agenda items.",
+      "novelis_angle": "A $300 million capital return signals Constellium management confidence in FRP cash generation at a time when Novelis is absorbing Oswego fire costs and ramping Bay Minette — competitive pressure on automotive sheet and aerospace plate remains undiminished."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
