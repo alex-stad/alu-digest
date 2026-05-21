@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 21 May 2026",
+  "lme_price": "$3,648/t",
+  "lme_change": "+$4 (+0.1%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$598/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Constellium shareholders approve $300m buyback at 2026 AGM; stock rises 7.3%",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/why-constellium-cstm-7-3-070820021.html",
+      "source": "Yahoo Finance",
+      "date": "21 May",
+      "category": "Competitors",
+      "summary": "Constellium's 2026 AGM convened on 21 May in Paris with 16 proposals; shareholders approved the $300 million share repurchase programme through December 2028 alongside executive pay and board elections, driving CSTM shares 7.3% higher on the day.",
+      "novelis_angle": "Constellium's buyback capacity — enabled by its record Q1 2026 EBITDA of $359 million and raised full-year guidance to $900–940 million — signals competitive balance-sheet strength in European automotive and aerospace FRP at a time when Novelis is absorbing Oswego disruption costs and Bay Minette ramp-up investment."
+    },
+    {
+      "title": "ACEA and European Aluminium call for CO2 rules to create demand for low-carbon aluminium",
+      "url": "https://www.acea.auto/press-release/revision-of-co2-rules-for-cars-and-vans-a-crucial-chance-to-create-demand-for-low-carbon-aluminium/",
+      "source": "ACEA",
+      "date": "18 May",
+      "category": "End Markets",
+      "summary": "Europe's automotive and aluminium industries jointly called on 18 May for expanded compensatory mechanisms under the EU's CO2 regulations for cars and vans to formally recognise the carbon benefit of low-carbon materials such as recycled aluminium; together, the two sectors sustain 14.5 million jobs in the EU.",
+      "novelis_angle": "A favorable CO2 rules revision could give OEMs regulatory credit for specifying recycled aluminium in BIW and closures, directly strengthening the demand case for Novelis's high-recycled-content automotive sheet product line."
+    },
+    {
+      "title": "LME aluminium fluctuates at highs as US-Iran war threat renewed",
+      "url": "https://www.alcircle.com/press-release/renewed-threat-of-us-iran-war-aluminium-prices-fluctuate-at-highs-118524",
+      "source": "AlCircle",
+      "date": "20 May",
+      "category": "Industry News",
+      "summary": "LME aluminium closed at $3,600.5/t (+0.38%) on 20 May as renewed US-Iran conflict rhetoric heightened Gulf supply concerns; LME on-warrant stocks fell 11,700 tonnes year-on-year to 346,500 tonnes, sustaining tight visible inventory.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
