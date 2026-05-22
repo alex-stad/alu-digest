@@ -1,0 +1,39 @@
+{
+  "date": "Friday, 22 May 2026",
+  "lme_price": "$3,661/t",
+  "lme_change": "+$18 (+0.5%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$598/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Hindalco Q4 FY26: consolidated revenue rises 16% to ₹64,890 crore as net profit surges 66%",
+      "url": "https://www.bajajfinserv.in/hindalco-industries-quarterly-results",
+      "source": "Bajaj Finserv",
+      "date": "22 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Hindalco Industries reported Q4 FY26 consolidated revenue of ₹64,890 crore (+16% YoY) and net profit of ₹5,283 crore (+66.4% YoY; EPS ₹23.45 vs ₹14.10 in Q4 FY25), driven by a recovery at subsidiary Novelis and record India aluminium operations; the board declared a final dividend of ₹5 per share for FY26.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Speira commissions second H2-ready recycling furnace at Grevenbroich",
+      "url": "https://aluminiumtoday.com/news/speira-upgrades-aluminium-recycling-furnaces",
+      "source": "Aluminium International Today",
+      "date": "22 May",
+      "category": "Competitors",
+      "summary": "Speira has started production on its second tiltable rotary furnace at the Grevenbroich Rheinwerk site in Germany, completing the first pair of a planned four-furnace, €11 million investment across two sites; the H2-ready units are capable of melting 25 tonnes of material per cycle and process low-grade scrap and dross at three times the energy efficiency of the previous furnaces.",
+      "novelis_angle": "Speira's growing low-grade scrap recycling capacity at Grevenbroich intensifies competition for European post-consumer aluminium scrap, a critical feedstock that Novelis Nachterstedt and the jointly-operated Alunorf melt shop depend on to meet the 3×30 recycled-content target."
+    },
+    {
+      "title": "EU Council and Parliament agree mechanism to counter US steel and aluminium tariffs",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/20/eu-us-trade-council-and-parliament-strike-a-deal-to-implement-the-tariff-elements-of-the-joint-statement/",
+      "source": "Council of the European Union",
+      "date": "20 May",
+      "category": "Trade & Regulation",
+      "summary": "The EU Council presidency and European Parliament reached a provisional agreement on 20 May to implement tariff elements of the EU-US Joint Statement, empowering the European Commission to suspend tariff preferences on US goods if Washington maintains duties above 15% on EU steel and aluminium derivatives beyond 31 December 2026; current US tariffs on EU steel and aluminium derivatives remain as high as 50%.",
+      "novelis_angle": "If the mechanism succeeds in reducing US tariffs on EU aluminium derivatives below 15%, European automotive OEMs including BMW, Audi, and JLR that export aluminium-intensive vehicles to North America would regain export cost headroom, supporting demand for BIW and body sheet at Novelis's European plants."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
