@@ -1,0 +1,39 @@
+{
+  "date": "Monday, 25 May 2026",
+  "lme_price": "$3,676/t",
+  "lme_change": "+$15 (+0.4%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$598/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Novelis introduces second-generation aluminium-intensive battery enclosure solution for electric vehicles",
+      "url": "https://investors.novelis.com/news-events/press-releases/detail/70/novelis-introduces-second-generation-aluminum-intensive-battery-enclosure-solution-for-electric-vehicles",
+      "source": "Novelis Inc.",
+      "date": "18 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis unveiled its Generation II aluminium-intensive battery enclosure for EVs, using Advanz s650 alloy in roll-formed frame sections and a structurally integrated thermal management bottom plate; the design achieves more than 20% mass reduction versus baseline aluminium production enclosures and a frame mass efficiency below 1.0 kg/kWh in a cell-to-pack architecture that is 50% lighter than equivalent steel housings.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Germany's aluminium recycling output drops 3% y-o-y; recovery looks lean in 2026",
+      "url": "https://www.alcircle.com/news/germanys-aluminium-recycling-output-drops-3-yoy-recovery-looks-lean-in-2026-118563",
+      "source": "AlCircle",
+      "date": "24 May",
+      "category": "Sustainability & Recycling",
+      "summary": "Germany produced 684,564 tonnes of recycled aluminium in Q1 2026, down 3% year-on-year, with secondary remelters falling 4% to 555,925 tonnes; 85% of surveyed companies reported aluminium scrap shortages and 57% do not expect conditions to improve before the end of 2026.",
+      "novelis_angle": "Persistent scrap shortages and declining German recycled output tighten the secondary aluminium supply pool that Novelis Nachterstedt and the Alunorf joint venture depend on to meet the 3×30 recycled-content target."
+    },
+    {
+      "title": "China aluminium flat-rolled products review tests EU trade defence balance",
+      "url": "https://www.metalnomist.com/2026/05/china-aluminium-flat-rolled-products.html",
+      "source": "The Metalnomist",
+      "date": "23 May",
+      "category": "Trade & Regulation",
+      "summary": "The European Commission opened a partial interim review of existing anti-dumping measures on Chinese aluminium flat-rolled products, specifically 7000-series alloy sheets used in aviation unit load devices (ULDs), following a request by PalNet; the review will assess whether current duty levels remain appropriate for this aviation-adjacent high-alloy FRP segment.",
+      "novelis_angle": "A revision to 7000-series trade protection affects pricing dynamics for Chinese aerospace-grade aluminium imports competing against European FRP producers; Novelis Koblenz, which manufactures aerospace plate for Airbus and Boeing programmes, stands to benefit if duties are maintained or increased."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
