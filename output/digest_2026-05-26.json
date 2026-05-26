@@ -1,0 +1,39 @@
+{
+  "date": "Tuesday, 26 May 2026",
+  "lme_price": "$3,704/t",
+  "lme_change": "+$28 (+0.8%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$598/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Hindalco sees steady Novelis earnings, strong domestic demand in 2027",
+      "url": "https://www.business-standard.com/companies/news/hindalco-sees-steady-novelis-earnings-strong-domestic-demand-in-2027-126052500762_1.html",
+      "source": "Business Standard",
+      "date": "25 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Hindalco MD Satish Pai stated \"the worst is over for Novelis\" at the post-FY26 results analyst call, projecting Novelis's adjusted EBITDA per tonne to recover to approximately $500 in FY2027; Pai confirmed the Ford customer relationship has been retained despite Oswego supply disruptions and flagged strong FY27 demand from India's aluminium and copper markets.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Middle East crisis jolts aluminium downstream trade, end-use sectors grapple with supply crunch",
+      "url": "https://www.alcircle.com/news/middle-east-crisis-jolts-aluminium-downstream-trade-end-use-sectors-grapple-with-supply-crunch-118574",
+      "source": "AlCircle",
+      "date": "24 May",
+      "category": "End Markets",
+      "summary": "Wood Mackenzie projects 3–3.5 million tonnes of 2026 global aluminium output wiped out by Middle East conflict, with GCC smelter shutdowns at EGA, Alba, and Qatalum removing an estimated 2.3–3 million tonnes of capacity; packaging, automotive, aerospace, and EV sectors face supply crunches and Monster Beverage has flagged incremental price increases through 2026 citing aluminium costs and freight.",
+      "novelis_angle": "Supply constraints across packaging and automotive segments signal that can-sheet and BIW customers are paying a premium for reliable supply; Novelis restarts Oswego into a structurally tight market, which should support shipment volumes and pricing in H2 2026."
+    },
+    {
+      "title": "Italy records 92.8% aluminium beverage can recycling rate in 2025",
+      "url": "https://www.alcircle.com/news/italy-records-92-8-aluminium-beverage-can-recycling-rate-in-2025-118575",
+      "source": "AlCircle",
+      "date": "25 May",
+      "category": "Sustainability & Recycling",
+      "summary": "Italy's CIAL reported an overall aluminium packaging recycling rate of 69.5% for 2025—exceeding the EU's 50% target—with beverage cans reaching 92.8%, up 5.5 percentage points year-on-year; 65,000 tonnes of aluminium were recycled, a 42% increase from 2024, saving an estimated 460,000 tonnes of CO₂ equivalent.",
+      "novelis_angle": "Italy's high UBC recycling rate strengthens feedstock availability for Novelis's Pieve Emanuele and Bresso plants, directly supporting the 3×30 recycled-content targets and its closed-loop partnerships with Italian can-makers."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
