@@ -1,0 +1,57 @@
+{
+  "date": "Wednesday, 27 May 2026",
+  "lme_price": "$3,700/t",
+  "lme_change": "+$24 (+0.6%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$596/t",
+  "ecdp_change": "-$1 (-0.2%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Novelis Oswego hot mill set to restart weeks ahead of schedule",
+      "url": "https://www.alcircle.com/news/novelis-oswego-hot-mill-set-to-restart-weeks-ahead-of-schedule-after-2025-fires-118541",
+      "source": "AL Circle",
+      "date": "26 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis has completed major reconstruction milestones at its Oswego, NY hot mill — including roof trusses, structural columns, and ductwork — with commissioning activities accelerating ahead of the original end-June 2026 restart timeline. The facility was shut down by fires in September and November 2025.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Novelis Bay Minette cold mill on track for Q3 commissioning",
+      "url": "https://aluminiumtoday.com/news/cold-mill-at-bay-minette-to-be-commissioned-next-quarter",
+      "source": "Aluminium International Today",
+      "date": "27 May",
+      "category": "Novelis / Hindalco",
+      "summary": "The cold mill at Novelis's $5 billion Bay Minette, Alabama greenfield is on track for commissioning in Q3 2026, with approximately 1,000 contractors on site expected to double by year-end as the plant targets full-capacity production at 600 kt/yr in H2 2026.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Speira explores new growth opportunities in secondary aluminium",
+      "url": "https://recyclinginternational.com/commodities/non-ferrous-metals-recycling/speira-exploring-new-growth-opportunities-for-aluminium/58920/",
+      "source": "Recycling International",
+      "date": "26 May",
+      "category": "Competitors",
+      "summary": "Speira is advancing a secondary aluminium growth strategy targeting CBAM-driven demand for low-carbon, recycled-content FRP from European manufacturers, building on its recent investment in hydrogen-ready recycling infrastructure at Grevenbroich.",
+      "novelis_angle": "Speira's accelerating push into CBAM-advantaged secondary aluminium heightens competition for closed-loop packaging and automotive scrap in Central Europe — feedstock on which Novelis depends for its 75% recycled-content target by 2030."
+    },
+    {
+      "title": "Trump administration rejects Ford's aluminium tariff relief request",
+      "url": "https://www.automotiveworld.com/news/trump-admin-rejects-ford-bid-for-aluminum-tariff-relief/",
+      "source": "Automotive World",
+      "date": "26 May",
+      "category": "End Markets",
+      "summary": "The Trump administration denied Ford Motor Company's application for relief from 25% aluminium import tariffs, maintaining elevated raw material costs for the automaker's aluminium-intensive F-150 programme; Ford had absorbed approximately $2 billion in aluminium-related costs by February 2026.",
+      "novelis_angle": "Ford is a key Novelis automotive customer through long-term F-150 aluminium body sheet supply; the tariff denial extends Ford's cost headwinds and strengthens the commercial case for both companies to source domestically once Bay Minette ramps in H2 2026."
+    },
+    {
+      "title": "Ball Corporation advances verified recycled-content aluminium packaging",
+      "url": "https://www.packaginginsights.com/news/aluminum-packaging-sustainability-verification.html",
+      "source": "Packaging Insights",
+      "date": "26 May",
+      "category": "End Markets",
+      "summary": "Ball Corporation shipped 111.9 billion aluminium beverage cans globally in 2025 with 74% recycled content and expanded sustainable aluminium can production capacity in May 2026, positioning itself as a verified climate-tech packaging company.",
+      "novelis_angle": "Ball's push for independently verified recycled content strengthens the premium for ASI-certified, closed-loop can sheet — a segment where Novelis differentiates through its Latchford recycling hub and high-recycled-content alloy programme."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
