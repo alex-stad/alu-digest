@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 28 May 2026",
+  "lme_price": "$3,665/t",
+  "lme_change": "-$35 (-1.0%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$596/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Hindalco Industries likely to gain from high aluminium, copper prices",
+      "url": "https://www.business-standard.com/markets/news/hindalco-industries-likely-to-gain-from-high-aluminium-copper-prices-126052601895_1.html",
+      "source": "Business Standard",
+      "date": "26 May",
+      "category": "Novelis / Hindalco",
+      "summary": "Business Standard reported that Hindalco Industries is expected to benefit from prevailing high aluminium and copper prices.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Top bauxite producer Guinea to unveil export controls in June",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-25/top-bauxite-producer-guinea-to-unveil-export-controls-in-june",
+      "source": "Bloomberg",
+      "date": "25 May",
+      "category": "Trade & Regulation",
+      "summary": "Guinea, the world's largest bauxite producer, plans to unveil export controls in June 2026 aimed at stabilising bauxite prices amid global market volatility.",
+      "novelis_angle": "Guinea export controls would add a further supply constraint upstream of European smelters, putting upward structural pressure on P1020 availability and ECDP premiums independent of the current Middle East disruption."
+    },
+    {
+      "title": "Global aluminum rally could draw record exports from China",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-27/global-aluminum-rally-could-draw-record-exports-from-china",
+      "source": "Bloomberg",
+      "date": "27 May",
+      "category": "Industry News",
+      "summary": "China's daily aluminium output hit an all-time high of 129,000 tonnes in May 2026, with full-year exports tracking toward 7.2–7.5 million tonnes—potentially exceeding the 2024 record of 6.7 million tonnes—as the LME–Shanghai price premium reached its widest since March 2022.",
+      "novelis_angle": "Record Chinese aluminium exports would partially replenish global P1020 supply and cap further ECDP premium gains, easing upstream cost pressure for European FRP producers including Novelis."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
