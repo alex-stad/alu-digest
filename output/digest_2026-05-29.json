@@ -1,0 +1,48 @@
+{
+  "date": "Friday, 29 May 2026",
+  "lme_price": "$3,695/t",
+  "lme_change": "+$2 (+0.0%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$596/t",
+  "ecdp_change": null,
+  "ecdp_change_positive": null,
+  "articles": [
+    {
+      "title": "Sortera Technologies doubles capacity with new Tennessee facility, deploying physical AI to strengthen the US supply chain for high-purity recycled aluminium",
+      "url": "https://www.alcircle.com/press-release/sortera-technologies-doubles-capacity-with-new-tennessee-facility-deploying-physical-ai-to-strengthen-the-us-supply-chain-for-high-purity-recycled-alu-118585",
+      "source": "AlCircle",
+      "date": "28 May",
+      "category": "Sustainability & Recycling",
+      "summary": "Sortera Technologies opened a second AI-driven aluminium scrap sorting facility in Lebanon, Tennessee, doubling annual processing capacity to approximately 109,000 tonnes; the system uses cameras, lasers and X-ray fluorescence sensors guided by machine-learning algorithms to recover high-purity recycled aluminium from mixed scrap streams, funded by a $45 million raise in 2025.",
+      "novelis_angle": "Growing AI-enabled scrap sorting capacity in the US increases competition for high-purity recycled aluminium feedstock in the same geography where Novelis's Bay Minette greenfield recycling and rolling plant will source material from H2 2026 onwards."
+    },
+    {
+      "title": "Can the EU deliver for the aluminium industry?",
+      "url": "https://www.aluminium-journal.com/european-aluminium-column-may-2026",
+      "source": "International Aluminium Journal",
+      "date": "29 May",
+      "category": "Trade & Regulation",
+      "summary": "European Aluminium's May 2026 column warns that the EU's Industrial Accelerator Act remains unfulfilled for the aluminium sector, and that revised EU ETS fallback benchmarks for 2026–2030 would cut free allocations for aluminium recyclers and alumina refiners by 34%, raising production costs despite the process consuming 95% less energy than primary production.",
+      "novelis_angle": "A 34% cut to EU ETS fallback benchmark free allocations would directly raise carbon costs across Novelis's European recycling operations, including Nachterstedt and Latchford, compressing the cost margin of secondary over primary metal at precisely the moment Novelis is expanding European recycled content."
+    },
+    {
+      "title": "New Zealand launches WTO safeguard investigation on imports of certain aluminium extrusions",
+      "url": "https://www.wto.org/english/news_e/news26_e/safe_nzl_28may26_394_e.htm",
+      "source": "WTO",
+      "date": "28 May",
+      "category": "Trade & Regulation",
+      "summary": "New Zealand notified the WTO Committee on Safeguards on 27 May 2026 of the initiation of a safeguard investigation on imports of certain aluminium extrusions, citing potential serious injury to domestic producers from increased import volumes.",
+      "novelis_angle": null
+    },
+    {
+      "title": "LME aluminium closes at $3,695/t as Hormuz-driven backwardation reaches near-record levels",
+      "url": "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_cash",
+      "source": "Westmetall",
+      "date": "29 May",
+      "category": "Industry News",
+      "summary": "LME aluminium 3-month settled at $3,695/t on 29 May, essentially unchanged (+$2), while cash-to-3-month backwardation has widened to approximately $60–95/t — near a 19-year extreme — as Gulf primary smelters accounting for 9% of non-Chinese global supply remain offline following the Strait of Hormuz blockade.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
