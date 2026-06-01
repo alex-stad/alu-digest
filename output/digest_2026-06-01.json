@@ -1,0 +1,39 @@
+{
+  "date": "Monday, 01 June 2026",
+  "lme_price": "$3,700/t",
+  "lme_change": "+$7 (+0.2%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$593/t",
+  "ecdp_change": "-$3 (-0.6%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "EU recyclers warn against export restrictions on recycled aluminium",
+      "url": "https://www.recycling-magazine.com/2026/05/28/eu-recyclers-warn-against-export-restrictions-on-recycled-aluminium/",
+      "source": "RECYCLING magazine",
+      "date": "28 May",
+      "category": "Sustainability & Recycling",
+      "summary": "A coalition of European recycling associations and companies filed a joint open letter to the European Commission opposing potential export restrictions on recycled aluminium scrap, arguing that Europe's recycling industry produces high-quality materials that already exceed domestic demand. The proposed restrictions, targeted for spring 2026 implementation, could disrupt established scrap supply flows critical to European aluminium recyclers.",
+      "novelis_angle": "As the world's largest aluminium recycler, Novelis depends on pan-European scrap flows to meet its 63%-recycled-content targets; restrictions on scrap exports could tighten input supply at facilities such as Latchford (UK) and Nachterstedt (DE)."
+    },
+    {
+      "title": "Collateral damage: Aughinish Alumina, EU sanctions and Russian missiles",
+      "url": "https://www.rte.ie/news/analysis-and-comment/2026/0530/1575983-aughinish-alumina-analysis/",
+      "source": "RTÉ News",
+      "date": "30 May",
+      "category": "Trade & Regulation",
+      "summary": "The European Commission decided not to propose sanctions on Russian-owned Aughinish Alumina in Ireland despite evidence linking its alumina exports to Russian weapons production, citing the risk of further destabilising Europe's already stressed aluminium supply chain. Aughinish is one of Europe's largest alumina refineries and a key upstream feedstock supplier to European primary aluminium smelters.",
+      "novelis_angle": "Preserving Aughinish output limits further P1020 supply tightening in Europe at a time when the market is already running a structural deficit, reducing upside pressure on Novelis's primary aluminium input costs."
+    },
+    {
+      "title": "The aluminum shock hitting the global economy",
+      "url": "https://www.bloomberg.com/news/videos/2026-05-31/the-aluminum-shock-hitting-the-global-economy-video",
+      "source": "Bloomberg",
+      "date": "31 May",
+      "category": "Industry News",
+      "summary": "Bloomberg reports the global aluminium market is experiencing a significant supply shock driven by the Strait of Hormuz conflict and US tariffs, with spot prices spiking to near four-year highs and LME exchange inventories slumping. The combined effect of Middle East production disruptions and sustained electrification demand is creating the tightest market conditions in years.",
+      "novelis_angle": "Sustained LME elevation above $3,700/t raises primary metal input costs across Novelis's operations; the speed of the price move may outpace metal-price pass-through mechanisms in some customer contracts."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
