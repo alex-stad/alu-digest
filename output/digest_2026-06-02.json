@@ -1,0 +1,48 @@
+{
+  "date": "Monday, 02 June 2026",
+  "lme_price": "$3,755/t",
+  "lme_change": "+$55 (+1.5%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$593/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "60-day reboot: how Novelis and ABB restored a flooded Swiss auto aluminium plant",
+      "url": "https://www.alcircle.com/news/60-day-reboot-how-novelis-and-abb-restored-a-flooded-swiss-auto-aluminium-plant-118611",
+      "source": "AlCircle",
+      "date": "1 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis and ABB jointly restored Novelis' Sierre, Switzerland automotive aluminium plant following severe flooding, completing the recovery within 60 days through rapid equipment replacement and remote commissioning support from ABB.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Speira appoints Peter Basten to executive team",
+      "url": "https://aluminiumtoday.com/news/speira-appoints-peter-basten-to-executive-team",
+      "source": "Aluminium International Today",
+      "date": "2 Jun",
+      "category": "Competitors",
+      "summary": "Speira appointed Peter Basten to its executive management team, with responsibility for Speira's Specialities business unit and New Business Development functions.",
+      "novelis_angle": "Strengthening Speira's specialities leadership signals increased focus on the higher-margin industrial and automotive specialty sheet markets where Novelis competes most directly in Europe."
+    },
+    {
+      "title": "Aluminium supply uncertainties prompt EU to step back from Aughinish sanctions",
+      "url": "https://www.alcircle.com/news/aluminium-supply-uncertainties-prompt-eu-to-step-back-from-aughinish-sanctions-118660",
+      "source": "AlCircle",
+      "date": "2 Jun",
+      "category": "Trade & Regulation",
+      "summary": "The European Commission decided not to proceed with sanctions on Aughinish Alumina, the Rusal-owned Irish alumina refinery, citing concerns that sanctions would further destabilise Europe's already fragile aluminium supply chain amid ongoing Middle East disruptions.",
+      "novelis_angle": "With LME aluminium at four-year highs driven by the Hormuz supply squeeze, preserving Aughinish output limits further upward pressure on primary aluminium costs that feed into Novelis' P1020 input prices."
+    },
+    {
+      "title": "Aluminium: liquid aluminium proportion increased more than expectations in May, expected to edge up in June",
+      "url": "https://www.alcircle.com/press-release/aluminium-liquid-aluminium-proportion-increased-more-than-expectations-in-may-expected-to-edge-up-in-june-118682",
+      "source": "AlCircle",
+      "date": "2 Jun",
+      "category": "Industry News",
+      "summary": "China's liquid aluminium proportion at smelters reached 76.5% in May 2026, up 1.1 percentage points beyond expectations, and is forecast to edge up further in June as domestic fabrication demand remains strong.",
+      "novelis_angle": "Rising Chinese liquid ratios indicate domestic fabrication is absorbing more primary output, reducing the pool of aluminium available for export and providing structural support to elevated LME prices."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
