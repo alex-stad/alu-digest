@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Wednesday, 03 June 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Wednesday, 03 June 2026</h2>
+        <p class="meta">5 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,782/t</span>
+          <span class="change-neg">-$6 (-0.2%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$585/t</span>
+          <span class="change-neg">-$8 (-1.3%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-novelis">Novelis / Hindalco</span>
+            <span class="article-source">1 Jun</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>Novelis publishes EPDs for key architectural aluminium products</h3>
+          <p>Novelis published third-party verified Environmental Product Declarations (EPDs) for selected European portfolio products used in architectural and construction applications, including materials with recycled content exceeding 90%. The declarations are aligned with international EPD standards and support customers&#x27; sustainability reporting, life-cycle analysis, and carbon footprint calculations.</p>
+          <a href="https://www.alcircle.com/news/novelis-publishes-epds-for-key-architectural-aluminium-products-118697" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-sustainability">Sustainability &amp; Recycling</span>
+            <span class="article-source">1 Jun</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>Europe aluminium recycling facts: amidst 8MT demand and 66% scrap export surge, recycling grows over 80%</h3>
+          <p>European aluminium recycling rates have exceeded 80% against total demand of 8 million tonnes, even as scrap exports surged 66%, according to new industry data. The figures reveal a structural tension between rising domestic recycling rates and escalating scrap outflows that risk constraining the secondary raw material base for European producers.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Elevated scrap exports divert material away from European recyclers; Novelis&#x27;s closed-loop partnerships — returning post-consumer scrap directly to its European plants — provide insulation against this structural drain on domestic secondary supply.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/europes-aluminium-recycling-facts-despite-a-66-scrap-export-surge-recycling-rates-grow-above-80-in-parallel-to-an-increased-8mt-demand-118678" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-trade">Trade &amp; Regulation</span>
+            <span class="article-source">2 Jun</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>Trump cuts Section 232 tariffs on selected aluminium derivative products to 15%</h3>
+          <p>President Trump signed a proclamation on 1 June reducing Section 232 tariffs on certain aluminium-containing derivative products — including agricultural machinery and HVAC equipment — from 25% to 15%, effective 8 June 2026 through year-end 2027. The same proclamation added aluminium lithographic plates to Section 232 coverage for the first time.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Targeted Section 232 modifications that lower tariffs on aluminium-consuming downstream equipment signal continued active US trade policy reshaping — a macro backdrop that shapes the competitive economics of Novelis&#x27;s Bay Minette greenfield as it approaches commissioning.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/trump-eases-aluminium-and-steel-tariffs-to-accelerate-domestic-manufacturing-investment-118692" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-trade">Trade &amp; Regulation</span>
+            <span class="article-source">2 Jun</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3>Global aluminium associations welcome new OECD data on industrial subsidies</h3>
+          <p>Aluminium associations from the US, Europe, Canada, and Japan welcomed the OECD&#x27;s new MAGIC database, which shows the global aluminium sector received USD 118.3 billion in subsidies from 2005 to 2024, with China accounting for USD 101.4 billion (86%). The associations called for the findings to inform international trade policy measures against subsidised production.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Quantifying China&#x27;s USD 101.4 billion subsidy advantage strengthens the evidentiary base for EU CBAM enforcement and anti-dumping instruments that protect European FRP producers, including Novelis, from unfairly priced Chinese flat-rolled competition.</p>
+          </div>
+          <a href="https://www.alcircle.com/press-release/global-aluminium-associations-welcome-new-oecd-data-on-industrial-subsidies-118693" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">2 Jun</span>
+            <span class="article-num">#5</span>
+          </div>
+          <h3>Alba receives EU approval to acquire Aluminium Dunkerque in $2.2B deal</h3>
+          <p>The European Commission cleared Bahrain&#x27;s Alba to acquire Aluminium Dunkerque, Europe&#x27;s largest primary aluminium smelter at 300,000 tonnes per year, in a $2.2 billion deal that still requires French FDI screening and EU Foreign Subsidies Regulation approvals. Bpifrance separately signed a €100 million investment agreement for a 6% stake in the acquisition vehicle at the Choose France Summit in Paris.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>A Gulf-state-backed primary producer taking control of Europe&#x27;s largest primary smelter introduces a new strategic owner into a key regional P1020 supply node at a time when European aluminium prices are at four-year highs.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/alba-receives-eu-approval-to-acquire-its-largest-aluminium-smelter-aluminium-dunkerque-in-2-2b-deal-118699" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
