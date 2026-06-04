@@ -1,0 +1,48 @@
+{
+  "date": "Thursday, 04 June 2026",
+  "lme_price": "$3,732/t",
+  "lme_change": "-$56 (-1.5%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Novelis aluminum plant to resume operations following fire damage",
+      "url": "https://www.wardsauto.com/news/novelis-aluminum-oswego-ny-plant-resume-hot-mill-operations-fire-damage/821494/",
+      "source": "WardsAuto",
+      "date": "3 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis has completed mechanical rebuilding at its Oswego, NY hot mill and entered the final commissioning phase, with CEO Steve Fisher confirming production will resume within weeks — ahead of the previously communicated end-of-June target; the plant produces approximately 1.7 billion pounds of aluminium sheet per year and supplies roughly 40% of sheet aluminium consumed by US automakers. The restart eases an acute supply crunch that cut Ford F-150 inventory nearly 24% and is estimated to have cost Ford approximately $2 billion.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Giga-casting: the aluminium shot — alloy science, scrap loop economics, and the survival pivot every foundry must execute now",
+      "url": "https://www.alcircle.com/news/giga-casting-the-aluminium-shot-alloy-science-scrap-loop-economics-and-the-survival-pivot-every-foundry-must-execute-now-118716",
+      "source": "AlCircle",
+      "date": "3 Jun",
+      "category": "End Markets",
+      "summary": "Giga-casting is substituting stamped flat-rolled aluminium sheet in EV structural components with high-pressure die-cast parts; Toyota is adopting megacasting for 2026-model EVs and Volvo was the first European OEM to commit, selecting an 8,400-tonne machine at its Torslanda facility. The shift disrupts alloy selection (copper-free hypoeutectic HPDC alloys versus wrought sheet), scrap loop economics, and the competitive positioning of traditional rolling and stamping supply chains.",
+      "novelis_angle": "Giga-casting's structural substitution of BIW sheet — now spreading beyond EVs to ICE platforms — is a volume headwind for Novelis's automotive FRP business; battery enclosure growth may partially offset losses, but the BIW sheet trajectory warrants monitoring."
+    },
+    {
+      "title": "Can recycling and innovation shield aluminium from global disruptions?",
+      "url": "https://www.alcircle.com/news/can-recycling-and-innovation-shield-aluminium-from-global-disruptions-118668",
+      "source": "AlCircle",
+      "date": "2 Jun",
+      "category": "Sustainability & Recycling",
+      "summary": "European aluminium recycling rates now exceed 80%, but the sector cannot fully compensate for primary supply shortfalls caused by the Middle East conflict; Germany's recycled aluminium output fell approximately 3% year-on-year in Q1 2026 to 684,564 tonnes, constrained by weak industrial demand, high energy costs, and scrap scarcity. The analysis concludes that recycling and product innovation improve supply resilience but leave a structural gap that secondary production alone cannot close.",
+      "novelis_angle": "Novelis's approximately 63% recycled content and closed-loop infrastructure position it more resiliently than primary-dependent FRP peers during supply disruptions, though scrap scarcity and weak German industrial demand are headwinds for European recycling operations."
+    },
+    {
+      "title": "Geopolitical disruptions and structural demand: China's aluminium exports to rebound by 2026",
+      "url": "https://www.alcircle.com/press-release/geopolitical-disruptions-and-structural-demand-china-s-aluminium-exports-to-rebound-by-2026-118665",
+      "source": "AlCircle",
+      "date": "2 Jun",
+      "category": "Industry News",
+      "summary": "China's aluminium semis exports rebounded sharply in April 2026 to 535,700 tonnes, up 20.9% month-on-month and 9.8% year-on-year, with aluminium products reaching 318,000 tonnes, up 32.8% month-on-month. Orders from major Chinese exporters for June–July are running 15–20% above May levels, driven by structural demand growth outside China and geopolitical diversion of trade flows away from Middle East routes.",
+      "novelis_angle": "Rising Chinese aluminium semis volumes are increasing competitive pressure on European and Asian FRP markets, potentially compressing regional premiums and creating margin headwinds for Novelis's non-US rolling operations."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
