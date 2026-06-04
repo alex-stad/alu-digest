@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Thursday, 04 June 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Thursday, 04 June 2026</h2>
+        <p class="meta">4 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,732/t</span>
+          <span class="change-neg">-$56 (-1.5%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$585/t</span>
+          <span class="change-neg">$0 (0.0%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-novelis">Novelis / Hindalco</span>
+            <span class="article-source">3 Jun</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>Novelis aluminum plant to resume operations following fire damage</h3>
+          <p>Novelis has completed mechanical rebuilding at its Oswego, NY hot mill and entered the final commissioning phase, with CEO Steve Fisher confirming production will resume within weeks — ahead of the previously communicated end-of-June target; the plant produces approximately 1.7 billion pounds of aluminium sheet per year and supplies roughly 40% of sheet aluminium consumed by US automakers. The restart eases an acute supply crunch that cut Ford F-150 inventory nearly 24% and is estimated to have cost Ford approximately $2 billion.</p>
+          <a href="https://www.wardsauto.com/news/novelis-aluminum-oswego-ny-plant-resume-hot-mill-operations-fire-damage/821494/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">3 Jun</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>Giga-casting: the aluminium shot — alloy science, scrap loop economics, and the survival pivot every foundry must execute now</h3>
+          <p>Giga-casting is substituting stamped flat-rolled aluminium sheet in EV structural components with high-pressure die-cast parts; Toyota is adopting megacasting for 2026-model EVs and Volvo was the first European OEM to commit, selecting an 8,400-tonne machine at its Torslanda facility. The shift disrupts alloy selection (copper-free hypoeutectic HPDC alloys versus wrought sheet), scrap loop economics, and the competitive positioning of traditional rolling and stamping supply chains.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Giga-casting&#x27;s structural substitution of BIW sheet — now spreading beyond EVs to ICE platforms — is a volume headwind for Novelis&#x27;s automotive FRP business; battery enclosure growth may partially offset losses, but the BIW sheet trajectory warrants monitoring.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/giga-casting-the-aluminium-shot-alloy-science-scrap-loop-economics-and-the-survival-pivot-every-foundry-must-execute-now-118716" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-sustainability">Sustainability &amp; Recycling</span>
+            <span class="article-source">2 Jun</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>Can recycling and innovation shield aluminium from global disruptions?</h3>
+          <p>European aluminium recycling rates now exceed 80%, but the sector cannot fully compensate for primary supply shortfalls caused by the Middle East conflict; Germany&#x27;s recycled aluminium output fell approximately 3% year-on-year in Q1 2026 to 684,564 tonnes, constrained by weak industrial demand, high energy costs, and scrap scarcity. The analysis concludes that recycling and product innovation improve supply resilience but leave a structural gap that secondary production alone cannot close.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Novelis&#x27;s approximately 63% recycled content and closed-loop infrastructure position it more resiliently than primary-dependent FRP peers during supply disruptions, though scrap scarcity and weak German industrial demand are headwinds for European recycling operations.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/can-recycling-and-innovation-shield-aluminium-from-global-disruptions-118668" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">2 Jun</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3>Geopolitical disruptions and structural demand: China&#x27;s aluminium exports to rebound by 2026</h3>
+          <p>China&#x27;s aluminium semis exports rebounded sharply in April 2026 to 535,700 tonnes, up 20.9% month-on-month and 9.8% year-on-year, with aluminium products reaching 318,000 tonnes, up 32.8% month-on-month. Orders from major Chinese exporters for June–July are running 15–20% above May levels, driven by structural demand growth outside China and geopolitical diversion of trade flows away from Middle East routes.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Rising Chinese aluminium semis volumes are increasing competitive pressure on European and Asian FRP markets, potentially compressing regional premiums and creating margin headwinds for Novelis&#x27;s non-US rolling operations.</p>
+          </div>
+          <a href="https://www.alcircle.com/press-release/geopolitical-disruptions-and-structural-demand-china-s-aluminium-exports-to-rebound-by-2026-118665" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
