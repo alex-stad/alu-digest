@@ -1,0 +1,39 @@
+{
+  "date": "Friday, 05 June 2026",
+  "lme_price": "$3,694/t",
+  "lme_change": "-$38 (-1.0%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "+$0 (+0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Novelis recognised for 100% scrap product",
+      "url": "https://aluminiumtoday.com/news/novelis-recognised-for-100-scrap-product",
+      "source": "Aluminium International Today",
+      "date": "5 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis received the Münchner Management Kolloquium Award of Excellence 2026 for an automotive exterior body sheet produced from 100% end-of-life vehicle scrap, the first fully circular product of its kind for BIW applications.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Updated ETS benchmarks raise industry concerns",
+      "url": "https://www.aluminium-journal.com/updated-ets-benchmarks-raise-industry-concerns",
+      "source": "International Aluminium Journal",
+      "date": "4 Jun",
+      "category": "Trade & Regulation",
+      "summary": "The European Commission's revised EU ETS benchmarks for 2026–2030 impose approximately a 50% cut in free allowances for aluminium recycling operations versus Phase 3 levels, with heat/fuel fall-back benchmarks declining ~34%, raising concerns about aluminium recycling economics and critical raw material supply security in Europe.",
+      "novelis_angle": "A ~50% cut in ETS free allocations for recycling furnaces would materially increase carbon costs for Novelis's European secondary operations, directly pressuring the economics of its 3x30 recycled-content target."
+    },
+    {
+      "title": "Europe's aluminium sector hit by rising costs, lower output and weak demand",
+      "url": "https://www.alcircle.com/news/europes-aluminium-sector-hit-by-rising-costs-lower-output-and-weak-demand-118732",
+      "source": "AL Circle",
+      "date": "4 Jun",
+      "category": "Industry News",
+      "summary": "Fastmarkets estimates European aluminium smelter output at 3.445 million tonnes in 2026, down approximately 44% from 6.151 million tonnes in 2025, due to high energy costs and persistently weak downstream demand; sector recovery is expected to take six to twelve months.",
+      "novelis_angle": "Collapsed European primary smelter output tightens P1020 availability for FRP producers reliant on primary ingot, strengthening the competitive case for Novelis's secondary-focused production model."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
