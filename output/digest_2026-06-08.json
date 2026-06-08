@@ -1,0 +1,39 @@
+{
+  "date": "Monday, 08 June 2026",
+  "lme_price": "$3,614/t",
+  "lme_change": "-$80 (-2.2%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$585/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Aluminium giant Constellium's FY25 profit gains 358%: would CBAM cloud the outlook?",
+      "url": "https://www.alcircle.com/news/aluminium-giant-constelliums-fy25-profit-gains-358-would-cbam-cloud-the-outlook-119770",
+      "source": "AlCircle",
+      "date": "7 Jun",
+      "category": "Competitors",
+      "summary": "Constellium's FY25 net income surged 358% year-on-year to USD 275 million from USD 60 million as revenue rose 15% to USD 8.45 billion, driven by strong packaging demand and aerospace segment recovery; the analysis examines whether CBAM enforcement from January 2026 will constrain margin improvement in the year ahead.",
+      "novelis_angle": "Constellium's FRP recovery across packaging and aerospace confirms the end-market demand environment Novelis is entering in H2 2026, with Bay Minette adding 600 kt of North American capacity at a moment when key end markets are strengthening."
+    },
+    {
+      "title": "From CBAM to tariffs: how industry leaders are preparing for aluminium's changing policy landscape",
+      "url": "https://www.alcircle.com/news/from-cbam-to-tariffs-how-industry-leaders-are-preparing-for-aluminium-s-changing-policy-landscape-118725",
+      "source": "AlCircle",
+      "date": "6 Jun",
+      "category": "Trade & Regulation",
+      "summary": "Aluminium industry leaders detailed preparations for CBAM's full-charge phase, active since 1 January 2026, and US tariff dynamics; the EU consultation on expanding CBAM scope to approximately 180 additional aluminium and steel product categories closes 10 June 2026.",
+      "novelis_angle": "A broader CBAM scope from 2028 would significantly raise compliance costs for Novelis's European downstream customers, potentially accelerating demand for Novelis's low-carbon, high-recycled-content FRP as a commercially differentiated product."
+    },
+    {
+      "title": "Aluminium producers see fiscal gains as Middle East crisis and China's capacity cap fuel price rally",
+      "url": "https://www.alcircle.com/news/aluminium-producers-see-fiscal-gains-as-middle-east-crisis-and-chinas-capacity-cap-fuel-price-rally-119759",
+      "source": "AlCircle",
+      "date": "7 Jun",
+      "category": "Industry News",
+      "summary": "Aluminium producers reported fiscal gains driven by elevated LME prices sustained by ongoing Middle East supply disruptions and China's production capacity cap; LME warehouse stocks stood at approximately 338,000 tonnes — near historically low levels — maintaining backwardation and price support above $3,600/t.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
