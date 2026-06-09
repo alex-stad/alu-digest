@@ -1,0 +1,39 @@
+{
+  "date": "Tuesday, 09 June 2026",
+  "lme_price": "$3,615/t",
+  "lme_change": "-$13 (-0.3%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$565/t",
+  "ecdp_change": "-$20 (-3.4%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Gränges sets 2026 growth targets at capital markets day following record 2025 operating profit",
+      "url": "https://www.granges.com/investors/cmd-2026/",
+      "source": "Gränges",
+      "date": "02 Jun",
+      "category": "Competitors",
+      "summary": "Gränges held its Capital Markets Day in Stockholm on June 2, reporting that 2025 was a record year for operating profit driven by market share gains and volume growth; management set a 2026 target of low-to-mid single-digit sales volume growth, underpinned by the successful ramp-up of its new Shandong, China facility.",
+      "novelis_angle": "Gränges' record automotive heat-exchanger volumes and China expansion confirm robust downstream aluminium demand in EV thermal management — a segment adjacent to Novelis's battery enclosure and automotive sheet business in Europe."
+    },
+    {
+      "title": "Meadow launches aluminium-based refill system for consumer goods market",
+      "url": "https://www.alcircle.com/news/meadow-launches-aluminium-based-refill-system-for-consumer-goods-market-118733",
+      "source": "AlCircle",
+      "date": "08 Jun",
+      "category": "Sustainability & Recycling",
+      "summary": "Startup Meadow launched an aluminium-based refillable packaging system for consumer goods brands designed to meet EU Packaging and Packaging Waste Regulation (PPWR) and California SB54 mandates requiring refillable formats, positioning aluminium as a preferred material for sustainable consumer packaging.",
+      "novelis_angle": "EU PPWR is driving aluminium adoption in consumer goods beyond traditional can sheet, creating emerging FRP specialty demand in refillable formats that could expand Novelis's European addressable market."
+    },
+    {
+      "title": "Geopolitical uncertainties persist as domestic and international aluminium prices diverge in volatile trading",
+      "url": "https://www.alcircle.com/press-release/geopolitical-uncertainties-persist-domestic-and-international-aluminium-prices-diverge-in-volatile-trading-118724",
+      "source": "AlCircle",
+      "date": "03 Jun",
+      "category": "Industry News",
+      "summary": "International aluminium prices have held above $3,600/t due to Middle East naval blockade impacts on Gulf smelters, while Chinese domestic prices remain at a discount from overcapacity, creating a persistent divergence that is reshaping global aluminium trade flows heading into mid-2026.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
