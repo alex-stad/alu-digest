@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 10 June 2026",
+  "lme_price": "$3,495/t",
+  "lme_change": "-$67 (-1.9%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$565/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Trivium reports sharp emissions cuts in latest ESG performance update",
+      "url": "https://www.alcircle.com/news/trivium-reports-sharp-emissions-cuts-in-latest-esg-performance-update-118519",
+      "source": "AlCircle",
+      "date": "31 May",
+      "category": "Sustainability & Recycling",
+      "summary": "Trivium Packaging reduced Scope 1 and 2 CO₂ emissions by 36% and Scope 3 emissions by 24% against its 2020 baseline, according to its latest ESG performance report.",
+      "novelis_angle": "Trivium’s demonstrable decarbonisation progress strengthens its competitiveness with FMCG customers seeking sustainable packaging, supporting long-term demand for the recycled-content aluminium beverage can sheet that Novelis supplies from its European mills."
+    },
+    {
+      "title": "Fastmarkets closes the CBAM pricing gap with daily view of carbon import costs",
+      "url": "https://www.prnewswire.com/news-releases/fastmarkets-closes-the-cbam-pricing-gap-with-daily-view-of-carbon-import-costs-302793905.html",
+      "source": "Fastmarkets",
+      "date": "09 Jun",
+      "category": "Trade & Regulation",
+      "summary": "Fastmarkets launched the CBAM Certificate Index and CBAM Certificate Builder, giving the aluminium market its first daily view of expected carbon border adjustment certificate costs based on specific import origin and carbon intensity.",
+      "novelis_angle": "European buyers can now quantify the daily CBAM cost disadvantage of lower-compliance imports, strengthening the commercial case for Novelis’s high-recycled-content European FRP output over cheaper but higher-emission competing material."
+    },
+    {
+      "title": "Bauxite curbs, alumina gaps and billion-dollar deals: is aluminium’s supply map about to change?",
+      "url": "https://www.alcircle.com/news/bauxite-curbs-alumina-gaps-and-billion-dollar-deals-is-aluminiums-supply-map-about-to-change-119775",
+      "source": "AlCircle",
+      "date": "06 Jun",
+      "category": "Industry News",
+      "summary": "Global alumina output fell 5.74% month-on-month to 11.92 Mt in April 2026; Guinea’s forthcoming bauxite export controls, Vietnam’s new alumina refinery commissioning, and the EU’s decision to spare Aughinish Alumina from sanctions are together reshaping the upstream supply chain, with pipeline additions offsetting only ~25% of a 730,000-tonne production gap.",
+      "novelis_angle": "Tighter upstream supply sustains elevated P1020 premiums; Novelis’s ~63% recycled content provides structural insulation from primary aluminium input cost spikes compared with FRP peers more reliant on primary metal."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
