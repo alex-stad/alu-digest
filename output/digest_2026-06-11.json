@@ -1,0 +1,48 @@
+{
+  "date": "Thursday, 11 June 2026",
+  "lme_price": "$3,490/t",
+  "lme_change": "+$15 (+0.4%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$565/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Novelis restarts Oswego hot mill after nine months of fire-related shutdown",
+      "url": "https://www.prnewswire.com/news-releases/novelis-restarts-oswego-hot-mill-302796113.html",
+      "source": "PR Newswire",
+      "date": "10 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis restarted its hot mill in Oswego, New York on 10 June 2026, ending a nine-month outage caused by two fires in September and November 2025. The facility supplies over a dozen automakers including Ford, GM, and Stellantis, and is ramping up below full capacity as production resumes.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Hindalco shares rise 4% on strong Novelis Q4; Oswego restart lifts outlook",
+      "url": "https://www.business-standard.com/markets/news/hindalco-share-price-novelis-q4-results-oswego-restart-brokerage-outlook-126052000342_1.html",
+      "source": "Business Standard",
+      "date": "10 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "Hindalco shares rose 4% on 10 June as markets reacted to the Oswego hot mill restart alongside Novelis FY26 full-year results, which showed adjusted EBITDA of $1.6 billion (down 9% year-on-year) and net sales of $18.4 billion (up 7% year-on-year).",
+      "novelis_angle": null
+    },
+    {
+      "title": "Germany's aluminium recycling output drops 3% year-on-year; recovery looks lean in 2026",
+      "url": "https://www.alcircle.com/news/germanys-aluminium-recycling-output-drops-3-yoy-recovery-looks-lean-in-2026-118563",
+      "source": "AlCircle",
+      "date": "10 Jun",
+      "category": "Sustainability & Recycling",
+      "summary": "Germany's recycled aluminium production fell 3% year-on-year to 684,564 tonnes in Q1 2026, according to Aluminium Deutschland data. High energy costs, weak demand, and scrap shortages are compounding sector pressure, with 57% of companies not expecting conditions to improve by year-end and 66% rating order situations as poor or very poor.",
+      "novelis_angle": "Scrap tightness in Germany, where Novelis operates Nachterstedt and other FRP plants, raises competition for post-consumer aluminium and risks increasing closed-loop input costs against the company's 75% recycled-content and 3×30 targets by 2030."
+    },
+    {
+      "title": "Geopolitical disturbances weaken marginally, accelerating destocking supports aluminium prices to fluctuate upward",
+      "url": "https://www.alcircle.com/press-release/geopolitical-disturbances-weaken-marginally-accelerating-destocking-supports-aluminium-prices-to-fluctuate-upward-119824",
+      "source": "AlCircle",
+      "date": "10 Jun",
+      "category": "Industry News",
+      "summary": "LME aluminium traded at USD 3,532.5/t on 10 June, testing 60-day moving average support at USD 3,526.37, while SHFE aluminium settled at RMB 23,900/t with trading volume at 81,600 lots, signalling weak market sentiment. Geopolitical tensions in the Middle East eased marginally, with accelerating downstream destocking expected to provide near-term upward price support.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
