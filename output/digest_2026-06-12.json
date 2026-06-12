@@ -1,0 +1,48 @@
+{
+  "date": "Friday, 12 June 2026",
+  "lme_price": "$3,552/t",
+  "lme_change": "+$37 (+1.0%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$565/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Novelis commissions first electric pusher furnace at Sierre plant",
+      "url": "https://www.prnewswire.com/news-releases/novelis-commissions-first-electric-pusher-furnace-at-sierre-plant-302797354.html",
+      "source": "PR Newswire",
+      "date": "11 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis has commissioned its first electric pusher furnace at its Sierre, Switzerland plant, replacing a gas-fired unit. The new furnace reduces energy consumption by approximately 25% compared to the gas predecessor.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Trimet expands recycling capabilities for closed material loops",
+      "url": "https://www.aluminium-journal.com/for-closed-material-loops-trimet-expands-recycling-capabilities",
+      "source": "International Aluminium Journal",
+      "date": "Jun 2026",
+      "category": "Sustainability & Recycling",
+      "summary": "Trimet's new facility will recycle around 70,000 tonnes of post-consumer aluminium scrap annually, feeding approximately 120,000 tonnes of extrusion ingot production using advanced sorting methods.",
+      "novelis_angle": "Trimet's European post-consumer scrap expansion increases competition for secondary aluminium feedstock that Novelis depends on to hit its 75% recycled content target by 2030."
+    },
+    {
+      "title": "EU considers broader CBAM scope for aluminium products; industry concern intensifies",
+      "url": "https://www.alcircle.com/news/eu-considers-broader-cbam-scope-for-aluminium-products-industry-concern-intensifies-118102",
+      "source": "AlCircle",
+      "date": "Jun 2026",
+      "category": "Trade & Regulation",
+      "summary": "The EU is weighing extending CBAM to approximately 180 additional aluminium- and steel-based downstream product categories from January 2028; industry associations have raised concerns about downstream competitiveness and leakage risk.",
+      "novelis_angle": "A broader CBAM scope covering semi-finished and finished aluminium products would disadvantage third-country can sheet and automotive sheet importers, strengthening Novelis's position as a high-recycled-content European FRP producer."
+    },
+    {
+      "title": "Global aluminium production drops 1.6% quarter-on-quarter in Q1 2026",
+      "url": "https://www.alcircle.com/news/global-aluminium-production-falls-1-6-in-q1-2026-led-by-declines-in-africa-gulf-south-america-and-oceania-118230",
+      "source": "AlCircle",
+      "date": "Jun 2026",
+      "category": "Industry News",
+      "summary": "Global primary aluminium output fell 1.6% quarter-on-quarter in Q1 2026, with declines in Africa, the Gulf, South America, and Oceania; demand remained resilient, sustaining supply tightness.",
+      "novelis_angle": "Sustained supply-side tightness keeps P1020 prices and European premiums elevated, directly affecting the primary metal input cost base for the share of Novelis production not covered by recycled scrap."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
