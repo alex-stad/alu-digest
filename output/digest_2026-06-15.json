@@ -1,0 +1,48 @@
+{
+  "date": "Monday, 15 June 2026",
+  "lme_price": "$3,573/t",
+  "lme_change": "+$26 (+0.7%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$565/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Range Rover is finally ready to sell its first electric SUV",
+      "url": "https://electrek.co/2026/06/05/range-rover-finally-ready-to-sell-first-electric-suv/",
+      "source": "Electrek",
+      "date": "5 Jun",
+      "category": "End Markets",
+      "summary": "Jaguar Land Rover confirmed on 5 June that it is ready to begin sales of the Range Rover Electric, the brand's first fully electric SUV, marking the start of JLR's mass-market electrification push.",
+      "novelis_angle": "JLR is a major Novelis automotive customer and closed-loop partner (REALCAR); the Range Rover Electric launch signals continued and potentially growing demand for premium aluminium-intensive BIW sheet from Novelis's European plants."
+    },
+    {
+      "title": "Aluminum scrap exports face scrutiny under HB 9161",
+      "url": "https://resource-recycling.com/policy-now/2026/06/09/aluminum-scrap-exports-face-scrutiny-under-hb-9161/",
+      "source": "Resource Recycling",
+      "date": "9 Jun",
+      "category": "Trade & Regulation",
+      "summary": "The bipartisan Secure Aluminum Supply Chains Act (HB 9161), introduced in the US House on 4 June 2026, directs the US International Trade Commission to investigate the economic and national security implications of US aluminium scrap exports to adversarial nations before any export restrictions are proposed.",
+      "novelis_angle": "If the USITC investigation leads to export restrictions, more North American post-consumer scrap would stay in the US supply chain, supporting feedstock availability for Novelis's Bay Minette and Greensboro recycling operations and advancing its 75% recycled content target."
+    },
+    {
+      "title": "Iran ceasefire brings relief but production scars run deep",
+      "url": "https://www.automotivemanufacturingsolutions.com/strategy/iran-ceasefire-brings-relief-but-production-scars-run-deep/2642356",
+      "source": "Automotive Manufacturing Solutions",
+      "date": "14 Jun",
+      "category": "Industry News",
+      "summary": "Ceasefire mediators announced on 14 June a memorandum of understanding to formally end the US–Iran conflict, with a signing ceremony expected on 19 June. EGA's Al Taweelah smelter — struck by Iranian missiles and drones — is expected to take up to a year to return to full capacity; Bahrain's ALBA facility remains partially suspended, leaving the Gulf's approximately 9% share of global primary aluminium output constrained.",
+      "novelis_angle": "The long EGA and ALBA recovery timeline means elevated ECDP premiums and tight P1020 spot availability for European FRP producers are likely to persist well into H2 2026, keeping Novelis's metal cost under pressure despite the peace MOU."
+    },
+    {
+      "title": "China fills the aluminium gap — but seaborne bauxite data suggest limits",
+      "url": "https://www.breakwaveadvisors.com/insights/2026/6/12/china-fills-the-aluminium-gap-but-seaborne-bauxite-data-suggest-limits",
+      "source": "Breakwave Advisors",
+      "date": "12 Jun",
+      "category": "Industry News",
+      "summary": "Chinese aluminium exports reached 632,000 tonnes in May 2026 — the highest monthly volume since November 2024 and 16% above year-earlier levels — as China partially fills the supply gap left by damaged Gulf smelters. Breakwave analysis warns that declining seaborne bauxite shipments to Chinese ports may limit further export growth, with June exports projected at 670,000–680,000 tonnes before raw material constraints become binding.",
+      "novelis_angle": "China's export surge is moderating European P1020 spot premiums for now, but bauxite constraints signal the Gulf-driven supply deficit may reassert in Q3 2026, exposing European FRP producers including Novelis to a renewed premium spike."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
