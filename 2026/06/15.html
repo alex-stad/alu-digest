@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Monday, 15 June 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Monday, 15 June 2026</h2>
+        <p class="meta">4 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,573/t</span>
+          <span class="change-pos">+$26 (+0.7%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$565/t</span>
+          <span class="change-neg">$0 (0.0%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">5 Jun</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>Range Rover is finally ready to sell its first electric SUV</h3>
+          <p>Jaguar Land Rover confirmed on 5 June that it is ready to begin sales of the Range Rover Electric, the brand&#x27;s first fully electric SUV, marking the start of JLR&#x27;s mass-market electrification push.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>JLR is a major Novelis automotive customer and closed-loop partner (REALCAR); the Range Rover Electric launch signals continued and potentially growing demand for premium aluminium-intensive BIW sheet from Novelis&#x27;s European plants.</p>
+          </div>
+          <a href="https://electrek.co/2026/06/05/range-rover-finally-ready-to-sell-first-electric-suv/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-trade">Trade &amp; Regulation</span>
+            <span class="article-source">9 Jun</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>Aluminum scrap exports face scrutiny under HB 9161</h3>
+          <p>The bipartisan Secure Aluminum Supply Chains Act (HB 9161), introduced in the US House on 4 June 2026, directs the US International Trade Commission to investigate the economic and national security implications of US aluminium scrap exports to adversarial nations before any export restrictions are proposed.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>If the USITC investigation leads to export restrictions, more North American post-consumer scrap would stay in the US supply chain, supporting feedstock availability for Novelis&#x27;s Bay Minette and Greensboro recycling operations and advancing its 75% recycled content target.</p>
+          </div>
+          <a href="https://resource-recycling.com/policy-now/2026/06/09/aluminum-scrap-exports-face-scrutiny-under-hb-9161/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">14 Jun</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>Iran ceasefire brings relief but production scars run deep</h3>
+          <p>Ceasefire mediators announced on 14 June a memorandum of understanding to formally end the US–Iran conflict, with a signing ceremony expected on 19 June. EGA&#x27;s Al Taweelah smelter — struck by Iranian missiles and drones — is expected to take up to a year to return to full capacity; Bahrain&#x27;s ALBA facility remains partially suspended, leaving the Gulf&#x27;s approximately 9% share of global primary aluminium output constrained.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>The long EGA and ALBA recovery timeline means elevated ECDP premiums and tight P1020 spot availability for European FRP producers are likely to persist well into H2 2026, keeping Novelis&#x27;s metal cost under pressure despite the peace MOU.</p>
+          </div>
+          <a href="https://www.automotivemanufacturingsolutions.com/strategy/iran-ceasefire-brings-relief-but-production-scars-run-deep/2642356" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">12 Jun</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3>China fills the aluminium gap — but seaborne bauxite data suggest limits</h3>
+          <p>Chinese aluminium exports reached 632,000 tonnes in May 2026 — the highest monthly volume since November 2024 and 16% above year-earlier levels — as China partially fills the supply gap left by damaged Gulf smelters. Breakwave analysis warns that declining seaborne bauxite shipments to Chinese ports may limit further export growth, with June exports projected at 670,000–680,000 tonnes before raw material constraints become binding.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>China&#x27;s export surge is moderating European P1020 spot premiums for now, but bauxite constraints signal the Gulf-driven supply deficit may reassert in Q3 2026, exposing European FRP producers including Novelis to a renewed premium spike.</p>
+          </div>
+          <a href="https://www.breakwaveadvisors.com/insights/2026/6/12/china-fills-the-aluminium-gap-but-seaborne-bauxite-data-suggest-limits" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
