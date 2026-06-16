@@ -1,0 +1,39 @@
+{
+  "date": "Tuesday, 16 June 2026",
+  "lme_price": "$3,355/t",
+  "lme_change": "-$14 (-0.4%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$565/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Europe's aluminium roadmap: circularity, resource security, low-carbon imperative",
+      "url": "https://www.alcircle.com/news/europes-aluminium-roadmap-circularity-resource-security-low-carbon-imperative-119889",
+      "source": "AlCircle",
+      "date": "15 Jun",
+      "category": "Sustainability & Recycling",
+      "summary": "AlCircle analysis maps how Europe's aluminium industry is anchoring its long-term strategy on circularity, resource security, and a low-carbon imperative, with closed-loop recycling systems increasingly becoming standard practice across the continent's production base.",
+      "novelis_angle": "With its European plants targeting 75% recycled content by 2030, Novelis is positioned ahead of the structural shift toward closed-loop mandates that Europe's roadmap foreshadows."
+    },
+    {
+      "title": "Slovak PM Fico: we're finalising reopening of aluminium production in Žiar nad Hronom",
+      "url": "https://newsnow.tasr.sk/premier-were-finalising-reopening-of-aluminium-production-in-ziar-nad-hronom/",
+      "source": "TASR",
+      "date": "14 Jun",
+      "category": "Industry News",
+      "summary": "Slovak PM Robert Fico announced that the restart of the Slovalco aluminium smelter in Žiar nad Hronom is in its final stages, with a formal announcement expected within weeks; the plant — a Hydro/Penta JV — has been idle since early 2023 after 70+ years of operation, and a government MoU signed in February 2026 targets a 2027 production restart.",
+      "novelis_angle": "A Slovalco restart would add primary P1020 supply back to the European market, with the potential to ease tightness that has kept the ECDP elevated near $565/t throughout 2026."
+    },
+    {
+      "title": "Synchronised slight recovery in aluminium prices as China's destocking stabilises; upside room limited",
+      "url": "https://www.alcircle.com/press-release/synchronised-slight-recovery-in-domestic-and-international-aluminium-prices-china-s-destocking-stabilises-upside-room-limited-119892",
+      "source": "AlCircle",
+      "date": "15 Jun",
+      "category": "Industry News",
+      "summary": "LME and Chinese domestic aluminium prices recorded a slight synchronised recovery in mid-June as China's ingot destocking — which had drawn down inventory from a near-three-year peak — showed signs of stabilising; analysts see limited further upside from current levels.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
