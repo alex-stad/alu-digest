@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 17 June 2026",
+  "lme_price": "$3,385/t",
+  "lme_change": "+$16 (+0.5%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$568/t",
+  "ecdp_change": "+$3 (+0.5%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Hindalco stock in focus as Novelis restarts New York hot mill: UBS remains bullish on aluminium",
+      "url": "https://www.alcircle.com/news/hindalco-stock-in-focus-as-novelis-restarts-new-york-hot-mill-ubs-remains-bullish-on-aluminium-119905",
+      "source": "AlCircle",
+      "date": "16 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "UBS maintained a Buy rating on Hindalco Industries with an INR 1,325 target price representing 28–29% upside from mid-June levels, citing renewed confidence in Novelis’s recovery trajectory following the Oswego, New York hot mill restart.",
+      "novelis_angle": null
+    },
+    {
+      "title": "SACA, a new coalition, debuts to support growth of recycled aluminium production in the US",
+      "url": "https://www.alcircle.com/news/saca-a-new-coalition-debuts-to-support-growth-of-recycled-aluminium-production-in-the-us-119880",
+      "source": "AlCircle",
+      "date": "13 Jun",
+      "category": "Trade & Regulation",
+      "summary": "The Secondary Aluminum Coalition for America (SACA), representing scrap collection, remelting, extrusion and fabrication companies across 17 US states, conducted a Washington fly-in to meet White House, DOE, ITA, USTR and Congressional officials, presenting secondary aluminium as the fastest and lowest-cost path to expanding US domestic supply; the sector accounts for more than 97% of US aluminium industry employment.",
+      "novelis_angle": "As the world’s largest aluminium recycler and a major US secondary producer, Novelis stands to benefit from any policy framework that prioritises recycled-content incentives over primary capacity—directly supporting the economics of the Bay Minette greenfield."
+    },
+    {
+      "title": "Aluminum drops to three-month low on weak China data, supply uncertainty",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-16/aluminum-extends-slump-as-china-data-adds-to-downside-pressure",
+      "source": "Bloomberg",
+      "date": "16 Jun",
+      "category": "Industry News",
+      "summary": "LME aluminium fell to a three-month low on 16 June after weaker-than-expected Chinese economic data heightened demand concerns; prices were also pressured by investor uncertainty over whether the US-Iran peace deal will deliver sustained Middle East supply restoration.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
