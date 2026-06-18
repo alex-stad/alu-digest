@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 18 June 2026",
+  "lme_price": "$3,395/t",
+  "lme_change": "-$26 (-0.7%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$568/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Cold mill at Bay Minette to be commissioned next quarter as project cost reaches $5B",
+      "url": "https://aluminiumtoday.com/news/cold-mill-at-bay-minette-to-be-commissioned-next-quarter",
+      "source": "Aluminium International Today",
+      "date": "11 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis' Bay Minette, Alabama greenfield plant is on track to commission its cold mill in Q3 2026, with total project cost now estimated at $5 billion, up from the original $4.1 billion figure. The 600 kt/year facility, capable of processing the equivalent of 17 billion used beverage cans annually, remains on schedule for broader commissioning in the second half of 2026.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Aluminium can shortage hits Indian beverage makers during peak summer demand",
+      "url": "https://www.alcircle.com/news/aluminium-can-shortage-hits-indian-beverage-makers-during-peak-summer-demand-119762",
+      "source": "AlCircle",
+      "date": "15 Jun",
+      "category": "End Markets",
+      "summary": "Indian beverage companies are facing an aluminium can sheet shortage at the peak of summer demand, as supply chain disruptions linked to Middle East tensions tighten availability from Gulf-origin primary producers.",
+      "novelis_angle": "Can sheet tightness across Asian and Middle Eastern markets signals continued demand-side pressure on Novelis's beverage packaging segment — its largest end market at ~60% of shipments — and reinforces the strategic value of Novelis's closed-loop recycled content supply."
+    },
+    {
+      "title": "Strait of Hormuz closure fuels European, US aluminium supply concerns; regional premiums surge",
+      "url": "https://www.fastmarkets.com/insights/strait-of-hormuz-closure-fuels-european-us-aluminium-supply-concerns/",
+      "source": "Fastmarkets",
+      "date": "16 Jun",
+      "category": "Trade & Regulation",
+      "summary": "Three months of Strait of Hormuz closure following US-Israeli strikes on Iran has driven European aluminium billet premiums to $560–600/t and briefly pushed LME aluminium above $3,700/t; a US-Iran framework agreement is expected to allow the strait to reopen around 19 June.",
+      "novelis_angle": "Normalisation of European P1020 premiums post-reopening would ease input cost pressure on Novelis's ten European plants, which source significant primary aluminium volumes from Gulf producers including EGA."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
