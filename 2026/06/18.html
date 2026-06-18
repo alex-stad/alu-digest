@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Thursday, 18 June 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Thursday, 18 June 2026</h2>
+        <p class="meta">3 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,395/t</span>
+          <span class="change-neg">-$26 (-0.7%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$568/t</span>
+          <span class="change-neg">$0 (0.0%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-novelis">Novelis / Hindalco</span>
+            <span class="article-source">11 Jun</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>Cold mill at Bay Minette to be commissioned next quarter as project cost reaches $5B</h3>
+          <p>Novelis&#x27; Bay Minette, Alabama greenfield plant is on track to commission its cold mill in Q3 2026, with total project cost now estimated at $5 billion, up from the original $4.1 billion figure. The 600 kt/year facility, capable of processing the equivalent of 17 billion used beverage cans annually, remains on schedule for broader commissioning in the second half of 2026.</p>
+          <a href="https://aluminiumtoday.com/news/cold-mill-at-bay-minette-to-be-commissioned-next-quarter" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">15 Jun</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>Aluminium can shortage hits Indian beverage makers during peak summer demand</h3>
+          <p>Indian beverage companies are facing an aluminium can sheet shortage at the peak of summer demand, as supply chain disruptions linked to Middle East tensions tighten availability from Gulf-origin primary producers.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Can sheet tightness across Asian and Middle Eastern markets signals continued demand-side pressure on Novelis&#x27;s beverage packaging segment — its largest end market at ~60% of shipments — and reinforces the strategic value of Novelis&#x27;s closed-loop recycled content supply.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/aluminium-can-shortage-hits-indian-beverage-makers-during-peak-summer-demand-119762" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-trade">Trade &amp; Regulation</span>
+            <span class="article-source">16 Jun</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>Strait of Hormuz closure fuels European, US aluminium supply concerns; regional premiums surge</h3>
+          <p>Three months of Strait of Hormuz closure following US-Israeli strikes on Iran has driven European aluminium billet premiums to $560–600/t and briefly pushed LME aluminium above $3,700/t; a US-Iran framework agreement is expected to allow the strait to reopen around 19 June.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Normalisation of European P1020 premiums post-reopening would ease input cost pressure on Novelis&#x27;s ten European plants, which source significant primary aluminium volumes from Gulf producers including EGA.</p>
+          </div>
+          <a href="https://www.fastmarkets.com/insights/strait-of-hormuz-closure-fuels-european-us-aluminium-supply-concerns/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
