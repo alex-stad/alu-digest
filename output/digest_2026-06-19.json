@@ -1,0 +1,39 @@
+{
+  "date": "Friday, 19 June 2026",
+  "lme_price": "$3,397/t",
+  "lme_change": "-$24 (-0.7%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$568/t",
+  "ecdp_change": "+$0 (+0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Canmakers flag tightest summer capacity in years as North American aluminium can demand outpaces supply",
+      "url": "https://www.packagingdive.com/news/beverage-food-cans-earnings-ball-ab-inbev-crown-ardagh-/819226/",
+      "source": "Packaging Dive",
+      "date": "Jun 2026",
+      "category": "End Markets",
+      "summary": "Crown Holdings reported March 2026 as its strongest monthly can shipment month on record globally and guided for 2–3% full-year demand growth, while Ball Corp confirmed its Millersburg, Oregon beverage can facility will begin operations in H2 2026. North American can executives cited tight supply conditions heading into the peak summer demand season.",
+      "novelis_angle": "Sustained demand growth and new Ball capacity coming online in H2 2026 support multi-year can-sheet volume for Novelis’s Bay Minette plant, which targets 600,000 t/yr predominantly for the beverage packaging segment."
+    },
+    {
+      "title": "EU moves to restrict aluminium scrap exports to protect domestic circular economy",
+      "url": "https://www.fastmarkets.com/insights/eu-moves-to-restrict-aluminium-scrap-exports/",
+      "source": "Fastmarkets",
+      "date": "Jun 2026",
+      "category": "Sustainability & Recycling",
+      "summary": "The European Commission is finalising options to curb aluminium scrap exports, weighing export duties, licensing requirements, or mandatory recycled-content targets. Around 15% of EU recycling capacity is currently offline while scrap leakage to Asian buyers, who outbid domestic recyclers, is constraining feedstock availability for European secondary producers.",
+      "novelis_angle": "Tighter EU scrap export controls would increase post-consumer aluminium availability for Novelis’s European closed-loop network, including the 400 kt Nachterstedt facility, directly supporting its 3x30 target of 75% recycled content by 2030."
+    },
+    {
+      "title": "US and Iran sign Strait of Hormuz peace memorandum; aluminium supply premium begins to unwind",
+      "url": "https://www.npr.org/2026/06/15/nx-s1-5858590/us-iran-deal-updates",
+      "source": "NPR",
+      "date": "19 Jun",
+      "category": "Trade & Regulation",
+      "summary": "The US and Iran formally signed a memorandum of understanding on 19 June to end hostilities and reopen the Strait of Hormuz, through which approximately 9% of global aluminium production transits. LME 3-month aluminium had fallen 4.4% to $3,379/t on the initial deal announcement on 15 June, unwinding the conflict premium accumulated since the February 2026 blockade.",
+      "novelis_angle": "With the Strait reopening, Gulf producers EGA and Aluminium Bahrain can resume unrestricted shipments to European spot buyers, easing P1020 availability constraints that had driven European duty-paid premiums sharply higher over the past three months."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
