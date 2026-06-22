@@ -1,0 +1,39 @@
+{
+  "date": "Monday, 22 June 2026",
+  "lme_price": "$3,403/t",
+  "lme_change": "-$4 (-0.1%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$568/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Bridgnorth Aluminium secures five-year battery foil supply deal with Lotte Aluminium Materials USA",
+      "url": "https://www.alcircle.com/news/bridgnorth-aluminium-secures-five-year-battery-foil-supply-deal-with-lotte-aluminium-materials-usa-119991",
+      "source": "AlCircle",
+      "date": "19 Jun",
+      "category": "End Markets",
+      "summary": "Bridgnorth Aluminium (BAL), the UK's last remaining aluminium rolling mill, signed a five-year supply agreement with Lotte Aluminium Materials USA to deliver battery-grade aluminium foil for the EV battery sector; the contract was formalised in Elizabethtown, Kentucky and covers output from BAL's 368-person Shropshire facility.",
+      "novelis_angle": "A five-year dedicated EV battery foil offtake confirms that North American battery cell manufacturers are committing to long-term aluminium sourcing — a demand signal directly relevant to Novelis's Bay Minette plant commissioning in H2 2026."
+    },
+    {
+      "title": "Aluminum's war shock blunted by dark transits and Chinese supply",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-21/aluminum-s-war-shock-blunted-by-dark-transits-and-chinese-supply",
+      "source": "Bloomberg",
+      "date": "21 Jun",
+      "category": "Industry News",
+      "summary": "The Iran war triggered one of aluminium's largest supply shocks, but the feared surge above $4,000/t did not materialise: Gulf smelters kept alumina flowing through the Strait of Hormuz via 'dark transit' vessels that disabled AIS tracking, with Persian Gulf alumina imports returning to pre-war levels by May 2026, while Chinese smelters operating at an annualised ~47 Mt — above the official 45 Mt cap — provided an additional supply buffer.",
+      "novelis_angle": "With the Hormuz peace framework signed 19 June, the risk premium embedded in European P1020 premiums should continue unwinding in H2 2026, reducing a key metal-cost headwind for Novelis's European plants."
+    },
+    {
+      "title": "From bauxite diplomacy to aluminium's supply squeeze: how the global aluminium value chain is being reshaped",
+      "url": "https://www.alcircle.com/news/from-bauxite-diplomacy-to-aluminium-s-supply-squeeze-how-the-global-aluminium-value-chain-is-being-reshaped-119989",
+      "source": "AlCircle",
+      "date": "19 Jun",
+      "category": "Industry News",
+      "summary": "H1 2026 aluminium prices climbed 29.1% to a peak of $3,855/t on 2 June — the highest since March 2022 — driven by Middle East supply disruptions, with the analysis mapping structural upstream risks including India-Venezuela bauxite diplomacy, Guinea export uncertainty, and political scrutiny of 33 bauxite shipments from the Solomon Islands.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
