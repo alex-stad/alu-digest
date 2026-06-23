@@ -1,0 +1,48 @@
+{
+  "date": "Tuesday, 23 June 2026",
+  "lme_price": "$3,297/t",
+  "lme_change": "-$72 (-2.1%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$568/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "ElvalHalcor to raise €250m in share capital and invest €455m by 2030",
+      "url": "https://athens-times.com/elvalhalcor-to-raise-e250m-in-share-capital-and-invest-e455m-by-2030/",
+      "source": "Athens Times",
+      "date": "18 Jun",
+      "category": "Competitors",
+      "summary": "ElvalHalcor, parent company of Greek flat-rolled aluminium producer Elval, announced a €250 million new share capital raise to fund a €455 million investment programme running through 2030, targeting production capacity expansion, aluminium recycling infrastructure, and manufacturing efficiency improvements.",
+      "novelis_angle": "A €455m capacity push by Elval — one of the largest European FRP producers — signals escalating competition in the packaging and automotive sheet segments where Novelis's Nachterstedt, Pieve Emanuele, and Bresso plants are primary incumbents."
+    },
+    {
+      "title": "JLR holds annual investor day",
+      "url": "https://media.jaguarlandrover.com/news/2026/06/jlr-holds-annual-investor-day",
+      "source": "JLR Media",
+      "date": "17 Jun",
+      "category": "End Markets",
+      "summary": "At its Gaydon Investor Day on 17 June, JLR announced the Electrified Modular Architecture (EMA) platform underpinning a Range Rover Electric due H2 FY2026-27 (76,976 on its waitlist), Range Rover Sport Electric, electrified Defender and Discovery variants, and the Jaguar Type 01 as Jaguar's first full EV; JLR confirmed five new model launches over 18 months and £3.7 billion in investment by FY27.",
+      "novelis_angle": "JLR committing five aluminium-intensive EMA models over 18 months is a direct sustained-demand signal for Novelis, whose REALCAR closed-loop partnership supplies BIW sheet to JLR's Solihull and Halewood plants."
+    },
+    {
+      "title": "Middle East outages to keep aluminium market tight near-term, but Indonesia-China supply wave caps upside: Goldman Sachs",
+      "url": "https://aninews.in/news/business/middle-east-outages-to-keep-aluminium-market-tight-near-term-but-indonesia-china-supply-wave-caps-upside-goldman-sachs20260621091214/",
+      "source": "ANI News",
+      "date": "21 Jun",
+      "category": "Industry News",
+      "summary": "Goldman Sachs raised its Q3 2026 LME aluminium price forecast to $3,300/t (from $3,200/t) and cut West Asian production estimates by 660,000 tonnes for 2026, citing continued damage to Gulf smelting infrastructure; the bank notes that rising output from Indonesian and Chinese smelters limits any sustained upward move above this level.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Aluminum falls as peace talk progress points to returning supply",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-23/aluminum-falls-as-peace-talk-progress-points-to-returning-supply",
+      "source": "Bloomberg",
+      "date": "23 Jun",
+      "category": "Industry News",
+      "summary": "LME aluminium touched a three-month low on 23 June after the US issued a 60-day licence permitting Iran to sell oil on international markets, reinforcing expectations that the Strait of Hormuz will formally reopen and restore supply from a region accounting for roughly 9% of global aluminium production.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
