@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Tuesday, 23 June 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Tuesday, 23 June 2026</h2>
+        <p class="meta">4 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,297/t</span>
+          <span class="change-neg">-$72 (-2.1%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$568/t</span>
+          <span class="change-pos">+$0 (0.0%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-competitors">Competitors</span>
+            <span class="article-source">18 Jun</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>ElvalHalcor to raise €250m in share capital and invest €455m by 2030</h3>
+          <p>ElvalHalcor, parent company of Greek flat-rolled aluminium producer Elval, announced a €250 million new share capital raise to fund a €455 million investment programme running through 2030, targeting production capacity expansion, aluminium recycling infrastructure, and manufacturing efficiency improvements.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>A €455m capacity push by Elval — one of the largest European FRP producers — signals escalating competition in the packaging and automotive sheet segments where Novelis&#x27;s Nachterstedt, Pieve Emanuele, and Bresso plants are primary incumbents.</p>
+          </div>
+          <a href="https://athens-times.com/elvalhalcor-to-raise-e250m-in-share-capital-and-invest-e455m-by-2030/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">17 Jun</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>JLR holds annual investor day</h3>
+          <p>At its Gaydon Investor Day on 17 June, JLR announced the Electrified Modular Architecture (EMA) platform underpinning a Range Rover Electric due H2 FY2026-27 (76,976 on its waitlist), Range Rover Sport Electric, electrified Defender and Discovery variants, and the Jaguar Type 01 as Jaguar&#x27;s first full EV; JLR confirmed five new model launches over 18 months and £3.7 billion in investment by FY27.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>JLR committing five aluminium-intensive EMA models over 18 months is a direct sustained-demand signal for Novelis, whose REALCAR closed-loop partnership supplies BIW sheet to JLR&#x27;s Solihull and Halewood plants.</p>
+          </div>
+          <a href="https://media.jaguarlandrover.com/news/2026/06/jlr-holds-annual-investor-day" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">21 Jun</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>Middle East outages to keep aluminium market tight near-term, but Indonesia-China supply wave caps upside: Goldman Sachs</h3>
+          <p>Goldman Sachs raised its Q3 2026 LME aluminium price forecast to $3,300/t (from $3,200/t) and cut West Asian production estimates by 660,000 tonnes for 2026, citing continued damage to Gulf smelting infrastructure; the bank notes that rising output from Indonesian and Chinese smelters limits any sustained upward move above this level.</p>
+          <a href="https://aninews.in/news/business/middle-east-outages-to-keep-aluminium-market-tight-near-term-but-indonesia-china-supply-wave-caps-upside-goldman-sachs20260621091214/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">23 Jun</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3>Aluminum falls as peace talk progress points to returning supply</h3>
+          <p>LME aluminium touched a three-month low on 23 June after the US issued a 60-day licence permitting Iran to sell oil on international markets, reinforcing expectations that the Strait of Hormuz will formally reopen and restore supply from a region accounting for roughly 9% of global aluminium production.</p>
+          <a href="https://www.bloomberg.com/news/articles/2026-06-23/aluminum-falls-as-peace-talk-progress-points-to-returning-supply" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
