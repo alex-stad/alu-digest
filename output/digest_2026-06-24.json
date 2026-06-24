@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 24 June 2026",
+  "lme_price": "$3,237/t",
+  "lme_change": "-$132 (-3.9%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$562/t",
+  "ecdp_change": "-$6 (-1.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "3 priorities for aerospace aluminium recycling in 2026",
+      "url": "https://aerospaceglobalnews.com/opinion/aerospace-aluminium-recycling-novelis-opinion/",
+      "source": "Aerospace Global News",
+      "date": "Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "In a Novelis-authored opinion piece, the company outlines three priorities for aerospace aluminium recycling in 2026: improving scrap traceability, with five Airbus facilities having launched a pilot programme; closing the aerospace supply chain loop; and scaling remelting capacity ahead of accelerating fleet retirement, projected to rise from approximately 700 to 1,100 aircraft per year by 2030.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Aluminium giant Constellium's FY25 profit gains 358%: would CBAM cloud the outlook?",
+      "url": "https://www.alcircle.com/news/aluminium-giant-constelliums-fy25-profit-gains-358-would-cbam-cloud-the-outlook-119770",
+      "source": "AlCircle",
+      "date": "Jun",
+      "category": "Competitors",
+      "summary": "Constellium's FY2025 results showed net income rising 358% to $275 million (from $60 million in FY2024), adjusted EBITDA up 36% to $846 million, and revenue growing 15% to $8.4 billion; the company simultaneously launched \"Vision 2028\" targets of $900 million EBITDA and $300 million annual free cash flow by 2028, with analysts noting that the EU's broadening CBAM scope could add cost pressure to import-exposed operations.",
+      "novelis_angle": "Constellium's sharp earnings recovery and Vision 2028's $900M EBITDA target signal growing competitive firepower in FRP at a time when Novelis is absorbing Bay Minette greenfield capex and Oswego restart costs."
+    },
+    {
+      "title": "Reframing scrap: why the UK must recognise aluminium as a strategic resource",
+      "url": "https://www.alcircle.com/news/reframing-scrap-why-the-uk-must-recognise-aluminium-as-a-strategic-resource-118736",
+      "source": "AlCircle",
+      "date": "Jun",
+      "category": "Sustainability & Recycling",
+      "summary": "An AlCircle analysis argues the UK government should formally classify aluminium scrap as a strategic resource, citing secondary aluminium's up to 95% energy savings versus primary production and its contribution to UK net-zero targets; the article calls for scrap export restrictions and public investment in domestic remelting capacity.",
+      "novelis_angle": "UK recognition of aluminium scrap as a strategic resource could reduce export competition and improve domestic scrap availability for Novelis's Latchford recycling plant, currently undergoing its £90M capacity expansion for beverage can recycling."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
