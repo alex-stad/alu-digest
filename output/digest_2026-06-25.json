@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 25 June 2026",
+  "lme_price": "$3,123/t",
+  "lme_change": "+$2 (+0.1%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$562/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Vedanta, Nalco and Hindalco shares fall as aluminium prices weaken on rising Chinese supply",
+      "url": "https://www.alcircle.com/news/vedanta-nalco-and-hindalco-shares-fall-as-aluminium-prices-weaken-on-rising-chinese-supply-120043",
+      "source": "AlCircle",
+      "date": "24 Jun",
+      "category": "Novelis / Hindalco",
+      "summary": "Hindalco shares fell on 24 June alongside Vedanta and Nalco as LME aluminium prices continued to weaken, driven by rising Chinese primary output and expectations of resumed Gulf supply; Hindalco, whose aluminium business is substantially anchored by the Novelis flat-rolled subsidiary, was among the most affected Indian metals equities as spot prices breached three-month lows.",
+      "novelis_angle": null
+    },
+    {
+      "title": "EGA undrapes UAE's largest aluminium recycling plant, boosting low-carbon production and circular economy goals",
+      "url": "https://www.alcircle.com/news/ega-undrapes-uae-s-largest-aluminium-recycling-plant-boosting-low-carbon-production-and-circular-economy-goals-120042",
+      "source": "AlCircle",
+      "date": "24 Jun",
+      "category": "Sustainability & Recycling",
+      "summary": "EGA inaugurated its 185,000 t/yr Al Taweelah aluminium recycling facility in Abu Dhabi on 24 June, producing RevivAL-brand low-carbon billets and T-bars from post-consumer and industrial scrap; the plant, halted since March 2026 following Iranian missile attacks, is now the largest aluminium scrap consumer in the Middle East.",
+      "novelis_angle": "A 185,000 t/yr scrap consumer entering the Gulf market adds structural demand pressure to global secondary aluminium feedstock, tightening supply for Novelis's 63%-recycled-content product strategy and potentially raising scrap input costs."
+    },
+    {
+      "title": "Alcoa shares drop 30% as aluminium market cools on Middle East supply hopes",
+      "url": "https://www.alcircle.com/news/alcoa-shares-drop-30-as-aluminium-market-cools-on-middle-east-supply-hopes-120035",
+      "source": "AlCircle",
+      "date": "23 Jun",
+      "category": "Industry News",
+      "summary": "Alcoa shares fell approximately 30% over three weeks as LME aluminium prices cooled sharply on Middle East supply recovery prospects, with rising Chinese primary output and the anticipated reopening of the Strait of Hormuz depressing market sentiment across aluminium producer equities.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
