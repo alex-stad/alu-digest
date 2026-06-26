@@ -1,0 +1,39 @@
+{
+  "date": "Friday, 26 June 2026",
+  "lme_price": "$3,156/t",
+  "lme_change": "-$10 (-0.3%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$562/t",
+  "ecdp_change": "+$0 (0.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Oil prices ease after spiking over halt to Strait of Hormuz evacuation plan",
+      "url": "https://www.aljazeera.com/economy/2026/6/26/oil-prices-climb-after-attack-in-strait-of-hormuz-halts-evacuation-plan",
+      "source": "Al Jazeera",
+      "date": "26 Jun",
+      "category": "Industry News",
+      "summary": "An 'unknown projectile' struck a cargo vessel near the Omani coast on 25 June while attempting to cross the Strait of Hormuz under the IMO's evacuation corridor, prompting the IMO to suspend its plan to evacuate 11,000 stranded seafarers; Brent crude spiked as much as 4% before easing to $74.11/bbl as of 26 June.",
+      "novelis_angle": "The renewed disruption reverses the geopolitical risk premium unwind that had been compressing LME aluminium prices since the 19 June US-Iran peace memorandum; if the evacuation stalls, EGA and Qatalum output constraints into Europe are likely to persist through Q3, re-supporting the ECDP."
+    },
+    {
+      "title": "High-strength aluminium alloy market to nearly double by 2030, reaching $115 billion",
+      "url": "https://www.globenewswire.com/news-release/2026/06/25/3317771/28124/en/High-Strength-Aluminum-Alloys-Market-to-Nearly-Double-by-2030-Reaching-115-Billion-Insights-Into-Case-Studies-Drivers-Challenges-and-Competitive-Strategies.html",
+      "source": "GlobeNewswire",
+      "date": "25 Jun",
+      "category": "Industry News",
+      "summary": "A market research report published 25 June projects the global high-strength aluminium alloy market will grow from $66.01 billion in 2025 to $115.29 billion by 2030 at a CAGR of 11.8%, driven by aerospace, automotive EV structural components, heavy machinery, and defence applications.",
+      "novelis_angle": "The 11.8% CAGR for high-strength alloy end-uses — aerospace plate and automotive BIW sheet — provides long-term demand visibility for Novelis's highest-margin FRP segments at Koblenz (aerospace) and Sierre (automotive R&D)."
+    },
+    {
+      "title": "LME aluminium cash slips 3.52% on 24 June to $3,148/t as warehoused stocks fall to 311,725 tonnes",
+      "url": "https://www.alcircle.com/news/lme-aluminium-price-graph-falters-on-june-24-cash-slips-3-5-stocks-drop-to-311-725t-120050",
+      "source": "AlCircle",
+      "date": "24 Jun",
+      "category": "Industry News",
+      "summary": "The LME aluminium cash bid price fell 3.52% day-on-day on 24 June to $3,148/t from $3,263/t, driven by expectations of resumed Gulf aluminium supply as US-Iran talks advanced; LME-monitored warehouse stocks simultaneously dropped to 311,725 tonnes.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
