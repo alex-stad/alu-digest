@@ -1,0 +1,39 @@
+{
+  "date": "Monday, 29 June 2026",
+  "lme_price": "$3,178/t",
+  "lme_change": "-$2 (-0.1%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$561/t",
+  "ecdp_change": "-$1 (-0.2%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Why scrap is becoming central to the aluminium industry: the past fortnight's updates",
+      "url": "https://www.alcircle.com/news/why-scrap-is-becoming-central-to-the-aluminium-industry-the-past-fortnights-updates-120085",
+      "source": "AlCircle",
+      "date": "29 Jun",
+      "category": "Sustainability & Recycling",
+      "summary": "A fortnightly roundup documents the accelerating global competition for aluminium scrap, noting that China — the world's largest primary producer — increased its overseas scrap imports in Q1 2026 even as its domestic recycling sector matures, as the industry's competitive advantage shifts from smelter scale to secondary material access and low-carbon processing.",
+      "novelis_angle": "Novelis's pre-secured scrap streams — JLR REALCAR closed-loop, the renewed Infinitum Norway collection agreement, and Latchford's UK DRS readiness — insulate it from the open-market scrap competition that is now intensifying globally."
+    },
+    {
+      "title": "EU delays aluminium scrap export curbs till September: will India seize the opportunity?",
+      "url": "https://www.alcircle.com/news/eu-delays-aluminium-scrap-export-curbs-till-september-will-india-seize-the-opportunity-120070",
+      "source": "AlCircle",
+      "date": "28 Jun",
+      "category": "Trade & Regulation",
+      "summary": "The European Union has postponed implementation of its aluminium scrap export restriction measures until September 2026, pushing back from the original spring timeline. India — which sources approximately 80% of its domestic scrap demand through imports and was the largest EU scrap importer throughout 2025 and Q1 2026 — is evaluating whether to accelerate procurement before the curbs take effect.",
+      "novelis_angle": "The three-month delay extends current trade flows; once September restrictions take effect, EU-domiciled recyclers benefit from a tighter domestic scrap market that reduces feedstock competition from non-EU secondary producers — strengthening the economics of Novelis's high-recycled-content European mills."
+    },
+    {
+      "title": "China's aluminium scrap sector squeezed by tax crackdown, shrinking aluminium scrap margins",
+      "url": "https://www.alcircle.com/press-release/china-s-aluminium-scrap-sector-squeezed-by-tax-crackdown-shrinking-aluminium-scraps-margins-120071",
+      "source": "AlCircle",
+      "date": "28 Jun",
+      "category": "Industry News",
+      "summary": "China's 2026 VAT Law enforcement has suspended 'reverse invoicing' practices in multiple provinces, narrowing the refined-to-scrap spread to RMB 412/t as of 23 June and compressing secondary aluminium producers' margins; reduced scrap availability is tightening China's domestic recycling sector just as global scrap demand from Europe and North America intensifies.",
+      "novelis_angle": "Chinese secondary producers competing harder for international scrap to offset domestic supply constraints could push global scrap premiums higher, adding cost pressure for European recyclers with less-secured feedstock than Novelis."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
