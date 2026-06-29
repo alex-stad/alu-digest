@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Monday, 29 June 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Monday, 29 June 2026</h2>
+        <p class="meta">3 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,178/t</span>
+          <span class="change-neg">-$2 (-0.1%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$561/t</span>
+          <span class="change-neg">-$1 (-0.2%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-sustainability">Sustainability &amp; Recycling</span>
+            <span class="article-source">29 Jun</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>Why scrap is becoming central to the aluminium industry: the past fortnight&#x27;s updates</h3>
+          <p>A fortnightly roundup documents the accelerating global competition for aluminium scrap, noting that China — the world&#x27;s largest primary producer — increased its overseas scrap imports in Q1 2026 even as its domestic recycling sector matures, as the industry&#x27;s competitive advantage shifts from smelter scale to secondary material access and low-carbon processing.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Novelis&#x27;s pre-secured scrap streams — JLR REALCAR closed-loop, the renewed Infinitum Norway collection agreement, and Latchford&#x27;s UK DRS readiness — insulate it from the open-market scrap competition that is now intensifying globally.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/why-scrap-is-becoming-central-to-the-aluminium-industry-the-past-fortnights-updates-120085" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-trade">Trade &amp; Regulation</span>
+            <span class="article-source">28 Jun</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>EU delays aluminium scrap export curbs till September: will India seize the opportunity?</h3>
+          <p>The European Union has postponed implementation of its aluminium scrap export restriction measures until September 2026, pushing back from the original spring timeline. India — which sources approximately 80% of its domestic scrap demand through imports and was the largest EU scrap importer throughout 2025 and Q1 2026 — is evaluating whether to accelerate procurement before the curbs take effect.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>The three-month delay extends current trade flows; once September restrictions take effect, EU-domiciled recyclers benefit from a tighter domestic scrap market that reduces feedstock competition from non-EU secondary producers — strengthening the economics of Novelis&#x27;s high-recycled-content European mills.</p>
+          </div>
+          <a href="https://www.alcircle.com/news/eu-delays-aluminium-scrap-export-curbs-till-september-will-india-seize-the-opportunity-120070" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">28 Jun</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>China&#x27;s aluminium scrap sector squeezed by tax crackdown, shrinking aluminium scrap margins</h3>
+          <p>China&#x27;s 2026 VAT Law enforcement has suspended &#x27;reverse invoicing&#x27; practices in multiple provinces, narrowing the refined-to-scrap spread to RMB 412/t as of 23 June and compressing secondary aluminium producers&#x27; margins; reduced scrap availability is tightening China&#x27;s domestic recycling sector just as global scrap demand from Europe and North America intensifies.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Chinese secondary producers competing harder for international scrap to offset domestic supply constraints could push global scrap premiums higher, adding cost pressure for European recyclers with less-secured feedstock than Novelis.</p>
+          </div>
+          <a href="https://www.alcircle.com/press-release/china-s-aluminium-scrap-sector-squeezed-by-tax-crackdown-shrinking-aluminium-scraps-margins-120071" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
