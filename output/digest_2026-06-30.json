@@ -1,0 +1,39 @@
+{
+  "date": "Tuesday, 30 June 2026",
+  "lme_price": "$3,107/t",
+  "lme_change": "+$20 (+0.6%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$561/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Constellium sells automotive structures joint venture in Changchun, China",
+      "url": "https://www.globenewswire.com/news-release/2026/06/29/3318754/0/en/Constellium-Sells-Automotive-Structures-Joint-Venture-in-Changchun-China.html",
+      "source": "GlobeNewswire",
+      "date": "29 Jun",
+      "category": "Competitors",
+      "summary": "Constellium SE sold its stake in its Changchun, China automotive structures joint venture — which manufactures aluminium crash management systems and structural components for the Chinese automotive market and employs approximately 200 people — to a Chinese automotive holding company. The divestiture is part of Constellium's Vision 2028 strategy to optimise its manufacturing footprint.",
+      "novelis_angle": "Constellium's exit from Chinese automotive structures signals a sharpened focus on higher-margin European and North American FRP markets where it competes most directly with Novelis in automotive body sheet and structural components."
+    },
+    {
+      "title": "ASI certifies Qingyuan Jinyang Aluminium Co. against Performance Standard V3.1 and Chain of Custody V2",
+      "url": "https://www.alcircle.com/press-release/asi-certifies-qingyuan-jinyang-aluminium-co-ltd-against-performance-standard-v3-1-and-chain-of-custody-v2-120080",
+      "source": "AlCircle",
+      "date": "28 Jun",
+      "category": "Sustainability & Recycling",
+      "summary": "Qingyuan Jinyang Aluminium Co., Ltd. received dual ASI certification under Performance Standard V3.1 and Chain of Custody Standard V2, among the latest Chinese producers to achieve compliance with the newest standards generation. The certification reflects accelerating uptake of third-party sustainability benchmarks across China's primary and secondary aluminium sector.",
+      "novelis_angle": "Growing ASI adoption by Chinese producers narrows the sustainability differentiation historically available to European certified mills; Novelis's closed-loop recycling and high-recycled-content positioning remains structurally distinct from a primary smelter's ASI credential."
+    },
+    {
+      "title": "Aluminum set for worst monthly loss since 2008 on supply outlook",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-30/aluminum-set-for-worst-monthly-loss-since-2008-on-supply-outlook",
+      "source": "Bloomberg",
+      "date": "30 Jun",
+      "category": "Industry News",
+      "summary": "LME aluminium 3-month futures are on course for their steepest monthly decline since 2008, having fallen below $3,200/t to a three-month low by 30 June 2026, as progress in US-Iran peace talks unwound the war-premium built on Strait of Hormuz supply concerns in preceding months.",
+      "novelis_angle": "The unwind of the supply-risk premium eases European P1020 input costs heading into Q3 but also compresses pricing headroom on aluminium contracts renegotiated during the elevated-premium period."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
