@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 01 July 2026",
+  "lme_price": "$3,060/t",
+  "lme_change": "-$24 (-0.8%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$505/t",
+  "ecdp_change": "-$56 (-10.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Aluminium processing rates fall to 63 per cent amid seasonal slump and export woes",
+      "url": "https://www.alcircle.com/press-release/aluminium-processing-rates-fall-to-63-per-cent-amid-seasonal-slump-and-export-woes-120073",
+      "source": "AlCircle",
+      "date": "1 Jul",
+      "category": "Industry News",
+      "summary": "China's downstream aluminium processing rate fell to 63% in early July 2026, down 0.4 percentage points week-on-week, as seasonal off-season pressure and volatile prices disrupted procurement. The plate/sheet and strip segment dropped 0.6pp to 70.6%, secondary aluminium fell 0.9pp to 52.3%, and extrusion rates edged down 0.3pp to 54.4%. China's June aluminium production rose 2.2% year-on-year but fell 3.1% month-on-month.",
+      "novelis_angle": "Softening Chinese downstream consumption reduces the global demand floor for aluminium and contributes to the LME decline, lowering Novelis's primary metal input costs in its recycling blends while also signalling weaker export-driven end-market demand from China."
+    },
+    {
+      "title": "Macro headwinds dominate futures, Shanghai and LME aluminium both remain in the doldrums",
+      "url": "https://www.alcircle.com/press-release/macro-headwinds-dominate-futures-shanghai-and-lme-aluminium-both-remain-in-the-doldrums-120066",
+      "source": "AlCircle",
+      "date": "30 Jun",
+      "category": "Industry News",
+      "summary": "LME and Shanghai aluminium futures remained under pressure at end-June, driven by hawkish US Federal Reserve expectations and continued easing of Middle East supply concerns as US-Iran peace talks progressed. LME aluminium 3-month settled at $3,060/t on 1 July 2026, extending June's steep decline and putting it on track for the worst monthly loss since 2008.",
+      "novelis_angle": null
+    },
+    {
+      "title": "China aluminium ingot destocking accelerates while export arbitrage narrows",
+      "url": "https://www.alcircle.com/press-release/destocking-acceleration-provides-support-export-concerns-limit-rebound-space-120092",
+      "source": "AlCircle",
+      "date": "1 Jul",
+      "category": "Industry News",
+      "summary": "China's aluminium ingot social inventory fell approximately 40,000 tonnes week-on-week and 82,000 tonnes versus the prior Monday, as lower prices triggered domestic buying activity. The SHFE/LME price ratio recovered to 7.29 from a low of 6.5, narrowing the Chinese aluminium export arbitrage window; new orders in some downstream segments are declining, signalling reduced Chinese semis exports ahead.",
+      "novelis_angle": "A narrowing of China's aluminium export arbitrage may reduce Chinese FRP and semis competition in European markets in H2 2026, providing marginal support to Novelis's European order book."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
