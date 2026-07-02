@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 02 July 2026",
+  "lme_price": "$3,094/t",
+  "lme_change": "+$17 (+0.6%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$505/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Rising copper prices accelerate shift towards aluminium wiring in automotive industry",
+      "url": "https://www.alcircle.com/news/rising-copper-prices-accelerate-shift-towards-aluminium-wiring-in-automotive-industry-120125",
+      "source": "AlCircle",
+      "date": "1 Jul",
+      "category": "End Markets",
+      "summary": "Ferrari and BMW are expanding aluminium electrical wiring across new vehicle models as the copper-to-aluminium price ratio climbs above 4.2×; at roughly one-quarter the cost of copper and 3.3 times lighter, aluminium offers a compelling economic case despite carrying only 61% of copper's conductivity. JPMorgan estimates aluminium wiring could displace around 2% of global annual copper demand in 2026, rising to approximately 6% by 2030.",
+      "novelis_angle": "Escalating OEM adoption of aluminium across additional vehicle sub-systems reinforces the structural long-term demand trajectory for Novelis's automotive flat-rolled and BIW sheet business, as OEM material commitment to aluminium deepens beyond body panels."
+    },
+    {
+      "title": "EU backs new tariff rules with protection for aluminium and steel industries",
+      "url": "https://www.alcircle.com/news/eu-backs-new-tariff-rules-with-protection-for-aluminium-and-steel-industries-119945",
+      "source": "AlCircle",
+      "date": "1 Jul",
+      "category": "Trade & Regulation",
+      "summary": "The EU's new steel and aluminium safeguard regulation entered application on 1 July 2026, cutting duty-free steel import quotas 47% to 18.3 million tonnes per year and raising out-of-quota tariffs to 50% from 25%; the regulation also grants the European Commission authority to impose countermeasures on the US if US tariffs on EU steel and aluminium derivative products remain above 15% by 31 December 2026.",
+      "novelis_angle": "The EU aluminium tariff retaliation clause — operationalised by year-end if US tariffs remain elevated — raises the risk of further EU-US trade friction affecting Novelis's cross-Atlantic supply chain and competitive positioning at Bay Minette."
+    },
+    {
+      "title": "Aluminum falls to lowest since February as dollar strengthens",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-01/aluminum-falls-to-lowest-since-february-as-dollar-strengthens",
+      "source": "Bloomberg",
+      "date": "1 Jul",
+      "category": "Industry News",
+      "summary": "LME aluminium fell to approximately $3,095/t on 1 July 2026, its lowest level since February, extending June's 16% month-on-month decline — the steepest monthly drop since 2008; drivers include a stronger US dollar on Federal Reserve hawkish expectations, rising supply expectations following the Hormuz reopening, and increased production in China and Indonesia.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
