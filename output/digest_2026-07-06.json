@@ -1,0 +1,48 @@
+{
+  "date": "Monday, 06 July 2026",
+  "lme_price": "$3,091/t",
+  "lme_change": "-$1 (-0.0%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$540/t",
+  "ecdp_change": "+$36 (+7.0%)",
+  "ecdp_change_positive": true,
+  "articles": [
+    {
+      "title": "Türkiye's 120 GW renewable target puts grid modernisation and aluminium demand in focus",
+      "url": "https://www.alcircle.com/news/turkiyes-120-gw-renewable-target-puts-grid-modernisation-and-aluminium-demand-in-focus-120195",
+      "source": "AL Circle",
+      "date": "5 Jul",
+      "category": "End Markets",
+      "summary": "Turkey is targeting 120 GW of combined solar and wind capacity by 2035, backed by approximately $80 billion in planned renewable investment; aluminium's role in electrical cables, power transmission lines, and solar mounting structures is identified as a key downstream demand driver.",
+      "novelis_angle": "Turkey's renewable infrastructure buildout represents an emerging demand signal for industrial and specialty aluminium sheet in Novelis's European supply geography, particularly for electrical and construction-grade product lines."
+    },
+    {
+      "title": "UK aluminium scrap exports grow 9% in Jan–Apr 2026 despite declines to India, Hong Kong, Germany and China",
+      "url": "https://www.alcircle.com/news/uks-aluminim-scrap-exports-grow-9-during-jan-apr-2026-despite-declines-to-india-hong-kong-germany-china-120158",
+      "source": "AL Circle",
+      "date": "4 Jul",
+      "category": "Sustainability & Recycling",
+      "summary": "UK aluminium scrap exports grew 9% year-on-year in January–April 2026, despite falling volumes to India, Hong Kong, Germany, and China; the shift reflects trade flow diversification by UK exporters amid evolving EU and UK scrap export policy.",
+      "novelis_angle": "Rising UK scrap export volumes and the shift away from traditional markets tighten domestic secondary aluminium availability, affecting feedstock supply and input costs for Novelis's Latchford beverage can recycling facility."
+    },
+    {
+      "title": "TOMRA expands aluminium alloy sorting system AUTOSORT PULSE to heavy metals, IBA and magnesium",
+      "url": "https://www.alcircle.com/news/tomra-expands-aluminium-alloy-sorting-system-autosort-pulse-to-heavy-metals-iba-and-magnesium-120189",
+      "source": "AL Circle",
+      "date": "5 Jul",
+      "category": "Sustainability & Recycling",
+      "summary": "TOMRA has extended its Dynamic LIBS-based AUTOSORT PULSE sorting system beyond aluminium alloy identification to cover stainless steel, heavy metals, magnesium, and incinerator bottom ash (IBA) streams, expanding the technology's applicability in mixed-materials processing facilities.",
+      "novelis_angle": null
+    },
+    {
+      "title": "Adani and IHC unveil $11.5 billion Odisha aluminium complex with 4–5 year timeline",
+      "url": "https://www.alcircle.com/news/adani-ihc-unveil-odisha-aluminium-project-with-4-5yr-timeline-53-500-jobs-120193",
+      "source": "AL Circle",
+      "date": "3 Jul",
+      "category": "Industry News",
+      "summary": "Adani Enterprises and Abu Dhabi's IHC (International Resources Holding) signed a $11.5 billion 50:50 JV MoU to build India's largest aluminium complex in Odisha — comprising a 4 Mt/yr alumina refinery, a 2 Mt/yr primary smelter, and a 1 Mt/yr downstream park — representing the largest-ever foreign direct investment in the Indian metals sector.",
+      "novelis_angle": "Adding approximately 2 Mt/yr of Indian primary capacity within 4–5 years would meaningfully shift the global aluminium supply balance and could exert long-term downward pressure on P1020 premiums, a key input cost for Novelis's European smelter-free FRP operations."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
