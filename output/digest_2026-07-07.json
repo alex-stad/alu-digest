@@ -1,0 +1,48 @@
+{
+  "date": "Tuesday, 07 July 2026",
+  "lme_price": "$3,114/t",
+  "lme_change": "+$22 (+0.7%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$540/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Hindalco schedules 67th annual general meeting for July 23, sets July 10 as dividend record date",
+      "url": "https://www.businessupturn.com/business/hindalco-industries-announces-67th-agm-on-july-23-2026/",
+      "source": "Business Upturn",
+      "date": "5 Jul",
+      "category": "Novelis / Hindalco",
+      "summary": "Hindalco Industries has scheduled its 67th Annual General Meeting via video conferencing for July 23, 2026, with remote voting open from July 20. The board has set July 10 as the record date for a final dividend of ₹5 per equity share for FY26, with payments commencing on or after July 28.",
+      "novelis_angle": null
+    },
+    {
+      "title": "EU proposes 15% levy on aluminium scrap exports to keep recyclable metal within the bloc",
+      "url": "https://www.alcircle.com/news/eu-proposes-15-tax-on-aluminium-scrap-exports-to-secure-recycled-metal-supply-120114",
+      "source": "AL Circle",
+      "date": "2 Jul",
+      "category": "Trade & Regulation",
+      "summary": "The EU is preparing a 15% export levy on aluminium scrap, with the formal proposal expected to be presented on September 9 — the first time Brussels would impose charges on goods leaving the EU. The measure targets growing scrap outflows to Asia and the US, which has been accelerated by the US 50% aluminium tariff exempting scrap and creating a favourable arbitrage for exporters.",
+      "novelis_angle": "A 15% EU scrap export levy would reduce outflows and anchor more post-consumer aluminium within Europe, supporting Novelis's scrap procurement across its ten European FRP plants and its 75%+ recycled content targets."
+    },
+    {
+      "title": "Aluminum rebounds from four-month low on dollar weakness as Goldman Sachs warns of faster Middle East supply return",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-06/copper-and-aluminum-advance-on-fading-expectations-for-rate-hike",
+      "source": "Bloomberg",
+      "date": "6 Jul",
+      "category": "Industry News",
+      "summary": "LME aluminium rose 1.1% on July 6 from near a four-month low as the US dollar retreated following softer-than-expected US jobs data; Goldman Sachs cautioned that primary supply from Persian Gulf smelters — accounting for roughly 10% of global output — is normalising faster than expected following the US–Iran deal, limiting the upside.",
+      "novelis_angle": "A faster-than-expected recovery in Middle East primary supply would compress the elevated P1020 premium environment that Novelis has benefited from in recent months, coinciding with the Bay Minette commissioning ramp beginning in H2 2026."
+    },
+    {
+      "title": "Slovalco secures framework to restart 75,000 tonnes of curtailed European primary aluminium capacity",
+      "url": "https://aluminiumtoday.com/news/slovalco-to-restart-aluminium-smelting",
+      "source": "Aluminium International Today",
+      "date": "1 Jul",
+      "category": "Industry News",
+      "summary": "Hydro-backed Slovalco has reached an agreement with the Slovak government to restart 75,000 tonnes of curtailed primary aluminium production capacity at its 175,000-tonne Žiar nad Hronom plant, with smelting expected to resume in Q4 2026 after a €100 million investment. The restart is conditional on EU Commission approval of Slovakia's updated indirect carbon cost compensation scheme.",
+      "novelis_angle": "The partial restart of Slovalco adds domestic European P1020 supply and reduces dependence on Middle East and Russian material for Novelis's ten European rolling plants, with upside to a full 175,000-tonne restart subject to post-2030 framework clarity."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
