@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alu Digest — Wednesday, 08 July 2026</title>
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface2: #FAFBFC;
+    --border: #E8EAED;
+    --border-light: #EEF0F3;
+    --accent: #2D6A9F;
+    --text: #1A2028;
+    --text-muted: #4A5662;
+    --text-dim: #8A96A0;
+    --text-dimmer: #B0BAC4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .site-header {
+    background: var(--surface);
+    padding: 28px 0;
+    border-bottom: 2px solid #C0A060;
+  }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .site-header h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+  .site-header p { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+
+  /* INDEX PAGE */
+  .digest-list { list-style: none; }
+  .digest-list li { border-bottom: 1px solid var(--border); }
+  .digest-list a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; color: var(--text); transition: color 0.15s;
+  }
+  .digest-list a:hover { color: var(--accent); text-decoration: none; }
+  .digest-list .date { font-size: 14px; font-weight: 600; }
+  .digest-list .headline { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+  .digest-list .arrow { font-size: 18px; color: var(--text-dim); }
+
+  /* DIGEST PAGE */
+  .digest-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .digest-header .back { font-size: 12px; color: var(--text-dim); margin-bottom: 12px; display: block; }
+  .digest-header h2 { font-size: 22px; font-weight: 700; color: var(--text); }
+  .digest-header .meta { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+
+  /* PRICE BARS */
+  .price-bar {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 6px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .price-bar .label { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--text-dim); text-transform: uppercase; }
+  .price-bar .price { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; margin-left: 12px; }
+  .price-bar .change-pos { font-size: 12px; color: #1A8A4A; margin-left: 8px; }
+  .price-bar .change-neg { font-size: 12px; color: #C0392B; margin-left: 8px; }
+  .price-bar .unit { font-size: 10px; color: var(--text-dimmer); margin-left: auto; }
+
+  /* ARTICLES */
+  .articles { display: flex; flex-direction: column; gap: 0; }
+  .article { padding: 24px 0; border-bottom: 1px solid var(--border-light); }
+  .article:last-child { border-bottom: none; }
+  .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+
+  .tag {
+    display: inline-block; padding: 3px 9px; border-radius: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0; text-transform: uppercase;
+  }
+  .tag-novelis        { background: #EAF2FB; color: #1A5FA0; border: 1px solid #BAD4F0; }
+  .tag-competitors    { background: #F2EAFA; color: #6B3FA0; border: 1px solid #D4BCF0; }
+  .tag-end-markets    { background: #EAF7EE; color: #1A7A3C; border: 1px solid #B8E0C4; }
+  .tag-sustainability { background: #E6F8ED; color: #0F7A46; border: 1px solid #A8E0C0; }
+  .tag-trade          { background: #FBF6E2; color: #8A6A0A; border: 1px solid #E8D898; }
+  .tag-industry       { background: #FBF0E8; color: #8A4A10; border: 1px solid #E8C8A0; }
+
+  .article-source { font-size: 11px; color: var(--text-dim); }
+  .article-num { font-size: 12px; font-weight: 600; color: #C8D0D8; margin-left: auto; }
+
+  .article h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.35; }
+  .article p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+  .novelis-angle { border-left: 2px solid #C0A060; background: #FDFBF8; padding: 8px 12px; margin-top: 10px; }
+  .novelis-angle .label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: #C0A060; text-transform: uppercase; margin-bottom: 3px; }
+  .novelis-angle p { font-size: 12px; font-style: italic; color: #5A6B78; line-height: 1.6; }
+
+  .read-more { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--accent); }
+
+  .site-footer {
+    padding: 20px 24px; margin-top: 40px;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-dim);
+    max-width: 760px; margin: 40px auto 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Alex's Daily Alu Digest</h1>
+    <p>Daily aluminium industry digest · Curated for Novelis</p>
+  </div>
+</header>
+
+
+    <div class="container">
+      <div class="digest-header">
+        <a href="https://alex-stad.github.io/alu-digest/" class="back">← Back to archive</a>
+        <h2>Wednesday, 08 July 2026</h2>
+        <p class="meta">5 stories · Alex's Daily Alu Digest</p>
+      </div>
+      
+        <div class="price-bar">
+          <span class="label">LME Aluminium</span>
+          <span class="price">$3,146/t</span>
+          <span class="change-pos">+$9 (+0.3%)</span>
+          <span class="unit">Cash settlement · USD/t</span>
+        </div>
+        <div class="price-bar">
+          <span class="label">ECDP</span>
+          <span class="price">$538/t</span>
+          <span class="change-neg">-$2 (-0.4%)</span>
+          <span class="unit">P1020A in-whs dp Rotterdam · USD/t</span>
+        </div>
+      <div class="articles">
+        
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-novelis">Novelis / Hindalco</span>
+            <span class="article-source">30 Jun</span>
+            <span class="article-num">#1</span>
+          </div>
+          <h3>Novelis starts operating electric pusher furnace at Sierre aluminium plant</h3>
+          <p>Novelis has commissioned a new electric pusher furnace at its Sierre, Switzerland plant, reducing CO₂ emissions by approximately 4,500 tonnes per year and cutting energy consumption by around 25% versus the gas-fired furnace it replaces.</p>
+          <a href="https://www.alcircle.com/news/novelis-starts-operating-electric-pusher-furnace-at-sierre-aluminium-plant-119860" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-competitors">Competitors</span>
+            <span class="article-source">25 Jun</span>
+            <span class="article-num">#2</span>
+          </div>
+          <h3>ASI certifies Laminazione Sottile Group against Chain of Custody Standard V2</h3>
+          <p>The Aluminium Stewardship Initiative has certified Laminazione Sottile Group against its Chain of Custody Standard V2, recognising the Italian FRP producer&#x27;s responsible sourcing and supply chain traceability practices.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>ASI CoC V2 certification strengthens Laminazione Sottile&#x27;s sustainability positioning with European packaging customers, the same segment where Novelis competes on recycled-content credentials.</p>
+          </div>
+          <a href="https://www.alcircle.com/press-release/asi-certifies-laminazione-sottile-group-against-chain-of-custody-standard-v2-119813" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-end-markets">End Markets</span>
+            <span class="article-source">7 Jul</span>
+            <span class="article-num">#3</span>
+          </div>
+          <h3>Iran ceasefire brings relief but production scars run deep</h3>
+          <p>Gulf aluminium producers EGA and Alba sustained damage from Iranian strikes and declared force majeure; the ceasefire eases further disruption risk but production restarts are expected to take six to twelve months, sustaining tight aluminium supply to automotive rolling mills.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>Prolonged Gulf smelter outages keep European P1020 premiums elevated and reinforce demand for Novelis&#x27;s scrap-based sheet, where input costs are decoupled from primary metal price spikes.</p>
+          </div>
+          <a href="https://www.automotivemanufacturingsolutions.com/strategy/iran-ceasefire-brings-relief-but-production-scars-run-deep/2642356" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-sustainability">Sustainability &amp; Recycling</span>
+            <span class="article-source">24 Jun</span>
+            <span class="article-num">#4</span>
+          </div>
+          <h3>Raffmetal awarded by Ferrari for the value of its Silval primary alloys from recycling</h3>
+          <p>Italian aluminium recycler Raffmetal received Ferrari&#x27;s Co-Prosperity award at Podio Ferrari 2026 for its Silval 7 alloy, a 100% recycled aluminium alloy with a third-party verified carbon footprint of less than 1 kg CO₂eq/kg Al from cradle to gate.</p>
+          <div class="novelis-angle">
+            <span class="label">Novelis angle</span>
+            <p>A sub-1 kg CO₂eq/kg Al verified certification for 100% recycled aluminium sets a public benchmark in the automotive supply chain, directly relevant to Novelis&#x27;s own recycled-content positioning with OEM customers.</p>
+          </div>
+          <a href="https://www.raffmetal.com/news/raffmetal-awarded-by-ferrari-for-the-value-of-its-silval-primary-alloys-from-recycled-aluminium/" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+        <article class="article">
+          <div class="article-meta">
+            <span class="tag tag-industry">Industry News</span>
+            <span class="article-source">8 Jul</span>
+            <span class="article-num">#5</span>
+          </div>
+          <h3>Aluminium rises as US-Iran ceasefire tested</h3>
+          <p>LME three-month aluminium rose 0.61% to $3,156.5/t and Shanghai futures climbed 0.72% to 23,085 yuan/t after new strikes on Iranian targets renewed supply-disruption concerns; the Middle East accounts for approximately 9% of global aluminium smelting capacity.</p>
+          <a href="https://www.brecorder.com/news/40429042/aluminium-rises-as-us-iran-ceasefire-tested" class="read-more" target="_blank" rel="noopener">READ FULL STORY ↗</a>
+        </article>
+      </div>
+    </div>
+
+<div class="site-footer">
+  Daily aluminium industry digest · Curated for Novelis ·
+  <a href="https://alex-stad.github.io/alu-digest/">Archive</a>
+</div>
+
+</body>
+</html>
