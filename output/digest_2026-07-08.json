@@ -1,0 +1,57 @@
+{
+    "date": "Wednesday, 08 July 2026",
+    "lme_price": "$3,146/t",
+    "lme_change": "+$9 (+0.3%)",
+    "lme_change_positive": true,
+    "ecdp_price": "$538/t",
+    "ecdp_change": "-$2 (-0.4%)",
+    "ecdp_change_positive": false,
+    "articles": [
+        {
+            "title": "Novelis starts operating electric pusher furnace at Sierre aluminium plant",
+            "url": "https://www.alcircle.com/news/novelis-starts-operating-electric-pusher-furnace-at-sierre-aluminium-plant-119860",
+            "source": "AlCircle",
+            "date": "30 Jun",
+            "category": "Novelis / Hindalco",
+            "summary": "Novelis has commissioned a new electric pusher furnace at its Sierre, Switzerland plant, reducing CO₂ emissions by approximately 4,500 tonnes per year and cutting energy consumption by around 25% versus the gas-fired furnace it replaces.",
+            "novelis_angle": null
+        },
+        {
+            "title": "ASI certifies Laminazione Sottile Group against Chain of Custody Standard V2",
+            "url": "https://www.alcircle.com/press-release/asi-certifies-laminazione-sottile-group-against-chain-of-custody-standard-v2-119813",
+            "source": "AlCircle",
+            "date": "25 Jun",
+            "category": "Competitors",
+            "summary": "The Aluminium Stewardship Initiative has certified Laminazione Sottile Group against its Chain of Custody Standard V2, recognising the Italian FRP producer's responsible sourcing and supply chain traceability practices.",
+            "novelis_angle": "ASI CoC V2 certification strengthens Laminazione Sottile's sustainability positioning with European packaging customers, the same segment where Novelis competes on recycled-content credentials."
+        },
+        {
+            "title": "Iran ceasefire brings relief but production scars run deep",
+            "url": "https://www.automotivemanufacturingsolutions.com/strategy/iran-ceasefire-brings-relief-but-production-scars-run-deep/2642356",
+            "source": "Automotive Manufacturing Solutions",
+            "date": "7 Jul",
+            "category": "End Markets",
+            "summary": "Gulf aluminium producers EGA and Alba sustained damage from Iranian strikes and declared force majeure; the ceasefire eases further disruption risk but production restarts are expected to take six to twelve months, sustaining tight aluminium supply to automotive rolling mills.",
+            "novelis_angle": "Prolonged Gulf smelter outages keep European P1020 premiums elevated and reinforce demand for Novelis's scrap-based sheet, where input costs are decoupled from primary metal price spikes."
+        },
+        {
+            "title": "Raffmetal awarded by Ferrari for the value of its Silval primary alloys from recycling",
+            "url": "https://www.raffmetal.com/news/raffmetal-awarded-by-ferrari-for-the-value-of-its-silval-primary-alloys-from-recycled-aluminium/",
+            "source": "Raffmetal",
+            "date": "24 Jun",
+            "category": "Sustainability & Recycling",
+            "summary": "Italian aluminium recycler Raffmetal received Ferrari's Co-Prosperity award at Podio Ferrari 2026 for its Silval 7 alloy, a 100% recycled aluminium alloy with a third-party verified carbon footprint of less than 1 kg CO₂eq/kg Al from cradle to gate.",
+            "novelis_angle": "A sub-1 kg CO₂eq/kg Al verified certification for 100% recycled aluminium sets a public benchmark in the automotive supply chain, directly relevant to Novelis's own recycled-content positioning with OEM customers."
+        },
+        {
+            "title": "Aluminium rises as US-Iran ceasefire tested",
+            "url": "https://www.brecorder.com/news/40429042/aluminium-rises-as-us-iran-ceasefire-tested",
+            "source": "Business Recorder",
+            "date": "8 Jul",
+            "category": "Industry News",
+            "summary": "LME three-month aluminium rose 0.61% to $3,156.5/t and Shanghai futures climbed 0.72% to 23,085 yuan/t after new strikes on Iranian targets renewed supply-disruption concerns; the Middle East accounts for approximately 9% of global aluminium smelting capacity.",
+            "novelis_angle": null
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
