@@ -1,0 +1,57 @@
+{
+  "date": "Thursday, 09 July 2026",
+  "lme_price": "$3,133/t",
+  "lme_change": "-$3 (-0.1%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$538/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Novelis seeks more aluminum production as Oswego plant returns",
+      "url": "https://www.industrialinfo.com/news/article/novelis-seeks-more-aluminum-production-as-oswego-plant-returns--359003",
+      "source": "Industrial Info",
+      "date": "9 Jul",
+      "category": "Novelis / Hindalco",
+      "summary": "Novelis restarted its Oswego, New York hot mill on 10 June 2026 following two fires in 2025 that had halted roughly 40% of US aluminium sheet supply for automakers; the company is now ramping production to address pent-up demand from automotive and beverage packaging customers, with Bay Minette cold mill commissioning also underway.",
+      "novelis_angle": null
+    },
+    {
+      "title": "EOS partners with Constellium on aluminium alloys for additive manufacturing",
+      "url": "https://www.advancedmanufacturing.org/news-desk/eos-partners-with-constellium/article_08474cf2-e6ad-41a3-9592-599717debe8b.html",
+      "source": "Advanced Manufacturing",
+      "date": "8 Jul",
+      "category": "Competitors",
+      "summary": "EOS and Constellium announced a long-term strategic partnership to co-develop and market advanced aluminium alloys for industrial 3D printing, adding Constellium's proprietary Aheadd CP1 and Al5X1 alloys to the EOS metal AM systems portfolio with validated process parameters for reliable industrial-scale production.",
+      "novelis_angle": "Constellium's move to co-brand proprietary alloys through an AM platform partner signals a strategy to monetise alloy IP across manufacturing routes beyond flat-rolled; Novelis has not publicly entered the AM materials licensing space."
+    },
+    {
+      "title": "ASI certifies Amcor Flexibles Sélestat against Performance Standard V3.1",
+      "url": "https://www.alcircle.com/press-release/asi-certifies-amcor-flexibles-selestat-against-performance-standard-v3-1-120246",
+      "source": "AlCircle",
+      "date": "9 Jul",
+      "category": "Sustainability & Recycling",
+      "summary": "The Aluminium Stewardship Initiative (ASI) certified Amcor Flexibles Sélestat (France) against the ASI Performance Standard V3.1 (2023), extending responsible sourcing verification to a major European flexible packaging converter serving the food and beverage sector.",
+      "novelis_angle": "Growing ASI certification among European packaging converters strengthens chain-of-custody traceability and supports Novelis's ability to sell certified-sustainable FRP at premium pricing to buyers with ESG procurement mandates."
+    },
+    {
+      "title": "Aluminum Association calls for comprehensive strategy to strengthen US aluminium supply chain",
+      "url": "https://www.alcircle.com/news/aluminum-association-calls-for-comprehensive-strategy-to-strengthen-us-aluminium-supply-chain-120235",
+      "source": "AlCircle",
+      "date": "8 Jul",
+      "category": "Trade & Regulation",
+      "summary": "The Aluminum Association published a policy roadmap urging US policymakers to adopt an 'all of the above' approach combining new primary smelting capacity, recycled aluminium investment, and stronger trade enforcement against state-sponsored overcapacity to secure domestic aluminium supply chains.",
+      "novelis_angle": "The roadmap's emphasis on recycling investment and trade enforcement directly supports the economic case for Novelis's Bay Minette plant, where contracted beverage packaging volumes depend on tariff protection against non-market-economy FRP imports."
+    },
+    {
+      "title": "SHFE and LME aluminium prices stabilise and rebound in tandem, China destocking strengthens price bottom support",
+      "url": "https://www.alcircle.com/press-release/shfe-and-lme-aluminium-prices-stabilise-and-rebound-in-tandem-china-destocking-strengthens-price-bottom-support-120243",
+      "source": "AlCircle",
+      "date": "8 Jul",
+      "category": "Industry News",
+      "summary": "LME and SHFE aluminium prices began recovering from multi-month lows reached after June's 16% decline — the steepest monthly drop since 2008 — with China aluminium billet inventory falling to 130,000 t and destocking accelerating; the most-traded SHFE contract closed at RMB 23,055/t on 7 July 2026, with analysts projecting upside if macro sentiment improves.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
