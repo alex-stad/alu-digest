@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 10 July 2026",
+  "lme_price": "$3,203/t",
+  "lme_change": "+$69 (+2.2%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$538/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Half-time whistle: Airbus hits its stride on road to annual delivery goal",
+      "url": "https://www.aerotime.aero/articles/airbus-deliveries-orders-june-2026",
+      "source": "Aerotime",
+      "date": "8 Jul",
+      "category": "End Markets",
+      "summary": "Airbus confirmed 89 aircraft deliveries in June 2026 to 49 customers — its strongest monthly total of the year — lifting its H1 2026 tally to 351 jets, a 15% gain over the first six months of 2025; Airbus now targets 870 deliveries officially for 2026, with an internal goal exceeding 900 for the first time.",
+      "novelis_angle": "A 15% YoY lift in Airbus H1 deliveries signals sustained structural aluminium plate demand for Novelis's Koblenz aerospace facility, which supplies plate for Airbus narrow- and wide-body programmes."
+    },
+    {
+      "title": "Hydro enables Norway's first closed-loop aluminium façade in Oslo refurbishment",
+      "url": "https://www.alcircle.com/press-release/hydro-enables-norways-first-closed-loop-aluminium-facade-in-oslo-refurbishment-120255",
+      "source": "AlCircle",
+      "date": "10 Jul",
+      "category": "Sustainability & Recycling",
+      "summary": "Hydro's WICONA building systems brand closed the loop on the 21,000 m² Sørkedalsveien 6 office building in Oslo: the existing aluminium façade was dismantled, sent to Stena Recycling in Sweden, converted into Hydro CIRCAL 75R (≥75% post-consumer scrap), and re-installed as the new façade — marking Norway's first closed-loop aluminium building refurbishment.",
+      "novelis_angle": "European B&C specifiers are beginning to mandate documented closed-loop provenance for façade systems; Novelis's pre-painted FRP products such as Super Windy® face a competitive landscape where circularity credentials from scrap-to-façade are becoming a differentiating factor."
+    },
+    {
+      "title": "Aluminium prices climb as LME stockpiles slip under 300,000 tonnes for first time since 2022",
+      "url": "https://finimize.com/content/aluminum-prices-climb-as-lme-stockpiles-slip-under-300000-tons",
+      "source": "Finimize",
+      "date": "8 Jul",
+      "category": "Industry News",
+      "summary": "LME aluminium warehouse stocks fell to 295,550 t on 7 July 2026, breaching the 300,000 t threshold for the first time since 2022 following a ~19,225 t drawdown over five weeks; the tightening in prompt availability pushed the three-month contract up 0.4% to $3,103/t.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
