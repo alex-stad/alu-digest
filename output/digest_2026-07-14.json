@@ -1,0 +1,39 @@
+{
+  "date": "Tuesday, 14 July 2026",
+  "lme_price": "$3,167/t",
+  "lme_change": "+$28 (+0.9%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$530/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Three years in: Has India's Carbon Credit Trading Scheme delivered for the aluminium industry?",
+      "url": "https://www.alcircle.com/news/three-years-in-has-india-s-carbon-credit-trading-scheme-delivered-for-the-aluminium-industry-120319",
+      "source": "AlCircle",
+      "date": "14 Jul",
+      "category": "Trade & Regulation",
+      "summary": "India's Carbon Credit Trading Scheme (CCTS), enacted in 2023 and now in its third year, is moving toward exchange-based trading in 2026; aluminium is among the covered sectors where carbon intensity — driven largely by coal-fired captive power — faces formal domestic scrutiny for the first time, with CCTS increasingly intersecting with EU CBAM compliance requirements on exports.",
+      "novelis_angle": "A functioning CCTS that prices Indian smelters' embedded carbon could raise their CBAM liability on EU exports over time, narrowing the competitiveness advantage of high-carbon primary aluminium from India relative to European recycled-content FRP producers."
+    },
+    {
+      "title": "China aluminium market H1 2026 review and H2 outlook",
+      "url": "https://www.alcircle.com/press-release/china-aluminium-market-h1-2026-review-and-h2-outlook-120287",
+      "source": "AlCircle",
+      "date": "12 Jul",
+      "category": "Industry News",
+      "summary": "China's aluminium market followed a 'higher earlier, lower later' price trajectory in H1 2026 — Q1 gains driven by Middle East supply disruption and US rate-cut expectations gave way to Q2 weakness as macro headwinds softened — while June inventory destocking accelerated and the market is forecast to swing from surplus to deficit in H2 2026 as seasonal demand recovers.",
+      "novelis_angle": "A China-side deficit in H2 2026 reduces global surplus pressure and supports the LME, improving Novelis's ability to recover input-cost increases through its metal-price-hedged long-term contract structure."
+    },
+    {
+      "title": "MRAI urges government to remove import duty on aluminium scrap",
+      "url": "https://www.alcircle.com/news/mrai-urges-government-to-remove-import-duty-on-aluminium-scrap-120323",
+      "source": "AlCircle",
+      "date": "14 Jul",
+      "category": "Industry News",
+      "summary": "India's Metal Recyclers Association (MRAI) has formally called on the government to remove the existing import duty on aluminium scrap, arguing the duty constrains recycling capacity utilisation and weakens the competitiveness of India's secondary aluminium sector.",
+      "novelis_angle": "If adopted, India's scrap import liberalisation could redirect global used-beverage-can and post-consumer scrap flows eastward, tightening European scrap availability at a time when the EU already faces an estimated two-million-tonne annual scrap deficit — a headwind for Novelis's recycling-intensive cost model."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
