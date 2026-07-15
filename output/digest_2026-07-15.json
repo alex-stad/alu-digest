@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 15 July 2026",
+  "lme_price": "$3,173/t",
+  "lme_change": "+$6 (+0.2%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$530/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Constellium or Alcoa: who is benefiting more from the aluminium market upswing?",
+      "url": "https://www.alcircle.com/news/constellium-or-alcoa-who-is-benefiting-more-from-the-aluminium-market-upswing-119927",
+      "source": "AlCircle",
+      "date": "13 Jul",
+      "category": "Competitors",
+      "summary": "Constellium SE shares have climbed 92.4% over the past six months, outpacing Alcoa's 47.7% gain, as growing demand for automotive aluminium components and elevated prices driven by the West Asia conflict underpinned the company's financial results.",
+      "novelis_angle": "Constellium's outperformance in automotive aluminium structures signals intensifying competition for BIW contracts in an improving FRP pricing environment — a segment where Novelis competes directly."
+    },
+    {
+      "title": "Aluminium can shortage hits Indian beverage makers during peak summer demand",
+      "url": "https://www.alcircle.com/news/aluminium-can-shortage-hits-indian-beverage-makers-during-peak-summer-demand-119762",
+      "source": "AlCircle",
+      "date": "12 Jul",
+      "category": "End Markets",
+      "summary": "Indian beverage companies are facing a shortage of aluminium can sheets as demand for soft drinks and beer surged during extreme summer temperatures, straining domestic can sheet supply at the peak of the season.",
+      "novelis_angle": "Seasonal demand pressure on can sheet supply in Asia reinforces the structural growth trajectory for beverage packaging aluminium, supporting the investment rationale for Novelis's Bay Minette greenfield and Asian recycling expansion."
+    },
+    {
+      "title": "China's H1 2026 aluminium exports climb 16.3%, led by 711kt record June shipments",
+      "url": "https://www.alcircle.com/news/china-s-h1-2026-aluminium-exports-climb-16-3-led-by-711kt-tonnes-record-june-shipments-120334",
+      "source": "AlCircle",
+      "date": "14 Jul",
+      "category": "Industry News",
+      "summary": "China's June 2026 exports of unwrought aluminium and products reached a record 711,000 tonnes — the first monthly figure to exceed 700,000 tonnes — bringing H1 2026 total exports to 3.4 million tonnes, up 16.3% year-on-year, as high smelting margins, new capacity commissioned in late 2025, and weak domestic demand continued to push volumes into export markets.",
+      "novelis_angle": "Record Chinese export volumes increase global aluminium supply, weighing on European P1020 and ECDP premiums; while lower metal input costs improve Novelis's conversion margin, the surplus backdrop limits scrap premium appreciation."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
