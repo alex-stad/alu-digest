@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 16 July 2026",
+  "lme_price": "$3,171/t",
+  "lme_change": "+$23 (+0.7%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$530/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Gränges H1 2026 interim results: operating profit exceeds expectations",
+      "url": "https://www.marketscreener.com/quote/stock/GRANGES-AB-20668354/news/Granges-increased-operating-profit-more-than-expected-48908463/",
+      "source": "MarketScreener",
+      "date": "16 Jul",
+      "category": "Competitors",
+      "summary": "Gränges AB published its January–June 2026 interim report today, with operating profit exceeding analyst expectations. The result follows a record Q1 2026 in which EBIT rose 12% year-on-year to SEK 459M on 5.4% volume growth, driven by automotive and specialty wins across Europe, Americas, and Asia.",
+      "novelis_angle": "Gränges is Novelis's principal competitor in automotive heat-exchanger strip; an H1 beat signals that automotive aluminium sheet demand is recovering more strongly than consensus expected, with positive read-across for Novelis's European automotive volumes."
+    },
+    {
+      "title": "Trimet adds 80,000 t/yr of German aluminium recycling capacity with hydrogen-rich furnaces",
+      "url": "https://aluminiumtoday.com/news/trimet-upgrades-german-recycling-plants",
+      "source": "Aluminium International Today",
+      "date": "Jun 2026",
+      "category": "Sustainability & Recycling",
+      "summary": "Trimet has expanded its Gelsenkirchen smelter with up to 80,000 t/year of new secondary aluminium melting capacity; hydrogen-rich coke-oven gas furnaces are scheduled for operation in August 2026, significantly reducing CO₂ intensity versus natural gas. The programme also adds a 16,000t scrap storage and laser alloy-sorting hall at Essen and a greenfield scrap processing facility in Hamm targeting year-end 2026 commissioning.",
+      "novelis_angle": "Trimet’s scaled-up secondary capacity intensifies competition for post-consumer and industrial scrap in Germany, directly tightening feedstock availability for Novelis’s Nachterstedt recycling complex."
+    },
+    {
+      "title": "LME aluminium cash gains 1% on July 14 as stocks slip to 286,225t; Iran maritime blockade resumes",
+      "url": "https://www.alcircle.com/news/lme-aluminium-price-recovers-on-july-14-cash-gains-1-as-stocks-slip-to-286-225t-120343",
+      "source": "AL Circle",
+      "date": "14 Jul",
+      "category": "Industry News",
+      "summary": "LME aluminium cash bid rose approximately 1% on 14 July to USD 3,169/t as total warehouse stocks fell to 286,225t — down 43% year-to-date and below 300,000t for the first time since 2022. US forces resumed the maritime blockade of Iranian ports at 4pm EDT on 14 July; Persian Gulf producers account for approximately 10% of global primary aluminium output.",
+      "novelis_angle": null
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
