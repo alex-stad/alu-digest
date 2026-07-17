@@ -1,0 +1,39 @@
+{
+    "date": "Friday, 17 July 2026",
+    "lme_price": "$3,188/t",
+    "lme_change": "+$41 (+1.3%)",
+    "lme_change_positive": true,
+    "ecdp_price": "$530/t",
+    "ecdp_change": "$0 (0.0%)",
+    "ecdp_change_positive": false,
+    "articles": [
+        {
+            "title": "Kotak upgrades Hindalco to 'Buy', sees 17% upside on aluminium and Novelis recovery",
+            "url": "https://www.alcircle.com/news/kotak-upgrades-hindalco-to-buy-sees-17-upside-on-aluminium-novelis-recovery-120374",
+            "source": "AlCircle",
+            "date": "16 Jul",
+            "category": "Novelis / Hindalco",
+            "summary": "Kotak Institutional Equities upgraded Hindalco from 'Reduce' to 'Buy' with a revised target of INR 1,120 per share (17% upside), citing improving earnings visibility, Novelis' Oswego hot mill restart, healthier US scrap spreads, and a projected global aluminium supply deficit of 900,000 tonnes in 2026. The brokerage values Hindalco at approximately 5.5x FY28 EV/EBITDA following a recent correction in the share price.",
+            "novelis_angle": null
+        },
+        {
+            "title": "Stellantis Q2 2026 estimated consolidated shipments of 1.6 million units, +10% year-over-year",
+            "url": "https://www.globenewswire.com/news-release/2026/07/13/3325905/0/en/Stellantis-Reports-Q2-2026-Estimated-Consolidated-Shipments-of-1-6-Million-Units-10-Year-Over-Year.html",
+            "source": "GlobeNewsWire / Stellantis Media",
+            "date": "13 Jul",
+            "category": "End Markets",
+            "summary": "Stellantis reported estimated Q2 2026 consolidated shipments of 1.6 million units, up 10% year-over-year, driven by North America (+38% YoY on Ram and Jeep refreshes) and Enlarged Europe (+5% YoY with BEV as primary driver). Full financial results are scheduled for release on 30 July 2026.",
+            "novelis_angle": "A 10% annual rebound in Stellantis shipments is a direct positive signal for automotive BIW aluminium sheet and battery enclosure demand from one of Novelis's largest European OEM customers, reinforcing the H2 2026 demand outlook."
+        },
+        {
+            "title": "China's NFC produces first aluminium at Vietnam smelter",
+            "url": "https://aluminiumtoday.com/news/chinas-nfc-produces-first-aluminium-at-vietnam-smelter",
+            "source": "Aluminium International Today",
+            "date": "16 Jul",
+            "category": "Industry News",
+            "summary": "NFC's Dak Nong smelter in Vietnam tapped its first molten primary aluminium on 16 July, 50 days ahead of the contractual milestone. The 450,000 tpy facility enters Phase 1 at 150,000 tpy, ramping to full capacity by 2027–2028, becoming Vietnam's first large-scale electrolytic aluminium plant.",
+            "novelis_angle": "While Phase 1 output is modest at 150 kt, the full 450 kt ramp adds a new Southeast Asian P1020 source that could soften European aluminium premiums over the medium term as geopolitical supply constraints ease."
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
