@@ -1,0 +1,39 @@
+{
+    "date": "Sunday, 20 July 2026",
+    "lme_price": "$3,152/t",
+    "lme_change": "-$37 (-1.1%)",
+    "lme_change_positive": false,
+    "ecdp_price": "$526/t",
+    "ecdp_change": "-$4 (-0.8%)",
+    "ecdp_change_positive": false,
+    "articles": [
+        {
+            "title": "Novelis Korea executive to lead KONMA's new aluminium committee",
+            "url": "https://www.alcircle.com/news/novelis-korea-executive-to-lead-konma-s-new-aluminium-committee-120384",
+            "source": "Al Circle",
+            "date": "16 Jul",
+            "category": "Novelis / Hindalco",
+            "summary": "Choi Min-young, Director of Government Affairs at Novelis Korea, has been appointed inaugural chair of the Aluminium Committee of the Korea Nonferrous Metals Association (KONMA), a newly established body to promote the sustainable development of South Korea's aluminium industry and address shared priorities including trade, environmental regulation and recycled-content policy.",
+            "novelis_angle": null
+        },
+        {
+            "title": "Constellium to source local renewable energy for its German facilities",
+            "url": "https://www.globenewswire.com/news-release/2026/07/15/3327705/0/en/Constellium-to-Source-Local-Renewable-Energy-for-its-German-Facilities.html",
+            "source": "GlobeNewswire",
+            "date": "15 Jul",
+            "category": "Competitors",
+            "summary": "Constellium signed a 10-year power purchase agreement with the community of Gottmadingen to receive the full output of the Katzental solar park for its Gottmadingen and Singen plants in Germany, covering over 25% of combined electricity needs and expected to avoid approximately 3,500 tCO₂/year from spring 2027.",
+            "novelis_angle": "Constellium's long-term solar PPA at German plants advances its low-carbon credentials; Novelis's Nachterstedt and Göttingen plants will face similar customer and sustainability reporting expectations to demonstrate equivalent renewable-energy sourcing."
+        },
+        {
+            "title": "Macro and fundamentals intertwined with bullish and bearish forces, short-term aluminium prices expected to mainly consolidate and adjust",
+            "url": "https://www.alcircle.com/press-release/macro-and-fundamentals-intertwined-with-bullish-and-bearish-forces-short-term-aluminium-prices-expected-to-mainly-consolidate-and-adjust-120407",
+            "source": "Al Circle",
+            "date": "18 Jul",
+            "category": "Industry News",
+            "summary": "US June CPI contracted 0.4% month-on-month — the first monthly decline since 2020 — while Federal Reserve chair Warsh signalled zero tolerance for inflation, lifting the September rate-hike probability to 53.5%; combined with weak off-season downstream demand and renewed US airstrikes against Iran on 16 July, LME aluminium is forecast to trade in a USD 3,050–3,250/t range near-term.",
+            "novelis_angle": null
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
