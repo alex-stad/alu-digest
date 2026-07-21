@@ -1,0 +1,39 @@
+{
+    "date": "Tuesday, 21 July 2026",
+    "lme_price": "$3,155/t",
+    "lme_change": "+$15 (+0.5%)",
+    "lme_change_positive": true,
+    "ecdp_price": "$526/t",
+    "ecdp_change": "-$0 (-0.1%)",
+    "ecdp_change_positive": false,
+    "articles": [
+        {
+            "title": "Steel Dynamics' aluminium flat-rolled mill achieves full 650,000 t/year capacity; automotive qualifications secured",
+            "url": "https://www.prnewswire.com/news-releases/steel-dynamics-reports-second-quarter-2026-results-302829891.html",
+            "source": "PR Newswire",
+            "date": "21 Jul",
+            "category": "Competitors",
+            "summary": "Steel Dynamics completed and commenced commissioning of its third and final cold mill at its Columbus, Mississippi aluminium flat-rolled facility in July 2026, bringing total annual capacity to 650,000 metric tonnes per year; the company confirmed receipt of automotive aluminium sheet product qualifications, with commercial automotive sales expected to begin before end of 2026.",
+            "novelis_angle": "Steel Dynamics' full 650,000 t/year flat-rolled mill entering automotive qualification at the same time Novelis is ramping Oswego back to full capacity adds a well-capitalised new US entrant to North American automotive aluminium sheet supply, heightening OEM contract competition in H2 2026."
+        },
+        {
+            "title": "AAI urges duty safeguards and BIS scrap standards as India's aluminium imports rise to 3.48 MTPA",
+            "url": "https://www.alcircle.com/news/aai-urges-duty-safeguards-bis-scrap-standards-as-indias-aluminium-imports-rise-to-3-48-mtpa-120414",
+            "source": "Al Circle",
+            "date": "20 Jul",
+            "category": "Trade & Regulation",
+            "summary": "India's Aluminium Association of India urged the Ministry of Finance to impose safeguard import duties and establish BIS quality standards for aluminium scrap imports, citing a rise in total aluminium imports to 3.48 million tonnes per annum that the association says is undercutting domestic producers.",
+            "novelis_angle": "Safeguard duties on flat-rolled semi-finished imports would support Novelis India's competitive position; BIS scrap quality standards could tighten secondary feedstock availability and raise recycled-content costs for Indian FRP producers including Novelis."
+        },
+        {
+            "title": "Destocking pattern hard to reverse in the short term; aluminium prices consolidate and adjust in the near term",
+            "url": "https://www.alcircle.com/press-release/destocking-pattern-hard-to-reverse-in-the-short-term-aluminium-prices-consolidate-and-adjust-in-the-near-term-120410",
+            "source": "Al Circle",
+            "date": "20 Jul",
+            "category": "Industry News",
+            "summary": "SHFE aluminium rose 0.39% to RMB 23,255 per tonne while LME aluminium eased to USD 3,172 per tonne, with analysts forecasting near-term price consolidation in a USD 3,050–3,250 per tonne range as persistent off-season downstream demand weakness and a continuing destocking cycle offset geopolitical supply-side support.",
+            "novelis_angle": null
+        }
+    ],
+    "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
