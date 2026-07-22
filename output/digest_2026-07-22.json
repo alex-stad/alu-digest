@@ -1,0 +1,39 @@
+{
+  "date": "Wednesday, 22 July 2026",
+  "lme_price": "$3,159/t",
+  "lme_change": "-$0 (-0.0%)",
+  "lme_change_positive": false,
+  "ecdp_price": "$523/t",
+  "ecdp_change": "-$2 (-0.4%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Speira label targets reliable carbon performance",
+      "url": "https://aluminiumtoday.com/news/speira-label-targets-reliable-carbon-performance",
+      "source": "Aluminium International Today",
+      "date": "7 Jul",
+      "category": "Competitors",
+      "summary": "Speira has launched VALIS, a verified low-carbon aluminium label for products with a CO₂ footprint independently certified below 4 tCO₂e/t, backed by Environmental Product Declarations. The label initially covers ORBIS can sheet with high recycled content and RIVOS low-carbon primary aluminium.",
+      "novelis_angle": "Speira’s VALIS certification raises the bar for documented low-carbon credentials in European can sheet, increasing pressure on Novelis to accelerate third-party verification of its recycled-content products."
+    },
+    {
+      "title": "ENVI vote leaves key aluminium loopholes unresolved in CBAM review",
+      "url": "https://www.alcircle.com/press-release/envi-vote-leaves-key-aluminium-loopholes-unresolved-in-cbam-review-120241",
+      "source": "AL Circle",
+      "date": "13 Jul",
+      "category": "Trade & Regulation",
+      "summary": "The European Parliament’s ENVI Committee voted on 6 July to expand CBAM to downstream aluminium products but left key loopholes unresolved, including the post-consumer scrap threshold, a 50-tonne mass-based exemption, and a pathway allowing Russian aluminium to enter the EU via third-country processing. A full Parliament plenary vote is expected in September 2026.",
+      "novelis_angle": "Unresolved CBAM loopholes allow continued entry of carbon-intensive aluminium into the EU market, undermining the competitive advantage of Novelis’s low-carbon FRP operations."
+    },
+    {
+      "title": "Middle East situation volatile and uncertain, aluminium prices consolidate and adjust",
+      "url": "https://www.alcircle.com/press-release/middle-east-situation-volatile-and-uncertain-aluminium-prices-consolidate-and-adjust-120431",
+      "source": "AL Circle",
+      "date": "22 Jul",
+      "category": "Industry News",
+      "summary": "Following the collapse of the Iran-US ceasefire and seven commercial vessel strikes in the Strait of Hormuz, Gulf smelters EGA, ALBA, and Qatalum — representing ~9% of global P1020 supply — face operational disruption. LME aluminium 3-month is at $3,159/t after bouncing from a four-month low of $3,085/t, with LME stocks at ~285,000 t, the lowest since 2022 and down 43% year-to-date.",
+      "novelis_angle": "Stalled Gulf supply from EGA, ALBA, and Qatalum tightens European P1020 availability and may further elevate ECDP premiums for Novelis’s 10 European plants."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
