@@ -1,0 +1,39 @@
+{
+  "date": "Thursday, 23 July 2026",
+  "lme_price": "$3,209/t",
+  "lme_change": "+$12 (+0.4%)",
+  "lme_change_positive": true,
+  "ecdp_price": "$523/t",
+  "ecdp_change": "$0 (0.0%)",
+  "ecdp_change_positive": false,
+  "articles": [
+    {
+      "title": "Crown Holdings lifts 2026 outlook on aluminium can demand",
+      "url": "https://www.alcircle.com/news/crown-lifts-2026-outlook-on-aluminium-can-demand-120458",
+      "source": "AlCircle",
+      "date": "22 Jul",
+      "category": "End Markets",
+      "summary": "Crown Holdings reported Q2 2026 adjusted diluted EPS of $2.49, up 16% year-on-year, as global beverage can volumes grew 5% including 7% in Europe and 5% in North America; the company raised its full-year 2026 EPS guidance to $8.30–$8.50 and announced new can-making capacity expansions in Brazil, Greece, Spain, and India.",
+      "novelis_angle": "European can volume growth of 7% and Crown’s planned capacity additions in Greece and Spain strengthen the near-term demand signal for Novelis can body sheet across Southern European markets."
+    },
+    {
+      "title": "Washington unveils aluminium onshoring incentive tied to Section 232 tariffs",
+      "url": "https://www.alcircle.com/news/beyond-the-tariff-wall-will-washingtons-new-aluminium-incentive-programme-succeed-where-tariffs-alone-failed-120443",
+      "source": "AlCircle",
+      "date": "22 Jul",
+      "category": "Trade & Regulation",
+      "summary": "Trump signed a proclamation on 20 July directing Commerce to establish an incentive programme under the Section 232 framework; companies committing to build, refurbish, or expand US primary aluminium smelting capacity and beginning construction by January 2029 may import primary aluminium at half the standard Section 232 tariff rate.",
+      "novelis_angle": "Expanded domestic US primary supply would ease P1020 availability and premium pressure for Novelis’s North American rolling operations, including the commissioning Bay Minette facility."
+    },
+    {
+      "title": "US Customs auctions 12,000 tonnes of seized Chinese aluminium profiles in Riverside, California",
+      "url": "https://www.prnewswire.com/news-releases/us-customs-to-auction-12-000-tons-of-seized-aluminum-in-riverside-california-302816220.html",
+      "source": "PR Newswire",
+      "date": "23 Jul",
+      "category": "Trade & Regulation",
+      "summary": "US CBP is today auctioning approximately 12,000 tonnes of extruded aluminium profiles seized from China Zhongwang Holdings, material imported in 2017 and disguised as non-functional pallets to evade US anti-dumping tariffs; this is the second and final auction in the decade-long fraud case, with the material stored in 623 shipping containers in Riverside, California.",
+      "novelis_angle": "The resolution of this trade fraud case demonstrates sustained US enforcement against Chinese aluminium circumvention, reinforcing the fair-competition environment for Novelis’s expanding North American flat-rolled business."
+    }
+  ],
+  "archive_url": "https://alex-stad.github.io/alu-digest/"
+}
